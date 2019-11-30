@@ -5,7 +5,7 @@ div {
   @include ratio(16,9);
 } */
 @mixin ratio($x,$y, $pseudo: false) {
-  $padding: unquote(($y/$x) *100+'%');
+  $padding: unquote(($y/$x) * 100 + '%');
 
   @if $pseudo {
 
@@ -260,6 +260,20 @@ div {
 
     @if $breakpoint != xl {
       @include screen('#{$breakpoint}') {
+        #{$name}: #{$value};
+      }
+    }
+  }
+}
+
+@mixin ruleMin($name, $pointsAndValues) {
+  @each $breakpoint, $value in $pointsAndValues {
+    @if $breakpoint == xs {
+      #{$name}: #{$value};
+    }
+
+    @if $breakpoint != xs {
+      @include screen('#{$breakpoint}', min) {
         #{$name}: #{$value};
       }
     }

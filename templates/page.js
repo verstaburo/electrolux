@@ -2,7 +2,7 @@ module.exports = pageName => `
 extends ../../layouts/default
 
 block head
-  - var pageTitle = projectName + ' | ${pageName}'
+  - var pageTitle = Electrolux + ' | ${pageName}'
 
 block content
   p Страница: ${pageName}

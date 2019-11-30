@@ -14,28 +14,36 @@ const isDebug = process.env.NODE_ENV !== 'production';
 
 exports.build = () => (
   gulp.src('app/styles/*.scss')
-    .pipe(plumber({ errorHandler: errorHandler('Error in styles task') }))
-    .pipe(gulpIf(isDebug, sourcemaps.init()))
-    .pipe(bulkSass())
-    .pipe(sass())
-    .pipe(postcss([
-      require('autoprefixer'),
-      require('postcss-discard-comments'),
-      require('postcss-import'),
-      //require('css-mqpacker'),
-    ]))
-    .pipe(cssnano({ zIndex: false }))
-    .pipe(gulpIf(isDebug, sourcemaps.write()))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/assets/styles'))
+  .pipe(plumber({
+    errorHandler: errorHandler('Error in styles task')
+  }))
+  .pipe(gulpIf(isDebug, sourcemaps.init()))
+  .pipe(bulkSass())
+  .pipe(sass())
+  .pipe(postcss([
+    require('autoprefixer'),
+    require('postcss-discard-comments'),
+    require('postcss-import'),
+    //require('css-mqpacker'),
+  ]))
+  .pipe(cssnano({
+    zIndex: false
+  }))
+  .pipe(gulpIf(isDebug, sourcemaps.write()))
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(gulp.dest('dist/assets/styles'))
 );
 
 exports.lint = () => (
   gulp.src('app/**/*.scss')
-    .pipe(postcss([
-      stylelint(),
-      require('postcss-reporter')({
-        clearAllMessages: true,
-      }),
-    ], { syntax: require('postcss-scss') }))
+  .pipe(postcss([
+    stylelint(),
+    require('postcss-reporter')({
+      clearAllMessages: true,
+    }),
+  ], {
+    syntax: require('postcss-scss'),
+  }))
 );

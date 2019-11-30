@@ -1,16 +1,4 @@
 /* ##########
-Убираем outline
-########## */
-
-button::-moz-focus-inner {
-  border: 0;
-}
-
-*:focus {
-  outline: none;
-}
-
-/* ##########
 Цвет выделения текста
 ########## */
 
@@ -31,18 +19,6 @@ input, textarea {
 }
 
 /* ##########
-Настройки для автозаполнения Chrome
-########## */
-
-input:-webkit-autofill {
-  -webkit-text-fill-color: $color-input !important; // Поменять цвет на аналогичный цвету input
-}
-
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-  transition: background-color 50000000000s ease-in-out 0s !important; // Убираем желтую заливку для автозаполнения в Chrome
-}
-
-/* ##########
 Основные стили
 ########## */
 
@@ -52,13 +28,18 @@ html, body {
   overflow-x: hidden; // Убираем горизонтальный скролл
   width: 100%;
   min-height: 100%;
+  background-color: $color-white;
 }
 
 body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   font-family: $font-main; // Задаем основной шрифт
   font-size: 16px; // Убираем проблему с отступами между inline-элементами
   color: $color-basic;
   overflow: hidden;
+  background-color: $color-white;
 }
 
 img {
@@ -112,4 +93,28 @@ select, input, textarea, button {
   border-radius: 0; // Убираем авто-закругление углов на iOS
   background-color: transparent;
   font-family: $font-main;
+}
+
+/* ##########
+Убираем outline
+########## */
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* ##########
+Настройки для автозаполнения Chrome
+########## */
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: $color-input !important; // Поменять цвет на аналогичный цвету input
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  transition: background-color 50000000000s ease-in-out 0s !important; // Убираем желтую заливку для автозаполнения в Chrome
 }

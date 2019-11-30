@@ -3,7 +3,7 @@
 // ##########
 // Базовые настройки сетки сайта
 // ##########
-$container-width: 960px; // Максимальная ширина контейнера контента
+$container-width: 1160px; // Максимальная ширина контейнера контента
 $container-padding: 20px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
@@ -20,21 +20,51 @@ $breakpoints: (
 // ##########
 // Цвета
 // ##########
-$color-basic: black; // Основной цвет текста (применяется к body)
-$color-placeholder: #777; // Основной цвет для placeholder
-$color-input: black; // Основной цвет input, select и textarea
-$color-main: #2252d8; // Основной фирменный цвет
-$color-border: #ccc; // Основной цвет границ таблиц, секций
+$color-basic: #2f2f2f; // Основной цвет текста (применяется к body)
+$color-placeholder: #aaa; // Основной цвет для placeholder
+$color-input: #4f4e53; // Основной цвет input, select и textarea
+$color-main: #011e41; // Основной фирменный цвет
+$color-border: #d8d8d8; // Основной цвет границ таблиц, секций
+$color-silk-rich: #2b2936;
+$color-blue-mid: #7a8a9c;
+$color-white: #fff;
+$color-bg-gray: #f4f4f4;
+$color-bg-gray2: #f4f5f4;
+$color-checkbox-text: #848484;
+$color-note-text: #929292;
+$color-error-bubble: #fdeceb;
+$color-error-text: #504f54;
+$color-form-border: #cbcfd2;
+$color-red: #af1930;
+$color-cross-dark: #191918;
+$color-light-gray: #d9d9d9;
+$color-dark-text: #3b3d3a;
+$color-header-shadow: #dcdcdc;
 
 // ##########
 // Массив цветов для UI-кита
 // ##########
 $colors: (
-  '$color-basic': black,
-  '$color-placeholder': #777,
-  '$color-input': black,
-  '$color-main': #2252d8,
-  '$color-border': #ccc,
+  '$color-basic': #2f2f2f,
+  '$color-placeholder': #aaa,
+  '$color-input': #4f4e53,
+  '$color-main': #011e41,
+  '$color-border': #d8d8d8,
+  '$color-silk-rich': #2b2936,
+  '$color-blue-mid': #7a8a9c,
+  '$color-white': #fff,
+  '$color-bg-gray': #f4f4f4,
+  '$color-bg-gray2': #f4f5f4,
+  '$color-error-bubble': #fdeceb,
+  '$color-error-text': #504f54,
+  '$color-checkbox-text': #848484,
+  '$color-note-text': #929292,
+  '$color-form-border': #cbcfd2,
+  '$color-red': #af1930,
+  '$color-cross-dark': #191918,
+  '$color-light-gray': #d9d9d9,
+  '$color-dark-text': #3b3d3a,
+  '$color-header-shadow': #dcdcdc,
 );
 
 // ##########
@@ -45,8 +75,7 @@ $ease-main: .2s ease;
 // ##########
 // Шрифты
 // ##########
-$font-main: Arial, sans-serif; // Основной шрифт сайта
-$font-second: Times New Roman, sans-serif; // Дополнительный шрифт
+$font-main: 'Electrolux', Arial, sans-serif; // Основной шрифт сайта
 
 // ##########
 // Цвета для UI-кита (удалить, если он отсутствует)

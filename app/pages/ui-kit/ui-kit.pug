@@ -2,7 +2,7 @@ extends ../../layouts/default
 include ui-kit-mixins
 
 block head
-  - var pageTitle = projectName + ' | UI-кит'
+  - var pageTitle = Electrolux + ' | UI-кит'
 
 block content
   script
@@ -29,7 +29,7 @@ block content
     +e.SECTION.head&attributes(attributes)
       .container
         +e.IMG.logo(src="assets/images/logo.svg", alt="Логотип проекта")
-        +e.name Название проекта
+        +e.name Electrolux - мастер классы
 
     //- Сетка
     +ui-section._grid

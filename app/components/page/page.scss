@@ -1,0 +1,9 @@
+.page {
+  display: block;
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  $b: &;
+
+  @include ruleMin(padding-top, (xs: 62px, sm: 110px));
+}

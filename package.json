@@ -59,7 +59,7 @@
     "gulp-watch": "^4.3.11",
     "inputmask": "^4.0.0",
     "jade-get-data": "^1.0.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.4.1",
     "leaflet": "^1.2.0",
     "normalize.css": "^8.0.0",
     "nouislider": "^14.0.0",

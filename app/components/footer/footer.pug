@@ -1,5 +1,12 @@
 mixin footer()
   +b.FOOTER.footer&attributes(attributes)
+    +e.wrapper
+      +e.side_front
+        +logo._footer.__logo
+      +e.text
+        +link.__link(href="#") Пользовательское соглашение (оферта)
+      +e.side_end.is-hidden-sm
+        +totop.__totop.is-hidden-sm
     block
 
     //- При +ui-section-content(true) контейнер отсутствует

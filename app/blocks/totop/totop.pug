@@ -1,0 +1,20 @@
+mixin totop()
+  +b.BUTTON.totop.js-to-top&attributes(attributes)
+    +icon('arrow').__icon
+    block
+
+mixin ui-kit-totop()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок totop
+      +ui-path
+        p Блок: blocks/totop/totop
+      +ui-description
+        p Описание Блока
+
+    +ui-section-content()
+      +totop
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

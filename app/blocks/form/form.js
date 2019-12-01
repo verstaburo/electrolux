@@ -1,6 +1,6 @@
 /* eslint-disable */
 // https://github.com/jshjohnson/Choices
-import Choices from 'choices.js/public/assets/scripts/choices.min';
+import Choices from 'choices.js';
 
 // https://github.com/leongersen/noUiSlider
 import noUiSlider from 'nouislider';

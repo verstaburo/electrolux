@@ -3,7 +3,7 @@
 // ##########
 // Базовые настройки сетки сайта
 // ##########
-$container-width: 1160px; // Максимальная ширина контейнера контента
+$container-width: 1150px; // Максимальная ширина контейнера контента
 $container-padding: 20px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
@@ -11,10 +11,10 @@ $grid-gap: 20px; // Расстояние между колонками
 $grid-gap-vertical: 20px; // Расстояние между строками в сетке
 $breakpoints: (
   'xl': 1920px,
-  'lg': 1280px,
+  'lg': 1200px,
   'md': 1024px,
   'sm': 768px,
-  'xs': 480px
+  'xs': 320px
 );
 
 // ##########
@@ -40,6 +40,7 @@ $color-cross-dark: #191918;
 $color-light-gray: #d9d9d9;
 $color-dark-text: #3b3d3a;
 $color-header-shadow: #dcdcdc;
+$color-gray-text: #646569;
 
 // ##########
 // Массив цветов для UI-кита
@@ -65,6 +66,7 @@ $colors: (
   '$color-light-gray': #d9d9d9,
   '$color-dark-text': #3b3d3a,
   '$color-header-shadow': #dcdcdc,
+  '$color-gray-text': #646569,
 );
 
 // ##########

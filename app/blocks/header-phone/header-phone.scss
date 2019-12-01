@@ -1,0 +1,27 @@
+.header-phone {
+  $b: &;
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: $color-silk-rich;
+  transition: color $ease-main;
+
+  &:hover {
+    color: $color-blue-mid;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 16px;
+    fill: $color-red;
+
+    &:not(:last-child) {
+      margin-right: 9px;
+    }
+  }
+}

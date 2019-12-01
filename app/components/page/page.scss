@@ -1,9 +1,10 @@
 .page {
   display: block;
   width: 100%;
-  flex: 1;
+  min-height: calc(100% - 100px);
   box-sizing: border-box;
+  overflow: hidden;
   $b: &;
 
-  @include ruleMin(padding-top, (xs: 62px, sm: 110px));
+  @include ruleMin(padding-top, (xs: 60px, sm: 110px));
 }

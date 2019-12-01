@@ -1,0 +1,15 @@
+.navigation {
+  $b: &;
+
+  display: block;
+  width: 100%;
+  z-index: 9;
+  background-color: $color-bg-gray;
+
+  @include ruleMin(visibility, (xs: hidden, sm: visible));
+  @include ruleMin(opacity, (xs: 0, sm: 1));
+  @include ruleMin(height, (xs: 100%, sm: 60px));
+  @include ruleMin(position, (xs: fixed, sm: sticky));
+  @include ruleMin(top, (xs: 0, sm: auto));
+  @include ruleMin(left, (xs: 0, sm: auto));
+}

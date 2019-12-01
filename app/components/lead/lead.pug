@@ -1,0 +1,25 @@
+mixin lead()
+  +b.lead&attributes(attributes)
+    +e.bg
+      +e.PICTURE.image
+        source(srcset="assets/images/lead.jpg" media="(min-width: 768px)")
+        source(srcset="assets/images/lead-sm.jpg" media="(min-width: 200px)")
+        img(srcset="assets/images/lead.jpg" alt="@@")
+    .container
+    block
+
+mixin ui-kit-lead()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент lead
+      +ui-path
+        p Компонент: components/lead/lead
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +lead
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

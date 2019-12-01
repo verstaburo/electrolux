@@ -1,0 +1,19 @@
+mixin chess-section()
+  +b.chess-section&attributes(attributes)
+    block
+    
+mixin ui-kit-chess-section()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок chess-section
+      +ui-path
+        p Блок: blocks/chess-section/chess-section
+      +ui-description
+        p Описание Блока
+  
+    +ui-section-content()
+      +chess-section
+      
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

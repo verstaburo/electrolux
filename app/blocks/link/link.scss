@@ -2,24 +2,23 @@
   color: $color-main;
   border: 0;
   transition: fill $ease-main, color $ease-main, opacity $ease-main, border-color $ease-main;
-  fill: $color-main;
+  fill: currentColor;
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 
   $b: &;
 
   &:hover {
-    opacity: .5;
+    color: $color-blue-mid;
   }
 
   &__text {
-    border-bottom: 1px solid;
-    border-color: inherit;
 
-    #{$b}_dashed & {
-      border-bottom-style: dashed;
+    #{$b}_underline & {
+      border-bottom: 1px solid;
+      border-color: currentColor;
     }
   }
 
@@ -35,8 +34,6 @@
 
   &.is-disabled {
     pointer-events: none;
-    fill: $color-border;
-    color: $color-border;
-    border-color: transparent;
+    opacity: .5;
   }
 }

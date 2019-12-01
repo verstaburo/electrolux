@@ -2,6 +2,8 @@
   $b: &;
 
   h1, h2, h3, h4, h5, h6 {
+    font-size: 30px;
+    line-height: 1.2;
 
     &:not(:first-child) {
       margin-top: 10px;
@@ -10,11 +12,6 @@
     &:not(:last-child) {
       margin-bottom: 10px;
     }
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 30px;
-    line-height: 1.5;
   }
 
   p {

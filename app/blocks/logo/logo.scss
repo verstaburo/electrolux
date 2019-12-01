@@ -1,0 +1,64 @@
+.logo {
+  $b: &;
+
+  display: flex;
+  justify-content: flex-start;
+
+  &__item {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+
+    @include ruleMin(padding, (xs: 0 13px, sm: 0 22px));
+
+    &:not(:last-child) {
+
+      &::before {
+        @include pseudo;
+
+        right: 0;
+        top: 50%;
+        width: 1px;
+        background-color: $color-light-gray;
+        transform: translate3d(0, -50%, 0);
+
+        @include ruleMin(height, (xs: 40px, sm: 45px));
+      }
+    }
+
+    #{$b}_footer & {
+      padding: 0 20px;
+
+      &:not(:last-child) {
+
+        &::before {
+          height: 45px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+
+    &_electrolux {
+      @include ruleMin(width, (xs: 156px, sm: 173px));
+
+      #{$b}_footer & {
+        @include ruleMin(width, (xs: 143px, sm: 173px));
+      }
+    }
+
+    &_aeg {
+      @include ruleMin(width, (xs: 60px, sm: 77px));
+
+      #{$b}_footer & {
+        width: 77px;
+      }
+    }
+  }
+}

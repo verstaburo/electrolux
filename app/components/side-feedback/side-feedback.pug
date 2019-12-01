@@ -1,0 +1,19 @@
+mixin side-feedback()
+  +b.side-feedback&attributes(attributes)
+    block
+    
+mixin ui-kit-side-feedback()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент side-feedback
+      +ui-path
+        p Компонент: components/side-feedback/side-feedback
+      +ui-description
+        p Описание компонента
+  
+    +ui-section-content()
+      +side-feedback
+      
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

@@ -1,3 +1,41 @@
 .header {
   $b: &;
+
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  border-bottom: 2px solid $color-header-shadow;
+  z-index: 10;
+
+  @include ruleMin(border-bottom-width, (xs: 1px, sm: 2px));
+  @include ruleMin(height, (xs: 60px, sm: 110px));
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+
+    @include ruleMin(justify-content, (xs: flex-end, sm: space-between));
+    @include ruleMin(padding, (xs: 0 20px, lg: 0 50px));
+  }
+
+  &__burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__logo {
+    @include ruleMin(margin-left, (sm: -22px));
+    @include ruleMin(margin-right, (xs: -16px, sm: 0));
+  }
+
+  &__phone {
+    @include ruleMin(margin-right, (lg: 102px))
+  }
 }

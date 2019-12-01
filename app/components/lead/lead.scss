@@ -1,0 +1,32 @@
+.lead {
+  $b: &;
+
+  position: relative;
+  display: block;
+  width: 100%;
+
+  @include ruleMin(min-height, (xs: 126.56vw, sm: 34.6vw));
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      @include fill-img;
+    }
+  }
+}

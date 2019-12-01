@@ -17,8 +17,26 @@
   margin-right: auto;
   max-width: $container-width;
   box-sizing: border-box;
+
+  @include ruleMin(padding, (xs: 0 $container-padding, lg: 0 25px));
 }
 
 .js-sr {
   visibility: hidden;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-hidden-sm {
+  @include screen('sm') {
+    display: none;
+  }
+}
+
+.is-hidden-xl {
+  @include screen('sm', min) {
+    display: none;
+  }
 }

@@ -1,0 +1,22 @@
+mixin header-phone(tel)
+  +b.A.header-phone&attributes(attributes)
+    +icon('phone').__icon
+    +e.text
+      block
+
+mixin ui-kit-header-phone()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок header-phone
+      +ui-path
+        p Блок: blocks/header-phone/header-phone
+      +ui-description
+        p Описание Блока
+
+    +ui-section-content()
+      +header-phone()(href="tel:88004444448") 8 (800) 444-44-48
+
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

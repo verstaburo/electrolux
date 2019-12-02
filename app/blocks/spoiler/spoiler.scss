@@ -1,0 +1,25 @@
+.spoiler {
+  $b: &;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $color-basic;
+
+  &__icon {
+    width: 10px;
+    height: 18px;
+    margin-top: -2px;
+    transform-origin: 50% 50% 0;
+    transform: rotate(90deg);
+    transition: transform $ease-main;
+    fill: $color-white;
+
+    #{$b}.is-active & {
+      transform: rotate(-90deg);
+    }
+  }
+}

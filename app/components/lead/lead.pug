@@ -1,11 +1,12 @@
 mixin lead()
-  +b.lead&attributes(attributes)
-    +e.bg
-      +e.PICTURE.image
-        source(srcset="assets/images/lead.jpg" media="(min-width: 768px)")
-        source(srcset="assets/images/lead-sm.jpg" media="(min-width: 200px)")
-        img(srcset="assets/images/lead.jpg" alt="@@")
+  +b.SECTION.lead&attributes(attributes)
     .container
+      +e.content
+        +e.H1.title Готовьте дома, <br> как в ресторане
+        +e.text
+          p Наш столетний опыт и&nbsp;богатое наследие в&nbsp;области работы с&nbsp;
+            +e.SPAN.spoiler(data-spoiler-content="lead") профессиональными шеф&#8209;поварами позволили нам получить знания, которые мы&nbsp;применяем в&nbsp;нашей кухонной технике, позволяя вам максимально использовать все возможности кухни у&nbsp;вас дома.
+        +spoiler().__more.is-hidden-xl(data-spoiler="lead")
     block
 
 mixin ui-kit-lead()

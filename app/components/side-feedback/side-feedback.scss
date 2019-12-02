@@ -1,3 +1,11 @@
 .side-feedback {
   $b: &;
+
+  position: fixed;
+  display: block;
+
+  @include ruleMin(left, (xs: 0, sm: 100%));
+  @include ruleMin(bottom, (xs: 0, sm: auto));
+  @include ruleMin(top, (sm: 50%));
+  @include ruleMin(transform, (xs: translate3d(0, 100%, 0), sm: translate3d(0, -50%, 0)));
 }

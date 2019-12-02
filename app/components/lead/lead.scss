@@ -21,7 +21,7 @@
     width: 100%;
 
     @include ruleMin(max-width, (xs: 270px, sm: 560px));
-    @include ruleMin(padding, (xs: 27px 20px 30px, sm: 46px 46px 48px));
+    @include ruleMin(padding, (xs: 25px 20px 30px, sm: 46px 46px 48px));
   }
 
   &__spoiler {
@@ -41,10 +41,10 @@
     font-weight: 300;
 
     @include ruleMin(font-size, (xs: 15px, sm: 18px));
-    @include ruleMin(line-height, (xs: 20px, sm: 28px));
+    @include ruleMin(line-height, (xs: 1.5, sm: 1.25));
 
     &:not(:first-child) {
-      @include ruleMin(margin-top, (xs: 20px, sm: 34px));
+      @include ruleMin(margin-top, (xs: 15px, sm: 34px));
     }
   }
 

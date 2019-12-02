@@ -33,6 +33,7 @@ import '../blocks/dropdown/dropdown';
 import putBlockIntoSlot from '../blocks/js-functions/put-block-into-slot';
 import totop from '../blocks/totop/totop';
 import spoiler from '../blocks/spoiler/spoiler';
+import sideFeedback from '../components/side-feedback/side-feedback';
 
 const $ = window.$;
 
@@ -61,4 +62,5 @@ $(() => {
   putBlockIntoSlot();
   totop();
   spoiler();
+  sideFeedback();
 });

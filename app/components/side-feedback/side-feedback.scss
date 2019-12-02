@@ -3,9 +3,194 @@
 
   position: fixed;
   display: block;
+  z-index: 7;
 
+  @include ruleMin(transition, (xs: transform $ease-main, sm: none));
   @include ruleMin(left, (xs: 0, sm: 100%));
   @include ruleMin(bottom, (xs: 0, sm: auto));
   @include ruleMin(top, (sm: 50%));
+  @include ruleMin(width, (xs: 100%, sm: auto));
   @include ruleMin(transform, (xs: translate3d(0, 100%, 0), sm: translate3d(0, -50%, 0)));
+
+  &__head {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    top: -44px;
+    right: 0;
+    transition: transform $ease-main;
+    transform: translate3d(-8px, 0, 0);
+    box-sizing: border-box;
+    border: 1px solid $color-form-border;
+    border-bottom-width: 0;
+
+    #{$b}.is-active & {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__head-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 45px;
+    width: 45px;
+    height: 45px;
+    box-sizing: border-box;
+    background-color: $color-silk-rich;
+    transition: border $ease-main;
+  }
+
+  &__head-icon {
+    fill: $color-white;
+    width: 25px;
+    height: 25px;
+
+    &_message {
+      width: 21px;
+      height: 20px;
+    }
+
+    &_cross {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__head-content {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+    background-color: $color-white;
+    transition: border $ease-main;
+  }
+
+  &__head-text {
+    display: inline-block;
+    text-align: center;
+    color: $color-silk-rich;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    box-sizing: border-box;
+  }
+
+  &__list {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include ruleMin(border, (xs: 1px solid $color-form-border, sm: none));
+    @include ruleMin(background-color, (xs: $color-white, sm: transparent));
+    @include ruleMin(padding, (xs: 0 20px, sm: 0));
+  }
+
+  &__item {
+    display: block;
+    background-color: $color-white;
+    box-sizing: border-box;
+    transition: transform .2s ease-in-out;
+    width: 280px;
+
+    @include ruleMin(transform, (sm: translate3d(-60px, 0, 0)));
+    @include ruleMin(border, (sm: 2px solid $color-header-shadow));
+
+    #{$b}:hover & {
+      @include ruleMin(transform, (sm: translate3d(-100%, 0, 0)));
+    }
+
+    @for $i from 1 through 10 {
+
+      &:nth-child(#{$i}) {
+        transition-delay: .3s;
+
+        #{$b}:hover & {
+          transition-delay: (0.3s + (0.075s * $i));
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      @include ruleMin(border-bottom, (xs: 1px solid $color-form-border, sm: 2px solid $color-header-shadow));
+      @include ruleMin(margin-bottom, (sm: 7px));
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    min-height: 56px;
+
+    @include ruleMin(padding, (xs: 20px 0, sm: 0));
+  }
+
+  &__image {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    font-size: 0;
+
+    @include screen('sm', min) {
+      min-width: 62px;
+      width: 62px;
+      background-color: $color-silk-rich;
+      box-sizing: border-box;
+      margin-left: -2px;
+      margin-top: -2px;
+      margin-bottom: -2px;
+    }
+  }
+
+  &__icon {
+    @include ruleMin(fill, (xs: $color-silk-rich, sm: $color-white));
+
+    &_phone {
+      @include ruleMin(width, (xs: 20px, sm: 32px));
+      @include ruleMin(height, (xs: 22px, sm: 35px));
+    }
+
+    &_mail {
+      @include ruleMin(width, (xs: 21px, sm: 31px));
+      @include ruleMin(height, (xs: 15px, sm: 23px));
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $color-silk-rich;
+
+    @include ruleMin(padding, (xs: 0 22px, sm: 0 25px));
+    @include ruleMin(white-space, (sm: nowrap));
+  }
+
+  .is-closed {
+    display: block;
+  }
+
+  &.is-active .is-closed {
+    display: none;
+  }
+
+  .is-opened {
+    display: none;
+  }
+
+  &.is-active .is-opened {
+    display: block;
+  }
+
+  &.is-active {
+    @include ruleMin(transform, (xs: translate3d(0, 0, 0), sm: translate3d(0, -50%, 0)));
+  }
 }

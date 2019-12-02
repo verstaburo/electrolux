@@ -1,7 +1,30 @@
 mixin side-feedback()
-  +b.side-feedback&attributes(attributes)
+  +b.side-feedback&attributes(attributes)(data-panel)
+    +e.BUTTON.head.is-hidden-xl.js-show-panel
+      +e.head-image
+        +icon('message').__head-icon_message.is-closed
+        +icon('cross').__head-icon_cross.is-opened
+      +e.head-content
+        +e.head-text
+          span.is-closed Связаться с нами
+          span.is-opened Закрыть
+    +e.UL.list
+      +e.LI.item
+        +e.A.link(href="tel:88004444448")
+          +e.image
+            +icon('phone').__icon_phone
+          +e.text
+            span.is-hidden-sm Свяжитесь с нами
+            span.is-hidden-xl 8 (800) 444-44-48
+      +e.LI.item
+        +e.A.link.js-feedback(href='#feedback-form')
+          +e.image
+            +icon('mail').__icon_mail
+          +e.text
+            span.is-hidden-sm Написать на сайте
+            span.is-hidden-xl Написать нам
     block
-    
+
 mixin ui-kit-side-feedback()
   +ui-section
     +ui-section-head
@@ -10,10 +33,10 @@ mixin ui-kit-side-feedback()
         p Компонент: components/side-feedback/side-feedback
       +ui-description
         p Описание компонента
-  
+
     +ui-section-content()
       +side-feedback
-      
+
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
     //- Рамка вокруг особой секции: +ui-special()

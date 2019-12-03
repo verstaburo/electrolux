@@ -1,0 +1,32 @@
+mixin feedback-form()
+  +b.feedback-form&attributes(attributes)
+    .container
+      +e.head
+        +e.title Связаться с нами
+        +e.A.close.js-close-feedback(href="#")
+          +e.back
+            +icon('arrow').__icon_back
+          +e.close-text Назад
+      +e.content
+        +form(action="/" method="post" data-validated-form).__form
+          +grid
+            +col({xl: 4, md: 6, sm: 12})
+              +inputbox
+                +input-wrapper
+                  +input._noborder(type="text" name="name" placeholder="Ваше ФИО*" required)
+              +inputbox
+                +input-wrapper
+                  +input._noborder(type="email" name="email" placeholder="Адрес электронной почты*" required)
+            +col({xl: 4, md: 6, sm: 12})
+              +inputbox
+                +input-wrapper
+                  +textarea._noborder.js-scrollbar(name="message" placeholder="Ваше сообщение*" required)
+            +col({xl: 4, md: 12})
+              +button('button')._blue.__button(type="submit") Отправить
+              +e.text.is-hidden-sm Нажимая на кнопку, я соглашаюсь с&nbsp;
+                +link._underline(href="#") условиями политики конфиденциальности.
+    block
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

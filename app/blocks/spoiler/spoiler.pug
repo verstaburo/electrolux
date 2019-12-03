@@ -13,7 +13,9 @@ mixin ui-kit-spoiler()
         p Описание Блока
 
     +ui-section-content()
-      +spoiler
+      p Спойлер
+      p.is-hidden(data-spoiler-content="test-spoiler") Содержимое спойлера
+      +spoiler(data-spoiler="test-spoiler")
 
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()

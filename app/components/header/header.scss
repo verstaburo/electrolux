@@ -38,4 +38,27 @@
   &__phone {
     @include ruleMin(margin-right, (lg: 102px))
   }
+
+  &__close {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    margin-right: 57px;
+    margin-left: auto;
+    transition: opacity $ease-main;
+    opacity: 0;
+
+    @include ruleMin(display, (xs: none, sm: flex));
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__cross {
+    width: 30px;
+    height: 30px;
+    fill: $color-cross-dark;
+  }
 }

@@ -8,3 +8,5 @@ window.globalOptions = {
     xs: 320,
   },
 };
+
+window.globalFunctions = {};

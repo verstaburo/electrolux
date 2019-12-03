@@ -1,0 +1,24 @@
+mixin popup-phones()
+  +popup.popup-phones__&attributes(attributes)
+    +e.head
+      +icon('phone-in-circle').__icon
+    +e.phones
+      +link()(href="tel:+74952484444").__link +7 (495) 248-44-44
+      +link()(href="tel:88004444448").__link 8 (800) 444-44-48
+    block
+
+mixin ui-kit-popup-phones()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент popup-phones
+      +ui-path
+        p Компонент: components/popup-phones/popup-phones
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +popup-phones
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

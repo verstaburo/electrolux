@@ -3,7 +3,7 @@
 
   position: fixed;
   display: block;
-  z-index: 7;
+  z-index: 9;
 
   @include ruleMin(transition, (xs: transform $ease-main, sm: none));
   @include ruleMin(left, (xs: 0, sm: 100%));
@@ -63,7 +63,7 @@
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 0 16px;
     background-color: $color-white;
     transition: border $ease-main;
   }
@@ -93,8 +93,8 @@
     background-color: $color-white;
     box-sizing: border-box;
     transition: transform .2s ease-in-out;
-    width: 280px;
 
+    @include ruleMin(width, (xs: 100%, sm: 280px));
     @include ruleMin(transform, (sm: translate3d(-60px, 0, 0)));
     @include ruleMin(border, (sm: 2px solid $color-header-shadow));
 
@@ -125,7 +125,7 @@
     box-sizing: border-box;
     min-height: 56px;
 
-    @include ruleMin(padding, (xs: 20px 0, sm: 0));
+    @include ruleMin(padding, (xs: 18px 0, sm: 0));
   }
 
   &__image {

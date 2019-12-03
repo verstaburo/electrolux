@@ -1,13 +1,24 @@
 .inputbox {
   display: block;
 
+  &_h100 {
+    height: 100%;
+  }
+
   &__label {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1;
+    margin-bottom: 4px;
+    line-height: 1.5;
+    font-weight: 300;
+
+    @include ruleMin(font-size, (xs: 15px, sm: 16px));
   }
 
   &__wrapper {
     position: relative;
+    height: 100%;
+  }
+
+  &:not(:first-child) {
+    margin-top: 28px;
   }
 }

@@ -69,6 +69,7 @@
     "nouislider": "^14.0.0",
     "object-fit-images": "^3.2.3",
     "overlayscrollbars": "^1.7.1",
+    "parsleyjs": "^2.9.1",
     "picturefill": "^3.0.3",
     "polyfill-array-includes": "^2.0.0",
     "postcss-discard-comments": "^4.0.0",

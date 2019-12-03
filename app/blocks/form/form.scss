@@ -1,5 +1,51 @@
 .form {
   display: block;
+  width: 100%;
 
   $b: &;
+
+  &__section {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 600;
+
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.33;
+    color: $color-gray-text;
+
+    .link {
+      display: inline;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+
+    &:not(:first-child) {
+      margin-top:15px;
+    }
+
+    &_note {
+      font-size: 14px;
+      font-weight: 300;
+      color: $color-note-text;
+
+      &:not(:first-child) {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &__button {
+
+    &_wide {
+      width: 100%;
+    }
+  }
 }

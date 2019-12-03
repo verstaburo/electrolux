@@ -14,4 +14,14 @@ export default function sideFeedback() {
       $(panel).removeClass('is-active');
     }
   });
+
+  $(document).on('click', '.js-show-phones', (evt) => {
+    const self = evt.currentTarget;
+    if ($(window).width() >= window.globalOptions.sizes.sm) {
+      evt.preventDefault();
+      const popup = $(self).attr('data-popup');
+      const popupEl = $(popup);
+      window.globalFunctions.openPopup(popupEl);
+    }
+  });
 }

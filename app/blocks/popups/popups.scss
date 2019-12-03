@@ -4,6 +4,27 @@
   display: none;
 }
 
-.fancybox-close-small:focus::after { outline: none; }
+.fancybox-slide--html .fancybox-close-small {
+  color: $color-cross-dark;
+  padding: 8px;
+  outline: none;
+  right: 2px;
+  top: 8px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::after { outline: none; }
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+.fancybox-is-open .fancybox-bg {
+  background-color: #000;
+  opacity: .6;
+}
 
 .fancybox-enabled { overflow: initial; }

@@ -10,32 +10,20 @@ mixin side-feedback()
           span.is-opened Закрыть
     +e.UL.list
       +e.LI.item
-        +e.A.link(href="tel:88004444448")
+        +e.A.link.js-show-phones(href="tel:88004444448" data-popup="#popup-phones")
           +e.image
             +icon('phone').__icon_phone
           +e.text
             span.is-hidden-sm Свяжитесь с нами
             span.is-hidden-xl 8 (800) 444-44-48
       +e.LI.item
-        +e.A.link.js-feedback(href='#feedback-form')
+        +e.A.link.js-show-feedback(href='#feedback-form')
           +e.image
             +icon('mail').__icon_mail
           +e.text
             span.is-hidden-sm Написать на сайте
             span.is-hidden-xl Написать нам
     block
-
-mixin ui-kit-side-feedback()
-  +ui-section
-    +ui-section-head
-      +ui-title Компонент side-feedback
-      +ui-path
-        p Компонент: components/side-feedback/side-feedback
-      +ui-description
-        p Описание компонента
-
-    +ui-section-content()
-      +side-feedback
 
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()

@@ -2,8 +2,8 @@ mixin form()
   +b.FORM.form&attributes(attributes)
     block
 
-mixin inputbox()
-  +b.inputbox&attributes(attributes)
+mixin inputbox(tag)
+  +b(tag || 'label').inputbox&attributes(attributes)
     block
 
 mixin label()
@@ -13,9 +13,13 @@ mixin label()
 mixin input-wrapper()
   +e.wrapper&attributes(attributes)
     block
+    +error-message
 
 mixin input()
   +b.INPUT.input&attributes(attributes)
+
+mixin error-message()
+  +b.error-message&attributes(attributes)
 
 mixin input-number()
   +b.input-numberbox

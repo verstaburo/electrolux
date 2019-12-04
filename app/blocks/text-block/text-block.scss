@@ -1,0 +1,68 @@
+.text-block {
+  $b: &;
+
+  display: block;
+  width: 100%;
+
+  &_centered {
+    text-align: center;
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include ruleMin(font-size, (xs: 26px, sm: 36px));
+
+    &_fz40 {
+      @include ruleMin(font-size, (xs: 24px, sm: 40px));
+    }
+  }
+
+  &__text {
+    display: block;
+    width: 100%;
+    font-weight: 300;
+    line-height: 24px;
+
+    @include ruleMin(font-size, (xs: 15px, sm: 16px));
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 12px, sm: 20px));
+    }
+
+    &_fz20  {
+      @include ruleMin(line-height, (xs: 24px, sm: 32px));
+      @include ruleMin(font-size, (xs: 15px, sm: 20px));
+    }
+
+    &_fw400 {
+      font-weight: 400;
+    }
+
+    &_blue {
+      color: $color-silk-rich;
+    }
+
+    p {
+
+      &:not(:first-child) {
+        @include ruleMin(margin-top, (xs: 24px));
+      }
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 35px, sm: 35px));
+    }
+  }
+
+  &__button {
+    min-width: 168px;
+  }
+}

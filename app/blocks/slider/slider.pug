@@ -1,16 +1,13 @@
-mixin slider(pagination, buttons)
+mixin slider(buttons)
   +b.slider&attributes(attributes).swiper-container.js-slider
     .swiper-wrapper
       block
-
-    if pagination
-      +e.dots
-        +e.dot
-
     if buttons
       +e.navigation
         +e.button._prev
+          +icon('arrow').__icon
         +e.button._next
+          +icon('arrow').__icon
 
 mixin slide()
   +e.slide&attributes(attributes).swiper-slide
@@ -28,10 +25,10 @@ mixin ui-kit-slider
 
     +ui-section-content()
       +slider(true, true)
-        +slide Привет
-        +slide Привет
-        +slide Привет
-        +slide Привет
+        +slide(style="background-color: pink") Слайд 1
+        +slide(style="background-color: yellow") Слайд 2
+        +slide(style="background-color: olive") Слайд 3
+        +slide(style="background-color: silver") Слайд 4
 
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()

@@ -42,6 +42,8 @@ $color-dark-text: #3b3d3a;
 $color-header-shadow: #dcdcdc;
 $color-gray-text: #646569;
 $color-scroll-gray: #bfc9d6;
+$color-days: #656565;
+$color-days-disabled: #cacaca;
 
 // ##########
 // Массив цветов для UI-кита
@@ -69,6 +71,8 @@ $colors: (
   '$color-header-shadow': #dcdcdc,
   '$color-gray-text': #646569,
   '$color-scroll-gray': #bfc9d6,
+  '$color-days': #656565,
+  '$color-days-disabled': #cacaca,
 );
 
 // ##########

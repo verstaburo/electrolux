@@ -1,35 +1,29 @@
-mixin section()
-  +b.SECTION.section&attributes(attributes)
+mixin text-block()
+  +b.text-block&attributes(attributes)
     block
 
-mixin section-head()
-  +e.head&attributes(attributes)
+mixin text-block-title(tag)
+  +e(tag || 'h3').title&attributes(attributes)
     block
 
-mixin section-content()
-  +e.content&attributes(attributes)
+mixin text-block-text()
+  +e.text&attributes(attributes)
     block
 
-mixin section-column()
-  +e.column&attributes(attributes)
-    block
-
-mixin section-media()
-  +e.media&attributes(attributes)
-    block
-
-
-mixin ui-kit-section()
+mixin ui-kit-text-block()
   +ui-section
     +ui-section-head
-      +ui-title Блок section
+      +ui-title Блок text-block
       +ui-path
-        p Блок: blocks/section/section
+        p Блок: blocks/text-block/text-block
       +ui-description
         p Описание Блока
 
     +ui-section-content()
-      +section
+      +text-block
+        +text-block-title Заголовок
+        +text-block-text Текст
+        +text-block-text._fz20 Текст fz20
 
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()

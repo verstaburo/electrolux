@@ -31,14 +31,15 @@
 // Стрелочка сверху над блоком
 
 .datepicker--pointer {
-  border-top-color: $color-border;
-  border-right-color: $color-border;
+  display: none;
+  border-top-color: $color-white;
+  border-right-color: $color-white;
 }
 
 // Цвет дней недели
 
 .datepicker--day-name {
-  color: $color-main;
+  color: $color-red;
 }
 
 // Ячейка со стрелкой
@@ -55,17 +56,27 @@
 
 .datepicker--nav {
   border-color: $color-border;
+  border-bottom: none;
 
   // Ячейка с заголовком месяца/года
 
   &-title {
+    color: $color-basic;
+    font-size: 18px;
+    font-weight: 600;
     border-radius: 0;
     transition: color $ease-main, background-color $ease-main;
 
     // Цвет года в шапке
 
-    i { color: rgba($color-basic, .5); }
+    i {
+      color: rgba($color-basic, .5);
+    }
   }
+}
+
+.datepicker--cells {
+  width: 280px;
 }
 
 // Цвет ховера по ячейкам в календаре, шапке
@@ -83,7 +94,7 @@
   // Цвет сегодняшнего даты/месяца
 
   &.-current- {
-    color: $color-main;
+    color: $color-days;
     background: rgba($color-main, .1);
   }
 
@@ -109,9 +120,9 @@
 // Цвет даты другого месяца/года
 
 .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
-  color: rgba($color-basic, .2);
+  color: $color-days-disabled;
 
-  &:hover { color: rgba($color-basic, .5); }
+  &:hover { color: $color-days-disabled; }
 }
 
 // Стили при выборе диапазона дат

@@ -5,35 +5,22 @@ import * as Swiper from '../../../node_modules/swiper/js/swiper';
 const $ = window.$;
 
 export function slider() {
-  $('.js-slider').each(function () {
-    const
-      block = $(this);
-
-    const mySlider = new Swiper(block, {
+  $('.js-slider').each((i, el) => {
+    const nextEl = $(el).find('.slider__button_next');
+    const prevEl = $(el).find('.slider__button_prev');
+    const mySlider = new Swiper(el, {
       loop: true,
-      speed: 700,
-      autoplay: {
-        delay: 2000,
-      },
+      speed: 300,
       slidesPerView: 1,
       spaceBetween: 0,
       centeredSlides: false,
       roundLengths: true,
       freeMode: false,
+      effect: 'fade',
+      slideToClickedSlide: true,
       navigation: {
-        nextEl: block.find('.slider__button_next'),
-        prevEl: block.find('.slider__button_prev'),
-      },
-      pagination: {
-        el: block.find('.slider__dots'),
-        clickable: true,
-        bulletClass: 'slider__dot',
-        bulletActiveClass: 'is-active',
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
+        nextEl,
+        prevEl,
       },
     });
   });

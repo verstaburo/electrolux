@@ -1,43 +1,21 @@
 @import '../../node_modules/swiper/css/swiper.css';
 
 .slider {
-  position: relative;
+  $b: &;
 
   &__slide {
-    padding: 100px 80px;
-    box-sizing: border-box;
-    text-align: center;
-    border: 1px solid $ui-kit-color-gray;
-  }
-
-  &__dots {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    padding: 0 20px;
-    text-align: center;
-    pointer-events: none;
-    box-sizing: border-box;
-    z-index: 2;
-  }
-
-  &__dot {
-    margin: 5px;
-    width: 10px;
-    height: 10px;
-    border: 1px solid $color-border;
-    border-radius: 50%;
-    display: inline-block;
     position: relative;
-    transition: border-color $ease-main, background-color $ease-main;
-    pointer-events: all;
-    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+  }
 
-    &.is-active {
-      background-color: $color-main;
-      border-color: $color-main;
-    }
+  &__image {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+
+    @include fill-img;
   }
 
   &__navigation {
@@ -46,40 +24,45 @@
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    height: 40px;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
     box-sizing: border-box;
   }
 
+  &__icon {
+    width: 12px;
+    height: 24px;
+    fill: $color-white;
+    font-size: 0;
+    line-height: 0;
+    transform-origin: 50% 50% 0;
+  }
+
   &__button {
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    border: 1px solid $ui-kit-color-gray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    font-size: 0;
+    line-height: 0;
     transition: opacity $ease-main;
     cursor: pointer;
-    background-color: white;
+    background-color: transparent;
     position: relative;
-    text-align: center;
-    font-size: 20px;
     z-index: 1;
+    box-sizing: border-box;
 
-    &:hover { opacity: .5; }
+    @include ruleMin(padding, (xs: 6px, sm: 40px));
+
+    &:hover { opacity: .8; }
 
     &_next {
-
-      &::before {
-        content: '→';
-      }
+      justify-content: flex-end;
     }
 
     &_prev {
-
-      &::before {
-        content: '←';
+      #{$b}__icon {
+        transform: rotate(180deg);
       }
     }
   }

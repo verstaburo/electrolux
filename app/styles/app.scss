@@ -19,6 +19,22 @@
   box-sizing: border-box;
 
   @include ruleMin(padding, (xs: 0 $container-padding, lg: 0 25px));
+
+  &_half {
+    @include ruleMin(max-width, (xs: none, sm: $container-width / 2));
+  }
+
+  &_start {
+    margin-left: 0;
+
+    @include ruleMin(padding-left, (xs: 20px, lg: 112px));
+  }
+
+  &_end {
+    margin-right: 0;
+
+    @include ruleMin(padding-right, (xs: 20px, lg: 96px));
+  }
 }
 
 .js-sr {

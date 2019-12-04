@@ -1,0 +1,112 @@
+.balloon {
+  $b: &;
+
+  display: block;
+  width: 320px;
+  font-family: $font-main;
+  background-color: $color-white;
+  color: $color-basic;
+  transform: translate3d(-50%, 0, 0);
+
+  @include ruleMin(width, (sm: 320px));
+
+  &__tail {
+    position: absolute;
+    display: block;
+    border-width: 8px 8px;
+    border-style: solid;
+    border-color: $color-white;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    left: 50%;
+    bottom: 100%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  &__wrapper {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 28px 21px;
+  }
+
+  &__content {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $font-main;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include ruleMin(font-size, (xs: 16px, sm: 18px));
+  }
+
+  &__icon {
+    width: 14px;
+    height: 20px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__address {
+    color: $color-gray-text;
+    line-height: 18px;
+    font-weight: 600;
+
+    @include ruleMin(font-size, (xs: 16px, sm: 18px));
+    @include ruleMin(padding-left, (sm: 22px));
+    @include ruleMin(margin-top, (xs: 14px, sm: 14px));
+  }
+
+  &__describe {
+    color: $color-gray-text;
+    line-height: 18px;
+    font-weight: 300;
+
+    @include ruleMin(font-size, (xs: 13px, sm: 14px));
+    @include ruleMin(padding-left, (sm: 22px));
+    @include ruleMin(margin-top, (xs: 10px, sm: 11px));
+  }
+}
+
+ymaps[class*="balloon_layout_panel"] {
+  font-family: $font-main;
+  background-color: $color-white;
+  color: $color-basic;
+  overflow: visible !important;
+  box-shadow: none;
+  border-bottom: 1px solid $color-header-shadow;
+
+  &::before {
+    @include ruleMin(display, (xs: block, sm: none));
+
+    position: absolute;
+    content: '';
+    border-width: 8px 8px;
+    border-style: solid;
+    border-color: $color-white;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    left: 50%;
+    bottom: 100%;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+ymaps[class$="balloon__content"] {
+  @include ruleMin(padding, (xs: 20px 20px 22px, sm: 28px 21px));
+
+  font-family: $font-main;
+  background-color: $color-white;
+  color: $color-basic;
+}

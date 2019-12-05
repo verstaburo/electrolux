@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>undefined | UI-кит</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header"><button class="burger header__burger is-hidden-xl js-menu-open"><span></span></button>
+        <div class="header__wrapper">
+            <div class="logo header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div><a class="header__close is-hidden-sm js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
+        </div>
+    </header>
+    <div class="side-feedback" data-panel="data-panel"><button class="side-feedback__head is-hidden-xl js-show-panel">
+            <div class="side-feedback__head-image"><svg class="side-feedback__head-icon side-feedback__head-icon_message is-closed"><use xlink:href="assets/images/icon.svg#icon_message"></use></svg><svg class="side-feedback__head-icon side-feedback__head-icon_cross is-opened"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></div>
+            <div class="side-feedback__head-content">
+                <div class="side-feedback__head-text"><span class="is-closed">Связаться с нами</span><span class="is-opened">Закрыть</span></div>
+            </div>
+        </button>
+        <ul class="side-feedback__list">
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-phones" href="tel:88004444448" data-popup="#popup-phones"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_phone"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Свяжитесь с нами</span><span class="is-hidden-xl">8 (800) 444-44-48</span></span></a></li>
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-feedback" href="#feedback-form"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_mail"><use xlink:href="assets/images/icon.svg#icon_mail"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Написать на сайте</span><span class="is-hidden-xl">Написать нам</span></span></a></li>
+        </ul>
+    </div>
+    <div class="feedback-form">
+        <div class="container">
+            <div class="feedback-form__head">
+                <div class="feedback-form__title">Связаться с нами</div><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__back"><svg class="feedback-form__icon feedback-form__icon_back"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></span><span class="feedback-form__close-text">Назад</span></a>
+            </div>
+            <div class="feedback-form__content">
+                <form class="form feedback-form__form" action="/" method="post" data-validated-form="data-validated-form">
+                    <div class="grid">
+                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_noborder js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_md_12"><button class="button button_blue form__button" type="submit">Отправить</button>
+                            <div class="form__text is-hidden-sm">Нажимая на кнопку, я соглашаюсь с&nbsp;<a class="link link_underline" href="#"><span class="link__text">условиями политики конфиденциальности.</span></a></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main class="page" role="main">
+        <script>
+            $(window).on('load', function() {
+                $('.ui-kit__section').each(function(i) {
+                    var id = 'section' + i;
+                    var name = $(this).find('.ui-kit__section-head h2').text();
+                    var li = $('<li></li>');
+                    var a = $('<a></a>');
+
+                    a.attr('href', '#' + id).text(name).addClass('js-anchor');
+                    li.append(a);
+
+                    $('.ui-kit__navigation__list').append(li);
+                    $(this).attr('id', id);
+                });
+            });
+        </script>
+        <div class="ui-kit">
+            <div class="ui-kit__navigation">
+                <ul class="ui-kit__navigation__list"></ul>
+            </div>
+            <section class="ui-kit__head">
+                <div class="container"><img class="ui-kit__logo" src="assets/images/logo.svg" alt="Логотип проекта" title="" />
+                    <div class="ui-kit__name">Electrolux - мастер классы</div>
+                </div>
+            </section>
+            <section class="ui-kit__section ui-kit__section_grid">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Сетка</h2>
+                        <div class="ui-kit__description">
+                            <p>Колонок: 12 ($grid-cols)</p>
+                            <p>Переменные: styles/helpers/_variables.scss</p>
+                            <p>Блок: blocks/grid/</p>
+                            <div class="ui-kit__special">
+                                <p>Возможные варианты использования</p>
+                                <p>
+                                    <pre>+col(12) аналогично +col({ xl: 12 })</pre>
+                                </p>
+                                <p>
+                                    <pre>+col({ xl: 8, lg: 6: md: 5, sm: 7, xs: 12 })</pre>
+                                </p>
+                                <p>Промежуточные брейкпоинты указывать не обязательно</p>
+                                <p>При следующей записи - блок будет занимать 6 колонок на всех разрешениях, а на самом маленьком (xs) — 12</p>
+                                <p>
+                                    <pre>+col({ xl: 6, xs: 12 })</pre>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_1"></div>
+                            <div class="grid__col grid__col_xl_4"></div>
+                            <div class="grid__col grid__col_xl_4"></div>
+                            <div class="grid__col grid__col_xl_4"></div>
+                            <div class="grid__col grid__col_xl_6"></div>
+                            <div class="grid__col grid__col_xl_6"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Шрифты</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Переменные находятся в файле styles/helpers/_variables.scss</p>
+                            <p>Шрифты подключены в styles/helpers/_fonts.scss</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Основной шрифт: ElectroluxSans ($font-main), font-weight: 300, 400, 600</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Цвета сайта</h2>
+                        <div class="ui-kit__blockpath">Переменные находятся в файле styles/helpers/_variables.scss</div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list">
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                            <div class="ui-kit__color ui-kit__color_color"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Градиенты</h2>
+                        <div class="ui-kit__blockpath">Миксины градиентов находятся в файле styles/helpers/_gradients.scss</div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list">
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                            <div class="ui-kit__color ui-kit__color_gradient"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Таблицы</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/table/table</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <table class="table" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <td>Ячейка</td>
+                                    <td>Ячейка</td>
+                                    <td>Ячейка</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>Ячейка</td>
+                                <td>Ячейка</td>
+                                <td>Ячейка</td>
+                            </tr>
+                            <tr>
+                                <td>Ячейка</td>
+                                <td>Ячейка</td>
+                                <td>Ячейка</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Табы</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/tabs/tabs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <ul class="tabs">
+                            <li class="tabs__tab active" data-tab-target="tab1">Информация</li>
+                            <li class="tabs__tab" data-tab-target="tab2">Контент</li>
+                            <li class="tabs__tab" data-tab-target="tab3">Тексты</li>
+                        </ul>
+                        <div class="tabs-content">
+                            <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="testtabs">
+                                <p>Это таб 1</p>
+                            </div>
+                            <div class="tabs-content__wrapper" data-tab="tab2" data-tab-group="testtabs">
+                                <p>Это таб 2</p>
+                            </div>
+                            <div class="tabs-content__wrapper" data-tab="tab3" data-tab-group="testtabs">
+                                <p>Это таб 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Попапы</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/popups/popups</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>На ссылку вешается класс .js-fancybox, в [href] указывается id попапа (href="#popup")</p>
+                            <p>Демонстрация попапов на странице <a href="sitemap.html">sitemap.html</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Ссылки</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/link/link</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list"><a class="link" href="#"><span class="link__text">Обычная ссылка</span></a><a class="link link_underline" href="#"><span class="link__text">Подчеркнутая ссылка</span></a><a class="link" href="#"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="link__text">Ссылка с иконкой</span></a><a class="link is-disabled" href="#"><span class="link__text">Отключенная ссылка</span></a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Кастомный скроллбар</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/scrollbar/scrollbar</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Активируется классом .js-scrollbar на скроллящемся контейнере</p>
+                            <p><a href="https://kingsora.github.io/OverlayScrollbars/#!documentation/options" target="_blank">Документация</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__special ui-kit__special_scroll js-scrollbar">
+                            <div style="height: 1000px"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Слайдер</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/slider/slider</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p><a href="https://idangero.us/swiper/api/" target="_blank">Документация</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="slider swiper-container js-slider">
+                            <div class="swiper-wrapper">
+                                <div class="slider__slide swiper-slide" style="background-color: pink;">Слайд 1</div>
+                                <div class="slider__slide swiper-slide" style="background-color: yellow;">Слайд 2</div>
+                                <div class="slider__slide swiper-slide" style="background-color: olive;">Слайд 3</div>
+                                <div class="slider__slide swiper-slide" style="background-color: silver;">Слайд 4</div>
+                            </div>
+                            <div class="slider__navigation">
+                                <div class="slider__button slider__button_prev"><svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                <div class="slider__button slider__button_next"><svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Подсказки</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/tooltip/tooltip</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>На блок вешаем класс .js-tooltip, текст подсказки прописываем в [title].</p>
+                            <p>Для HTML-тултипов читаем документацию</p>
+                            <p><a class="js-tooltip" href="#" title="Пример подсказки">Пример подсказки</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Карта</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/map/map</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Сделано через Leaflet.js</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="map" id="map"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Анимации при скролле</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/js-functions/scrollAnimation</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>.js-sr — общий класс для анимируемых элементов</p>
+                            <p>Предустановленные модификаторы для появления с разных сторон:</p>
+                            <div class="ui-kit__special">
+                                <p>.js-sr_top — появление сверху</p>
+                                <p>.js-sr_right — появление справа</p>
+                                <p>.js-sr_bottom — появление снизу</p>
+                                <p>.js-sr_left — появление слева</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list"><a class="button js-sr js-sr js-sr_left">.js-sr_left</a><a class="button js-sr js-sr js-sr_top">.js-sr_top</a><a class="button js-sr js-sr js-sr_right">.js-sr_right</a><a class="button js-sr js-sr js-sr_bottom">.js-sr_bottom</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Хлебные крошки</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/breadcrumbs/breadcrumbs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Раздел</a></li>
+                            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Страница</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Рейтинг</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/rating/rating</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__description">Интерактивный</div>
+                        <div class="rating rating_interactive"><label class="rating__box"><input class="rating__control js-rating-control" type="radio" name="name" value="4" /><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></label><label class="rating__box"><input class="rating__control js-rating-control" type="radio" name="name" value="3" /><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></label><label class="rating__box"><input class="rating__control js-rating-control" type="radio" name="name" value="2" /><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></label><label class="rating__box"><input class="rating__control js-rating-control" type="radio" name="name" value="1" /><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></label><label class="rating__box"><input class="rating__control js-rating-control" type="radio" name="name" value="0" /><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></label></div>
+                        <div class="ui-kit__description">Статичный</div>
+                        <div class="rating">
+                            <div class="rating__box"><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></div>
+                            <div class="rating__box"><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></div>
+                            <div class="rating__box is-active"><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></div>
+                            <div class="rating__box"><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></div>
+                            <div class="rating__box"><svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Аккордеон</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/accordion/accordion</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Управляется тремя классами: .js-accordion, .js-accordion-button, .js-accordion-content</p>
+                            <p>При наличии атрибута [data-accordion-single] каждый открываемый аккордеон отключает соседние (находящиеся в одном родителе)</p>
+                            <p>Чтобы исходное состояние аккордеона было активным, на него надо повесить класс .is-active</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="accordion js-accordion">
+                            <div class="accordion__button js-accordion-button js-accordion-button">
+                                <p>Кнопка открытия аккордеона</p>
+                            </div>
+                            <div class="accordion__content js-accordion-content">
+                                <p>Контент</p>
+                                <p>Контент</p>
+                                <p>Контент</p>
+                                <p>Контент</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Кнопки</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/button/button</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list"><a class="button">Кнопка</a><a class="button button_blue">Кнопка cиняя</a><a class="button" disabled="disabled">Отключенная кнопка</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Dropdown</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/dropdown/dropdown</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Для использования, нужно "кнопке" добавить класс .js-dropdown-toggle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__elements-list">
+                            <div style="display: inline-block; position: relative;"><a class="button js-dropdown-toggle">top</a>
+                                <div class="js-dropdown dropdown dropdown_position_top">content</div>
+                            </div>
+                            <div style="display: inline-block; position: relative;"><a class="button js-dropdown-toggle">bottom</a>
+                                <div class="js-dropdown dropdown">content</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Формы</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/form/form</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Форма собирается на основе сетки (блок grid)</p>
+                            <p>При необходимости изменения сетки от стандартной, к ней добавляется модификатор</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <form class="form">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Название поля</p><span class="inputbox__wrapper"><input class="input" placeholder="Плейсхолдер" type="text" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Выпадающий список</p><span class="inputbox__wrapper"><select class="select js-select">
+                                                <option value="Опция 1">Опция 1</option>
+                                                <option value="Опция 2">Опция 2</option>
+                                                <option value="Опция 3">Опция 3</option>
+                                            </select><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Календарь</p><span class="inputbox__wrapper"><input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly" type="text" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Маска телефона</p><span class="inputbox__wrapper"><input class="input" placeholder="+7 (___) ___-__-__" data-type="tel" type="text" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Маска e-mail</p><span class="inputbox__wrapper"><input class="input" placeholder="E-mail" data-type="email" type="text" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Выбор количества</p><span class="inputbox__wrapper"><span class="input-numberbox"><span class="input-numberbox__button js-numberbox-minus"></span><input class="input input-numberbox__input js-numberbox-input" placeholder="Количество товара" type="text" /><span class="input-numberbox__button js-numberbox-plus"></span></span><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                        <p class="inputbox__label">Текстовое поле</p><span class="inputbox__wrapper"><textarea class="textarea" placeholder="Текстовое поле"></textarea><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Чекбокс</p><span class="inputbox__wrapper"><label class="checkradio"><input class="checkradio__input" name="ui-checkbox" value="test" checked="true" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Чекбокс</span></label><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Радиокнопка</p><span class="inputbox__wrapper"><label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span></label><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6"><label class="inputbox">
+                                        <p class="inputbox__label">Ползунок</p><span class="inputbox__wrapper"><span class="range js-range" data-start="40" data-connect="[true, false]" data-min="0" data-max="100"></span><span class="error-message"></span></span>
+                                    </label></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Контентная зона</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/content-zone/content-zone</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Текстовая зона для WYSIWYG-редакторов</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="ui-kit__special">
+                            <div class="content-zone">
+                                <h1>Заголовок H1 (heading-1)</h1>
+                                <h2>Заголовок H2 (heading-2)</h2>
+                                <h3>Заголовок H3 (heading-3)</h3>
+                                <h4>Заголовок H4 (heading-4)</h4>
+                                <h5>Заголовок H5 (heading-5)</h5>
+                                <h6>Заголовок H6 (heading-6)</h6>
+                                <p>Текст p (text)<br> Цитата внутри текста p: <q>Цитата q</q></p>
+                                <p><small>Тег small внутри p (text-small)</small></p>
+                                <blockquote>
+                                    <p>Демонстрация цитаты через тег blockquote</p>
+                                    <h4>Внутри могут быть заголовки</h4>
+                                    <p>Текст с <a href="#">ссылкой в тексте</a></p>
+                                </blockquote>
+                                <p>Картинка в тексте (img):</p><img src="http://verstaburo.com/NEW/patterns/pattern.jpg" />
+                                <p>Маркированный список ul. Стили взяты из styles/helpers/_list-styles.scss</p>
+                                <ul>
+                                    <li>Элемент списка</li>
+                                    <li>Другой элемент<ul>
+                                            <li>Элемент списка</li>
+                                            <li>Другой элемент</li>
+                                            <li>Элемент списка</li>
+                                        </ul>
+                                    </li>
+                                    <li>Элемент списка</li>
+                                </ul>
+                                <p>Нумерованный список ol. Стили взяты из styles/helpers/_list-styles.scss</p>
+                                <ol>
+                                    <li>Элемент списка</li>
+                                    <li>Другой элемент<ol>
+                                            <li>Элемент списка</li>
+                                            <li>Другой элемент</li>
+                                            <li>Элемент списка</li>
+                                        </ol>
+                                    </li>
+                                    <li>Элемент списка</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок burger</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/burger/burger</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container"><button class="burger"><span></span></button></div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок navigation</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/navigation/navigation</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <nav class="navigation" data-navigation="data-navigation">
+                            <div class="navigation__wrapper">
+                                <div class="container">
+                                    <div class="navigation__header js-show-nav-list is-hidden-xl"><svg class="navigation__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        <div class="navigation__name" data-active-link-title="data-active-link-title"></div>
+                                    </div>
+                                    <div class="navigation__list">
+                                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#mk" data-nav-link="mk">Расписание мастер&#8209;классов</a></div>
+                                        <div class="navigation__item"><a class="navigation__link" href="#kitchen-msc" data-nav-link="kitchen-msc">Кулинарные пространства</a></div>
+                                        <div class="navigation__item"><a class="navigation__link" href="#childrens-mk" data-nav-link="childrens-mk">Мастер&#8209;класс для детей</a></div>
+                                        <div class="navigation__item"><a class="navigation__link" href="#chef" data-nav-link="chef">Бренд-шеф</a></div>
+                                        <div class="navigation__item"><a class="navigation__link" href="#whiterabbit" data-nav-link="whiterabbit">Акция от White Rabbit Family</a></div>
+                                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#order" data-nav-link="order">Получить мастер-класс</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок logo</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/logo/logo</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
+                        <div class="logo logo_footer"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок header-phone</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/header-phone/header-phone</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container"><a class="header-phone" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a></div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок totop</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/totop/totop</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container"><button class="totop js-to-top"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент lead</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/lead/lead</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="lead">
+                            <div class="container">
+                                <div class="lead__content">
+                                    <h1 class="lead__title">Готовьте дома, <br> как в ресторане</h1>
+                                    <div class="lead__text">
+                                        <p>Наш столетний опыт и богатое наследие в области работы с&nbsp;<span class="lead__spoiler" data-spoiler-content="lead">профессиональными шеф&#8209;поварами позволили нам получить знания, которые мы&nbsp;применяем в&nbsp;нашей кухонной технике, позволяя вам максимально использовать все возможности кухни у&nbsp;вас дома.</span></p>
+                                    </div><button class="spoiler js-show-more lead__more is-hidden-xl" data-spoiler="lead"><svg class="spoiler__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок section</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/section/section</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="section"></section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок spoiler</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/spoiler/spoiler</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <p>Спойлер</p>
+                        <p class="is-hidden" data-spoiler-content="test-spoiler">Содержимое спойлера</p><button class="spoiler js-show-more" data-spoiler="test-spoiler"><svg class="spoiler__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент popup-phones</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/popup-phones/popup-phones</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="popup popup-phones">
+                            <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
+                            <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:+74952484444"><span class="link__text">+7 (495) 248-44-44</span></a><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок text-block</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/text-block/text-block</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="text-block">
+                            <h3 class="text-block__title">Заголовок</h3>
+                            <div class="text-block__text">Текст</div>
+                            <div class="text-block__text text-block__text_fz20">Текст fz20</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__side footer__side_front">
+                <div class="logo logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
+            </div>
+            <div class="footer__text"><a class="link footer__link" href="#"><span class="link__text">Пользовательское соглашение (оферта)</span></a></div>
+            <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
+        </div>
+    </footer>
+    <div class="popups">
+        <div class="popup popup-phones" id="popup-phones">
+            <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
+            <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:+74952484444"><span class="link__text">+7 (495) 248-44-44</span></a><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9971b6ff-9a4d-4940-aaa6-9b7f3bdb8ee8&amp;lang=ru_RU"></script>
+    <script src="assets/scripts/libs/parsley.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

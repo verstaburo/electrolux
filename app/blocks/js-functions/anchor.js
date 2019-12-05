@@ -11,7 +11,7 @@ export default function anchor() {
     if (target.length > 0) {
       $('body, html').stop().animate({
         scrollTop: target.offset().top,
-      }, 1000, 'swing');
+      }, 600, 'swing');
     }
   });
 }

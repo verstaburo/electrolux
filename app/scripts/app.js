@@ -35,6 +35,7 @@ import totop from '../blocks/totop/totop';
 import spoiler from '../blocks/spoiler/spoiler';
 import sideFeedback from '../components/side-feedback/side-feedback';
 import feedbackForm from '../components/feedback-form/feedback-form';
+import navigation from '../blocks/navigation/navigation';
 
 const $ = window.$;
 
@@ -65,4 +66,5 @@ $(() => {
   spoiler();
   sideFeedback();
   feedbackForm();
+  navigation();
 });

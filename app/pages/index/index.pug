@@ -5,7 +5,7 @@ block head
 
 block content
   +lead
-  +section#mk
+  +section#mk(data-section)
     +section-head
       .container
         +text-block._centered
@@ -14,50 +14,51 @@ block content
           +text-block-title Расписание мастер&#8209;классов
     +section-content
   +navigation
-  +section._chess#kitchen-msc
-    +section-column._order2
-      .container.container_half.container_end
-        +text-block
-          +text-block-title._fz40 Наши кулинарные пространства в&nbsp;Москве
-          +text-block-text
-            p Брэнд&#8209;шеф компании Electrolux c многолетний опытом работы в профессиональной технике, поделится своими секретами и научит Вас, как просто и технологично использовать технику Electrolux у себя дома, а также поможет определиться с выбором и даст полезные советы.
-            p Правильно подготовить ингредиенты, выбрать нужные режимы духовки и варочной панели, разобраться в настройках, применить термощуп, сделать красивую
-          +e.buttons
-            +button().__button.js-show-map(href="#map_msc") Где находится
-    +section-column
-      +section-media._small
-        +slider(true).__slider
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-msc.jpg")
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-rh.jpg")
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-msc.jpg")
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-rh.jpg")
-        +map.__map#map_msc(data-balloon-title="Адрес нашего центра:" data-balloon-address="Шлюзовая набережная д. 6 стр. 4" data-balloon-describe="(вход со стороны Шлюзовой набережной, у КПП со шлагбаумом). Вход без пропуска.")
-  +section._chess#kitchen-rh
-    +section-column
-      +section-media._small
-        +slider(true).__slider
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-rh.jpg")
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-msc.jpg")
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-rh.jpg")
-          +slide
-            +e.IMG.image(src="assets/images/kitchen-msc.jpg")
-        +map.__map#map_rh(data-balloon-title="Адрес нашего центра:" data-balloon-address="с. Эстосадок, Роза Хутор, ул. Каменка, 2" data-balloon-describe="Ежедневно с 12:00 до 21:00")
-    +section-column
-      .container.container_half.container_start
-        +text-block
-          +text-block-title._fz40 Активная студия Electrolux на&nbsp;Роза&nbsp;Хутор
-          +text-block-text
-            p Кулинарные мастер&#8209;классы для детей и взрослых, где вы сможете приятно и полезно провести время: правильно подготовить ингредиенты, выбрать нужные режимы приготовления и красиво подать блюдо. Всё это под чутким руководством бренд&#8209;шефа Electrolux.
-          +e.buttons
-            +button().__button.js-show-map(href="#map_rh") Где находится
-  +section._chess#childrens-mk
+  +section#kitchen-msc(data-section)
+    +section._chess
+      +section-column._order2
+        .container.container_half.container_end
+          +text-block
+            +text-block-title._fz40 Наши кулинарные пространства в&nbsp;Москве
+            +text-block-text
+              p Брэнд&#8209;шеф компании Electrolux c многолетний опытом работы в профессиональной технике, поделится своими секретами и научит Вас, как просто и технологично использовать технику Electrolux у себя дома, а также поможет определиться с выбором и даст полезные советы.
+              p Правильно подготовить ингредиенты, выбрать нужные режимы духовки и варочной панели, разобраться в настройках, применить термощуп, сделать красивую
+            +e.buttons
+              +button().__button.js-show-map(href="#map_msc") Где находится
+      +section-column
+        +section-media._small
+          +slider(true).__slider
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-msc.jpg")
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-rh.jpg")
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-msc.jpg")
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-rh.jpg")
+          +map.__map#map_msc(data-balloon-title="Адрес нашего центра:" data-balloon-address="Шлюзовая набережная д. 6 стр. 4" data-balloon-describe="(вход со стороны Шлюзовой набережной, у КПП со шлагбаумом). Вход без пропуска.")
+    +section._chess
+      +section-column
+        +section-media._small
+          +slider(true).__slider
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-rh.jpg")
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-msc.jpg")
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-rh.jpg")
+            +slide
+              +e.IMG.image(src="assets/images/kitchen-msc.jpg")
+          +map.__map#map_rh(data-balloon-title="Адрес нашего центра:" data-balloon-address="с. Эстосадок, Роза Хутор, ул. Каменка, 2" data-balloon-describe="Ежедневно с 12:00 до 21:00")
+      +section-column
+        .container.container_half.container_start
+          +text-block
+            +text-block-title._fz40 Активная студия Electrolux на&nbsp;Роза&nbsp;Хутор
+            +text-block-text
+              p Кулинарные мастер&#8209;классы для детей и взрослых, где вы сможете приятно и полезно провести время: правильно подготовить ингредиенты, выбрать нужные режимы приготовления и красиво подать блюдо. Всё это под чутким руководством бренд&#8209;шефа Electrolux.
+            +e.buttons
+              +button().__button.js-show-map(href="#map_rh") Где находится
+  +section._chess#childrens-mk(data-section)
     +section-column._order2
       .container.container_half.container_end
         +text-block
@@ -68,7 +69,7 @@ block content
     +section-column
       +section-media
         +e.IMG.image(src="assets/images/childes-mk.jpg")
-  +section._chess#chef
+  +section._chess#chef(data-section)
     +section-column
       +section-media
         +e.IMG.image(src="assets/images/chef.jpg")
@@ -79,7 +80,7 @@ block content
           +text-block-text
             p Брэнд&#8209;шеф компании Electrolux c многолетний опытом работы в профессиональной технике, поделится своими секретами и научит Вас, как просто и технологично использовать технику Electrolux у себя дома, а также поможет определиться с выбором и даст полезные советы.
             p Правильно подготовить ингредиенты, выбрать нужные режимы духовки и варочной панели, разобраться в настройках, применить термощуп, сделать красивую подачу — вам предстоит пройти весь процесс приготовления блюд от начала до конца, чтобы без труда повторить их дома.
-  +section._chess#whiterabbit
+  +section._chess#whiterabbit(data-section)
     +section-column._order2
       .container.container_half.container_end
         +text-block
@@ -91,7 +92,7 @@ block content
     +section-column
       +section-media
         +e.IMG.image(src="assets/images/white-rabbit.jpg")
-  +section#order
+  +section#order(data-section)
     +section-head
       .container
         +text-block._centered

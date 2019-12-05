@@ -8,6 +8,7 @@ export default function feedbackForm() {
       }, 300, 'swing', () => {
         $('.header .js-close-feedback').addClass('is-active');
         $('.feedback-form').addClass('is-active');
+        $('[data-navigation]').removeClass('is-opened');
       });
     },
     close() {

@@ -110,7 +110,7 @@ ymaps.ready(function () {
     // Необходимо указать данный тип макета.
     iconLayout: 'default#image',
     // Своё изображение иконки метки.
-    iconImageHref: '/assets/images/location.png',
+    iconImageHref: 'assets/images/location.png',
     // Размеры метки.
     iconImageSize: [24, 34],
     // Смещение левого верхнего угла иконки относительно
@@ -134,7 +134,7 @@ ymaps.ready(function () {
     // Необходимо указать данный тип макета.
     iconLayout: 'default#image',
     // Своё изображение иконки метки.
-    iconImageHref: '/assets/images/location.png',
+    iconImageHref: 'assets/images/location.png',
     // Размеры метки.
     iconImageSize: [24, 34],
     // Смещение левого верхнего угла иконки относительно

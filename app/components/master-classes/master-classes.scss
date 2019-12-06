@@ -1,0 +1,137 @@
+.master-classes {
+  $b: &;
+
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 1;
+
+  @include ruleMin(margin-bottom, (xs: 56px, sm: 77px));
+
+  &:not(:first-child) {
+    @include ruleMin(margin-top, (xs: 28px, sm: 34px));
+  }
+
+  .container {
+    @include screen('sm') {
+      padding: 0;
+    }
+  }
+
+  .grid {
+    @include ruleMin(flex-wrap, (xs: nowrap, sm: wrap));
+
+    @include screen('sm') {
+      margin: 0;
+      width: 100%;
+    }
+
+    &__col {
+      @include screen('sm') {
+        padding: 0;
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__slide {
+
+    &.is-hide {
+      @include ruleMin(display, (sm: none));
+    }
+  }
+
+  &__case {
+    height: 100%;
+  }
+
+  &__navigation {
+    display: block;
+    width: 100%;
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 6px, sm: 45px));
+    }
+  }
+
+  &__toggles {
+    @include ruleMin(display, (xs: flex, sm: none));
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__progress {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    padding: 0 10px;
+  }
+
+  &__arrow {
+    width: 12px;
+    height: 20px;
+    fill: $color-silk-rich;
+    transform-origin: 50% 50% 0;
+    transition: fill $ease-main;
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 2px solid $color-silk-rich;
+    transition: border $ease-main;
+
+    &_prev {
+
+      #{$b}__arrow {
+        transform: rotate(-180deg);
+        margin-left: -5px;
+      }
+    }
+
+    &_next {
+
+      #{$b}__arrow {
+        margin-right: -5px;
+      }
+    }
+
+    &.swiper-button-disabled {
+      border-color: $color-disabled-arrow;
+
+      #{$b}__arrow {
+        fill: $color-disabled-arrow;
+      }
+    }
+  }
+
+  &__buttons {
+    @include ruleMin(display, (xs: none, sm: flex));
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__button {
+
+    &.is-engage {
+      display: none;
+    }
+  }
+}

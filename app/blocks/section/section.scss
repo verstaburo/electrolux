@@ -18,6 +18,10 @@
   &__content {
     display: block;
     width: 100%;
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 28px, sm: 47px));
+    }
   }
 
   &__column {
@@ -93,6 +97,24 @@
     .container {
       @include ruleMin(padding-top, (xs: 20px, sm: 40px));
       @include ruleMin(padding-bottom, (xs: 35px, sm: 40px));
+    }
+  }
+
+  &_mc {
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 28px, sm: 34px));
+    }
+  }
+
+  &_order {
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 11px, sm: 80px));
+    }
+
+    .text-block__button {
+      @include ruleMin(min-width, (xs: 100%, sm: 364px));
     }
   }
 }

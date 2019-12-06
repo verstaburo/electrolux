@@ -1,0 +1,21 @@
+mixin popup-registration-success()
+  +popup.popup-registration-success&attributes(attributes)
+    +e.title Спасибо за регистрацию!
+    +e.content Ваша заявка будет рассмотрена в течение 3&nbsp;рабочих дней. Ожидайте e&#8209;mail на указанную почту
+    block
+
+mixin ui-kit-popup-registration-success()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент popup-registration-success
+      +ui-path
+        p Компонент: components/popup-registration-success/popup-registration-success
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +popup-registration-success
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

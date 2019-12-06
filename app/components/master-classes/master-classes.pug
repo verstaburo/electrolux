@@ -1,0 +1,36 @@
+mixin master-classes()
+  +b.SECTION.master-classes&attributes(attributes)
+    .container
+      +e.content.js-mc-slider
+        +grid.master-classes__wrapper
+          each item in getData('cases')
+            +col({xl: 4, md: 6, sm: 12}).master-classes__slide(class=item.slideClass)
+              +case(item).__case
+      +e.navigation
+        +e.toggles
+          +e.toggle_prev
+            +icon('arrow').__arrow
+          +e.progress 1/8
+          +e.toggle_next
+            +icon('arrow').__arrow
+        +e.buttons
+          +button().__button_more.js-show-mc-next3(href="#") Показать больше мастер-классов
+          +button().__button_all.is-hidden.js-show-mc-all(href="#") Показать все мастер-классы
+
+    block
+
+mixin ui-kit-master-classes()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент master-classes
+      +ui-path
+        p Компонент: components/master-classes/master-classes
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +master-classes
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

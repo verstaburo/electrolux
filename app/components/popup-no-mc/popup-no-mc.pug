@@ -1,0 +1,21 @@
+mixin popup-no-mc()
+  +popup.popup-no-mc&attributes(attributes)
+    +e.title Нет доступных мастер&#8209;классов
+    +e.content Мы постоянно обновляем расписание, попробуйте посмотреть расписание немного позже или укажите другие даты
+    block
+
+mixin ui-kit-popup-no-mc()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент popup-no-mc
+      +ui-path
+        p Компонент: components/popup-no-mc/popup-no-mc
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +popup-no-mc
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

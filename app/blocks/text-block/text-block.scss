@@ -19,6 +19,10 @@
     &_fz40 {
       @include ruleMin(font-size, (xs: 24px, sm: 40px));
     }
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 18px, sm: 35px));
+    }
   }
 
   &__text {
@@ -44,6 +48,13 @@
 
     &_blue {
       color: $color-silk-rich;
+    }
+
+    &_bmg {
+
+      &:not(:first-child) {
+        @include ruleMin(margin-top, (xs: 18px, sm: 36px));
+      }
     }
 
     p {

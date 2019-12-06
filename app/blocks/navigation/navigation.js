@@ -137,14 +137,16 @@ export default function navigation() {
     const navBlock = $('[data-navigation]');
     const navMobile = $('[data-section]')[0];
     const bp = window.globalOptions.sizes;
-    const nBT = $(navBlock).offset().top;
-    const nBMT = $(navMobile).offset().top - 61;
-    const navTop = ($(window).width() < bp.sm) ? nBMT : nBT;
+    if (navBlock.length > 0) {
+      const nBT = $(navBlock).offset().top;
+      const nBMT = $(navMobile).offset().top - 61;
+      const navTop = ($(window).width() < bp.sm) ? nBMT : nBT;
 
-    if (sT > navTop) {
-      $(navBlock).addClass('is-sticky');
-    } else {
-      $(navBlock).removeClass('is-sticky');
+      if (sT > navTop) {
+        $(navBlock).addClass('is-sticky');
+      } else {
+        $(navBlock).removeClass('is-sticky');
+      }
     }
   });
 }

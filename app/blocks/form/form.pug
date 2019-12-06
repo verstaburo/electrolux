@@ -20,6 +20,7 @@ mixin input()
 
 mixin error-message()
   +b.error-message&attributes(attributes)
+    block
 
 mixin input-number()
   +b.input-numberbox
@@ -39,6 +40,7 @@ mixin checkradio(isRadio, name, value, checked, required)
   +b.LABEL.checkradio&attributes(attributes)
     +e.INPUT.input(name=name, value=value, checked=checked, type=(isRadio ? "radio" : "checkbox"), required=(required || false))
     +e.SPAN.box
+      +icon('check').__check
     +e.SPAN.content
       block
 

@@ -1,0 +1,45 @@
+.filters {
+  $b: &;
+
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include ruleMin(flex-wrap, (xs: wrap, sm: nowrap));
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+
+    @include screen('sm', min) {
+      flex: 1;
+    }
+
+    &:not(:last-child) {
+      @include ruleMin(margin-right, (sm: 30px));
+      @include ruleMin(margin-bottom, (xs: 32px, sm: 0));
+    }
+
+    .inputbox {
+
+      &__wrapper {
+        width: 100%;
+
+        @include screen('md', min) {
+          max-width: 364px;
+        }
+      }
+    }
+
+    &:last-child .inputbox {
+      justify-content: flex-end;
+    }
+  }
+}

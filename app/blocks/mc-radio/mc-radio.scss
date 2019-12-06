@@ -1,0 +1,20 @@
+.mc-radio {
+  $b: &;
+
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include ruleMin(flex-wrap, (xs: wrap, sm: nowrap));
+
+  &__input {
+    display: none;
+  }
+
+  &__info {
+    @include ruleMin(flex, (sm: 1));
+    @include ruleMin(width, (xs: 100%, sm: auto));
+  }
+}

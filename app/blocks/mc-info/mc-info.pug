@@ -1,0 +1,27 @@
+mixin mc-info(data)
+  +b.mc-info&attributes(attributes)
+    +e.media
+      +e.IMG.image(src=data.image)
+    +e.describe
+      +e.title!=data.title
+      +e.datetime
+        +e.TIME.date(datetime=data.date.date)!=data.date.text
+        +e.time!=data.time
+      +e.price Цена: #{data.price}
+    block
+
+mixin ui-kit-mc-info()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок mc-info
+      +ui-path
+        p Блок: blocks/mc-info/mc-info
+      +ui-description
+        p Описание Блока
+
+    +ui-section-content()
+      +mc-info(getData('cases-short')[0])
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

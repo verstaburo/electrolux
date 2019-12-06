@@ -1,0 +1,297 @@
+.case {
+  $b: &;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: $color-bg-gray;
+
+  &__top {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__media {
+    position: relative;
+    display: block;
+    padding-top: 124%;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+    @include ruleMin(padding-top, (xs: 141.25%, sm: 124%));
+  }
+
+  &__image {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+
+    @include fill-img;
+  }
+
+  &__label {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 7px 16px;
+    background-color: $color-case-label;
+    color: $color-white;
+    text-align: center;
+    max-width: 50%;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    z-index: 2;
+  }
+
+  &__describe {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background-color: $color-bg-gray;
+    color: $color-basic;
+    box-sizing: border-box;
+    transform: translate3d(100%, 0, 0);
+    transition: transform $ease-main;
+
+    @include ruleMin(padding, (xs: 30px 20px 0, sm: 23px 20px 0));
+
+    #{$b}:hover & {
+      @include screen('sm', min) {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    #{$b}.is-hover & {
+      @include screen('sm') {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__item {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $color-silk-rich;
+    line-height: 1.5;
+    font-weight: 300;
+
+    @include ruleMin(font-size, (xs: 14px, sm: 16px));
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: $color-icon-blue;
+
+    &_time {
+
+      &:not(:last-child) {
+        margin-right: 9px;
+      }
+    }
+
+    &_vacancy {
+
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    border-top: 2px solid $color-white;
+    border-bottom: 2px solid $color-white;
+    box-sizing: border-box;
+
+    @include ruleMin(padding, (xs: 14px 0 5px, sm: 14px 0 10px));
+
+    &:not(:first-child) {
+      margin-top: 18px;
+    }
+  }
+
+  &__name {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $color-silk-rich;
+  }
+
+  &__scrollblock {
+    display: block;
+    width: 100%;
+    flex: 1;
+
+    &:not(:first-child) {
+      margin-top: 17px;
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__note {
+    display: block;
+    width: 100%;
+    color: $color-checkbox-text;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 300;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__price {
+    display: inline-flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__price-text {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  &__sum {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 151px;
+
+    &_wide {
+      max-width: none;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+
+    @include ruleMin(padding, (xs: 20px, sm: 25px 26px));
+  }
+
+  &__location {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: $color-case-loc;
+
+    @include ruleMin(font-size, (xs: 14px, sm: 16px));
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $color-silk-rich;
+
+    @include ruleMin(font-size, (xs: 15px, sm: 18px));
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__date {
+    display: block;
+    width: 100%;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $color-case-loc;
+
+    @include ruleMin(font-size, (xs: 14px, sm: 16px));
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: auto));
+    }
+  }
+
+  &__buttons {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 28px 20px;
+    background-color: $color-white;
+  }
+}

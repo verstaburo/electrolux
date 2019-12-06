@@ -1,0 +1,72 @@
+.mc-info {
+  $b: &;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 0;
+
+  @include ruleMin(flex-direction, (xs: column, sm: row));
+
+  &__media {
+    position: relative;
+    display: block;
+    min-width: 115px;
+    width: 115px;
+    height: 86px;
+    overflow: hidden;
+  }
+
+  &__image {
+    @include fill-img;
+  }
+
+  &__describe {
+    display: block;
+
+    @include ruleMin(flex, (sm: 1));
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    color: $color-silk-rich;
+  }
+
+  &__datetime {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-mc-gray;
+    font-weight: 400;
+  }
+
+  &__date {
+    display: block;
+
+    &:not(:last-child) {
+      @include ruleMin(margin-right, (xs: 0, sm: 40px));
+    }
+  }
+
+  &__time {
+    display: block;
+  }
+
+  &__price {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-mc-gray;
+  }
+}

@@ -1,24 +1,89 @@
 .inputbox {
   display: block;
 
+  $b: &;
+
   &_h100 {
     height: 100%;
   }
 
   &__label {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     line-height: 1.5;
     font-weight: 300;
 
     @include ruleMin(font-size, (xs: 15px, sm: 16px));
   }
 
+  .datepicker-inline {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    box-sizing: border-box;
+    margin-top: -1px;
+    border: 1px solid #dedede;
+    padding: 40px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    visibility: hidden;
+    transition: opacity $ease-main, visibility $ease-main;
+    transition-delay: 0, .3s;
+    opacity: 0;
+  }
+
   &__wrapper {
     position: relative;
     height: 100%;
+
+    &_flex {
+      display: flex;
+    }
+
+    &.is-show-date {
+
+      .datepicker-inline {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0, 0;
+      }
+    }
   }
 
   &:not(:first-child) {
     margin-top: 28px;
+  }
+
+  &_row {
+    @include screen('md', min) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #{$b} {
+
+      &__label {
+        @include screen('sm', min) {
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 6px;
+        }
+
+        @include screen('md', min) {
+          margin-right: 28px;
+          margin-bottom: 0;
+        }
+      }
+
+      &__wrapper {
+        @include screen('md', min) {
+          flex: 1;
+        }
+      }
+    }
   }
 }

@@ -2,4 +2,28 @@
   border-radius: 3px;
   box-shadow: 0 3px 40px rgba(0, 0, 0, .35);
   background-color: $color-white;
+  color: $color-basic;
+  font-family: $font-main;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+
+  @include ruleMin(padding, (xs: 50px 30px 40px, sm: 72px 70px 60px));
+
+  &__title {
+    @include ruleMin(font-size, (xs: 20px, sm: 24px));
+    @include ruleMin(line-height, (xs: 24px, sm: 28px));
+
+    font-weight: 600;
+  }
+
+  &__content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+
+    &:not(:first-child) {
+      margin-top: 35px;
+    }
+  }
 }

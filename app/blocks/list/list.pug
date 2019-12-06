@@ -1,0 +1,22 @@
+mixin list(tag)
+  +b(tag || 'ul').list&attributes(attributes)
+    block
+
+mixin ui-kit-list()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок list
+      +ui-path
+        p Блок: blocks/list/list
+      +ui-description
+        p Маркированный список
+
+    +ui-section-content()
+      +list
+        li Строка 1
+        li Строка 2
+        li Строка 3
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

@@ -14,12 +14,39 @@ import Inputmask from 'inputmask';
 const $ = window.$;
 
 export function selects() {
-  if ($('.js-select').length) {
-    const choices = new Choices('.js-select', {
+  function initSelect(select) {
+    const self = select;
+    const choices = new Choices(select, {
       searchEnabled: false,
       itemSelectText: '',
+      callbackOnCreateTemplates(template) {
+        const classNames = this.config.classNames;
+        return {
+          containerInner: () => template(`
+            <div class="${classNames.containerInner}"><div class="choices__toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.46 16"><path d="M8.46,8l-7-8L0,1.24,5.91,8,0,14.76,1.47,16Z"/></svg></div></div>
+          `),
+        };
+      },
+      callbackOnInit() {
+        const choiceList = this.choiceList.element;
+        const dropdown = this.dropdown.element;
+        const scrollWrapper = document.createElement('div');
+        scrollWrapper.classList.add('choices__scrollblock');
+        $(choiceList).wrap(scrollWrapper);
+        const newScrollWrapper = $(dropdown).find('.choices__scrollblock');
+        window.globalFunctions.scrollbarInit(newScrollWrapper);
+      },
     });
+    const defaultValue = self.value;
+    self.choices = choices;
+    self.defaultSelectedValue = defaultValue;
   }
+
+  window.globalFunctions.initSelect = initSelect;
+
+  $('.js-select').each((i, el) => {
+    initSelect(el);
+  });
 }
 
 export function sliders() {
@@ -53,12 +80,35 @@ export function datepicker() {
     firstDay: 1
   };
 
-  $('.js-datepicker').datepicker({
-    // inline: true,
+  $('.js-datepicker-range').datepicker({
+    classes: 'inputbox__datepicker',
+    format: 'dd/mm/yyyy',
+    range: true,
+    onSelect(fd, d, inst) {
+      const datesString = fd;
+      const dates = datesString.split(',');
+      const el = inst.$el;
+      const startDateField = $(el).find('[data-start-date]');
+      const endDateField = $(el).find('[data-end-date]');
+      if (dates.length === 2) {
+        $(startDateField).val(dates[0].split('.').join('/'));
+        $(endDateField).val(dates[1].split('.').join('/'));
+        setTimeout(() => {
+          $(el).removeClass('is-show-date');
+        }, 50);
+      }
+    },
+  });
+
+  $(document).on('click', '.js-show-datepicker', (evt) => {
+    evt.preventDefault();
+    console.log('click input');
+    const self = evt.currentTarget;
+    const datepicker = $(self).closest('.js-datepicker-range');
+    $(datepicker).addClass('is-show-date');
   });
 
   // $('.js-datepicker').each((i, el) => {
-  //   console.log(el);
   //   $(el).datepicker();
   // });
 }

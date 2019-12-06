@@ -11,6 +11,9 @@
 }
 
 .choices {
+  $b: &;
+
+  margin-bottom: 0;
 
   &__inner, &[data-type*='select-one'] &__inner {
     @extend .select;
@@ -23,20 +26,34 @@
     .choices__inner { padding-bottom: 0; }
 
     &::after {
-      border-width: 5px 5px 0;
-      top: 0;
-      bottom: 0;
-      right: 10px;
-      margin: auto;
-      transform: rotate(0) translate3d(0, 0, 0);
-      transition: transform $ease-main;
-      border-color: #333 transparent transparent;
+      display: none;
     }
+  }
 
-    &.is-open::after {
-      transform: rotate(180deg) translate3d(0, 0, 0);
-      border-color: #333 transparent transparent;
-      margin: auto;
+  &__toggle {
+    position: absolute;
+    top: 50%;
+    height: 18px;
+    width: 10px;
+    transform-origin: 50% 50% 0;
+    transform: translate3d(0, -50%, 0) rotate(90deg);
+    transition: transform $ease-main;
+
+    @include ruleMin(right, (xs: 12px, sm: 14px));
+
+    #{$b}.is-open & {
+      transform: translate3d(0, -50%, 0) rotate(-90deg);
+    }
+  }
+
+  &__scrollblock {
+    display: block;
+    width: 100%;
+    max-height: 100px;
+    box-sizing: border-box;
+
+    .os-content {
+      visibility: inherit;
     }
   }
 
@@ -58,6 +75,7 @@
 
     &--dropdown {
       box-sizing: border-box;
+      // max-height: none;
 
       .choices__item {
         padding: 10px;

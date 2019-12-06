@@ -36,6 +36,10 @@ import spoiler from '../blocks/spoiler/spoiler';
 import sideFeedback from '../components/side-feedback/side-feedback';
 import feedbackForm from '../components/feedback-form/feedback-form';
 import navigation from '../blocks/navigation/navigation';
+import cases from '../blocks/case/case';
+import masterClasses from '../components/master-classes/master-classes';
+import mcSelect from '../blocks/mc-select/mc-select';
+import orderForm from '../components/order-form/order-form';
 
 const $ = window.$;
 
@@ -48,10 +52,10 @@ $(() => {
   svg4everybody();
   objectFitImages();
   anchor();
+  scrollbar();
   selects();
   sliders();
   popups();
-  scrollbar();
   slider();
   tooltips();
   tabs();
@@ -66,5 +70,9 @@ $(() => {
   spoiler();
   sideFeedback();
   feedbackForm();
+  cases();
+  masterClasses();
+  mcSelect();
+  orderForm();
   navigation();
 });

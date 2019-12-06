@@ -2,15 +2,20 @@
 import OverlayScrollbars from 'overlayscrollbars';
 
 export default function scrollbar() {
-  OverlayScrollbars(document.querySelectorAll('.js-scrollbar'), {
-    className: 'os-theme-electrolux',
-    scrollbars: {
-      clickScrolling: true,
-      paddingAbsolute: true,
-      overflowBehavior: {
-        x: 'hidden',
-      }
-    },
+  function scrollbarInit(el) {
+    OverlayScrollbars(el, {
+      className: 'os-theme-electrolux',
+      scrollbars: {
+        clickScrolling: true,
+        paddingAbsolute: true,
+      },
+    });
+  }
+
+  window.globalFunctions.scrollbarInit = scrollbarInit;
+
+  $('.js-scrollbar').each((i, el) => {
+    scrollbarInit(el);
   });
 }
 /* eslint-enable */

@@ -1,0 +1,97 @@
+[{
+  "id": "1",
+  "value": "1",
+  "mctype": "child",
+  "image": "assets/images/mc-short1.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Пар и Sous – Vide",
+  "date": {
+    "date": "2019-12-20",
+    "text": "20 декабря 2019 пятница"
+  }
+}, {
+  "id": "2",
+  "value": "2",
+  "mctype": "adult",
+  "image": "assets/images/mc-short2.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Выпечка сладкая/не сладкая выпечка вкусная",
+  "date": {
+    "date": "2019-12-21",
+    "text": "21 декабря 2019 суббота"
+  }
+}, {
+  "id": "3",
+  "value": "3",
+  "mctype": "adult",
+  "image": "assets/images/mc-short1.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Party food vol. 2",
+  "date": {
+    "date": "2019-12-24",
+    "text": "24 декабря 2019 вторник"
+  }
+}, {
+  "id": "4",
+  "value": "4",
+  "mctype": "child",
+  "image": "assets/images/mc-short2.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Выпечка сладкая/не сладкая выпечка вкусная",
+  "date": {
+    "date": "2019-12-23",
+    "text": "23 декабря 2019 вторник"
+  }
+}, {
+  "id": "5",
+  "value": "5",
+  "mctype": "adult",
+  "image": "assets/images/mс-short1.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Party food vol. 1",
+  "date": {
+    "date": "2019-12-18",
+    "text": "18 декабря 2019 cреда"
+  }
+}, {
+  "id": "6",
+  "value": "6",
+  "mctype": "adult",
+  "image": "assets/images/mc-short2.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Party food vol. 2",
+  "date": {
+    "date": "2019-12-10",
+    "text": "10 декабря | Вт"
+  }
+}, {
+  "id": "7",
+  "value": "7",
+  "mctype": "child",
+  "image": "assets/images/mc-short1.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Пар и Sous – Vide",
+  "date": {
+    "date": "2019-12-20",
+    "text": "20 декабря 2019 пятница"
+  }
+}, {
+  "id": "8",
+  "value": "8",
+  "mctype": "adult",
+  "image": "assets/images/mc-short2.jpg",
+  "time": "18:30 - 20:30",
+  "price": "2 500 ₽",
+  "title": "Выпечка сладкая/не сладкая выпечка вкусная",
+  "date": {
+    "date": "2019-12-21",
+    "text": "21 декабря 2019 суббота"
+  }
+}]

@@ -1,7 +1,35 @@
 .error-message {
+  position: relative;
   display: none;
+  background-color: $color-error-bubble;
+  color: $color-error-text;
+  font-weight: 300;
+  line-height: 18px;
+  box-sizing: border-box;
+  padding: 12px;
+  height: 48px;
+
+  @include ruleMin(font-size, (xs: 15px, sm: 16px));
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-width: 13px 13px;
+    border-style: solid;
+    border-color: $color-error-bubble;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    bottom: 100%;
+
+    @include ruleMin(left, (xs: 30px, sm: 40px));
+  }
 
   .is-error & {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 16px;
   }
 }

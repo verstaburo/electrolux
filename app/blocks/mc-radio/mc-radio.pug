@@ -1,0 +1,22 @@
+mixin mc-radio(name, data)
+  +b.LABEL.mc-radio&attributes(attributes)
+    +input(type="radio" name=name value=data.value data-mc-input="true" data-mc-type=data.mctype required).__input
+    +mc-info(data).__info(data-select-value)
+    +button('div').__button Выбрать
+    block
+
+mixin ui-kit-mc-radio()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок mc-radio
+      +ui-path
+        p Блок: blocks/mc-radio/mc-radio
+      +ui-description
+        p Описание Блока
+
+    +ui-section-content()
+      +mc-radio('tst', getData('cases-short')[0])
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

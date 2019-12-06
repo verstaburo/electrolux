@@ -5,7 +5,7 @@ block head
 
 block content
   +lead
-  +section#mk(data-section)
+  +section._mc#mc(data-section)
     +section-head
       .container
         +text-block._centered
@@ -13,6 +13,8 @@ block content
             p Приходите на наши мастер&#8209;классы и&nbsp;мы покажем вам на что способна наша бытовая техника, а&nbsp;также научим готовить вас дома, как в&nbsp;ресторане.
           +text-block-title Расписание мастер&#8209;классов
     +section-content
+      +filters
+      +master-classes
   +navigation
   +section#kitchen-msc(data-section)
     +section._chess
@@ -58,7 +60,7 @@ block content
               p Кулинарные мастер&#8209;классы для детей и взрослых, где вы сможете приятно и полезно провести время: правильно подготовить ингредиенты, выбрать нужные режимы приготовления и красиво подать блюдо. Всё это под чутким руководством бренд&#8209;шефа Electrolux.
             +e.buttons
               +button().__button.js-show-map(href="#map_rh") Где находится
-  +section._chess#childrens-mk(data-section)
+  +section._chess#childrens-mc(data-section)
     +section-column._order2
       .container.container_half.container_end
         +text-block
@@ -92,12 +94,14 @@ block content
     +section-column
       +section-media
         +e.IMG.image(src="assets/images/white-rabbit.jpg")
-  +section#order(data-section)
+  +section._order#order(data-section)
     +section-head
       .container
         +text-block._centered
           +text-block-title Получить мастер&#8209;класс
-          +text-block-text Вы купили духовой шкаф с функцией пара и хотите освоить все возможности новой техники? Или, может, только выбираете подходящую модель, и вам интересно увидеть духовки и варочные поверхности Electrolux в деле? Тогда смело записывайтесь на кулинарный мастер&#8209;класс.
+          +text-block-text._bmg Вы купили духовой шкаф с функцией пара и хотите освоить все возможности новой техники? Или, может, только выбираете подходящую модель, и вам интересно увидеть духовки и варочные поверхности Electrolux в деле? Тогда смело записывайтесь на кулинарный мастер&#8209;класс.
           +e.buttons
             +button().__button.js-show-orderform(href="#") Записаться на мастер-класс
     +section-content
+      .container
+        +order-form

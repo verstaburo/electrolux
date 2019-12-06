@@ -4,7 +4,6 @@ $new-breakpoints: map_remove($breakpoints, $default-breakpoint-name);
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
 
 .grid {
-  font-size: 0;
   display: flex;
   flex-wrap: wrap;
   margin: -$grid-gap-vertical (-$grid-gap/2) 0;

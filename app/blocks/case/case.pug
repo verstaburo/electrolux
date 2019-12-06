@@ -1,0 +1,53 @@
+mixin case(data)
+  +b.ARTICLE.case&attributes(attributes)
+    +e.top
+      if data.child
+        +e.label Детский
+      +e.media
+        +e.IMG.image(src=data.image)
+      +e.describe
+        +e.info
+          +e.item
+            +icon('clock').__icon_time
+            +e.info-text!= data.time
+          +e.item
+            +icon('user').__icon_vacancy
+            +e.info-text!= data.vacancy.text
+        +e.menu
+          +e.name Меню:
+          +e.scrollblock.js-scrollbar
+            +list.__list
+              each item in data.menu
+                li!=item
+          +e.total
+            +e.price
+              +e.price-text Стоимость:
+              +e.sum!=data.price
+            +button().__button.js-order-mc(href="#order") Записаться
+            +e.note!= data.note
+    +e.bottom
+      +e.header
+        +e.location!=data.location.name
+        +e.H4.title!=data.title
+        +e.TIME.date(datatime=data.date.date)!=data.date.text
+      +e.buttons.is-hidden-xl
+        +button().__button_wide.js-show-describe(href="#") Программа мастер-класса
+    block
+
+mixin ui-kit-case()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок case
+      +ui-path
+        p Блок: blocks/case/case
+      +ui-description
+        p Описание Блока
+
+    +ui-section-content()
+      +grid
+        +col({xl: 4, sm: 12})
+          +case(getData('cases')[0])
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

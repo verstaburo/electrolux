@@ -8,11 +8,11 @@
 
 .datepicker {
   color: $color-basic;
-  font-size: 14px;
-  width: 250px;
+  font-size: 16px;
+  width: 280px;
   background: white;
-  border: 1px solid $color-border;
-  box-shadow: 0 2px 4px rgba($color-basic, .15);
+  border: none;
+  box-shadow: none;
   border-radius: 0;
   transition: opacity $ease-main, transform $ease-main, left 0s $ease-main;
   font-family: $font-main;
@@ -40,6 +40,9 @@
 
 .datepicker--day-name {
   color: $color-red;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
 }
 
 // Ячейка со стрелкой
@@ -75,10 +78,6 @@
   }
 }
 
-.datepicker--cells {
-  width: 280px;
-}
-
 // Цвет ховера по ячейкам в календаре, шапке
 
 .datepicker--cell.-focus-, .datepicker--nav-action:hover, .datepicker--nav-title:hover {
@@ -101,7 +100,7 @@
   // Ховер по активной дате
 
   &.-selected-.-focus- {
-    background: rgba($color-main, .8);
+    background: rgba($color-calendar-range, .2);
   }
 
   // Неактивная ячейка
@@ -114,6 +113,7 @@
 
   &.-selected-, &.-selected-.-current- {
     background: $color-main;
+    color: $color-days;
   }
 }
 
@@ -129,19 +129,19 @@
 
 .datepicker--cell.-range-to-, .datepicker--cell.-range-from- {
   border: 0;
-  background-color: rgba($color-main, .3);
+  background-color: rgba($color-calendar-range, .2);
 
   &.-selected- {
-    background-color: $color-main;
+    background-color: rgba($color-calendar-range, .2);
   }
 }
 
 .datepicker--cell.-range-from- {
-  border-radius: 3px 0 0 3px;
+  border-radius: 0;
 }
 
 .datepicker--cell.-range-to- {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0;
 }
 
 // Стили ячеек другого месяца, находящихся в диапазоне

@@ -1405,15 +1405,15 @@
                             <div class="order-form__buttons"><button class="order-form__collapse js-hide-orderform">
                                     <div class="order-form__collapse-text">Свернуть</div><svg class="order-form__collapse-arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
                                 </button></div>
-                            <form class="form order-form__form" action="/" method="post" data-validated-form="data-validated-form">
+                            <form class="form order-form__form" action="/" method="post" data-validated-form="data-validated-form" data-orderform="data-orderform">
                                 <div class="grid">
                                     <div class="grid__col grid__col_xl_1 grid__col_sm_12 is-hidden-sm"></div>
                                     <div class="grid__col grid__col_xl_10 grid__col_sm_12">
-                                        <fieldset class="form__section">
+                                        <fieldset class="form__section" data-form-checkers="data-form-checkers">
                                             <div class="form__title">Детали Мастер-класса</div>
                                             <div class="grid">
                                                 <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                        <p class="inputbox__label">Выберите адрес студии*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="location" data-location="data-location" required="required">
+                                                        <p class="inputbox__label">Выберите адрес студии*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="location" data-location="data-location" required="required" data-parsley-group="start">
                                                                 <option value="" placeholder="placeholder">Выберите адрес студии из списка</option>
                                                                 <option value="1">Москва, Шлюзовая набережная д. 6 стр. 4</option>
                                                                 <option value="2">с. Эстосадок, Роза Хутор, ул. Каменка, 2</option>
@@ -1429,28 +1429,28 @@
                                                                 </div>
                                                                 <div class="mc-select__dropdown js-scrollbar">
                                                                     <ul class="mc-select__list">
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" required="required" data-form-type="pay,child" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" required="required" data-form-type="pay,child" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mс-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" required="required" data-form-type="pay,child" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
-                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                                 <div class="button mc-radio__button">Выбрать</div>
                                                                             </label></li>
                                                                     </ul>
@@ -1459,8 +1459,145 @@
                                                         </span>
                                                     </label></div>
                                             </div>
-                                            <div class="form__checkers"><label class="checkradio"><input class="checkradio__input" name="oven" value="oven" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно</span></label><label class="checkradio"><input class="checkradio__input" name="wr" value="wr" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">У меня есть приглашение на одного из ресторана White Rabbit Family - пойду на мастер-класс бесплатно</span></label></div>
+                                            <div class="form__checkers"><label class="checkradio form__checker"><input class="checkradio__input" name="oven" value="oven" type="checkbox" data-form-type="oven" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно</span></label><label class="checkradio form__checker"><input class="checkradio__input" name="whiterabbit" value="whiterabbit" type="checkbox" data-form-type="whiterabbit" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">У меня есть приглашение на одного из ресторана White Rabbit Family - пойду на мастер-класс бесплатно</span></label></div>
+                                            <div class="form__triggers" data-form-trigger="data-form-trigger">
+                                                <div class="form__note">* Обязательное поле</div>
+                                                <div class="form__buttons"><button class="button form__button js-toggle-orderform" type="button">Записаться</button></div>
+                                            </div>
                                         </fieldset>
+                                        <div class="form__content" data-form-body="data-form-body">
+                                            <fieldset class="form__section">
+                                                <div class="form__text form__text_chd" data-form-field="child">К мастер-классу допускаются дети в возрасте от 6-ти лет и только в сопровождении одного взрослого.</div>
+                                                <div class="form__title form__title_mb28"><span data-form-field="adult, oven, whiterabbit">Личные данные</span><span data-form-field="child">Сопровождающий ребенка</span></div>
+                                                <div class="grid">
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Представьтесь, пожалуйста (ФИО)*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Например, ivan.ivanov@electrolux.com" data-type="email" /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                                            <p class="inputbox__label">Количество человек*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="pay-vacancy" required="required">
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="6">6</option>
+                                                                    <option value="7">7</option>
+                                                                    <option value="8">8</option>
+                                                                    <option value="9">9</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="11">11</option>
+                                                                    <option value="12">12</option>
+                                                                    <option value="13">13</option>
+                                                                    <option value="14">14</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="16">16</option>
+                                                                    <option value="17">17</option>
+                                                                    <option value="18">18</option>
+                                                                    <option value="19">19</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="21">21</option>
+                                                                    <option value="22">22</option>
+                                                                </select><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="oven"><label class="inputbox">
+                                                            <p class="inputbox__label">Количество человек*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="free-vacancy" required="required">
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="6">6</option>
+                                                                    <option value="7">7</option>
+                                                                    <option value="8">8</option>
+                                                                    <option value="9">9</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="11">11</option>
+                                                                </select><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="whiterabbit"><label class="inputbox">
+                                                            <p class="inputbox__label">Номер приглашения*</p><span class="inputbox__wrapper"><input class="input" type="text" name="invitation" required="required" placeholder="16278499921" data-parsley-type="digits" /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form__section" data-form-field="child">
+                                                <div class="form__title form__title_sm-mb40">Данные ребенка</div>
+                                                <div class="grid">
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Имя ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childName[0]" required="required" placeholder="Имя ребенка" /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Возраст ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childAge[0]" required="required" placeholder="Сколько лет " /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                </div>
+                                                <div class="form__add"><button class="button form__additional js-add-child" type="button">+ Добавить ребенка</button></div>
+                                            </fieldset>
+                                            <fieldset class="form__section" data-form-field="oven">
+                                                <div class="form__title">Ваш продукт</div>
+                                                <div class="grid">
+                                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Модель духового шкафа*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="ovenModel" required="required">
+                                                                    <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                                    <option value="1">Модель 1</option>
+                                                                    <option value="2">Модель 2</option>
+                                                                    <option value="3">Модель 3</option>
+                                                                    <option value="4">Модель 4</option>
+                                                                    <option value="5">Модель 5</option>
+                                                                    <option value="6">Модель 6</option>
+                                                                    <option value="7">Модель 7</option>
+                                                                    <option value="8">Модель 8</option>
+                                                                    <option value="9">Модель 9</option>
+                                                                    <option value="10">Модель 10</option>
+                                                                    <option value="11">Модель 11</option>
+                                                                </select><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Где была куплена техника*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="shop" required="required">
+                                                                    <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                                    <option value="1">Магазин 1</option>
+                                                                    <option value="2">Магазин 2</option>
+                                                                    <option value="3">Магазин 3</option>
+                                                                    <option value="4">Магазин 4</option>
+                                                                    <option value="5">Магазин 5</option>
+                                                                    <option value="6">Магазин 6</option>
+                                                                    <option value="7">Магазин 7</option>
+                                                                    <option value="8">Магазин 8</option>
+                                                                    <option value="9">Магазин 9</option>
+                                                                    <option value="10">Магазин 10</option>
+                                                                    <option value="11">Магазин 11</option>
+                                                                </select><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Где была куплена техника*</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="дд.мм.гггг" data-date="data-date" /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Номер чека*</p><span class="inputbox__wrapper"><input class="input" type="text" name="checkNumber" required="required" placeholder="16278499921" data-parsley-type="digits" /><span class="error-message"></span></span>
+                                                        </label></div>
+                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                            <p class="inputbox__label">Приложите чек*</p><span class="inputbox__wrapper"><label class="input-uploader js-file-upload"><input class="input" type="file" name="files[]" required="required" /><span class="input-uploader__filename" data-filename="data-filename"></span><span class="input-uploader__placeholder" data-placeholder="data-placeholder">Нажмите для выбора</span></label><span class="error-message"></span></span>
+                                                        </label></div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form__section">
+                                                <div class="form__notes">
+                                                    <div class="form__note">* Обязательное поле</div>
+                                                    <div class="form__agreements"><label class="checkradio checkradio_fz15 form__agreement"><input class="checkradio__input" name="offer" value="offer" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я принимаю&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условия оферты и ознакомился с правилами проведения акции.</span></a></span></label><label class="checkradio checkradio_fz15 form__agreement"><input class="checkradio__input" name="personalData" value="pd" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я соглашаюсь с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></span></label></div>
+                                                </div>
+                                                <div class="form__payment" data-form-field="adult,child">
+                                                    <div class="form__price">
+                                                        <div class="form__total">3 000 ₽</div>
+                                                        <div class="form__price-text">итоговая стоимость</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__buttons form__buttons_mtb"><button class="button form__button" type="submit"><span data-form-field="oven,whiterabbit">Записаться</span><span data-form-field="adult,child">Оплатить</span></button></div>
+                                                <div class="form__note form__note_centered form__note_mt20" data-form-field="adult,child">После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.</div>
+                                            </fieldset>
+                                        </div>
                                     </div>
                                     <div class="grid__col grid__col_xl_1 grid__col_sm_12 is-hidden-sm"></div>
                                 </div>
@@ -1491,28 +1628,28 @@
                             </div>
                             <div class="mc-select__dropdown js-scrollbar">
                                 <ul class="mc-select__list">
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" required="required" data-form-type="pay,child" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" required="required" data-form-type="pay,child" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mс-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" required="required" data-form-type="pay,child" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
-                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" required="required" data-form-type="pay,adult" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                             <div class="button mc-radio__button">Выбрать</div>
                                         </label></li>
                                 </ul>
@@ -1534,7 +1671,7 @@
                     </div>
                 </div>
                 <div class="ui-kit__section-content">
-                    <div class="container"><label class="mc-radio"><input class="input mc-radio__input" type="radio" name="tst" value="1" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                    <div class="container"><label class="mc-radio"><input class="input mc-radio__input" type="radio" name="tst" value="1" data-mc-input="true" required="required" data-form-type="pay,child" data-parsley-group="start" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                             <div class="button mc-radio__button">Выбрать</div>
                         </label></div>
                 </div>
@@ -1566,6 +1703,22 @@
                     </div>
                 </div>
             </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок input-uploader</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/input-uploader/input-uploader</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container"><label class="input-uploader js-file-upload"><input class="input" type="file" name="files[]" required="required" /><span class="input-uploader__filename" data-filename="data-filename"></span><span class="input-uploader__placeholder" data-placeholder="data-placeholder">Нажмите для выбора</span></label></div>
+                </div>
+            </section>
         </div>
     </main>
     <footer class="footer">
@@ -1591,9 +1744,9 @@
             <div class="popup__content">Ваша заявка будет рассмотрена в течение 3&nbsp;рабочих дней. Ожидайте e&#8209;mail на указанную почту</div>
         </div>
     </div>
+    <script src="assets/scripts/libs/parsley.min.js"></script>
     <script src="assets/scripts/app.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=9971b6ff-9a4d-4940-aaa6-9b7f3bdb8ee8&amp;lang=ru_RU"></script>
-    <script src="assets/scripts/libs/parsley.min.js"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 

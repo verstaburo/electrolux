@@ -571,10 +571,10 @@
                                         <p class="inputbox__label">Текстовое поле</p><span class="inputbox__wrapper"><textarea class="textarea" placeholder="Текстовое поле"></textarea><span class="error-message"></span></span>
                                     </label></div>
                                 <div class="grid__col grid__col_xl_6"><label class="inputbox">
-                                        <p class="inputbox__label">Чекбокс</p><span class="inputbox__wrapper"><label class="checkradio"><input class="checkradio__input" name="ui-checkbox" value="test" checked="true" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Чекбокс</span></label><span class="error-message"></span></span>
+                                        <p class="inputbox__label">Чекбокс</p><span class="inputbox__wrapper"><label class="checkradio"><input class="checkradio__input" name="ui-checkbox" value="test" checked="true" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Чекбокс</span></label><span class="error-message"></span></span>
                                     </label></div>
                                 <div class="grid__col grid__col_xl_6"><label class="inputbox">
-                                        <p class="inputbox__label">Радиокнопка</p><span class="inputbox__wrapper"><label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Радиокнопка</span></label><span class="error-message"></span></span>
+                                        <p class="inputbox__label">Радиокнопка</p><span class="inputbox__wrapper"><label class="checkradio"><input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Радиокнопка</span></label><span class="error-message"></span></span>
                                     </label></div>
                                 <div class="grid__col grid__col_xl_6"><label class="inputbox">
                                         <p class="inputbox__label">Ползунок</p><span class="inputbox__wrapper"><span class="range js-range" data-start="40" data-connect="[true, false]" data-min="0" data-max="100"></span><span class="error-message"></span></span>
@@ -678,9 +678,9 @@
                                         <div class="navigation__name" data-active-link-title="data-active-link-title"></div>
                                     </div>
                                     <div class="navigation__list">
-                                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#mk" data-nav-link="mk">Расписание мастер&#8209;классов</a></div>
+                                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#mc" data-nav-link="mc">Расписание мастер&#8209;классов</a></div>
                                         <div class="navigation__item"><a class="navigation__link" href="#kitchen-msc" data-nav-link="kitchen-msc">Кулинарные пространства</a></div>
-                                        <div class="navigation__item"><a class="navigation__link" href="#childrens-mk" data-nav-link="childrens-mk">Мастер&#8209;класс для детей</a></div>
+                                        <div class="navigation__item"><a class="navigation__link" href="#childrens-mc" data-nav-link="childrens-mc">Мастер&#8209;класс для детей</a></div>
                                         <div class="navigation__item"><a class="navigation__link" href="#chef" data-nav-link="chef">Бренд-шеф</a></div>
                                         <div class="navigation__item"><a class="navigation__link" href="#whiterabbit" data-nav-link="whiterabbit">Акция от White Rabbit Family</a></div>
                                         <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#order" data-nav-link="order">Получить мастер-класс</a></div>
@@ -849,6 +849,723 @@
                     </div>
                 </div>
             </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок filters</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/filters/filters</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <form class="filters">
+                            <div class="container">
+                                <div class="filters__item"><label class="inputbox inputbox_row">
+                                        <p class="inputbox__label">Показать Мастер-классы в</p><span class="inputbox__wrapper"><select class="select js-select" name="location">
+                                                <option value="" placeholder="placeholder">Выберите город</option>
+                                                <option value="1">Москва</option>
+                                                <option value="2">Роза Хутор</option>
+                                            </select><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="filters__item"><label class="inputbox inputbox_row">
+                                        <p class="inputbox__label">В период</p><span class="inputbox__wrapper inputbox__wrapper_flex js-datepicker-range"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-start-date="data-start-date" readonly="readonly" /><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-end-date="data-end-date" readonly="readonly" /><span class="error-message"></span></span>
+                                    </label></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок case</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/case/case</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_4 grid__col_sm_12">
+                                <article class="case">
+                                    <div class="case__top">
+                                        <div class="case__label">Детский</div>
+                                        <div class="case__media"><img class="case__image" src="assets/images/mk1.jpg" alt="" role="presentation" /></div>
+                                        <div class="case__describe">
+                                            <div class="case__info">
+                                                <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                    <div class="case__info-text">18:30 - 20:30</div>
+                                                </div>
+                                                <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                    <div class="case__info-text">осталось 7 мест</div>
+                                                </div>
+                                            </div>
+                                            <div class="case__menu">
+                                                <div class="case__name">Меню:</div>
+                                                <div class="case__scrollblock js-scrollbar">
+                                                    <ul class="list case__list">
+                                                        <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                        <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                        <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                        <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="case__total">
+                                                    <div class="case__price">
+                                                        <div class="case__price-text">Стоимость:</div>
+                                                        <div class="case__sum">2 500 ₽</div>
+                                                    </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                    <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="case__bottom">
+                                        <div class="case__header">
+                                            <div class="case__location">Москва</div>
+                                            <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019-12-20">20 декабря | Пт</time>
+                                        </div>
+                                        <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент master-classes</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/master-classes/master-classes</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="master-classes">
+                            <div class="container">
+                                <div class="master-classes__content js-mc-slider">
+                                    <div class="grid master-classes__wrapper">
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__label">Детский</div>
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk1.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Москва</div>
+                                                        <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019-12-20">20 декабря | Пт</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk2.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Роза Хутор</div>
+                                                        <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019-12-21">21 декабря | Сб</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk3.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Москва</div>
+                                                        <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019-12-24">24 декабря | Вт</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__label">Детский</div>
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk4.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Москва</div>
+                                                        <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019-12-23">23 декабря | Вт</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk5.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Роза Хутор</div>
+                                                        <h4 class="case__title">Party food vol. 1</h4><time class="case__date" datatime="2019-12-18">18 декабря | Ср</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk6.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Москва</div>
+                                                        <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019-12-10">10 декабря | Вт</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__label">Детский</div>
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk1.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Москва</div>
+                                                        <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019-12-20">20 декабря | Пт</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                            <article class="case master-classes__case">
+                                                <div class="case__top">
+                                                    <div class="case__media"><img class="case__image" src="assets/images/mk2.jpg" alt="" role="presentation" /></div>
+                                                    <div class="case__describe">
+                                                        <div class="case__info">
+                                                            <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                                <div class="case__info-text">18:30 - 20:30</div>
+                                                            </div>
+                                                            <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                                <div class="case__info-text">осталось 7 мест</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="case__menu">
+                                                            <div class="case__name">Меню:</div>
+                                                            <div class="case__scrollblock js-scrollbar">
+                                                                <ul class="list case__list">
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                    <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                                    <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                                    <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                                    <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="case__total">
+                                                                <div class="case__price">
+                                                                    <div class="case__price-text">Стоимость:</div>
+                                                                    <div class="case__sum">2 500 ₽</div>
+                                                                </div><a class="button case__button js-order-mc" href="#order">Записаться</a>
+                                                                <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__bottom">
+                                                    <div class="case__header">
+                                                        <div class="case__location">Роза Хутор</div>
+                                                        <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019-12-21">21 декабря | Сб</time>
+                                                    </div>
+                                                    <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="master-classes__navigation">
+                                    <div class="master-classes__toggles">
+                                        <div class="master-classes__toggle master-classes__toggle_prev"><svg class="master-classes__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                        <div class="master-classes__progress">1/8</div>
+                                        <div class="master-classes__toggle master-classes__toggle_next"><svg class="master-classes__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                    </div>
+                                    <div class="master-classes__buttons"><a class="button master-classes__button master-classes__button_more js-show-mc-next3" href="#">Показать больше мастер-классов</a><a class="button master-classes__button master-classes__button_all is-hidden js-show-mc-all" href="#">Показать все мастер-классы</a></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок list</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/list/list</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Маркированный список</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <ul class="list">
+                            <li>Строка 1</li>
+                            <li>Строка 2</li>
+                            <li>Строка 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент popup-registration-success</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/popup-registration-success/popup-registration-success</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="popup popup-registration-success">
+                            <div class="popup__title">Спасибо за регистрацию!</div>
+                            <div class="popup__content">Ваша заявка будет рассмотрена в течение 3&nbsp;рабочих дней. Ожидайте e&#8209;mail на указанную почту</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент popup-no-mc</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/popup-no-mc/popup-no-mc</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="popup popup-no-mc">
+                            <div class="popup__title">Нет доступных мастер&#8209;классов</div>
+                            <div class="popup__content">Мы постоянно обновляем расписание, попробуйте посмотреть расписание немного позже или укажите другие даты</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент order-form</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/order-form/order-form</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="order-form">
+                            <div class="order-form__buttons"><button class="order-form__collapse js-hide-orderform">
+                                    <div class="order-form__collapse-text">Свернуть</div><svg class="order-form__collapse-arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                </button></div>
+                            <form class="form order-form__form" action="/" method="post" data-validated-form="data-validated-form">
+                                <div class="grid">
+                                    <div class="grid__col grid__col_xl_1 grid__col_sm_12 is-hidden-sm"></div>
+                                    <div class="grid__col grid__col_xl_10 grid__col_sm_12">
+                                        <fieldset class="form__section">
+                                            <div class="form__title">Детали Мастер-класса</div>
+                                            <div class="grid">
+                                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                        <p class="inputbox__label">Выберите адрес студии*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="location" data-location="data-location" required="required">
+                                                                <option value="" placeholder="placeholder">Выберите адрес студии из списка</option>
+                                                                <option value="1">Москва, Шлюзовая набережная д. 6 стр. 4</option>
+                                                                <option value="2">с. Эстосадок, Роза Хутор, ул. Каменка, 2</option>
+                                                            </select><span class="error-message"></span></span>
+                                                    </label></div>
+                                                <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                                        <p class="inputbox__label">Выберите мастер-класс*</p><span class="inputbox__wrapper">
+                                                            <div class="mc-select js-mc-select">
+                                                                <div class="mc-select__head" data-head="data-head">
+                                                                    <div class="mc-select__label" data-label="data-label"></div>
+                                                                    <div class="mc-select__placeholder">Выберите мастер-класс из списка</div>
+                                                                    <div class="mc-select__toggle"><svg class="mc-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                                                </div>
+                                                                <div class="mc-select__dropdown js-scrollbar">
+                                                                    <ul class="mc-select__list">
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mс-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                        <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                                <div class="button mc-radio__button">Выбрать</div>
+                                                                            </label></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div><span class="error-message"></span>
+                                                        </span>
+                                                    </label></div>
+                                            </div>
+                                            <div class="form__checkers"><label class="checkradio"><input class="checkradio__input" name="oven" value="oven" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно</span></label><label class="checkradio"><input class="checkradio__input" name="wr" value="wr" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">У меня есть приглашение на одного из ресторана White Rabbit Family - пойду на мастер-класс бесплатно</span></label></div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="grid__col grid__col_xl_1 grid__col_sm_12 is-hidden-sm"></div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок mc-select</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/mc-select/mc-select</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="mc-select js-mc-select">
+                            <div class="mc-select__head" data-head="data-head">
+                                <div class="mc-select__label" data-label="data-label"></div>
+                                <div class="mc-select__placeholder">Выберите мастер-класс из списка</div>
+                                <div class="mc-select__toggle"><svg class="mc-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            </div>
+                            <div class="mc-select__dropdown js-scrollbar">
+                                <ul class="mc-select__list">
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mс-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                    <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" data-mc-type="adult" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                            <div class="button mc-radio__button">Выбрать</div>
+                                        </label></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок mc-radio</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/mc-radio/mc-radio</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container"><label class="mc-radio"><input class="input mc-radio__input" type="radio" name="tst" value="1" data-mc-input="true" data-mc-type="child" required="required" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                            <div class="button mc-radio__button">Выбрать</div>
+                        </label></div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок mc-info</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/mc-info/mc-info</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="mc-info">
+                            <div class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></div>
+                            <div class="mc-info__describe">
+                                <div class="mc-info__title">Пар и Sous – Vide</div>
+                                <div class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time>
+                                    <div class="mc-info__time">18:30 - 20:30</div>
+                                </div>
+                                <div class="mc-info__price">Цена: 2 500 ₽</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
     <footer class="footer">
@@ -864,6 +1581,14 @@
         <div class="popup popup-phones" id="popup-phones">
             <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
             <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:+74952484444"><span class="link__text">+7 (495) 248-44-44</span></a><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+        </div>
+        <div class="popup popup-no-mc" id="popup-no-mc">
+            <div class="popup__title">Нет доступных мастер&#8209;классов</div>
+            <div class="popup__content">Мы постоянно обновляем расписание, попробуйте посмотреть расписание немного позже или укажите другие даты</div>
+        </div>
+        <div class="popup popup-registration-success" id="popup-registration-success">
+            <div class="popup__title">Спасибо за регистрацию!</div>
+            <div class="popup__content">Ваша заявка будет рассмотрена в течение 3&nbsp;рабочих дней. Ожидайте e&#8209;mail на указанную почту</div>
         </div>
     </div>
     <script src="assets/scripts/app.min.js"></script>

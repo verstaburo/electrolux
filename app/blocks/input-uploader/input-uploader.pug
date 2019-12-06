@@ -1,0 +1,22 @@
+mixin input-uploader()
+  +b.LABEL.input-uploader&attributes(attributes).js-file-upload
+    +input(type="file" name="files[]" required)
+    +e.filename(data-filename)
+    +e.placeholder(data-placeholder) Нажмите для выбора
+    block
+
+mixin ui-kit-input-uploader()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок input-uploader
+      +ui-path
+        p Блок: blocks/input-uploader/input-uploader
+      +ui-description
+        p Описание Блока
+
+    +ui-section-content()
+      +input-uploader
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

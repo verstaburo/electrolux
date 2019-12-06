@@ -6,8 +6,8 @@
   align-items: flex-start;
   box-sizing: border-box;
   width: 100%;
-  padding: 20px 0;
 
+  @include ruleMin(padding, (xs: 16px 0, sm: 20px 0));
   @include ruleMin(flex-direction, (xs: column, sm: row));
 
   &__media {
@@ -17,6 +17,9 @@
     width: 115px;
     height: 86px;
     overflow: hidden;
+
+    @include ruleMin(margin-right, (xs: 0, sm: 30px, md: 54px));
+    @include ruleMin(margin-bottom, (xs: 8px, sm: 0));
   }
 
   &__image {
@@ -26,6 +29,7 @@
   &__describe {
     display: block;
 
+    @include ruleMin(padding-top, (sm: 7px));
     @include ruleMin(flex, (sm: 1));
   }
 
@@ -48,18 +52,26 @@
     line-height: 24px;
     color: $color-mc-gray;
     font-weight: 400;
+
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
   }
 
   &__date {
     display: block;
 
     &:not(:last-child) {
-      @include ruleMin(margin-right, (xs: 0, sm: 40px));
+      @include ruleMin(margin-right, (xs: 0, sm: 68px));
     }
   }
 
   &__time {
     display: block;
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: -6px, sm: 0));
+    }
   }
 
   &__price {
@@ -68,5 +80,9 @@
     font-size: 16px;
     font-weight: 600;
     color: $color-mc-gray;
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 5px, sm: 5px));
+    }
   }
 }

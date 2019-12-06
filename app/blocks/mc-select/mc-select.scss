@@ -36,6 +36,15 @@
     }
   }
 
+  &__label {
+    width: 100%;
+    box-sizing: border-box;
+
+    @include screen('sm', min) {
+      padding: 0 10px;
+    }
+  }
+
   &__toggle {
     position: absolute;
     display: flex;
@@ -50,6 +59,10 @@
 
     #{$b}.is-open & {
       transform: rotate(180deg);
+    }
+
+    .is-error &, .is-success & {
+      opacity: 0;
     }
   }
 
@@ -66,13 +79,15 @@
     left: 0;
     display: none;
     width: 100%;
-    max-height: 300px;
     overflow: hidden;
     border: 1px solid $color-border;
     border-top-width: 0;
     background-color: $color-white;
     pointer-events: none;
     box-sizing: border-box;
+    z-index: 3;
+
+    @include ruleMin(max-height, (xs: 350px, sm: 250px));
 
     #{$b}.is-open & {
       display: block;

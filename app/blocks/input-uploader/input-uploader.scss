@@ -1,0 +1,26 @@
+.input-uploader {
+  $b: &;
+
+  @extend .input;
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('../images/clip.svg');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: calc(100% - 9px) 15px;
+
+  .input {
+    display: none;
+  }
+
+  &__placeholder {
+    color: $color-placeholder;
+    display: none;
+
+    #{$b}__filename:empty ~ & {
+      display: inline;
+    }
+  }
+}

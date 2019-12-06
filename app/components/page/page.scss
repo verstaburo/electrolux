@@ -1,4 +1,6 @@
 .page {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 100%;
   min-height: calc(100vh - 100px);
@@ -7,5 +9,5 @@
   $b: &;
 
   @include ruleMin(padding-top, (xs: 60px, sm: 110px));
-  @include ruleMin(padding-bottom, (xs: 60px, sm: 100px));
+  @include ruleMin(padding-bottom, (xs: 60px, sm: 120px));
 }

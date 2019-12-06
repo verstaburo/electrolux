@@ -7,6 +7,7 @@
   align-items: center;
   width: 100%;
 
+  @include ruleMin(padding-right, (md: 68px));
   @include ruleMin(flex-wrap, (xs: wrap, sm: nowrap));
 
   &__input {
@@ -16,5 +17,12 @@
   &__info {
     @include ruleMin(flex, (sm: 1));
     @include ruleMin(width, (xs: 100%, sm: auto));
+    @include ruleMin(margin-right, (xs: 0, sm: 20px, md: 50px));
+  }
+
+  &__button {
+    min-width: 169px;
+
+    @include ruleMin(margin-bottom, (xs: 16px, sm: 0));
   }
 }

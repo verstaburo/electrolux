@@ -4,18 +4,18 @@ mixin order-form()
       +e.BUTTON.collapse.js-hide-orderform
         +e.collapse-text Свернуть
         +icon('arrow').__collapse-arrow
-    +form.__form(action="/" method="post" data-validated-form)
+    +form.__form(action="/" method="post" data-validated-form data-orderform)
       +grid
         +col({xl: 1, sm: 12}).is-hidden-sm
         +col({xl: 10, sm: 12})
-          +e.FIELDSET.section
+          +e.FIELDSET.section(data-form-checkers)
             +e.title Детали Мастер-класса
             +grid
               +col({xl: 6, sm: 12})
                 +inputbox()
                   +label Выберите адрес студии*
                   +input-wrapper
-                    +select.js-select(name="location" data-location required)
+                    +select.js-select(name="location" data-location required data-parsley-group="start")
                       option(value="" placeholder) Выберите адрес студии из списка
                       option(value="1") Москва, Шлюзовая набережная д. 6 стр. 4
                       option(value="2") с. Эстосадок, Роза Хутор, ул. Каменка, 2
@@ -27,9 +27,131 @@ mixin order-form()
                       each item in getData('cases-short')
                         +mc-select-item(item)
             +e.checkers
-              +checkradio(false, 'oven', 'oven', false, false) Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно
-              +checkradio(false, 'wr', 'wr', false, false) У меня есть приглашение на одного из ресторана White Rabbit Family  - пойду на мастер-класс бесплатно
-
+              +b.LABEL.checkradio.__checker
+                +e.INPUT.input(name="oven", value="oven", type="checkbox" data-form-type="oven")
+                +e.SPAN.box
+                  +icon('check').__check
+                +e.SPAN.content Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно
+              +b.LABEL.checkradio.__checker
+                +e.INPUT.input(name="whiterabbit", value="whiterabbit", type="checkbox" data-form-type="whiterabbit")
+                +e.SPAN.box
+                  +icon('check').__check
+                +e.SPAN.content У меня есть приглашение на одного из ресторана White Rabbit Family  - пойду на мастер-класс бесплатно
+            +e.triggers(data-form-trigger)
+              +e.note * Обязательное поле
+              +e.buttons
+                +button('button').__button.js-toggle-orderform(type="button") Записаться
+          +e.content(data-form-body)
+            +e.FIELDSET.section
+              +e.text_chd(data-form-field="child") К мастер-классу допускаются дети в возрасте от 6-ти лет и только в сопровождении одного взрослого.
+              +e.title._mb28
+                span(data-form-field="adult, oven, whiterabbit") Личные данные
+                span(data-form-field="child") Сопровождающий ребенка
+              +grid
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Представьтесь, пожалуйста (ФИО)*
+                    +input-wrapper
+                      +input(type="text" name="name" required placeholder="ФИО*")
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Адрес электронной почты*
+                    +input-wrapper
+                      +input(type="email" name="email" required placeholder="Например, ivan.ivanov@electrolux.com" data-type="email")
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Телефон*
+                    +input-wrapper
+                      +input(type="tel" name="phone" required placeholder="Например, +79032094743" data-type="tel")
+                +col({xl: 6, sm: 12})(data-form-field="adult")
+                  +inputbox()
+                    +label Количество человек*
+                    +input-wrapper
+                      +select.js-select(name="pay-vacancy" required)
+                        - for (var i = 1; i <= 22; i++) {
+                          option(value=i)!=i
+                        -}
+                +col({xl: 6, sm: 12})(data-form-field="oven")
+                  +inputbox()
+                    +label Количество человек*
+                    +input-wrapper
+                      +select.js-select(name="free-vacancy" required)
+                        - for (var i = 1; i <= 11; i++) {
+                          option(value=i)!=i
+                        -}
+                +col({xl: 6, sm: 12})(data-form-field="whiterabbit")
+                  +inputbox()
+                    +label Номер приглашения*
+                    +input-wrapper
+                      +input(type="text" name="invitation" required placeholder="16278499921" data-parsley-type="digits")
+            +e.FIELDSET.section(data-form-field="child")
+              +e.title_sm-mb40 Данные ребенка
+              +grid(data-child-template)
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Имя ребенка*
+                    +input-wrapper
+                      +input(type="text" name="childName[0]" required placeholder="Имя ребенка")
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Возраст ребенка*
+                    +input-wrapper
+                      +input(type="text" name="childAge[0]" required placeholder="Сколько лет ")
+              +e.add
+                +button('button').__additional.js-add-child(type="button") + Добавить ребенка
+            +e.FIELDSET.section(data-form-field="oven")
+              +e.title Ваш продукт
+              +grid
+                +col({xl: 12})
+                  +inputbox()
+                    +label Модель духового шкафа*
+                    +input-wrapper
+                      +select.js-select(name="ovenModel" required)
+                        option(value="" placeholder) Выберите из списка
+                        - for (var i = 1; i <= 11; i++) {
+                          option(value=i) Модель #{i}
+                        -}
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Где была куплена техника*
+                    +input-wrapper
+                      +select.js-select(name="shop" required)
+                        option(value="" placeholder) Выберите из списка
+                        - for (var i = 1; i <= 11; i++) {
+                          option(value=i) Магазин #{i}
+                        -}
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Где была куплена техника*
+                    +input-wrapper.js-datepicker
+                      +input(type="text" name="shoppingDate" required placeholder="дд.мм.гггг" data-date).js-show-datepicker
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Номер чека*
+                    +input-wrapper
+                      +input(type="text" name="checkNumber" required placeholder="16278499921" data-parsley-type="digits")
+                +col({xl: 6, sm: 12})
+                  +inputbox()
+                    +label Приложите чек*
+                    +input-wrapper
+                      +input-uploader
+            +e.FIELDSET.section
+              +e.notes
+                +e.note * Обязательное поле
+                +e.agreements
+                  +checkradio(false, 'offer', 'offer', true, true)._fz15.__agreement Я принимаю&nbsp;
+                    +link()._underline(href="#" target="__blank") условия оферты и ознакомился с правилами проведения акции.
+                  +checkradio(false, 'personalData', 'pd', true, true)._fz15.__agreement Я соглашаюсь с&nbsp;
+                    +link()._underline(href="#" target="__blank") условиями обработки персональных данных, оплаты, возврата и пользования сайтом.
+              +e.payment(data-form-field="adult,child")
+                +e.price
+                  +e.total 3 000 ₽
+                  +e.price-text итоговая стоимость
+              +e.buttons_mtb
+                +button('button').__button(type="submit")
+                  span(data-form-field="oven,whiterabbit") Записаться
+                  span(data-form-field="adult,child") Оплатить
+              +e.note_centered._mt20(data-form-field="adult,child") После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.
         +col({xl: 1, sm: 12}).is-hidden-sm
 
     block

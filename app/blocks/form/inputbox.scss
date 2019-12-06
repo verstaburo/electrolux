@@ -38,6 +38,7 @@
   &__wrapper {
     position: relative;
     height: 100%;
+    display: block;
 
     &_flex {
       display: flex;
@@ -49,6 +50,7 @@
         visibility: visible;
         opacity: 1;
         transition-delay: 0, 0;
+        z-index: 3;
       }
     }
   }

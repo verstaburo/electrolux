@@ -2,4 +2,56 @@
   $b: &;
 
   display: none;
+  width: 100%;
+
+  @include ruleMin(margin-top, (xs: -4px, sm: -17px));
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include ruleMin(padding, (xs: 0 5px, sm: 0 11px));
+  }
+
+  &__collapse {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: $color-collapse;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    &-text {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &-arrow {
+      fill: currentColor;
+      transform-origin: 50% 50% 0;
+      width: 10px;
+      height: 17px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__form {
+    display: block;
+    width: 100%;
+    border: 1px solid $color-form-border;
+    box-sizing: border-box;
+
+    @include ruleMin(padding, (xs: 38px 20px, sm: 45px 0, md: 83px 0 58px));
+
+    &:not(:first-child) {
+      @include ruleMin(margin-top, (xs: 11px, sm: 15px));
+    }
+  }
 }

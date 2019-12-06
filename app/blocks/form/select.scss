@@ -19,6 +19,7 @@
     @extend .select;
 
     transition: border-color $ease-main;
+    overflow: hidden;
   }
 
   &[data-type*='select-one'] {
@@ -39,10 +40,14 @@
     transform: translate3d(0, -50%, 0) rotate(90deg);
     transition: transform $ease-main;
 
-    @include ruleMin(right, (xs: 12px, sm: 14px));
+    @include ruleMin(right, (xs: 12px, sm: 20px));
 
     #{$b}.is-open & {
       transform: translate3d(0, -50%, 0) rotate(-90deg);
+    }
+
+    .is-error &, .is-success & {
+      opacity: 0;
     }
   }
 
@@ -66,16 +71,21 @@
       height: 100%;
       padding: 0;
       padding-right: 20px;
+      overflow: hidden;
 
       .choices__item {
         display: table-cell;
         vertical-align: middle;
+        box-sizing: border-box;
       }
     }
 
     &--dropdown {
       box-sizing: border-box;
-      // max-height: none;
+
+      .choices__list {
+        max-height: none;
+      }
 
       .choices__item {
         padding: 10px;

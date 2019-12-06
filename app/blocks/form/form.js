@@ -104,13 +104,23 @@ export function datepicker() {
     evt.preventDefault();
     console.log('click input');
     const self = evt.currentTarget;
-    const datepicker = $(self).closest('.js-datepicker-range');
+    const datepicker = $(self).closest('.js-datepicker-range, .js-datepicker');
     $(datepicker).addClass('is-show-date');
   });
 
-  // $('.js-datepicker').each((i, el) => {
-  //   $(el).datepicker();
-  // });
+  $('.js-datepicker').each((i, el) => {
+    $(el).datepicker({
+      classes: 'inputbox__datepicker',
+      format: 'dd.mm.yyyy',
+      altField: '[data-date]',
+      altFieldDateFormat: 'dd.mm.yyyy',
+      onSelect() {
+        setTimeout(() => {
+          $(el).removeClass('is-show-date');
+        }, 50);
+      },
+    });
+  });
 }
 
 export function inputmask() {

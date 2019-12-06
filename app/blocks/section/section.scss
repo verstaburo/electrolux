@@ -108,6 +108,7 @@
   }
 
   &_order {
+    position: relative;
 
     &:not(:first-child) {
       @include ruleMin(margin-top, (xs: 11px, sm: 80px));

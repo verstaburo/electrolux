@@ -53,7 +53,7 @@
     &_bmg {
 
       &:not(:first-child) {
-        @include ruleMin(margin-top, (xs: 18px, sm: 36px));
+        @include ruleMin(margin-top, (xs: 9px, sm: 36px));
       }
     }
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>undefined | Карта верстки</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header"><button class="burger header__burger is-hidden-xl js-menu-open"><span></span></button>
+        <div class="header__wrapper">
+            <div class="logo header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div><a class="header__close is-hidden-sm js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
+        </div>
+    </header>
+    <div class="side-feedback" data-panel="data-panel"><button class="side-feedback__head is-hidden-xl js-show-panel">
+            <div class="side-feedback__head-image"><svg class="side-feedback__head-icon side-feedback__head-icon_message is-closed"><use xlink:href="assets/images/icon.svg#icon_message"></use></svg><svg class="side-feedback__head-icon side-feedback__head-icon_cross is-opened"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></div>
+            <div class="side-feedback__head-content">
+                <div class="side-feedback__head-text"><span class="is-closed">Связаться с нами</span><span class="is-opened">Закрыть</span></div>
+            </div>
+        </button>
+        <ul class="side-feedback__list">
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-phones" href="tel:88004444448" data-popup="#popup-phones"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_phone"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Свяжитесь с нами</span><span class="is-hidden-xl">8 (800) 444-44-48</span></span></a></li>
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-feedback" href="#feedback-form"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_mail"><use xlink:href="assets/images/icon.svg#icon_mail"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Написать на сайте</span><span class="is-hidden-xl">Написать нам</span></span></a></li>
+        </ul>
+    </div>
+    <div class="feedback-form">
+        <div class="container">
+            <div class="feedback-form__head">
+                <div class="feedback-form__title">Связаться с нами</div><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__back"><svg class="feedback-form__icon feedback-form__icon_back"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></span><span class="feedback-form__close-text">Назад</span></a>
+            </div>
+            <div class="feedback-form__content">
+                <form class="form feedback-form__form" action="/" method="post" data-validated-form="data-validated-form">
+                    <div class="grid">
+                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_noborder js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_md_12"><button class="button button_blue form__button" type="submit">Отправить</button>
+                            <div class="form__text is-hidden-sm">Нажимая на кнопку, я соглашаюсь с&nbsp;<a class="link link_underline" href="#"><span class="link__text">условиями политики конфиденциальности.</span></a></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main class="page" role="main">
+        <div class="sitemap">
+            <div class="container"><a class="sitemap__link" href="ui-kit.html">UI-kit (ui-kit.html)</a><a class="sitemap__link" href="index.html">Index (index.html)</a><br><b class="sitemap__title">Попапы</b><br><a class="sitemap__link js-fancybox" href="#popup-no-mc">Попап нет мк по запросу</a><a class="sitemap__link js-fancybox" href="#popup-registration-success">Попап успешная регистрация</a></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__side footer__side_front">
+                <div class="logo logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
+            </div>
+            <div class="footer__text"><a class="link footer__link" href="#"><span class="link__text">Пользовательское соглашение (оферта)</span></a></div>
+            <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
+        </div>
+    </footer>
+    <div class="popups">
+        <div class="popup popup-phones" id="popup-phones">
+            <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
+            <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:+74952484444"><span class="link__text">+7 (495) 248-44-44</span></a><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+        </div>
+        <div class="popup popup-no-mc" id="popup-no-mc">
+            <div class="popup__title">Нет доступных мастер&#8209;классов</div>
+            <div class="popup__content">Мы постоянно обновляем расписание, попробуйте посмотреть расписание немного позже или укажите другие даты</div>
+        </div>
+        <div class="popup popup-registration-success" id="popup-registration-success">
+            <div class="popup__title">Спасибо за регистрацию!</div>
+            <div class="popup__content">Ваша заявка будет рассмотрена в течение 3&nbsp;рабочих дней. Ожидайте e&#8209;mail на указанную почту</div>
+        </div>
+    </div>
+    <script src="assets/scripts/libs/parsley.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9971b6ff-9a4d-4940-aaa6-9b7f3bdb8ee8&amp;lang=ru_RU"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

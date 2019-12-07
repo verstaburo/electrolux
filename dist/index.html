@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header"><button class="burger header__burger is-hidden-xl js-menu-open"><span></span></button>
+        <div class="header__wrapper">
+            <div class="logo header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div><a class="header__close is-hidden-sm js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
+        </div>
+    </header>
+    <div class="side-feedback" data-panel="data-panel"><button class="side-feedback__head is-hidden-xl js-show-panel">
+            <div class="side-feedback__head-image"><svg class="side-feedback__head-icon side-feedback__head-icon_message is-closed"><use xlink:href="assets/images/icon.svg#icon_message"></use></svg><svg class="side-feedback__head-icon side-feedback__head-icon_cross is-opened"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></div>
+            <div class="side-feedback__head-content">
+                <div class="side-feedback__head-text"><span class="is-closed">Связаться с нами</span><span class="is-opened">Закрыть</span></div>
+            </div>
+        </button>
+        <ul class="side-feedback__list">
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-phones" href="tel:88004444448" data-popup="#popup-phones"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_phone"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Свяжитесь с нами</span><span class="is-hidden-xl">8 (800) 444-44-48</span></span></a></li>
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-feedback" href="#feedback-form"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_mail"><use xlink:href="assets/images/icon.svg#icon_mail"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Написать на сайте</span><span class="is-hidden-xl">Написать нам</span></span></a></li>
+        </ul>
+    </div>
+    <div class="feedback-form">
+        <div class="container">
+            <div class="feedback-form__head">
+                <div class="feedback-form__title">Связаться с нами</div><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__back"><svg class="feedback-form__icon feedback-form__icon_back"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></span><span class="feedback-form__close-text">Назад</span></a>
+            </div>
+            <div class="feedback-form__content">
+                <form class="form feedback-form__form" action="/" method="post" data-validated-form="data-validated-form">
+                    <div class="grid">
+                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_noborder js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_md_12"><button class="button button_blue form__button" type="submit">Отправить</button>
+                            <div class="form__text is-hidden-sm">Нажимая на кнопку, я соглашаюсь с&nbsp;<a class="link link_underline" href="#"><span class="link__text">условиями политики конфиденциальности.</span></a></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main class="page" role="main">
+        <section class="lead">
+            <div class="container">
+                <div class="lead__content">
+                    <h1 class="lead__title">Готовьте дома, <br> как в ресторане</h1>
+                    <div class="lead__text">
+                        <p>Наш столетний опыт и богатое наследие в области работы с&nbsp;<span class="lead__spoiler" data-spoiler-content="lead">профессиональными шеф&#8209;поварами позволили нам получить знания, которые мы&nbsp;применяем в&nbsp;нашей кухонной технике, позволяя вам максимально использовать все возможности кухни у&nbsp;вас дома.</span></p>
+                    </div><button class="spoiler js-show-more lead__more is-hidden-xl" data-spoiler="lead"><svg class="spoiler__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button>
+                </div>
+            </div>
+        </section>
+        <section class="section section_mc" id="mc" data-section="data-section">
+            <div class="section__head">
+                <div class="container">
+                    <div class="text-block text-block_centered">
+                        <div class="text-block__text text-block__text_fz20 text-block__text_fw400 text-block__text_blue">
+                            <p>Приходите на наши мастер&#8209;классы и&nbsp;мы покажем вам на что способна наша бытовая техника, а&nbsp;также научим готовить вас дома, как в&nbsp;ресторане.</p>
+                        </div>
+                        <h3 class="text-block__title">Расписание мастер&#8209;классов</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="section__content">
+                <form class="filters">
+                    <div class="container">
+                        <div class="filters__item"><label class="inputbox inputbox_row">
+                                <p class="inputbox__label">Показать Мастер-классы в</p><span class="inputbox__wrapper"><select class="select js-select" name="location" data-filter-location="data-filter-location">
+                                        <option value="" placeholder="placeholder">Выберите город</option>
+                                        <option value="1">Москва</option>
+                                        <option value="2">Роза Хутор</option>
+                                    </select><span class="error-message"></span></span>
+                            </label></div>
+                        <div class="filters__item"><label class="inputbox inputbox_row">
+                                <p class="inputbox__label">В период</p><span class="inputbox__wrapper inputbox__wrapper_flex js-datepicker-range"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-start-date="data-start-date" readonly="readonly" data-filter-start-date="data-filter-start-date" /><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-end-date="data-end-date" readonly="readonly" data-filter-end-date="data-filter-end-date" /><span class="error-message"></span></span>
+                            </label></div>
+                    </div>
+                </form>
+                <section class="master-classes">
+                    <div class="container">
+                        <div class="master-classes__content js-mc-slider">
+                            <div class="grid master-classes__wrapper">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide" data-filter-location-value="1" data-filter-date="2019.12.20">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__label">Детский</div>
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk1.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="1" data-location-value="1">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Москва</div>
+                                                <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019.12.20">20 декабря | Пт</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide" data-filter-location-value="2" data-filter-date="2019.12.21">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk2.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="2" data-location-value="2">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Роза Хутор</div>
+                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019.12.21">21 декабря | Сб</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide" data-filter-location-value="1" data-filter-date="2019.12.24">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk3.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="3" data-location-value="1">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Москва</div>
+                                                <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019.12.24">24 декабря | Вт</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="1" data-filter-date="2019.12.23">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__label">Детский</div>
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk4.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="4" data-location-value="1">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Москва</div>
+                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019.12.23">23 декабря | Вт</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="2" data-filter-date="2019.12.18">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk5.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="5" data-location-value="2">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Роза Хутор</div>
+                                                <h4 class="case__title">Party food vol. 1</h4><time class="case__date" datatime="2019.12.18">18 декабря | Ср</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="1" data-filter-date="2019.12.10">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk6.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="6" data-location-value="1">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Москва</div>
+                                                <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019.12.10">10 декабря | Вт</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="1" data-filter-date="2019.12.20">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__label">Детский</div>
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk1.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="7" data-location-value="1">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Москва</div>
+                                                <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019.12.20">20 декабря | Пт</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="2" data-filter-date="2019.12.21">
+                                    <article class="case master-classes__case">
+                                        <div class="case__top">
+                                            <div class="case__media"><img class="case__image" src="assets/images/mk2.jpg" alt="" role="presentation" /></div>
+                                            <div class="case__describe">
+                                                <div class="case__info">
+                                                    <div class="case__item"><svg class="case__icon case__icon_time"><use xlink:href="assets/images/icon.svg#icon_clock"></use></svg>
+                                                        <div class="case__info-text">18:30 - 20:30</div>
+                                                    </div>
+                                                    <div class="case__item"><svg class="case__icon case__icon_vacancy"><use xlink:href="assets/images/icon.svg#icon_user"></use></svg>
+                                                        <div class="case__info-text">осталось 7 мест</div>
+                                                    </div>
+                                                </div>
+                                                <div class="case__menu">
+                                                    <div class="case__name">Меню:</div>
+                                                    <div class="case__scrollblock js-scrollbar">
+                                                        <ul class="list case__list">
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                            <li>Вителло Тонато с вялеными помидорами черри и быстро маринованными огурцами в вакууме</li>
+                                                            <li>Тако Cups с фаршем из говядины и сыром чеддер</li>
+                                                            <li>Хумус с ржаными чипсами и дегидрированными овощами</li>
+                                                            <li>Брускетта с курицей карри и миндальными лепестками</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="case__total">
+                                                        <div class="case__price">
+                                                            <div class="case__price-text">Стоимость:</div>
+                                                            <div class="case__sum">2 500 ₽</div>
+                                                        </div><a class="button case__button js-order-mc" href="#order" data-case-index="8" data-location-value="2">Записаться</a>
+                                                        <div class="case__note">Для покупателей духового шкафа с паром МК бесплатно.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="case__bottom">
+                                            <div class="case__header">
+                                                <div class="case__location">Роза Хутор</div>
+                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019.12.21">21 декабря | Сб</time>
+                                            </div>
+                                            <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="master-classes__navigation">
+                            <div class="master-classes__toggles">
+                                <div class="master-classes__toggle master-classes__toggle_prev"><svg class="master-classes__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                <div class="master-classes__progress">1/8</div>
+                                <div class="master-classes__toggle master-classes__toggle_next"><svg class="master-classes__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            </div>
+                            <div class="master-classes__buttons"><a class="button master-classes__button master-classes__button_more js-show-mc-next3" href="#">Показать больше мастер-классов</a><a class="button master-classes__button master-classes__button_all is-hidden js-show-mc-all" href="#">Показать все мастер-классы</a></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <nav class="navigation" data-navigation="data-navigation">
+            <div class="navigation__wrapper">
+                <div class="container">
+                    <div class="navigation__header js-show-nav-list is-hidden-xl"><svg class="navigation__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                        <div class="navigation__name" data-active-link-title="data-active-link-title"></div>
+                    </div>
+                    <div class="navigation__list">
+                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#mc" data-nav-link="mc">Расписание мастер&#8209;классов</a></div>
+                        <div class="navigation__item"><a class="navigation__link" href="#kitchen-msc" data-nav-link="kitchen-msc">Кулинарные пространства</a></div>
+                        <div class="navigation__item"><a class="navigation__link" href="#childrens-mc" data-nav-link="childrens-mc">Мастер&#8209;класс для детей</a></div>
+                        <div class="navigation__item"><a class="navigation__link" href="#chef" data-nav-link="chef">Бренд-шеф</a></div>
+                        <div class="navigation__item"><a class="navigation__link" href="#whiterabbit" data-nav-link="whiterabbit">Акция от White Rabbit Family</a></div>
+                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#order" data-nav-link="order">Получить мастер-класс</a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="section" id="kitchen-msc" data-section="data-section">
+            <section class="section section_chess">
+                <div class="section__column section__column_order2">
+                    <div class="container container_half container_end">
+                        <div class="text-block">
+                            <h3 class="text-block__title text-block__title_fz40">Наши кулинарные пространства в&nbsp;Москве</h3>
+                            <div class="text-block__text">
+                                <p>Брэнд&#8209;шеф компании Electrolux c многолетний опытом работы в профессиональной технике, поделится своими секретами и научит Вас, как просто и технологично использовать технику Electrolux у себя дома, а также поможет определиться с выбором и даст полезные советы.</p>
+                                <p>Правильно подготовить ингредиенты, выбрать нужные режимы духовки и варочной панели, разобраться в настройках, применить термощуп, сделать красивую</p>
+                            </div>
+                            <div class="text-block__buttons"><a class="button text-block__button js-show-map" href="#map_msc">Где находится</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__column">
+                    <div class="section__media section__media_small">
+                        <div class="slider swiper-container js-slider section__slider">
+                            <div class="swiper-wrapper">
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-msc.jpg" alt="" role="presentation" /></div>
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-rh.jpg" alt="" role="presentation" /></div>
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-msc.jpg" alt="" role="presentation" /></div>
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-rh.jpg" alt="" role="presentation" /></div>
+                            </div>
+                            <div class="slider__navigation">
+                                <div class="slider__button slider__button_prev"><svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                <div class="slider__button slider__button_next"><svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            </div>
+                        </div>
+                        <div class="map section__map" id="map_msc" data-balloon-title="Адрес нашего центра:" data-balloon-address="Шлюзовая набережная д. 6 стр. 4" data-balloon-describe="(вход со стороны Шлюзовой набережной, у КПП со шлагбаумом). Вход без пропуска."></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_chess">
+                <div class="section__column">
+                    <div class="section__media section__media_small">
+                        <div class="slider swiper-container js-slider section__slider">
+                            <div class="swiper-wrapper">
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-rh.jpg" alt="" role="presentation" /></div>
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-msc.jpg" alt="" role="presentation" /></div>
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-rh.jpg" alt="" role="presentation" /></div>
+                                <div class="slider__slide swiper-slide"><img class="slider__image" src="assets/images/kitchen-msc.jpg" alt="" role="presentation" /></div>
+                            </div>
+                            <div class="slider__navigation">
+                                <div class="slider__button slider__button_prev"><svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                <div class="slider__button slider__button_next"><svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            </div>
+                        </div>
+                        <div class="map section__map" id="map_rh" data-balloon-title="Адрес нашего центра:" data-balloon-address="с. Эстосадок, Роза Хутор, ул. Каменка, 2" data-balloon-describe="Ежедневно с 12:00 до 21:00"></div>
+                    </div>
+                </div>
+                <div class="section__column">
+                    <div class="container container_half container_start">
+                        <div class="text-block">
+                            <h3 class="text-block__title text-block__title_fz40">Активная студия Electrolux на&nbsp;Роза&nbsp;Хутор</h3>
+                            <div class="text-block__text">
+                                <p>Кулинарные мастер&#8209;классы для детей и взрослых, где вы сможете приятно и полезно провести время: правильно подготовить ингредиенты, выбрать нужные режимы приготовления и красиво подать блюдо. Всё это под чутким руководством бренд&#8209;шефа Electrolux.</p>
+                            </div>
+                            <div class="text-block__buttons"><a class="button text-block__button js-show-map" href="#map_rh">Где находится</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="section section_chess" id="childrens-mc" data-section="data-section">
+            <div class="section__column section__column_order2">
+                <div class="container container_half container_end">
+                    <div class="text-block">
+                        <h3 class="text-block__title text-block__title_fz40">Мастер&#8209;классы<br>для детей</h3>
+                        <div class="text-block__text">
+                            <p>Брэнд&#8209;шеф компании Electrolux c многолетний опытом работы в профессиональной технике, поделится своими секретами и научит Вас, как просто и технологично использовать технику Electrolux у себя дома, а также поможет определиться с выбором и даст полезные советы.</p>
+                            <p>Правильно подготовить ингредиенты, выбрать нужные режимы духовки и варочной панели, разобраться в настройках, применить термощуп, сделать красивую подачу — вам предстоит пройти весь процесс приготовления блюд от начала до конца, чтобы без труда повторить их дома.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section__column">
+                <div class="section__media"><img class="section__image" src="assets/images/childes-mk.jpg" alt="" role="presentation" /></div>
+            </div>
+        </section>
+        <section class="section section_chess" id="chef" data-section="data-section">
+            <div class="section__column">
+                <div class="section__media"><img class="section__image" src="assets/images/chef.jpg" alt="" role="presentation" /></div>
+            </div>
+            <div class="section__column">
+                <div class="container container_half container_start">
+                    <div class="text-block">
+                        <h3 class="text-block__title text-block__title_fz40">Олег Туркин</h3>
+                        <div class="text-block__text">
+                            <p>Брэнд&#8209;шеф компании Electrolux c многолетний опытом работы в профессиональной технике, поделится своими секретами и научит Вас, как просто и технологично использовать технику Electrolux у себя дома, а также поможет определиться с выбором и даст полезные советы.</p>
+                            <p>Правильно подготовить ингредиенты, выбрать нужные режимы духовки и варочной панели, разобраться в настройках, применить термощуп, сделать красивую подачу — вам предстоит пройти весь процесс приготовления блюд от начала до конца, чтобы без труда повторить их дома.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section_chess" id="whiterabbit" data-section="data-section">
+            <div class="section__column section__column_order2">
+                <div class="container container_half container_end">
+                    <div class="text-block">
+                        <h3 class="text-block__title">White Rabbit Family</h3>
+                        <div class="text-block__text">
+                            <p>White Rabbit Family - российская группа компаний, основанная Борисом Зарьковым в 2010 году. Бренд-шеф White Rabbit Family Владимир Мухин - один из самых выдающихся российских шефов.</p>
+                            <p>Рестораны холдинга отмечены престижными российскими и международными рейтингами, авторитетные европейские гиды рекомендуют их иностранным туристам. В 2019 году ресторан White Rabbit занял 13-е место The World’s 50 Best Restaurants , а ресторан Selfie 65-е место.</p>
+                            <p>При чеке на 4000 рублей в ресторане на Роза Хутор вместе со счётом Вы получаете приглашение в Активную Студию Electrolux на кулинарный мастер класс.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section__column">
+                <div class="section__media"><img class="section__image" src="assets/images/white-rabbit.jpg" alt="" role="presentation" /></div>
+            </div>
+        </section>
+        <section class="section section_order" id="order" data-section="data-section">
+            <div class="section__head">
+                <div class="container">
+                    <div class="text-block text-block_centered">
+                        <h3 class="text-block__title">Получить мастер&#8209;класс</h3>
+                        <div class="text-block__text text-block__text_bmg">Вы купили духовой шкаф с функцией пара и хотите освоить все возможности новой техники? Или, может, только выбираете подходящую модель, и вам интересно увидеть духовки и варочные поверхности Electrolux в деле? Тогда смело записывайтесь на кулинарный мастер&#8209;класс.</div>
+                        <div class="text-block__buttons"><a class="button text-block__button js-show-orderform" href="#">Записаться на мастер-класс</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <section class="order-form">
+                    <div class="order-form__buttons"><button class="order-form__collapse js-hide-orderform">
+                            <div class="order-form__collapse-text">Свернуть</div><svg class="order-form__collapse-arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                        </button></div>
+                    <form class="form order-form__form" action="/" method="post" data-validated-form="data-validated-form" data-orderform="data-orderform">
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_1 grid__col_sm_12 is-hidden-sm"></div>
+                            <div class="grid__col grid__col_xl_10 grid__col_sm_12">
+                                <fieldset class="form__section" data-form-checkers="data-form-checkers">
+                                    <div class="form__title">Детали Мастер-класса</div>
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                <p class="inputbox__label">Выберите адрес студии*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="location" data-location="data-location" required="required" data-parsley-group="start">
+                                                        <option value="" placeholder="placeholder">Выберите адрес студии из списка</option>
+                                                        <option value="1">Москва, Шлюзовая набережная д. 6 стр. 4</option>
+                                                        <option value="2">с. Эстосадок, Роза Хутор, ул. Каменка, 2</option>
+                                                    </select><span class="error-message"></span></span>
+                                            </label></div>
+                                        <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                                <p class="inputbox__label">Выберите мастер-класс*</p><span class="inputbox__wrapper">
+                                                    <div class="mc-select js-mc-select">
+                                                        <div class="mc-select__head" data-head="data-head">
+                                                            <div class="mc-select__label" data-label="data-label"></div>
+                                                            <div class="mc-select__placeholder">Выберите мастер-класс из списка</div>
+                                                            <div class="mc-select__toggle"><svg class="mc-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                                        </div>
+                                                        <div class="mc-select__dropdown js-scrollbar">
+                                                            <ul class="mc-select__list">
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="1" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="2" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="3" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="4" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="5" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="6" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="7" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="8" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                        <div class="button mc-radio__button">Выбрать</div>
+                                                                    </label></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div><span class="error-message"></span>
+                                                </span>
+                                            </label></div>
+                                    </div>
+                                    <div class="form__checkers"><label class="checkradio form__checker"><input class="checkradio__input" name="oven" value="oven" type="checkbox" data-form-type="oven" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно</span></label><label class="checkradio form__checker"><input class="checkradio__input" name="whiterabbit" value="whiterabbit" type="checkbox" data-form-type="whiterabbit" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">У меня есть приглашение на одного из ресторана White Rabbit Family - пойду на мастер-класс бесплатно</span></label></div>
+                                    <div class="form__triggers" data-form-trigger="data-form-trigger">
+                                        <div class="form__note">* Обязательное поле</div>
+                                        <div class="form__buttons"><button class="button form__button js-toggle-orderform" type="button">Записаться</button></div>
+                                    </div>
+                                </fieldset>
+                                <div class="form__content" data-form-body="data-form-body">
+                                    <fieldset class="form__section">
+                                        <div class="form__text form__text_chd" data-form-field="child">К мастер-классу допускаются дети в возрасте от 6-ти лет и только в сопровождении одного взрослого.</div>
+                                        <div class="form__title form__title_mb28"><span data-form-field="adult, oven, whiterabbit">Личные данные</span><span data-form-field="child">Сопровождающий ребенка</span></div>
+                                        <div class="grid">
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Представьтесь, пожалуйста (ФИО)*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" /><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Например, ivan.ivanov@electrolux.com" data-type="email" /><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" /><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                                    <p class="inputbox__label">Количество человек*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="pay-vacancy" required="required">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                            <option value="13">13</option>
+                                                            <option value="14">14</option>
+                                                            <option value="15">15</option>
+                                                            <option value="16">16</option>
+                                                            <option value="17">17</option>
+                                                            <option value="18">18</option>
+                                                            <option value="19">19</option>
+                                                            <option value="20">20</option>
+                                                            <option value="21">21</option>
+                                                            <option value="22">22</option>
+                                                        </select><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="oven"><label class="inputbox">
+                                                    <p class="inputbox__label">Количество человек*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="free-vacancy" required="required">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                        </select><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="whiterabbit"><label class="inputbox">
+                                                    <p class="inputbox__label">Номер приглашения*</p><span class="inputbox__wrapper"><input class="input" type="text" name="invitation" required="required" placeholder="16278499921" data-parsley-type="digits" /><span class="error-message"></span></span>
+                                                </label></div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form__section" data-form-field="child">
+                                        <div class="form__title form__title_sm-mb40">Данные ребенка</div>
+                                        <div class="form__childes" data-child-container="data-child-container">
+                                            <div class="grid" data-child-template="data-child-template" data-child="data-child">
+                                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                        <p class="inputbox__label">Имя ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childName[0]" required="required" placeholder="Имя ребенка" /><span class="error-message"></span></span>
+                                                    </label></div>
+                                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                        <p class="inputbox__label">Возраст ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childAge[0]" required="required" placeholder="Сколько лет " /><span class="error-message"></span></span>
+                                                    </label></div>
+                                            </div>
+                                        </div>
+                                        <div class="form__add"><button class="button form__additional js-add-child" type="button" data-child-fields-names="childName,childAge" data-max-childs-count="11">+ Добавить ребенка</button></div>
+                                    </fieldset>
+                                    <fieldset class="form__section" data-form-field="oven">
+                                        <div class="form__title">Ваш продукт</div>
+                                        <div class="grid">
+                                            <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Модель духового шкафа*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="ovenModel" required="required">
+                                                            <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                            <option value="1">Модель 1</option>
+                                                            <option value="2">Модель 2</option>
+                                                            <option value="3">Модель 3</option>
+                                                            <option value="4">Модель 4</option>
+                                                            <option value="5">Модель 5</option>
+                                                            <option value="6">Модель 6</option>
+                                                            <option value="7">Модель 7</option>
+                                                            <option value="8">Модель 8</option>
+                                                            <option value="9">Модель 9</option>
+                                                            <option value="10">Модель 10</option>
+                                                            <option value="11">Модель 11</option>
+                                                        </select><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Где была куплена техника*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="shop" required="required">
+                                                            <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                            <option value="1">Магазин 1</option>
+                                                            <option value="2">Магазин 2</option>
+                                                            <option value="3">Магазин 3</option>
+                                                            <option value="4">Магазин 4</option>
+                                                            <option value="5">Магазин 5</option>
+                                                            <option value="6">Магазин 6</option>
+                                                            <option value="7">Магазин 7</option>
+                                                            <option value="8">Магазин 8</option>
+                                                            <option value="9">Магазин 9</option>
+                                                            <option value="10">Магазин 10</option>
+                                                            <option value="11">Магазин 11</option>
+                                                        </select><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Где была куплена техника*</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="дд.мм.гггг" data-date="data-date" /><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Номер чека*</p><span class="inputbox__wrapper"><input class="input" type="text" name="checkNumber" required="required" placeholder="16278499921" data-parsley-type="digits" /><span class="error-message"></span></span>
+                                                </label></div>
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                    <p class="inputbox__label">Приложите чек*</p><span class="inputbox__wrapper"><label class="input-uploader js-file-upload"><input class="input" type="file" name="files[]" required="required" /><span class="input-uploader__filename" data-filename="data-filename"></span><span class="input-uploader__placeholder" data-placeholder="data-placeholder">Нажмите для выбора</span></label><span class="error-message"></span></span>
+                                                </label></div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form__section">
+                                        <div class="form__notes">
+                                            <div class="form__note">* Обязательное поле</div>
+                                            <div class="form__agreements"><label class="checkradio checkradio_fz15 form__agreement"><input class="checkradio__input" name="offer" value="offer" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я принимаю&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условия оферты и ознакомился с правилами проведения акции.</span></a></span></label><label class="checkradio checkradio_fz15 form__agreement"><input class="checkradio__input" name="personalData" value="pd" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я соглашаюсь с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></span></label></div>
+                                        </div>
+                                        <div class="form__payment" data-form-field="adult,child">
+                                            <div class="form__price">
+                                                <div class="form__total">3 000 ₽</div>
+                                                <div class="form__price-text">итоговая стоимость</div>
+                                            </div>
+                                        </div>
+                                        <div class="form__buttons form__buttons_mtb"><button class="button form__button" type="submit"><span data-form-field="oven,whiterabbit">Записаться</span><span data-form-field="adult,child">Оплатить</span></button></div>
+                                        <div class="form__note form__note_centered form__note_mt20" data-form-field="adult,child">После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.</div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="grid__col grid__col_xl_1 grid__col_sm_12 is-hidden-sm"></div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__side footer__side_front">
+                <div class="logo logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
+            </div>
+            <div class="footer__text"><a class="link footer__link" href="#"><span class="link__text">Пользовательское соглашение (оферта)</span></a></div>
+            <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
+        </div>
+    </footer>
+    <div class="popups">
+        <div class="popup popup-phones" id="popup-phones">
+            <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
+            <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:+74952484444"><span class="link__text">+7 (495) 248-44-44</span></a><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+        </div>
+        <div class="popup popup-no-mc" id="popup-no-mc">
+            <div class="popup__title">Нет доступных мастер&#8209;классов</div>
+            <div class="popup__content">Мы постоянно обновляем расписание, попробуйте посмотреть расписание немного позже или укажите другие даты</div>
+        </div>
+        <div class="popup popup-registration-success" id="popup-registration-success">
+            <div class="popup__title">Спасибо за регистрацию!</div>
+            <div class="popup__content">Ваша заявка будет рассмотрена в течение 3&nbsp;рабочих дней. Ожидайте e&#8209;mail на указанную почту</div>
+        </div>
+    </div>
+    <script src="assets/scripts/libs/parsley.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9971b6ff-9a4d-4940-aaa6-9b7f3bdb8ee8&amp;lang=ru_RU"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

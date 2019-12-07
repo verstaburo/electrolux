@@ -34,13 +34,19 @@ export default function masterClasses() {
               init() {
                 const self = this;
                 const currentSlide = self.activeIndex + 1;
-                const totalSlides = self.slides.length;
+                const totalSlides = $(self.slides).not('.is-filtration-fall').length;
                 $(porgressEl).text(`${currentSlide}/${totalSlides}`);
               },
               slideChange() {
                 const self = this;
                 const currentSlide = self.activeIndex + 1;
-                const totalSlides = self.slides.length;
+                const totalSlides = $(self.slides).not('.is-filtration-fall').length;
+                $(porgressEl).text(`${currentSlide}/${totalSlides}`);
+              },
+              progress() {
+                const self = this;
+                const currentSlide = self.activeIndex + 1;
+                const totalSlides = $(self.slides).not('.is-filtration-fall').length;
                 $(porgressEl).text(`${currentSlide}/${totalSlides}`);
               },
             },
@@ -76,7 +82,7 @@ export default function masterClasses() {
   };
 
   function showCards() {
-    const slides = $('.master-classes__slide');
+    const slides = $('.master-classes__slide:not(.is-filtration-fall)');
     const bp = window.globalOptions.sizes;
     const wW = $(window).width();
     const isShowNext3 = $('.js-show-mc-next3').is('.is-engage');
@@ -88,41 +94,62 @@ export default function masterClasses() {
         $(slides).each((i, el) => {
           if (i > 3) {
             $(el).addClass('is-hide');
+            $('.js-show-mc-all').removeClass('is-hidden');
           } else {
             $(el).removeClass('is-hide');
+            $('.js-show-mc-all').addClass('is-hidden');
           }
         });
       } else if (wW >= bp.md) {
         $(slides).each((i, el) => {
           if (i > 5) {
             $(el).addClass('is-hide');
+            $('.js-show-mc-all').removeClass('is-hidden');
           } else {
             $(el).removeClass('is-hide');
+            $('.js-show-mc-all').addClass('is-hidden');
           }
         });
       } else {
         $(slides).each((i, el) => {
           $(el).removeClass('is-hide');
         });
+        $('.js-mc-slider').each((i, el) => {
+          el.swiper.update();
+        });
       }
     } else if (wW >= bp.sm && wW < bp.md) {
       $(slides).each((i, el) => {
         if (i > 1) {
           $(el).addClass('is-hide');
+          $('.js-show-mc-next3').removeClass('is-hidden');
         } else {
           $(el).removeClass('is-hide');
+          $('.js-show-mc-next3').addClass('is-hidden');
         }
       });
     } else if (wW >= bp.md) {
       $(slides).each((i, el) => {
         if (i > 2) {
           $(el).addClass('is-hide');
+          $('.js-show-mc-next3').removeClass('is-hidden');
         } else {
           $(el).removeClass('is-hide');
+          $('.js-show-mc-next3').addClass('is-hidden');
         }
       });
+    } else {
+      $(slides).removeClass('is-hide');
+      $('.js-mc-slider').each((i, el) => {
+        el.swiper.update();
+        el.swiper.slideTo(0);
+        // el.swiper.destroy(true, true);
+      });
+      // setSliderForMC();
     }
   }
+
+  window.globalFunctions.showCards = showCards;
 
   showCards();
 
@@ -132,7 +159,6 @@ export default function masterClasses() {
     evt.preventDefault();
     const self = evt.currentTarget;
     $(self).addClass('is-engage');
-    $('.js-show-mc-all').removeClass('is-hidden');
     setTimeout(showCards);
   });
 

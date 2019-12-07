@@ -42,6 +42,7 @@ import mcSelect from '../blocks/mc-select/mc-select';
 import orderForm from '../components/order-form/order-form';
 import inputUploader from '../blocks/input-uploader/input-uploader';
 import addChild from '../components/order-form/add-child';
+import filter from '../blocks/filters/filter';
 
 const $ = window.$;
 
@@ -78,5 +79,6 @@ $(() => {
   orderForm();
   inputUploader();
   addChild();
+  filter();
   navigation();
 });

@@ -46,6 +46,10 @@
     &.is-hide {
       @include ruleMin(display, (sm: none));
     }
+
+    &.is-filtration-fall {
+      display: none;
+    }
   }
 
   &__case {

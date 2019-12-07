@@ -84,6 +84,7 @@ export function datepicker() {
     classes: 'inputbox__datepicker',
     format: 'dd/mm/yyyy',
     range: true,
+    toggleSelected: false,
     onSelect(fd, d, inst) {
       const datesString = fd;
       const dates = datesString.split(',');
@@ -91,8 +92,8 @@ export function datepicker() {
       const startDateField = $(el).find('[data-start-date]');
       const endDateField = $(el).find('[data-end-date]');
       if (dates.length === 2) {
-        $(startDateField).val(dates[0].split('.').join('/'));
-        $(endDateField).val(dates[1].split('.').join('/'));
+        $(startDateField).val(dates[0].split('.').join('/')).change();
+        $(endDateField).val(dates[1].split('.').join('/')).change();
         setTimeout(() => {
           $(el).removeClass('is-show-date');
         }, 50);
@@ -102,7 +103,6 @@ export function datepicker() {
 
   $(document).on('click', '.js-show-datepicker', (evt) => {
     evt.preventDefault();
-    console.log('click input');
     const self = evt.currentTarget;
     const datepicker = $(self).closest('.js-datepicker-range, .js-datepicker');
     $(datepicker).addClass('is-show-date');

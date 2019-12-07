@@ -5,7 +5,7 @@ mixin filters()
         +inputbox._row
           +label Показать Мастер-классы в
           +input-wrapper
-            +select(name="location")
+            +select()(name="location" data-filter-location)
               option(value="" placeholder) Выберите город
               option(value="1") Москва
               option(value="2") Роза Хутор
@@ -13,8 +13,8 @@ mixin filters()
         +inputbox._row
           +label В период
           +input-wrapper._flex.js-datepicker-range
-            +input.input_time(type="text" name="startDate" placeholder="Дата приезда"  data-start-date readonly).js-show-datepicker
-            +input.input_time(type="text" name="endDate" placeholder="Дата отъезда"  data-end-date readonly).js-show-datepicker
+            +input.input_time(type="text" name="startDate" placeholder="Дата приезда"  data-start-date readonly data-filter-start-date).js-show-datepicker
+            +input.input_time(type="text" name="endDate" placeholder="Дата отъезда"  data-end-date readonly data-filter-end-date).js-show-datepicker
 
     block
 

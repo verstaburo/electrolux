@@ -4,7 +4,7 @@ mixin master-classes()
       +e.content.js-mc-slider
         +grid.master-classes__wrapper
           each item in getData('cases')
-            +col({xl: 4, md: 6, sm: 12}).master-classes__slide(class=item.slideClass)
+            +col({xl: 4, md: 6, sm: 12}).master-classes__slide(class=item.slideClass data-filter-location-value=item.location.value data-filter-date=item.date.date)
               +case(item).__case
       +e.navigation
         +e.toggles

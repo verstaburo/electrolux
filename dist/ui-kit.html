@@ -759,9 +759,9 @@
                         <section class="lead">
                             <div class="container">
                                 <div class="lead__content">
-                                    <h1 class="lead__title">Готовьте дома, <br> как в ресторане</h1>
+                                    <h1 class="lead__title">Готовьте, как <br>шеф&#8209;повар!</h1>
                                     <div class="lead__text">
-                                        <p>Наш столетний опыт и богатое наследие в области работы с&nbsp;<span class="lead__spoiler" data-spoiler-content="lead">профессиональными шеф&#8209;поварами позволили нам получить знания, которые мы&nbsp;применяем в&nbsp;нашей кухонной технике, позволяя вам максимально использовать все возможности кухни у&nbsp;вас дома.</span></p>
+                                        <p>Electrolux представляет серию кулинарных мастер&#8209;классов, <span class="lead__spoiler" data-spoiler-content="lead">которые одинаково полезны тем, кто любит готовить, и тем, у кого не получается пожарить даже яичницу.</span></p>
                                     </div><button class="spoiler js-show-more lead__more is-hidden-xl" data-spoiler="lead"><svg class="spoiler__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button>
                                 </div>
                             </div>
@@ -1316,7 +1316,7 @@
                                         <div class="master-classes__progress">1/8</div>
                                         <div class="master-classes__toggle master-classes__toggle_next"><svg class="master-classes__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
                                     </div>
-                                    <div class="master-classes__buttons"><a class="button master-classes__button master-classes__button_more js-show-mc-next3" href="#">Показать больше мастер-классов</a><a class="button master-classes__button master-classes__button_all is-hidden js-show-mc-all" href="#">Показать все мастер-классы</a></div>
+                                    <div class="master-classes__buttons"><a class="button master-classes__button master-classes__button_more js-show-mc-next3" href="#">Показать больше мастер-классов</a><a class="button master-classes__button master-classes__button_all is-hidden js-show-mc-all" href="#"><span class="button__ready">Показать все мастер-классы</span><span class="button__engage">Свернуть все мастер-классы</span></a></div>
                                 </div>
                             </div>
                         </section>
@@ -1459,7 +1459,7 @@
                                                         </span>
                                                     </label></div>
                                             </div>
-                                            <div class="form__checkers"><label class="checkradio form__checker"><input class="checkradio__input" name="oven" value="oven" type="checkbox" data-form-type="oven" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно</span></label><label class="checkradio form__checker"><input class="checkradio__input" name="whiterabbit" value="whiterabbit" type="checkbox" data-form-type="whiterabbit" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">У меня есть приглашение на одного из ресторана White Rabbit Family - пойду на мастер-класс бесплатно</span></label></div>
+                                            <div class="form__checkers"><label class="checkradio form__checker"><input class="checkradio__input" name="oven" value="oven" type="checkbox" data-form-type="oven" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно</span></label></div>
                                             <div class="form__triggers" data-form-trigger="data-form-trigger">
                                                 <div class="form__note">* Обязательное поле</div>
                                                 <div class="form__buttons"><button class="button form__button js-toggle-orderform" type="button">Записаться</button></div>
@@ -1468,7 +1468,7 @@
                                         <div class="form__content" data-form-body="data-form-body">
                                             <fieldset class="form__section">
                                                 <div class="form__text form__text_chd" data-form-field="child">К мастер-классу допускаются дети в возрасте от 6-ти лет и только в сопровождении одного взрослого.</div>
-                                                <div class="form__title form__title_mb28"><span data-form-field="adult, oven, whiterabbit">Личные данные</span><span data-form-field="child">Сопровождающий ребенка</span></div>
+                                                <div class="form__title form__title_mb28"><span data-form-field="adult, oven">Личные данные</span><span data-form-field="child">Сопровождающий ребенка</span></div>
                                                 <div class="grid">
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                             <p class="inputbox__label">Представьтесь, пожалуйста (ФИО)*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" /><span class="error-message"></span></span>
@@ -1519,9 +1519,6 @@
                                                                     <option value="10">10</option>
                                                                     <option value="11">11</option>
                                                                 </select><span class="error-message"></span></span>
-                                                        </label></div>
-                                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="whiterabbit"><label class="inputbox">
-                                                            <p class="inputbox__label">Номер приглашения*</p><span class="inputbox__wrapper"><input class="input" type="text" name="invitation" required="required" placeholder="16278499921" data-parsley-type="digits" /><span class="error-message"></span></span>
                                                         </label></div>
                                                 </div>
                                             </fieldset>
@@ -1587,8 +1584,10 @@
                                             </fieldset>
                                             <fieldset class="form__section">
                                                 <div class="form__notes">
-                                                    <div class="form__note">* Обязательное поле</div>
-                                                    <div class="form__agreements"><label class="checkradio checkradio_fz15 form__agreement"><input class="checkradio__input" name="offer" value="offer" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я принимаю&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условия оферты и ознакомился с правилами проведения акции.</span></a></span></label><label class="checkradio checkradio_fz15 form__agreement"><input class="checkradio__input" name="personalData" value="pd" checked="checked" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">Я соглашаюсь с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></span></label></div>
+                                                    <div class="form__note">* Обязательное поле</div><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio checkradio_fz15 inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                                    <p>Я принимаю&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условия оферты и ознакомился с правилами проведения акции.</span></a></p>
+                                                                    <p>Я соглашаюсь&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">с условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                                                </span></label><span class="error-message"></span></span></label>
                                                 </div>
                                                 <div class="form__payment" data-form-field="adult,child">
                                                     <div class="form__price">
@@ -1596,7 +1595,7 @@
                                                         <div class="form__price-text">итоговая стоимость</div>
                                                     </div>
                                                 </div>
-                                                <div class="form__buttons form__buttons_mtb"><button class="button form__button" type="submit"><span data-form-field="oven,whiterabbit">Записаться</span><span data-form-field="adult,child">Оплатить</span></button></div>
+                                                <div class="form__buttons form__buttons_mtb"><button class="button form__button" type="submit"><span data-form-field="oven">Записаться</span><span data-form-field="adult,child">Оплатить</span></button></div>
                                                 <div class="form__note form__note_centered form__note_mt20" data-form-field="adult,child">После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.</div>
                                             </fieldset>
                                         </div>

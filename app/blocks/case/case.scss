@@ -24,7 +24,7 @@
     overflow: hidden;
     z-index: 1;
 
-    @include ruleMin(padding-top, (xs: 141.25%, sm: 124%));
+    @include ruleMin(padding-top, (xs: 124%));
   }
 
   &__image {

@@ -165,7 +165,16 @@ export default function masterClasses() {
   $(document).on('click', '.js-show-mc-all', (evt) => {
     evt.preventDefault();
     const self = evt.currentTarget;
-    $(self).addClass('is-engage');
+    if ($(self).is('.is-engage')) {
+      $(self).removeClass('is-engage').addClass('is-hidden');
+      $('.js-show-mc-next3').removeClass('is-engage');
+      const section = $(self).closest('[data-section]');
+      $('body, html').stop().animate({
+        scrollTop: section.offset().top,
+      }, 600, 'swing');
+    } else {
+      $(self).addClass('is-engage');
+    }
     setTimeout(showCards);
   });
 }

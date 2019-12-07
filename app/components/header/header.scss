@@ -20,7 +20,7 @@
     box-sizing: border-box;
     height: 100%;
 
-    @include ruleMin(justify-content, (xs: flex-end, sm: space-between));
+    @include ruleMin(justify-content, (xs: center, sm: space-between));
     @include ruleMin(padding, (xs: 0 20px, lg: 0 50px));
   }
 
@@ -36,7 +36,7 @@
   }
 
   &__phone {
-    @include ruleMin(margin-right, (lg: 102px))
+    @include ruleMin(margin-right, (lg: 102px));
   }
 
   &__close {

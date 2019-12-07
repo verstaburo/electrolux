@@ -11,7 +11,7 @@
     align-items: center;
     box-sizing: border-box;
 
-    @include ruleMin(padding, (xs: 0 13px, sm: 0 22px));
+    @include ruleMin(padding, (xs: 0 8px, sm: 0 22px));
 
     &:not(:last-child) {
 
@@ -46,7 +46,7 @@
     line-height: 0;
 
     &_electrolux {
-      @include ruleMin(width, (xs: 156px, sm: 173px));
+      @include ruleMin(width, (xs: 134px, sm: 173px));
 
       #{$b}_footer & {
         @include ruleMin(width, (xs: 143px, sm: 173px));

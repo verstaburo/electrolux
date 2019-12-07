@@ -15,7 +15,9 @@ mixin master-classes()
             +icon('arrow').__arrow
         +e.buttons
           +button().__button_more.js-show-mc-next3(href="#") Показать больше мастер-классов
-          +button().__button_all.is-hidden.js-show-mc-all(href="#") Показать все мастер-классы
+          +button().__button_all.is-hidden.js-show-mc-all(href="#")
+            +e.SPAN.ready Показать все мастер-классы
+            +e.SPAN.engage Свернуть все мастер-классы
 
     block
 

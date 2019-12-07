@@ -32,11 +32,6 @@ mixin order-form()
                 +e.SPAN.box
                   +icon('check').__check
                 +e.SPAN.content Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно
-              +b.LABEL.checkradio.__checker
-                +e.INPUT.input(name="whiterabbit", value="whiterabbit", type="checkbox" data-form-type="whiterabbit")
-                +e.SPAN.box
-                  +icon('check').__check
-                +e.SPAN.content У меня есть приглашение на одного из ресторана White Rabbit Family  - пойду на мастер-класс бесплатно
             +e.triggers(data-form-trigger)
               +e.note * Обязательное поле
               +e.buttons
@@ -45,7 +40,7 @@ mixin order-form()
             +e.FIELDSET.section
               +e.text_chd(data-form-field="child") К мастер-классу допускаются дети в возрасте от 6-ти лет и только в сопровождении одного взрослого.
               +e.title._mb28
-                span(data-form-field="adult, oven, whiterabbit") Личные данные
+                span(data-form-field="adult, oven") Личные данные
                 span(data-form-field="child") Сопровождающий ребенка
               +grid
                 +col({xl: 6, sm: 12})
@@ -79,11 +74,6 @@ mixin order-form()
                         - for (var i = 1; i <= 11; i++) {
                           option(value=i)!=i
                         -}
-                +col({xl: 6, sm: 12})(data-form-field="whiterabbit")
-                  +inputbox()
-                    +label Номер приглашения*
-                    +input-wrapper
-                      +input(type="text" name="invitation" required placeholder="16278499921" data-parsley-type="digits")
             +e.FIELDSET.section(data-form-field="child")
               +e.title_sm-mb40 Данные ребенка
               +e.childes(data-child-container)
@@ -139,18 +129,20 @@ mixin order-form()
             +e.FIELDSET.section
               +e.notes
                 +e.note * Обязательное поле
-                +e.agreements
-                  +checkradio(false, 'offer', 'offer', true, true)._fz15.__agreement Я принимаю&nbsp;
-                    +link()._underline(href="#" target="__blank") условия оферты и ознакомился с правилами проведения акции.
-                  +checkradio(false, 'personalData', 'pd', true, true)._fz15.__agreement Я соглашаюсь с&nbsp;
-                    +link()._underline(href="#" target="__blank") условиями обработки персональных данных, оплаты, возврата и пользования сайтом.
+                +inputbox().__agreements
+                  +input-wrapper
+                    +checkradio(false, 'offer', 'offer', false, true)._fz15.__agreement
+                      p Я принимаю&nbsp;
+                        +link()._underline(href="#" target="__blank") условия оферты и ознакомился с правилами проведения акции.
+                      p Я соглашаюсь&nbsp;
+                        +link()._underline(href="#" target="__blank") с условиями обработки персональных данных, оплаты, возврата и пользования сайтом.
               +e.payment(data-form-field="adult,child")
                 +e.price
                   +e.total 3 000 ₽
                   +e.price-text итоговая стоимость
               +e.buttons_mtb
                 +button('button').__button(type="submit")
-                  span(data-form-field="oven,whiterabbit") Записаться
+                  span(data-form-field="oven") Записаться
                   span(data-form-field="adult,child") Оплатить
               +e.note_centered._mt20(data-form-field="adult,child") После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.
         +col({xl: 1, sm: 12}).is-hidden-sm

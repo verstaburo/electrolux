@@ -132,10 +132,34 @@
     width: 100%;
   }
 
-  &__button {
+  .js-show-mc-next3.is-engage {
+    display: none;
+  }
+
+  .js-show-mc-all {
+
+    .button {
+
+      &__ready {
+        display: inline-block;
+      }
+
+      &__engage {
+        display: none;
+      }
+    }
 
     &.is-engage {
-      display: none;
+
+      .button {
+        &__ready {
+          display: none;
+        }
+
+        &__engage {
+          display: inline-block;
+        }
+      }
     }
   }
 }

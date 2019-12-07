@@ -9,6 +9,8 @@
   border-radius: 50%;
   background-color: $color-blue-mid;
   transition: background-color $ease-main;
+  transform-origin: 50% 50% 0;
+  transform: rotate(-90deg);
 
   &:hover {
     background-color: $color-main;
@@ -18,8 +20,6 @@
     fill: $color-white;
     width: 10px;
     height: 20px;
-    transform-origin: 50% 50% 0;
-    transform: rotate(-90deg);
-    margin-top: -3px;
+    margin-right: -3px;
   }
 }

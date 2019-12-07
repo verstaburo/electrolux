@@ -86,19 +86,20 @@ mixin order-form()
                       +input(type="text" name="invitation" required placeholder="16278499921" data-parsley-type="digits")
             +e.FIELDSET.section(data-form-field="child")
               +e.title_sm-mb40 Данные ребенка
-              +grid(data-child-template)
-                +col({xl: 6, sm: 12})
-                  +inputbox()
-                    +label Имя ребенка*
-                    +input-wrapper
-                      +input(type="text" name="childName[0]" required placeholder="Имя ребенка")
-                +col({xl: 6, sm: 12})
-                  +inputbox()
-                    +label Возраст ребенка*
-                    +input-wrapper
-                      +input(type="text" name="childAge[0]" required placeholder="Сколько лет ")
+              +e.childes(data-child-container)
+                +grid()(data-child-template data-child)
+                  +col({xl: 6, sm: 12})
+                    +inputbox()
+                      +label Имя ребенка*
+                      +input-wrapper
+                        +input(type="text" name="childName[0]" required placeholder="Имя ребенка")
+                  +col({xl: 6, sm: 12})
+                    +inputbox()
+                      +label Возраст ребенка*
+                      +input-wrapper
+                        +input(type="text" name="childAge[0]" required placeholder="Сколько лет ")
               +e.add
-                +button('button').__additional.js-add-child(type="button") + Добавить ребенка
+                +button('button').__additional.js-add-child(type="button" data-child-fields-names="childName,childAge" data-max-childs-count="11") + Добавить ребенка
             +e.FIELDSET.section(data-form-field="oven")
               +e.title Ваш продукт
               +grid

@@ -1,6 +1,10 @@
 .inputbox {
   display: block;
 
+  .form & {
+    width: 100%;
+  }
+
   $b: &;
 
   &_h100 {
@@ -28,7 +32,7 @@
     margin-top: -1px;
     border: 1px solid #dedede;
     padding: 40px 20px 25px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
     visibility: hidden;
     transition: opacity $ease-main, visibility $ease-main;
     transition-delay: 0, .3s;
@@ -39,6 +43,7 @@
     position: relative;
     height: 100%;
     display: block;
+    width: 100%;
 
     &_flex {
       display: flex;

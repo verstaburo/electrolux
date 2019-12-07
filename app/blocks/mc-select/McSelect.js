@@ -34,6 +34,11 @@ export default class McSelect {
       }
     });
 
+    $(t.inputs).on('click', () => {
+      t.preset();
+      t.close();
+    });
+
     $(t.inputs).on('change', () => {
       t.preset();
       t.close();

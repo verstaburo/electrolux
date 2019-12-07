@@ -6,28 +6,6 @@
 
   $b: &;
 
-  &__input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-
-    &:checked {
-
-      & ~ .checkradio__box .checkradio__check {
-        opacity: 1;
-      }
-    }
-
-    &[type="radio"] ~ .checkradio__box {
-      border-radius: 50%;
-    }
-  }
-
   &__box {
     position: absolute;
     width: 16px;
@@ -49,6 +27,28 @@
     transform: translate3d(-50%, -50%, 0);
     opacity: 0;
     transition: opacity $ease-main;
+  }
+
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked {
+
+      & ~ .checkradio__box .checkradio__check {
+        opacity: 1;
+      }
+    }
+
+    &[type='radio'] ~ .checkradio__box {
+      border-radius: 50%;
+    }
   }
 
   &__content {

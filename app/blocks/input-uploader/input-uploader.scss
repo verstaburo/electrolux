@@ -3,24 +3,51 @@
 
   @extend .input;
 
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background-image: url('../images/clip.svg');
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: calc(100% - 9px) 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-right: 40px;
+  width: 100%;
 
   .input {
     display: none;
   }
 
+  &__filename {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: calc(100% - 56px);
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transform: translate3d(0, -50%, 0);
+
+    @include ruleMin(max-width, (xs: 80%, sm: 100%));
+
+    &:empty {
+      display: none;
+    }
+  }
+
   &__placeholder {
+    width: calc(100% - 56px);
     color: $color-placeholder;
     display: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
     #{$b}__filename:empty ~ & {
-      display: inline;
+      display: block;
     }
   }
 }

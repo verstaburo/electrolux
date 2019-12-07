@@ -37,7 +37,7 @@
       @include ruleMin(margin-top, (xs: 12px, sm: 20px));
     }
 
-    &_fz20  {
+    &_fz20 {
       @include ruleMin(line-height, (xs: 24px, sm: 32px));
       @include ruleMin(font-size, (xs: 15px, sm: 20px));
     }

@@ -8,6 +8,10 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
   flex-wrap: wrap;
   margin: -$grid-gap-vertical (-$grid-gap/2) 0;
 
+  & + .grid {
+    margin-top: 0;
+  }
+
   &__col {
     box-sizing: border-box;
     padding: $grid-gap-vertical $grid-gap/2 0;

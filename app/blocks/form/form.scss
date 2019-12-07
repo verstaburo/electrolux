@@ -7,9 +7,11 @@
   &__section {
     display: block;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
 
     &:not(:first-child) {
-
       @include ruleMin(margin-top, (xs: 26px, sm: 30px));
     }
   }
@@ -31,6 +33,7 @@
     }
 
     &_sm-mb40 {
+
       &:not(:last-child) {
         @include ruleMin(margin-bottom, (xs: 40px, sm: 14px));
       }
@@ -85,12 +88,6 @@
     }
   }
 
-  &__section {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-
   &__content {
     display: none;
     transition: opacity $ease-main;
@@ -119,6 +116,7 @@
   }
 
   &__checker {
+
     &:not(:first-child) {
       @include ruleMin(margin-top, (xs: 9px, sm: 18px));
     }
@@ -137,8 +135,8 @@
     }
 
     &_mt20 {
-      &:not(:first-child) {
 
+      &:not(:first-child) {
         @include ruleMin(margin-top, (xs: 16px, sm: 20px));
       }
     }
@@ -164,15 +162,11 @@
     }
 
     &_mtb {
-      &:not(:first-child) {
 
+      &:not(:first-child) {
         @include ruleMin(margin-top, (xs: 35px, sm: 44px));
       }
     }
-  }
-
-  &__button {
-    min-width: 169px;
   }
 
   .is-disabled {
@@ -241,5 +235,10 @@
 
   &__additional {
     @include ruleMin(min-width, (xs: 238px, sm: 266px));
+  }
+
+  &__childes {
+    display: block;
+    width: 100%;
   }
 }

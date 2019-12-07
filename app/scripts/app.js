@@ -40,6 +40,8 @@ import cases from '../blocks/case/case';
 import masterClasses from '../components/master-classes/master-classes';
 import mcSelect from '../blocks/mc-select/mc-select';
 import orderForm from '../components/order-form/order-form';
+import inputUploader from '../blocks/input-uploader/input-uploader';
+import addChild from '../components/order-form/add-child';
 
 const $ = window.$;
 
@@ -74,5 +76,7 @@ $(() => {
   masterClasses();
   mcSelect();
   orderForm();
+  inputUploader();
+  addChild();
   navigation();
 });

@@ -24,5 +24,10 @@
     min-width: 169px;
 
     @include ruleMin(margin-bottom, (xs: 16px, sm: 0));
+
+    #{$b}:hover & {
+      background-color: $color-silk-rich;
+      color: $color-white;
+    }
   }
 }

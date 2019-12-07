@@ -74,14 +74,14 @@
                 <form class="filters">
                     <div class="container">
                         <div class="filters__item"><label class="inputbox inputbox_row">
-                                <p class="inputbox__label">Показать Мастер-классы в</p><span class="inputbox__wrapper"><select class="select js-select" name="location">
+                                <p class="inputbox__label">Показать Мастер-классы в</p><span class="inputbox__wrapper"><select class="select js-select" name="location" data-filter-location="data-filter-location">
                                         <option value="" placeholder="placeholder">Выберите город</option>
                                         <option value="1">Москва</option>
                                         <option value="2">Роза Хутор</option>
                                     </select><span class="error-message"></span></span>
                             </label></div>
                         <div class="filters__item"><label class="inputbox inputbox_row">
-                                <p class="inputbox__label">В период</p><span class="inputbox__wrapper inputbox__wrapper_flex js-datepicker-range"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-start-date="data-start-date" readonly="readonly" /><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-end-date="data-end-date" readonly="readonly" /><span class="error-message"></span></span>
+                                <p class="inputbox__label">В период</p><span class="inputbox__wrapper inputbox__wrapper_flex js-datepicker-range"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-start-date="data-start-date" readonly="readonly" data-filter-start-date="data-filter-start-date" /><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-end-date="data-end-date" readonly="readonly" data-filter-end-date="data-filter-end-date" /><span class="error-message"></span></span>
                             </label></div>
                     </div>
                 </form>
@@ -89,7 +89,7 @@
                     <div class="container">
                         <div class="master-classes__content js-mc-slider">
                             <div class="grid master-classes__wrapper">
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide" data-filter-location-value="1" data-filter-date="2019.12.20">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__label">Детский</div>
@@ -127,13 +127,13 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Москва</div>
-                                                <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019-12-20">20 декабря | Пт</time>
+                                                <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019.12.20">20 декабря | Пт</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide" data-filter-location-value="2" data-filter-date="2019.12.21">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__media"><img class="case__image" src="assets/images/mk2.jpg" alt="" role="presentation" /></div>
@@ -170,13 +170,13 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Роза Хутор</div>
-                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019-12-21">21 декабря | Сб</time>
+                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019.12.21">21 декабря | Сб</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide" data-filter-location-value="1" data-filter-date="2019.12.24">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__media"><img class="case__image" src="assets/images/mk3.jpg" alt="" role="presentation" /></div>
@@ -213,13 +213,13 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Москва</div>
-                                                <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019-12-24">24 декабря | Вт</time>
+                                                <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019.12.24">24 декабря | Вт</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="1" data-filter-date="2019.12.23">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__label">Детский</div>
@@ -257,13 +257,13 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Москва</div>
-                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019-12-23">23 декабря | Вт</time>
+                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019.12.23">23 декабря | Вт</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="2" data-filter-date="2019.12.18">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__media"><img class="case__image" src="assets/images/mk5.jpg" alt="" role="presentation" /></div>
@@ -300,13 +300,13 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Роза Хутор</div>
-                                                <h4 class="case__title">Party food vol. 1</h4><time class="case__date" datatime="2019-12-18">18 декабря | Ср</time>
+                                                <h4 class="case__title">Party food vol. 1</h4><time class="case__date" datatime="2019.12.18">18 декабря | Ср</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="1" data-filter-date="2019.12.10">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__media"><img class="case__image" src="assets/images/mk6.jpg" alt="" role="presentation" /></div>
@@ -343,13 +343,13 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Москва</div>
-                                                <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019-12-10">10 декабря | Вт</time>
+                                                <h4 class="case__title">Party food vol. 2</h4><time class="case__date" datatime="2019.12.10">10 декабря | Вт</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="1" data-filter-date="2019.12.20">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__label">Детский</div>
@@ -387,13 +387,13 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Москва</div>
-                                                <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019-12-20">20 декабря | Пт</time>
+                                                <h4 class="case__title">Пар и Sous – Vide</h4><time class="case__date" datatime="2019.12.20">20 декабря | Пт</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
                                     </article>
                                 </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide">
+                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12 master-classes__slide is-hide" data-filter-location-value="2" data-filter-date="2019.12.21">
                                     <article class="case master-classes__case">
                                         <div class="case__top">
                                             <div class="case__media"><img class="case__image" src="assets/images/mk2.jpg" alt="" role="presentation" /></div>
@@ -430,7 +430,7 @@
                                         <div class="case__bottom">
                                             <div class="case__header">
                                                 <div class="case__location">Роза Хутор</div>
-                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019-12-21">21 декабря | Сб</time>
+                                                <h4 class="case__title">Выпечка сладкая/не сладкая выпечка вкусная</h4><time class="case__date" datatime="2019.12.21">21 декабря | Сб</time>
                                             </div>
                                             <div class="case__buttons is-hidden-xl"><a class="button case__button case__button_wide js-show-describe" href="#">Программа мастер-класса</a></div>
                                         </div>
@@ -618,28 +618,28 @@
                                                         </div>
                                                         <div class="mc-select__dropdown js-scrollbar">
                                                             <ul class="mc-select__list">
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="1" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="1" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="1" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="2" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="2" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="2" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="3" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="3" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="3" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.24">24 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="4" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="4" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="4" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.23">23 декабря 2019 вторник</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="5" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="5" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="5" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 1</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.18">18 декабря 2019 cреда</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="6" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="6" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="6" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Party food vol. 2</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.10">10 декабря | Вт</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="7" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="7" data-mc-input="true" required="required" data-form-type="child" data-parsley-group="start" data-target-case-index="7" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short1.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Пар и Sous – Vide</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.20">20 декабря 2019 пятница</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
-                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="8" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019-12-21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
+                                                                <li class="mc-select__item"><label class="mc-radio" data-select-item="data-select-item"><input class="input mc-radio__input" type="radio" name="mc" value="8" data-mc-input="true" required="required" data-form-type="adult" data-parsley-group="start" data-target-case-index="8" /><span class="mc-info mc-radio__info" data-select-value="data-select-value"><span class="mc-info__media"><img class="mc-info__image" src="assets/images/mc-short2.jpg" alt="" role="presentation" /></span><span class="mc-info__describe"><span class="mc-info__title">Выпечка сладкая/не сладкая выпечка вкусная</span><span class="mc-info__datetime"><time class="mc-info__date" datetime="2019.12.21">21 декабря 2019 суббота</time><span class="mc-info__time">18:30 - 20:30</span></span><span class="mc-info__price">Цена: 2 500 ₽</span></span></span>
                                                                         <div class="button mc-radio__button">Выбрать</div>
                                                                     </label></li>
                                                             </ul>

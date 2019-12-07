@@ -716,15 +716,17 @@
                                     </fieldset>
                                     <fieldset class="form__section" data-form-field="child">
                                         <div class="form__title form__title_sm-mb40">Данные ребенка</div>
-                                        <div class="grid">
-                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                    <p class="inputbox__label">Имя ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childName[0]" required="required" placeholder="Имя ребенка" /><span class="error-message"></span></span>
-                                                </label></div>
-                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                    <p class="inputbox__label">Возраст ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childAge[0]" required="required" placeholder="Сколько лет " /><span class="error-message"></span></span>
-                                                </label></div>
+                                        <div class="form__childes" data-child-container="data-child-container">
+                                            <div class="grid" data-child-template="data-child-template" data-child="data-child">
+                                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                        <p class="inputbox__label">Имя ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childName[0]" required="required" placeholder="Имя ребенка" /><span class="error-message"></span></span>
+                                                    </label></div>
+                                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                        <p class="inputbox__label">Возраст ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childAge[0]" required="required" placeholder="Сколько лет " /><span class="error-message"></span></span>
+                                                    </label></div>
+                                            </div>
                                         </div>
-                                        <div class="form__add"><button class="button form__additional js-add-child" type="button">+ Добавить ребенка</button></div>
+                                        <div class="form__add"><button class="button form__additional js-add-child" type="button" data-child-fields-names="childName,childAge" data-max-childs-count="11">+ Добавить ребенка</button></div>
                                     </fieldset>
                                     <fieldset class="form__section" data-form-field="oven">
                                         <div class="form__title">Ваш продукт</div>

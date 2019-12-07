@@ -7,7 +7,7 @@ mixin mc-info(data)
       +e.datetime
         +e.TIME.date(datetime=data.date.date)!=data.date.text
         +e.time!=data.time
-      +e.price Цена: #{data.price}
+      +e.price Цена: #{data.price.text}
     block
 
 mixin ui-kit-mc-info()

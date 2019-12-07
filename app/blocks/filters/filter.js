@@ -11,7 +11,7 @@ export default function filter() {
 
   function filtration() {
     // значения фильтров
-    const filterLocation = $('[data-filter-location').val();
+    const filterLocation = $('[data-filter-location]').val();
     const filterStartDate = $('[data-filter-start-date]').val().split('/').join('.');
     const filterEndDate = $('[data-filter-end-date]').val().split('/').join('.');
     let isFilteredByLocation = false; // будем ли фильтровать по месту

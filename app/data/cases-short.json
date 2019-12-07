@@ -4,8 +4,11 @@
   "mctype": "child",
   "image": "assets/images/mc-short1.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Пар и Sous – Vide",
+  "price": {
+    "text": "1 500 ₽",
+    "value": "1500"
+  },
+  "title": "Детский. Пар и Sous – Vide",
   "date": {
     "date": "2019.12.20",
     "text": "20 декабря 2019 пятница"
@@ -16,8 +19,11 @@
   "mctype": "adult",
   "image": "assets/images/mc-short2.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Выпечка сладкая/не сладкая выпечка вкусная",
+  "price": {
+    "text": "2 500 ₽",
+    "value": "2500"
+  },
+  "title": "Взрослый. Выпечка сладкая/не сладкая выпечка вкусная",
   "date": {
     "date": "2019.12.21",
     "text": "21 декабря 2019 суббота"
@@ -28,8 +34,11 @@
   "mctype": "adult",
   "image": "assets/images/mc-short1.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Party food vol. 2",
+  "price": {
+    "text": "2 500 ₽",
+    "value": "2500"
+  },
+  "title": "Взрослый. Party food vol. 2",
   "date": {
     "date": "2019.12.24",
     "text": "24 декабря 2019 вторник"
@@ -40,8 +49,11 @@
   "mctype": "child",
   "image": "assets/images/mc-short2.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Выпечка сладкая/не сладкая выпечка вкусная",
+  "price": {
+    "text": "2 500 ₽",
+    "value": "2500"
+  },
+  "title": "Детский. Выпечка сладкая/не сладкая выпечка вкусная",
   "date": {
     "date": "2019.12.23",
     "text": "23 декабря 2019 вторник"
@@ -52,8 +64,11 @@
   "mctype": "adult",
   "image": "assets/images/mc-short1.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Party food vol. 1",
+  "price": {
+    "text": "2 500 ₽",
+    "value": "2500"
+  },
+  "title": "Взрослый. Party food vol. 1",
   "date": {
     "date": "2019.12.18",
     "text": "18 декабря 2019 cреда"
@@ -64,8 +79,11 @@
   "mctype": "adult",
   "image": "assets/images/mc-short2.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Party food vol. 2",
+  "price": {
+    "text": "2 500 ₽",
+    "value": "2500"
+  },
+  "title": "Взрослый. Party food vol. 2",
   "date": {
     "date": "2019.12.10",
     "text": "10 декабря | Вт"
@@ -76,8 +94,11 @@
   "mctype": "child",
   "image": "assets/images/mc-short1.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Пар и Sous – Vide",
+  "price": {
+    "text": "1 500 ₽",
+    "value": "1500"
+  },
+  "title": "Детский. Пар и Sous – Vide",
   "date": {
     "date": "2019.12.20",
     "text": "20 декабря 2019 пятница"
@@ -88,8 +109,11 @@
   "mctype": "adult",
   "image": "assets/images/mc-short2.jpg",
   "time": "18:30 - 20:30",
-  "price": "2 500 ₽",
-  "title": "Выпечка сладкая/не сладкая выпечка вкусная",
+  "price": {
+    "text": "2 500 ₽",
+    "value": "2500"
+  },
+  "title": "Взрослый. Выпечка сладкая/не сладкая выпечка вкусная",
   "date": {
     "date": "2019.12.21",
     "text": "21 декабря 2019 суббота"

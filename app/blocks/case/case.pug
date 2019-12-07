@@ -23,7 +23,9 @@ mixin case(data)
             +e.price
               +e.price-text Стоимость:
               +e.sum!=data.price
-            +button().__button.js-order-mc(href="#order") Записаться
+            //- data-case-index должен совпадать с полем data-target-case-index у соответстующего мл в форме записи
+            //- data-location-value должен совпадать с value одной из опций у select[data-location] в форме записи
+            +button().__button.js-order-mc(href="#order" data-case-index=data.id data-location-value=data.location.value) Записаться
             +e.note!= data.note
     +e.bottom
       +e.header

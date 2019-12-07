@@ -69,6 +69,5 @@ export default function orderForm() {
       $('[data-form-trigger]').hide(300);
       $('[data-form-body]').addClass('is-show');
     });
-    // const fields = $('[data-form-checkers]').find('input', 'select');
   });
 }

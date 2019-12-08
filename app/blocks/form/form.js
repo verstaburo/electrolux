@@ -19,6 +19,7 @@ export function selects() {
     const choices = new Choices(select, {
       searchEnabled: false,
       itemSelectText: '',
+      shouldSort: false,
       callbackOnCreateTemplates(template) {
         const classNames = this.config.classNames;
         return {

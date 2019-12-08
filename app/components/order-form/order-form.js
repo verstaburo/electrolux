@@ -1,6 +1,22 @@
 const $ = window.$;
 
 export default function orderForm() {
+  const array22 = [];
+  const array12 = [];
+  const array2 = [];
+  for (let i = 1; i <= 22; i += 1) {
+    const result = {
+      value: i,
+      label: i,
+    };
+    array22.push(result);
+    if (i < 3) {
+      array2.push(result);
+    }
+    if (i < 13) {
+      array12.push(result);
+    }
+  }
   // получаем строку активных элементов
   function getFormFilterTypes() {
     const filtersEl = $('[data-form-type]:checked');
@@ -33,9 +49,34 @@ export default function orderForm() {
   window.globalFunctions.setTotalPrice = setPrice;
 
   // определяем допустимое количество свободных мест
-  // function setVacancies() {
+  function setVacancies() {
+    const filter = getFormFilterTypes().split(',');
+    const location = Number($('[data-location]').val());
+    const vacancy = $('[data-form-vacancy]')[0].choices;
+    if (filter.includes('child')) {
+      switch (location) {
+        case 1:
+          $('.js-add-child').attr('data-max-childs-count', 11);
+          break;
+        default:
+          $('.js-add-child').attr('data-max-childs-count', 8);
+          break;
+      }
+    } else if (filter.includes('oven')) {
+      vacancy.setChoices(array2, 'value', 'label', true);
+    } else {
+      switch (location) {
+        case 2:
+          vacancy.setChoices(array12, 'value', 'label', true);
+          break;
+        default:
+          vacancy.setChoices(array22, 'value', 'label', true);
+          break;
+      }
+    }
+  }
 
-  // }
+  window.globalFunctions.setFormVacancies = setVacancies;
 
   // переключаем секции
   // изменяет состояние элементов в переданной секции
@@ -105,7 +146,9 @@ export default function orderForm() {
   $(document).on('change', '[data-oven], [data-form-mc]', () => {
     switchElements(getFormFilterTypes());
     setTimeout(window.globalFunctions.setTotalPrice());
+    setTimeout(window.globalFunctions.setFormVacancies, 10);
   });
 
+  $(document).on('change', '[data-location]', window.globalFunctions.setFormVacancies);
   $(document).on('change', '[data-form-vacancy]', window.globalFunctions.setTotalPrice);
 }

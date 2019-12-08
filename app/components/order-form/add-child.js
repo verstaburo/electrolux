@@ -56,6 +56,7 @@ export default function addChild() {
     const self = evt.currentTarget;
     const child = $(self).closest('[data-child]');
     $(child).remove();
+    $('.js-add-child').fadeIn(300);
     setTimeout(window.globalFunctions.switcherFormElements);
     setTimeout(window.globalFunctions.setTotalPrice, 10);
   });

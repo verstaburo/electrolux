@@ -19,6 +19,9 @@ export default function filter() {
     let filteredByLocation; // элементы отфильтрованные по месту
     let filteredByDate; // элементы отфильтрованные по дате
     let filteredResult = null; // элементы отфильтрованные в итоге
+
+    console.log(`Шаг даты из формы ${filterStartDate}, ${filterEndDate}`);
+
     if (filterLocation) {
       isFilteredByLocation = true;
       filteredByLocation = $(`[data-filter-location-value="${filterLocation}"]`);
@@ -28,15 +31,26 @@ export default function filter() {
       isFilteredByDate = true;
       const msFilterStartDate = getDateInMS(filterStartDate);
       const msFilterEndDate = getDateInMS(filterEndDate);
+
+      console.log(`Шаг преобразованные в мс даты ${msFilterStartDate}, ${msFilterEndDate}`);
+
       filteredByDate = $('[data-filter-date]').filter((i, el) => {
         const caseDate = new Date($(el).attr('data-filter-date')).getTime();
+
+        console.log(`Шаг преобразованные в мс дата мк ${caseDate}`);
+
         return (caseDate >= msFilterStartDate && caseDate <= msFilterEndDate);
       });
+
+      console.log(`Шаг итоговая выборка по дате ${filteredByDate}`);
     }
 
     if (isFilteredByDate && isFilteredByLocation) {
       if (filteredByDate.length > 0 && filteredByLocation.length > 0) {
         const timeResults = $(filteredByDate).map((i, el) => $(filteredByLocation).filter((k, val) => $(el).is(val))).get();
+
+        console.log(`Шаг совместная с локацией выборка ${timeResults}`);
+
         filteredResult = timeResults.reduce((res, el) => $(res).add(el));
       } else {
         filteredResult = null;

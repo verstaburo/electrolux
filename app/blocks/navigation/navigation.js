@@ -116,14 +116,34 @@ export default function navigation() {
     }
   });
 
+  $(document).on('click', '.js-menu-open', (evt) => {
+    evt.preventDefault();
+    const self = evt.currentTarget;
+
+    if (nav.isOpen()) {
+      $('[data-navigation]').removeClass('is-sticky is-top');
+      $(self).removeClass('is-active');
+      nav.close();
+    } else {
+      $(self).addClass('is-active');
+      $('[data-navigation]').addClass('is-sticky is-top');
+      nav.open();
+    }
+  });
+
   $(document).on('click', '[data-nav-link]', (e) => {
     e.preventDefault();
 
     const self = e.currentTarget;
+    const navBlock = $(self).closest('[data-navigation]');
+    const burger = $('.js-menu-open');
     const link = $(self).attr('href').split('#').pop();
     const target = $(`#${link}`);
 
     nav.close();
+
+    $(burger).removeClass('is-active');
+    $(navBlock).removeClass('is-top');
 
     if (target.length > 0) {
       $('body, html').stop().animate({

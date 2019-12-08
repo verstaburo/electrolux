@@ -46,6 +46,10 @@
     color: $color-white;
     z-index: 2;
     box-sizing: border-box;
+
+    #{$b}.is-top & {
+      opacity: 0;
+    }
   }
 
   &__arrow {

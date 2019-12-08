@@ -3,9 +3,14 @@ const $ = window.$;
 
 export default function filter() {
   // преобразуте дату вида дд.мм.гггг
-  function getDateInMS(date) {
+  function getDateInMS(date, reverse) {
     const target = date.split('.');
-    const isoDate = new Date(target[2], (target[1] - 1), target[0]);
+    let isoDate;
+    if (reverse) {
+      isoDate = new Date(target[0], (target[1] - 1), target[2]);
+    } else {
+      isoDate = new Date(target[2], (target[1] - 1), target[0]);
+    }
     return isoDate.getTime();
   }
 
@@ -35,7 +40,7 @@ export default function filter() {
       console.log(`Шаг преобразованные в мс даты ${msFilterStartDate}, ${msFilterEndDate}`);
 
       filteredByDate = $('[data-filter-date]').filter((i, el) => {
-        const caseDate = new Date($(el).attr('data-filter-date')).getTime();
+        const caseDate = getDateInMS($(el).attr('data-filter-date'), true);
 
         console.log(`Шаг преобразованные в мс дата мк ${caseDate}`);
 

@@ -709,7 +709,7 @@
                                     <fieldset class="form__section is-disabled" data-form-field="child">
                                         <div class="form__title form__title_sm-mb40">Данные ребенка</div>
                                         <div class="form__childes" data-child-container="data-child-container">
-                                            <div class="form__child" data-child-template="data-child-template" data-child="data-child">
+                                            <div class="form__child" data-child="data-child">
                                                 <div class="grid">
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                             <p class="inputbox__label">Имя ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childName[0]" required="required" placeholder="Имя ребенка" /><span class="error-message"></span></span>
@@ -735,9 +735,9 @@
                                                 </div><button class="form__child-remove js-remove-child" type="button"><svg class="form__child-cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></button>
                                             </div>
                                         </div>
-                                        <div class="form__add"><button class="button form__additional js-add-child" type="button" data-child-fields-names="childName,childAge" data-max-childs-count="11">+ Добавить ребенка</button></div>
+                                        <div class="form__add"><button class="button form__additional js-add-child" type="button" data-child-template-src="assets/data/template.json" data-child-fields-names="childName,childAge" data-max-childs-count="11">+ Добавить ребенка</button></div>
                                     </fieldset>
-                                    <fieldset class="form__section is-disabled" data-form-field="oven">
+                                    <fieldset class="form__section form__section_mgt46 is-disabled" data-form-field="oven">
                                         <div class="form__title">Ваш продукт</div>
                                         <div class="grid">
                                             <div class="grid__col grid__col_xl_12"><label class="inputbox">
@@ -781,6 +781,22 @@
                                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                     <p class="inputbox__label">Приложите чек*</p><span class="inputbox__wrapper"><label class="input-uploader js-file-upload"><input class="input" type="file" name="files[]" required="required" disabled="disabled" /><span class="input-uploader__filename" data-filename="data-filename"></span><span class="input-uploader__placeholder" data-placeholder="data-placeholder">Нажмите для выбора</span></label><span class="error-message"></span></span>
                                                 </label></div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form__section form__section_mgt46">
+                                        <div class="form__title">У меня есть промокод</div>
+                                        <div class="promocode form__promocode">
+                                            <div class="grid">
+                                                <div class="grid__col grid__col_xl_6 grid__col_md_12">
+                                                    <div class="promocode__field"><input class="input promocode__input" type="text" name="promocode" placeholder="Введите промокод" /><button class="button promocode__button js-promocode" type="button" data-promocode-url="/">Применить</button></div>
+                                                </div>
+                                                <div class="grid__col grid__col_xl_6 grid__col_md_12">
+                                                    <div class="promocode__message">
+                                                        <div class="promocode__success">Промокод применен</div>
+                                                        <div class="promocode__error">Неверный промокод</div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </fieldset>
                                     <fieldset class="form__section">

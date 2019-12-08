@@ -1,0 +1,28 @@
+mixin promocode()
+  +b.promocode&attributes(attributes)
+    +grid
+      +col({xl: 6, md: 12})
+        +e.field
+          +input(type="text" name="promocode" placeholder="Введите промокод").__input
+          +button('button').__button.js-promocode(type="button" data-promocode-url="/") Применить
+      +col({xl: 6, md: 12})
+        +e.message
+          +e.success Промокод применен
+          +e.error Неверный промокод
+    block
+
+mixin ui-kit-promocode()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок promocode
+      +ui-path
+        p Блок: blocks/promocode/promocode
+      +ui-description
+        p Описание Блока
+
+    +ui-section-content()
+      +promocode
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

@@ -65,7 +65,7 @@ mixin order-form()
             +e.FIELDSET.section.is-disabled(data-form-field="child")
               +e.title_sm-mb40 Данные ребенка
               +e.childes(data-child-container)
-                +e.child(data-child-template data-child)
+                +e.child(data-child)
                   +grid()
                     +col({xl: 6, sm: 12})
                       +inputbox()
@@ -84,8 +84,8 @@ mixin order-form()
                   +e.BUTTON.child-remove.js-remove-child(type="button")
                     +icon('cross').__child-cross
               +e.add
-                +button('button').__additional.js-add-child(type="button" data-child-fields-names="childName,childAge" data-max-childs-count="11") + Добавить ребенка
-            +e.FIELDSET.section.is-disabled(data-form-field="oven")
+                +button('button').__additional.js-add-child(type="button" data-child-template-src="assets/data/template.json" data-child-fields-names="childName,childAge" data-max-childs-count="11") + Добавить ребенка
+            +e.FIELDSET.section_mgt46.is-disabled(data-form-field="oven")
               +e.title Ваш продукт
               +grid
                 +col({xl: 12})
@@ -121,6 +121,9 @@ mixin order-form()
                     +label Приложите чек*
                     +input-wrapper
                       +input-uploader
+            +e.FIELDSET.section_mgt46
+              +e.title У меня есть промокод
+              +promocode.__promocode
             +e.FIELDSET.section
               +e.notes
                 +e.note * Обязательное поле

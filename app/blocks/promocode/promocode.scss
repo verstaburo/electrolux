@@ -1,0 +1,56 @@
+.promocode {
+  $b: &;
+
+  display: block;
+  width: 100%;
+
+  .grid {
+    margin-top: -15px;
+
+    &__col {
+      padding-top: 15px;
+    }
+  }
+
+  &__field {
+    display: flex;
+
+    @include ruleMin(flex-wrap, (xs: wrap, sm: nowrap));
+  }
+
+  &__input {
+    @include ruleMin(flex, (xs: none, sm: 1));
+  }
+
+  &__button {
+    @include ruleMin(width, (xs: 100%, sm: 169px));
+  }
+
+  &__message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    color: $color-input;
+    font-weight: 300;
+    line-height: 1.5;
+
+    @include ruleMin(height, (sm: 100%));
+  }
+
+  &__success {
+    display: none;
+
+    .is-success & {
+      display: block;
+    }
+  }
+
+  &__error {
+    display: none;
+
+    .is-error & {
+      display: block;
+    }
+  }
+}

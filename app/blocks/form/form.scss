@@ -14,6 +14,13 @@
     &:not(:first-child) {
       @include ruleMin(margin-top, (xs: 26px, sm: 30px));
     }
+
+    &_mgt46 {
+
+      &:not(:first-child) {
+        @include ruleMin(margin-top, (xs: 26px, sm: 46px));
+      }
+    }
   }
 
   &__title {
@@ -96,7 +103,7 @@
     @include ruleMin(padding-top, (xs: 20px, sm: 18px));
 
     &:not(:first-child) {
-      @include ruleMin(margin-top, (xs: 26px, sm:35px));
+      @include ruleMin(margin-top, (xs: 26px, sm:27px));
     }
   }
 
@@ -105,7 +112,7 @@
     width: 100%;
 
     &:not(:first-child) {
-      @include ruleMin(margin-top, (xs: 15px, sm: 44px));
+      @include ruleMin(margin-top, (xs: 15px, sm: 37px));
     }
   }
 
@@ -223,7 +230,7 @@
   &__add {
 
     &:not(:first-child) {
-      @include ruleMin(margin-top, (xs: 29px, sm: 32px));
+      @include ruleMin(margin-top, (xs: 29px, sm: 28px));
     }
   }
 
@@ -247,7 +254,6 @@
 
     &-remove {
       position: absolute;
-      top: 60px;
       right: 0;
       display: flex;
       justify-content: center;
@@ -257,6 +263,9 @@
       height: 45px;
       transform-origin: 50% 50% 0;
       transform: translate3d(60px, 0, 0);
+
+      @include ruleMin(top, (xs: 20px, sm: 60px));
+      @include ruleMin(transform, (xs: translate3d(15px, 0, 0), sm: translate3d(50px, 0, 0), md: translate3d(60px, 0, 0)));
 
       #{$b}__child:first-child & {
         display: none;

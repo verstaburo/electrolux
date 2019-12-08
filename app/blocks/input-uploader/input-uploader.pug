@@ -1,6 +1,6 @@
 mixin input-uploader()
   +b.LABEL.input-uploader&attributes(attributes).js-file-upload
-    +input(type="file" name="files[]" required)
+    +input(type="file" name="files[]" required disabled)
     +e.filename(data-filename)
     +e.placeholder(data-placeholder) Нажмите для выбора
     block

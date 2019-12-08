@@ -28,20 +28,16 @@ mixin order-form()
                         +mc-select-item(item)
             +e.checkers
               +b.LABEL.checkradio.__checker
-                +e.INPUT.input(name="oven", value="oven", type="checkbox" data-form-type="oven")
+                +e.INPUT.input(name="oven", value="oven", type="checkbox" data-form-type="oven" data-oven)
                 +e.SPAN.box
                   +icon('check').__check
                 +e.SPAN.content Я купил духовой шкаф с паром - пойду на мастер-класс бесплатно
-            +e.triggers(data-form-trigger)
-              +e.note * Обязательное поле
-              +e.buttons
-                +button('button').__button.js-toggle-orderform(type="button") Записаться
           +e.content(data-form-body)
             +e.FIELDSET.section
-              +e.text_chd(data-form-field="child") К мастер-классу допускаются дети в возрасте от 6-ти лет и только в сопровождении одного взрослого.
+              +e.text_chd.is-disabled(data-form-field="child") К мастер-классу допускаются дети в возрасте от 6-ти лет и только в сопровождении одного взрослого.
               +e.title._mb28
-                span(data-form-field="adult, oven") Личные данные
-                span(data-form-field="child") Сопровождающий ребенка
+                span(data-form-field="adult") Личные данные
+                span.is-disabled(data-form-field="child") Сопровождающий ребенка
               +grid
                 +col({xl: 6, sm: 12})
                   +inputbox()
@@ -58,39 +54,38 @@ mixin order-form()
                     +label Телефон*
                     +input-wrapper
                       +input(type="tel" name="phone" required placeholder="Например, +79032094743" data-type="tel")
-                +col({xl: 6, sm: 12})(data-form-field="adult")
+                +col({xl: 6, sm: 12})(data-form-field="adult, oven")
                   +inputbox()
                     +label Количество человек*
                     +input-wrapper
-                      +select.js-select(name="pay-vacancy" required)
+                      +select.js-select(name="vacancy" data-form-vacancy required)
                         - for (var i = 1; i <= 22; i++) {
                           option(value=i)!=i
                         -}
-                +col({xl: 6, sm: 12})(data-form-field="oven")
-                  +inputbox()
-                    +label Количество человек*
-                    +input-wrapper
-                      +select.js-select(name="free-vacancy" required)
-                        - for (var i = 1; i <= 11; i++) {
-                          option(value=i)!=i
-                        -}
-            +e.FIELDSET.section(data-form-field="child")
+            +e.FIELDSET.section.is-disabled(data-form-field="child")
               +e.title_sm-mb40 Данные ребенка
               +e.childes(data-child-container)
-                +grid()(data-child-template data-child)
-                  +col({xl: 6, sm: 12})
-                    +inputbox()
-                      +label Имя ребенка*
-                      +input-wrapper
-                        +input(type="text" name="childName[0]" required placeholder="Имя ребенка")
-                  +col({xl: 6, sm: 12})
-                    +inputbox()
-                      +label Возраст ребенка*
-                      +input-wrapper
-                        +input(type="text" name="childAge[0]" required placeholder="Сколько лет ")
+                +e.child(data-child-template data-child)
+                  +grid()
+                    +col({xl: 6, sm: 12})
+                      +inputbox()
+                        +label Имя ребенка*
+                        +input-wrapper
+                          +input(type="text" name="childName[0]" required placeholder="Имя ребенка")
+                    +col({xl: 6, sm: 12})
+                      +inputbox()
+                        +label Возраст ребенка*
+                        +input-wrapper
+                          +select.js-select(name="childAge[0]" required)
+                            option(value="" placeholder) Сколько лет
+                            - for (var i = 6; i <= 18; i++) {
+                              option(value=i)!=i
+                            -}
+                  +e.BUTTON.child-remove.js-remove-child(type="button")
+                    +icon('cross').__child-cross
               +e.add
                 +button('button').__additional.js-add-child(type="button" data-child-fields-names="childName,childAge" data-max-childs-count="11") + Добавить ребенка
-            +e.FIELDSET.section(data-form-field="oven")
+            +e.FIELDSET.section.is-disabled(data-form-field="oven")
               +e.title Ваш продукт
               +grid
                 +col({xl: 12})
@@ -136,15 +131,15 @@ mixin order-form()
                         +link()._underline(href="#" target="__blank") условия оферты и ознакомился с правилами проведения акции.
                       p Я соглашаюсь&nbsp;
                         +link()._underline(href="#" target="__blank") с условиями обработки персональных данных, оплаты, возврата и пользования сайтом.
-              +e.payment(data-form-field="adult,child")
+              +e.payment(data-form-field="pay")
                 +e.price
                   +e.total 3 000 ₽
                   +e.price-text итоговая стоимость
               +e.buttons_mtb
                 +button('button').__button(type="submit")
-                  span(data-form-field="oven") Записаться
-                  span(data-form-field="adult,child") Оплатить
-              +e.note_centered._mt20(data-form-field="adult,child") После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.
+                  span.is-disabled(data-form-field="free") Записаться
+                  span(data-form-field="pay") Оплатить
+              +e.note_centered._mt20(data-form-field="pay") После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.
         +col({xl: 1, sm: 12}).is-hidden-sm
 
     block

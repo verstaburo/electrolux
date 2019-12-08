@@ -1,6 +1,6 @@
 mixin mc-radio(name, data)
   +b.LABEL.mc-radio&attributes(attributes)
-    +input(type="radio" name=name value=data.value data-mc-input="true" required data-form-type=data.mctype data-parsley-group="start" data-target-case-index=data.id data-case-price=data.price.value).__input
+    +input(type="radio" name=name value=data.value data-mc-input="true" required data-form-type=data.mctype data-parsley-group="start" data-target-case-index=data.id data-case-price=data.price.value data-form-mc).__input
     +mc-info(data).__info(data-select-value)
     +button('div').__button Выбрать
     block

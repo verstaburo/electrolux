@@ -24,5 +24,6 @@ export default function addChild() {
         });
       }
     }
+    setTimeout(window.globalFunctions.switcherFormElements);
   });
 }

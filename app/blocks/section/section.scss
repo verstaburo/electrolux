@@ -100,7 +100,7 @@
     }
   }
 
-  &_mc {
+  &_mc, &_kitch {
 
     &:not(:first-child) {
       @include ruleMin(margin-top, (xs: 28px, sm: 34px));

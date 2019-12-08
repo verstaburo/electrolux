@@ -48,26 +48,35 @@ export default function orderForm() {
   function switchElements(string) {
     stateElements.disabled('[data-form-field]');
     const array = string.split(',');
-    let searchString = 'adult';
 
     if (array.includes('oven')) {
-      searchString = 'oven';
-    } else if (array.includes('whiterabbit')) {
-      searchString = 'whiterabbit';
-    } else if (array.includes('child')) {
-      searchString = 'child';
+      console.log('oven');
+      console.log($('[data-child]').length);
+      if ($('[data-child]').length > 1) {
+        console.log('we are here?');
+        stateElements.disabled($('[data-form-field*="free"]'));
+        stateElements.enabled($('[data-form-field*="pay"]'));
+      } else {
+        stateElements.disabled($('[data-form-field*="pay"]'));
+        stateElements.enabled($('[data-form-field*="free"]'));
+      }
+    } else {
+      stateElements.disabled($('[data-form-field*="free"]'));
+      stateElements.enabled($('[data-form-field*="pay"]'));
     }
-    stateElements.enabled($(`[data-form-field*="${searchString}"]`));
+
+    $(array).each((i, el) => {
+      stateElements.enabled($(`[data-form-field*="${el}"]`));
+    });
   }
 
-  $(document).on('click', '.js-toggle-orderform', (evt) => {
-    evt.preventDefault();
-    $('[data-orderform]').parsley().whenValidate({
-      group: 'start',
-    }).done(() => {
-      switchElements(getFormFilterTypes());
-      $('[data-form-trigger]').hide(300);
-      $('[data-form-body]').addClass('is-show');
-    });
+  function switcherFormElements() {
+    switchElements(getFormFilterTypes());
+  }
+
+  window.globalFunctions.switcherFormElements = switcherFormElements;
+
+  $(document).on('change', '[data-oven], [data-form-mc]', () => {
+    switchElements(getFormFilterTypes());
   });
 }

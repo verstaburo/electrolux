@@ -1,21 +1,41 @@
 const $ = window.$;
 
 export default function orderForm() {
-  // показываем форму
-  $(document).on('click', '.js-show-orderform', (evt) => {
-    evt.preventDefault();
-    const self = evt.currentTarget;
-    $(self).addClass('is-hidden');
-    $('.order-form').slideDown(300);
-  });
-
-  // скрываем форму
-  $(document).on('click', '.js-hide-orderform', (evt) => {
-    evt.preventDefault();
-    $('.order-form').slideUp(300, () => {
-      $('.js-show-orderform').removeClass('is-hidden');
+  // получаем строку активных элементов
+  function getFormFilterTypes() {
+    const filtersEl = $('[data-form-type]:checked');
+    let filterString = '';
+    $(filtersEl).each((i, el) => {
+      filterString += `${$(el).attr('data-form-type')},`;
     });
-  });
+    return filterString.slice(0, -1);
+  }
+
+  // высчитываем цену
+  function setPrice() {
+    const currentMc = $('[data-form-mc]:checked');
+    const basePrice = (currentMc.length > 0) ? $(currentMc).attr('data-case-price') : 0;
+    const filter = getFormFilterTypes().split(',');
+    let multiplayer;
+    if (filter.includes('child')) {
+      if (filter.includes('oven')) {
+        multiplayer = $('[data-child]').length - 1;
+      } else {
+        multiplayer = $('[data-child]').length;
+      }
+    } else {
+      multiplayer = Number($('[data-form-vacancy]').val()) || 1;
+    }
+    const totalPrice = basePrice * multiplayer;
+    $('[data-total-price]').text(totalPrice);
+  }
+
+  window.globalFunctions.setTotalPrice = setPrice;
+
+  // определяем допустимое количество свободных мест
+  // function setVacancies() {
+
+  // }
 
   // переключаем секции
   // изменяет состояние элементов в переданной секции
@@ -36,24 +56,13 @@ export default function orderForm() {
     },
   };
 
-  function getFormFilterTypes() {
-    const filtersEl = $('[data-form-type]:checked');
-    let filterString = '';
-    $(filtersEl).each((i, el) => {
-      filterString += `${$(el).attr('data-form-type')},`;
-    });
-    return filterString.slice(0, -1);
-  }
-
   function switchElements(string) {
     stateElements.disabled('[data-form-field]');
     const array = string.split(',');
 
+    // устанавливаем видимость полей в зависимости от духового шкафа и детей
     if (array.includes('oven')) {
-      console.log('oven');
-      console.log($('[data-child]').length);
       if ($('[data-child]').length > 1) {
-        console.log('we are here?');
         stateElements.disabled($('[data-form-field*="free"]'));
         stateElements.enabled($('[data-form-field*="pay"]'));
       } else {
@@ -76,7 +85,27 @@ export default function orderForm() {
 
   window.globalFunctions.switcherFormElements = switcherFormElements;
 
+  // показываем форму
+  $(document).on('click', '.js-show-orderform', (evt) => {
+    evt.preventDefault();
+    const self = evt.currentTarget;
+    $(self).addClass('is-hidden');
+    window.globalFunctions.setTotalPrice();
+    $('.order-form').slideDown(300);
+  });
+
+  // скрываем форму
+  $(document).on('click', '.js-hide-orderform', (evt) => {
+    evt.preventDefault();
+    $('.order-form').slideUp(300, () => {
+      $('.js-show-orderform').removeClass('is-hidden');
+    });
+  });
+
   $(document).on('change', '[data-oven], [data-form-mc]', () => {
     switchElements(getFormFilterTypes());
+    setTimeout(window.globalFunctions.setTotalPrice());
   });
+
+  $(document).on('change', '[data-form-vacancy]', window.globalFunctions.setTotalPrice);
 }

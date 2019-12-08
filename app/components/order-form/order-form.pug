@@ -108,7 +108,7 @@ mixin order-form()
                         -}
                 +col({xl: 6, sm: 12})
                   +inputbox()
-                    +label Где была куплена техника*
+                    +label Дата покупки*
                     +input-wrapper.js-datepicker
                       +input(type="text" name="shoppingDate" required placeholder="дд.мм.гггг" data-date).js-show-datepicker
                 +col({xl: 6, sm: 12})
@@ -136,7 +136,7 @@ mixin order-form()
                         +link()._underline(href="#" target="__blank") с условиями обработки персональных данных, оплаты, возврата и пользования сайтом.
               +e.payment(data-form-field="pay")
                 +e.price
-                  +e.total 3 000 ₽
+                  +e.total <span data-total-price>3 000</span> ₽
                   +e.price-text итоговая стоимость
               +e.buttons_mtb
                 +button('button').__button(type="submit")

@@ -47,6 +47,7 @@ export default function addChild() {
           }
         }
         setTimeout(window.globalFunctions.switcherFormElements);
+        setTimeout(window.globalFunctions.setTotalPrice, 10);
       }
     }, 20);
   });
@@ -56,5 +57,6 @@ export default function addChild() {
     const child = $(self).closest('[data-child]');
     $(child).remove();
     setTimeout(window.globalFunctions.switcherFormElements);
+    setTimeout(window.globalFunctions.setTotalPrice, 10);
   });
 }

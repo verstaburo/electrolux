@@ -18,10 +18,15 @@ mixin ui-kit-promocode()
       +ui-path
         p Блок: blocks/promocode/promocode
       +ui-description
-        p Описание Блока
+        p Промокод.
+        p Состояние ошибки .promocode.is-error
+        p Состояние успеха .promocode.is-success
 
     +ui-section-content()
       +promocode
+      +promocode.is-error
+      +promocode.is-success
+
 
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()

@@ -52,6 +52,49 @@ $(document).ready(function () {
       return $(el.element).closest('.inputbox__wrapper').find('.error-message');
     },
   });
+
+  // проверка промокода
+  $(document).on('click', '.js-promocode', function (evt) {
+    evt.preventDefault();
+    var self = evt.currentTarget;
+    var promocodeEl = $(self).closest('.promocode');
+    var promocode = $(promocodeEl).find('[data-promocode-value]').val();
+    console.log(promocode);
+    if (promocode) {
+      $(promocodeEl).removeClass('is-error');
+      $(promocodeEl).addClass('is-success');
+    } else {
+      $(promocodeEl).removeClass('is-success');
+      $(promocodeEl).addClass('is-error');
+    }
+  })
+
+  // отправка формы записи
+  $('[data-orderform]').on('submit', function (evt) {
+    evt.preventDefault();
+    evt.stopPropagation();
+    var self = evt.currentTarget;
+    console.log(self);
+    var url = $(self).attr('action');
+    $(self).parsley().whenValidate().done(function () {
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: new FormData(self),
+        processData: false,
+        contentType: false,
+        dataType: 'json',
+        complete: function (data) {
+          var formTypesArray = window.globalFunctions.getFormTypes().split(',');
+          if (formTypesArray.indexOf('oven') === -1) {
+            // редирект
+          } else {
+            window.globalFunctions.openPopup($('#popup-registration-success')[0]);
+          }
+        }
+      });
+    });
+  });
 });
 
 

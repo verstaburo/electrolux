@@ -139,7 +139,7 @@ mixin order-form()
                   +e.total <span data-total-price>3 000</span> ₽
                   +e.price-text итоговая стоимость
               +e.buttons_mtb
-                +button('button').__button(type="submit")
+                +button('button').__button.js-form-submit(type="submit")
                   span.is-disabled(data-form-field="free") Записаться
                   span(data-form-field="pay") Оплатить
               +e.note_centered._mt20(data-form-field="pay") После нажатия, Вы будете перенесены на страницу оплаты. Это безопасно.

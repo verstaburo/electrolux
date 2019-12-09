@@ -27,6 +27,8 @@ export default function orderForm() {
     return filterString.slice(0, -1);
   }
 
+  window.globalFunctions.getFormTypes = getFormFilterTypes;
+
   // высчитываем цену
   function setPrice() {
     const currentMc = $('[data-form-mc]:checked');

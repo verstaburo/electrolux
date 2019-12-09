@@ -3,8 +3,8 @@ mixin promocode()
     +grid
       +col({xl: 6, md: 12})
         +e.field
-          +input(type="text" name="promocode" placeholder="Введите промокод").__input
-          +button('button').__button.js-promocode(type="button" data-promocode-url="/") Применить
+          +input(type="text" name="promocode" placeholder="Введите промокод" data-promocode-value).__input
+          +button('button').__button.js-promocode(type="button") Применить
       +col({xl: 6, md: 12})
         +e.message
           +e.success Промокод применен

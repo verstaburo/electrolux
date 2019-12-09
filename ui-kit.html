@@ -761,7 +761,7 @@
                                 <div class="lead__content">
                                     <h1 class="lead__title">Готовьте, как <br>шеф&#8209;повар!</h1>
                                     <div class="lead__text">
-                                        <p>Electrolux представляет серию кулинарных мастер&#8209;классов, <span class="lead__spoiler" data-spoiler-content="lead">которые одинаково полезны тем, кто любит готовить, и тем, у кого не получается пожарить даже яичницу.</span></p>
+                                        <p>Профессиональный и быстрый ремонт бытовой техники от наших <span class="lead__spoiler" data-spoiler-content="lead">сертифицированных мастеров, который вы можете заказать и оплатить прямо сейчас!</span></p>
                                     </div><button class="spoiler js-show-more lead__more is-hidden-xl" data-spoiler="lead"><svg class="spoiler__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button>
                                 </div>
                             </div>
@@ -873,8 +873,13 @@
                                             </select><span class="error-message"></span></span>
                                     </label></div>
                                 <div class="filters__item"><label class="inputbox inputbox_row">
-                                        <p class="inputbox__label">В период</p><span class="inputbox__wrapper inputbox__wrapper_flex js-datepicker-range"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-start-date="data-start-date" readonly="readonly" data-filter-start-date="data-filter-start-date" /><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-end-date="data-end-date" readonly="readonly" data-filter-end-date="data-filter-end-date" /><span class="error-message"></span></span>
+                                        <p class="inputbox__label">В период</p><span class="inputbox__wrapper inputbox__wrapper_flex js-datepicker-range"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-start-date="data-start-date" data-filter-start-date="data-filter-start-date" data-type="date" /><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-end-date="data-end-date" data-filter-end-date="data-filter-end-date" data-type="date" /><span class="error-message"></span></span>
                                     </label></div>
+                            </div>
+                            <div class="filters__clear">
+                                <div class="container"><button class="filters__reset js-reset-filter" type="reset">
+                                        <div class="filters__text">Сбросить все</div><svg class="filters__reset-icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                    </button></div>
                             </div>
                         </form>
                     </div>
@@ -1570,7 +1575,7 @@
                                                                 </select><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                            <p class="inputbox__label">Дата покупки*</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="дд.мм.гггг" data-date="data-date" /><span class="error-message"></span></span>
+                                                            <p class="inputbox__label">Дата покупки*</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="дд.мм.гггг" data-date="data-date" data-type="date2" /><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                             <p class="inputbox__label">Номер чека*</p><span class="inputbox__wrapper"><input class="input" type="text" name="checkNumber" required="required" placeholder="16278499921" data-parsley-type="digits" /><span class="error-message"></span></span>

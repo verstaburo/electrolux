@@ -8,6 +8,15 @@ mixin header()
       +header-phone.__phone.is-hidden-sm(href="tel:88004444448") 8 (800) 444-44-48
     block
 
+mixin header-fxp()
+  +b.HEADER.header&attributes(attributes)
+    +e.wrapper
+      +logo.__logo
+      +e.A.close.is-hidden-sm.js-close-feedback(href="#")
+        +icon('cross').__cross
+      +header-phone.__phone.is-hidden-sm(href="tel:88004444448") 8 (800) 444-44-48
+    block
+
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
     //- Рамка вокруг особой секции: +ui-special()

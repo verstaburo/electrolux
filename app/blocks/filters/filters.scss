@@ -7,6 +7,7 @@
   width: 100%;
 
   .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,6 +41,33 @@
 
     &:last-child .inputbox {
       justify-content: flex-end;
+    }
+  }
+
+  &__clear {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 15px;
+  }
+
+  &__reset {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: auto;
+    color: $color-collapse;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    &-icon {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      margin-left: 10px;
     }
   }
 }

@@ -18,7 +18,7 @@ export default function filter() {
     // значения фильтров
     const filterLocation = $('[data-filter-location]').val();
     const filterStartDate = $('[data-filter-start-date]').val().split('/').join('.');
-    const filterEndDate = $('[data-filter-end-date]').val().split('/').join('.');
+    const filterEndDate = $('[data-filter-end-date]').val().split('/').join('.') || '01.01.3000';
     let isFilteredByLocation = false; // будем ли фильтровать по месту
     let isFilteredByDate = false; // будем ли фильтровать по дате
     let filteredByLocation; // элементы отфильтрованные по месту
@@ -79,6 +79,17 @@ export default function filter() {
     }
   }
 
-  $(document).on('change', '[data-filter-location], [data-filter-end-date]', filtration);
+  $(document).on('change', '[data-filter-location], [data-filter-start-date], [data-filter-end-date]', filtration);
+
+  $(document).on('click', '.js-reset-filter', (evt) => {
+    evt.preventDefault();
+    const self = evt.currentTarget;
+    const form = self.form;
+    const selects = $(form).find('select');
+    $(selects).each((i, el) => el.choices.setChoiceByValue(''));
+    form.reset();
+    $('.master-classes__slide').removeClass('is-filtration-fall');
+    setTimeout(window.globalFunctions.showCards);
+  });
 }
 /* eslint-enable max-len */

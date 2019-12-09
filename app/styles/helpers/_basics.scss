@@ -87,6 +87,7 @@ a, input, button, select, textarea {
 button { cursor: pointer; }
 
 select, input, textarea, button {
+  -webkit-appearance: none;
   color: $color-input;
   margin: 0;
   padding: 0;

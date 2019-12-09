@@ -9,6 +9,15 @@ mixin footer()
         +totop.__totop.is-hidden-sm
     block
 
+mixin footer-fxp()
+  +b.FOOTER.footer&attributes(attributes)
+    +e.wrapper
+      +e.side_front
+        +logo._footer.__logo
+      +e.side_end.is-hidden-sm
+        +totop.__totop.is-hidden-sm
+    block
+
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
     //- Рамка вокруг особой секции: +ui-special()

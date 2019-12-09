@@ -75,5 +75,23 @@
 
   &__button {
     min-width: 168px;
+
+    [data-map] {
+      display: none;
+    }
+
+    [data-photo] {
+      display: inline-block;
+    }
+
+    &.is-active {
+      [data-map] {
+        display: inline-block;
+      }
+
+      [data-photo] {
+        display: none;
+      }
+    }
   }
 }

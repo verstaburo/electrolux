@@ -109,6 +109,11 @@ export function datepicker() {
     $(datepicker).addClass('is-show-date');
   });
 
+  $(document).on('mouseleave', '.js-datepicker-range, .js-datepicker', (evt) => {
+    const self = evt.currentTarget;
+    $(self).removeClass('is-show-date');
+  });
+
   $('.js-datepicker').each((i, el) => {
     $(el).datepicker({
       classes: 'inputbox__datepicker',
@@ -125,6 +130,14 @@ export function datepicker() {
 }
 
 export function inputmask() {
+  Inputmask.extendDefinitions({
+    'f': { //masksymbol
+      "validator": "[0-3]"
+    },
+    'g': { //masksymbol
+      "validator": "[0-1]"
+    }
+  });
   Inputmask({
     mask: '+7 (999) 999-99-99',
   }).mask('input[data-type="tel"]');
@@ -132,6 +145,14 @@ export function inputmask() {
   Inputmask({
     alias: 'email',
   }).mask('input[data-type="email"]');
+
+  Inputmask({
+    mask: 'f9/g9/2099',
+  }).mask('input[data-type="date"]');
+
+  Inputmask({
+    mask: 'f9.g9.2099',
+  }).mask('input[data-type="date2"]');
 }
 
 export function numberinput() {

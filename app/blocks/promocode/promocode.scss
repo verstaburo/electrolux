@@ -20,6 +20,10 @@
 
   &__input {
     @include ruleMin(flex, (xs: none, sm: 1));
+
+    &:not(:last-child) {
+      @include ruleMin(margin-right, (sm: 30px));
+    }
   }
 
   &__button {

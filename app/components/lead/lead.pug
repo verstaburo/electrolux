@@ -4,6 +4,16 @@ mixin lead()
       +e.content
         +e.H1.title Готовьте, как <br>шеф&#8209;повар!
         +e.text
+          p Профессиональный и быстрый ремонт бытовой техники от наших <span class="lead__spoiler" data-spoiler-content="lead">сертифицированных мастеров, который вы можете заказать и оплатить прямо сейчас!</span>
+        +spoiler().__more.is-hidden-xl(data-spoiler="lead")
+    block
+
+mixin lead-fxp()
+  +b.SECTION.lead_fxp&attributes(attributes)
+    .container
+      +e.content
+        +e.H1.title Новая удобная услуга <br>от&nbsp;Electrolux
+        +e.text
           p Electrolux представляет серию кулинарных мастер&#8209;классов, <span class="lead__spoiler" data-spoiler-content="lead">которые одинаково полезны тем, кто любит готовить, и тем, у кого не получается пожарить даже яичницу.</span>
         +spoiler().__more.is-hidden-xl(data-spoiler="lead")
     block

@@ -90,6 +90,13 @@
         @include screen('md', min) {
           flex: 1;
         }
+
+        .input {
+
+          &:not(:first-child) {
+            @include ruleMin(margin-left, (xs: 5px, sm: 20px, md: 30px));
+          }
+        }
       }
     }
   }

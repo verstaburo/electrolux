@@ -1,18 +1,18 @@
 .spoiler {
   $b: &;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: $color-basic;
 
   &__icon {
+    position: absolute;
+    top: 11px;
+    left: 15px;
     width: 10px;
     height: 18px;
-    margin-top: -2px;
     transform-origin: 50% 50% 0;
     transform: rotate(90deg);
     transition: transform $ease-main;

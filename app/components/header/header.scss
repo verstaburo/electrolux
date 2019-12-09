@@ -7,10 +7,9 @@
   left: 0;
   width: 100%;
   background-color: $color-white;
-  border-bottom: 2px solid $color-header-shadow;
+  border-bottom: 1px solid $color-form-border;
   z-index: 10;
 
-  @include ruleMin(border-bottom-width, (xs: 1px, sm: 2px));
   @include ruleMin(height, (xs: 60px, sm: 110px));
 
   &__wrapper {

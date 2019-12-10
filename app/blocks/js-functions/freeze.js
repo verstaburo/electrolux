@@ -7,8 +7,10 @@ export function freeze() {
   if (h.css('position') !== 'fixed') {
     const top = h.scrollTop() ? h.scrollTop() : $('body').scrollTop();
 
-    if (window.innerWidth > h.width()) {
-      h.css('overflow-y', 'scroll');
+    if (window.innerHeight < h.height()) {
+      $('body').css({
+        'overflow-y': 'scroll',
+      });
     }
 
     h.css({
@@ -16,6 +18,7 @@ export function freeze() {
       height: '100%',
       position: 'fixed',
       top: -top,
+      'touch-action': 'none',
     });
   }
 }
@@ -27,11 +30,17 @@ export function unfreeze() {
     h.css('position', 'static');
 
     $('html, body').scrollTop(-parseInt(h.css('top'), 10));
+
     h.css({
       position: '',
       width: '',
       height: '',
       top: '',
+      'overflow-y': '',
+      'touch-action': '',
+    });
+
+    $('body').css({
       'overflow-y': '',
     });
   }

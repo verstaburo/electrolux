@@ -138,6 +138,7 @@ mixin order-form()
                 +e.price
                   +e.total <span data-total-price>3 000</span> ₽
                   +e.price-text итоговая стоимость
+                  +input(type="hidden" name="totalPrice" data-total-price-field)
               +e.buttons_mtb
                 +button('button').__button.js-form-submit(type="submit")
                   span.is-disabled(data-form-field="free") Записаться

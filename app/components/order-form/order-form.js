@@ -42,10 +42,16 @@ export default function orderForm() {
         multiplayer = $('[data-child]').length;
       }
     } else {
-      multiplayer = Number($('[data-form-vacancy]').val()) || 1;
+      const vacancies = Number($('[data-form-vacancy]').val());
+      multiplayer = vacancies || 1;
+
+      if (filter.includes('oven') && vacancies > 2) {
+        multiplayer = vacancies - 2;
+      }
     }
     const totalPrice = basePrice * multiplayer;
     $('[data-total-price]').text(totalPrice);
+    $('[data-total-price-field]').val(totalPrice);
   }
 
   window.globalFunctions.setTotalPrice = setPrice;
@@ -64,8 +70,6 @@ export default function orderForm() {
           $('.js-add-child').attr('data-max-childs-count', 8);
           break;
       }
-    } else if (filter.includes('oven')) {
-      vacancy.setChoices(array2, 'value', 'label', true);
     } else {
       switch (location) {
         case 2:
@@ -102,19 +106,34 @@ export default function orderForm() {
   function switchElements(string) {
     stateElements.disabled('[data-form-field]');
     const array = string.split(',');
+    const switchPayToFree = {
+      pay() {
+        stateElements.disabled($('[data-form-field*="free"]'));
+        stateElements.enabled($('[data-form-field*="pay"]'));
+      },
+      free() {
+        stateElements.disabled($('[data-form-field*="pay"]'));
+        stateElements.enabled($('[data-form-field*="free"]'));
+      },
+    };
 
     // устанавливаем видимость полей в зависимости от духового шкафа и детей
     if (array.includes('oven')) {
-      if ($('[data-child]').length > 1) {
-        stateElements.disabled($('[data-form-field*="free"]'));
-        stateElements.enabled($('[data-form-field*="pay"]'));
+      const childs = $('[data-child]').length;
+      const vacancies = Number($('[data-form-vacancy]').val());
+      if (array.includes('child')) {
+        if (childs > 1) {
+          switchPayToFree.pay();
+        } else {
+          switchPayToFree.free();
+        }
+      } else if (vacancies > 2) {
+        switchPayToFree.pay();
       } else {
-        stateElements.disabled($('[data-form-field*="pay"]'));
-        stateElements.enabled($('[data-form-field*="free"]'));
+        switchPayToFree.free();
       }
     } else {
-      stateElements.disabled($('[data-form-field*="free"]'));
-      stateElements.enabled($('[data-form-field*="pay"]'));
+      switchPayToFree.pay();
     }
 
     $(array).each((i, el) => {
@@ -152,5 +171,8 @@ export default function orderForm() {
   });
 
   $(document).on('change', '[data-location]', window.globalFunctions.setFormVacancies);
-  $(document).on('change', '[data-form-vacancy]', window.globalFunctions.setTotalPrice);
+  $(document).on('change', '[data-form-vacancy]', () => {
+    window.globalFunctions.switcherFormElements();
+    setTimeout(window.globalFunctions.setTotalPrice, 10);
+  });
 }

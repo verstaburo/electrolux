@@ -1,7 +1,6 @@
 .header {
   $b: &;
 
-  position: absolute;
   display: block;
   top: 0;
   left: 0;
@@ -10,6 +9,7 @@
   border-bottom: 1px solid $color-form-border;
   z-index: 10;
 
+  @include ruleMin(position, (xs: fixed, md: absolute));
   @include ruleMin(height, (xs: 60px, sm: 110px));
 
   &__wrapper {
@@ -19,7 +19,7 @@
     box-sizing: border-box;
     height: 100%;
 
-    @include ruleMin(justify-content, (xs: center, sm: space-between));
+    @include ruleMin(justify-content, (xs: center, md: space-between));
     @include ruleMin(padding, (xs: 0 20px, lg: 0 50px));
   }
 
@@ -30,11 +30,12 @@
   }
 
   &__logo {
-    @include ruleMin(margin-left, (sm: -22px));
-    @include ruleMin(margin-right, (xs: -16px, sm: 0));
+    @include ruleMin(margin-left, (md: -22px));
+    @include ruleMin(margin-right, (xs: -16px, md: 0));
   }
 
   &__phone {
+    @include rule(display, (md: none));
     @include ruleMin(margin-right, (lg: 102px));
   }
 
@@ -47,11 +48,16 @@
     margin-left: auto;
     transition: opacity $ease-main;
     opacity: 0;
+    visibility: hidden;
 
     @include ruleMin(display, (xs: none, sm: flex));
+    @include ruleMin(position, (sm: absolute, md: static));
+    @include ruleMin(top, (sm: 0, md: auto));
+    @include ruleMin(right, (sm: 0, md: auto));
 
     &.is-active {
       opacity: 1;
+      visibility: visible;
     }
   }
 

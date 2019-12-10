@@ -51,8 +51,20 @@
   }
 }
 
+.is-hidden-md {
+  @include screen('md') {
+    display: none;
+  }
+}
+
 .is-hidden-xl {
   @include screen('sm', min) {
+    display: none;
+  }
+}
+
+.is-hidden-mdxl {
+  @include screen('md', min) {
     display: none;
   }
 }

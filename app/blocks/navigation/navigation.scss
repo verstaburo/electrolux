@@ -4,26 +4,29 @@
   display: block;
   width: 100%;
   z-index: 7;
-  height: 60px;
   transition: opacity $ease-main;
 
-  @include ruleMin(position, (xs: fixed, sm: relative));
-  @include ruleMin(top, (xs: 0, sm: auto));
-  @include ruleMin(left, (xs: 0, sm: auto));
-  @include ruleMin(opacity, (xs: 0, sm: 1));
-  @include ruleMin(visibility, (xs: hidden, sm: visible));
+  @include ruleMin(position, (xs: fixed, md: relative));
+  @include ruleMin(top, (xs: 0, md: auto));
+  @include ruleMin(left, (xs: 0, md: auto));
+  @include ruleMin(opacity, (xs: 0, md: 1));
+  @include ruleMin(visibility, (xs: hidden, md: visible));
+  @include ruleMin(height, (xs: 100%, md: 60px));
 
-  &.is-sticky {
-    @include ruleMin(opacity, (xs: 1, sm: 1));
-    @include ruleMin(visibility, (xs: visible, sm: visible));
+  &.is-opened {
+    @include ruleMin(opacity, (xs: 1, md: 1));
+    @include ruleMin(visibility, (xs: visible, md: visible));
   }
 
   &__wrapper {
     width: 100%;
     background-color: $color-bg-gray;
 
+    @include ruleMin(height, (xs: 100%, md: auto));
+    @include ruleMin(overflow, (xs: auto, md: hidden));
+
     #{$b}.is-sticky & {
-      @include screen('sm', min) {
+      @include screen('md', min) {
         position: fixed;
         top: 0;
         left: 0;
@@ -32,8 +35,10 @@
   }
 
   &__header {
-    @include ruleMin(display, (xs: flex, sm: none));
-    @include ruleMin(font-size, (xs: 15px, sm: 16px));
+    // @include ruleMin(display, (xs: flex, md: none));
+    display: none;
+
+    @include ruleMin(font-size, (xs: 15px, md: 16px));
     @include ruleMin(padding, (xs: 0 20px, lg: 0 25px));
 
     position: relative;
@@ -47,9 +52,9 @@
     z-index: 2;
     box-sizing: border-box;
 
-    #{$b}.is-top & {
-      opacity: 0;
-    }
+    // #{$b}.is-top & {
+    //   opacity: 0;
+    // }
   }
 
   &__arrow {
@@ -74,15 +79,17 @@
   }
 
   &__list {
-    @include ruleMin(display, (xs: block, sm: flex));
-    @include ruleMin(opacity, (xs: 0, sm: 1));
-    @include ruleMin(transform, (xs: translate3d(0, -100%, 0), sm: translate3d(0, 0, 0)));
-    @include ruleMin(position, (xs: absolute, sm: static));
-    @include ruleMin(top, (xs: 0, sm: auto));
-    @include ruleMin(left, (xs: 0, sm: auto));
-    @include ruleMin(height, (xs: calc(100vh - 60px), sm: auto));
-    @include ruleMin(padding-top, (xs: 60px, sm: 0));
-    @include ruleMin(pointer-events, (xs: none, sm: auto));
+    height: auto;
+
+    @include ruleMin(display, (xs: block, md: flex));
+    @include ruleMin(opacity, (xs: 0, md: 1));
+    @include ruleMin(transform, (xs: translate3d(0, -100%, 0), md: translate3d(0, 0, 0)));
+    // @include ruleMin(position, (xs: absolute, md: static));
+    // @include ruleMin(top, (xs: 0, md: auto));
+    // @include ruleMin(left, (xs: 0, md: auto));
+    // @include ruleMin(height, (xs: calc(100vh - 60px), md: auto));
+    @include ruleMin(padding-top, (xs: 60px, sm: 110px, md: 0));
+    @include ruleMin(pointer-events, (xs: none, md: auto));
 
     width: 100%;
     justify-content: flex-start;
@@ -91,20 +98,20 @@
     z-index: 1;
 
     #{$b}.is-opened & {
-      @include ruleMin(transform, (xs: translate3d(0, 0, 0), sm: translate3d(0, 0, 0)));
-      @include ruleMin(opacity, (xs: 1, sm: 1));
-      @include ruleMin(pointer-events, (xs: auto, sm: auto));
+      @include ruleMin(transform, (xs: translate3d(0, 0, 0), md: translate3d(0, 0, 0)));
+      @include ruleMin(opacity, (xs: 1, md: 1));
+      @include ruleMin(pointer-events, (xs: auto, md: auto));
     }
   }
 
   &__item {
-    @include ruleMin(border-bottom, (xs: 2px solid $color-form-border, sm: none));
+    @include ruleMin(border-bottom, (xs: 2px solid $color-form-border, md: none));
   }
 
   &__link {
     @include ruleMin(font-size, (xs: 15px, sm: 16px));
     @include ruleMin(padding, (xs: 0 20px, lg: 0 25px));
-    @include ruleMin(height, (xs: 58px, sm: 60px));
+    @include ruleMin(height, (xs: 58px, md: 60px));
     @include ruleMin(justify-content, (xs: flex-start, sm: center));
     @include ruleMin(text-align, (xs: left, sm: center));
 
@@ -116,12 +123,12 @@
     align-items: center;
 
     &.is-active {
-      @include ruleMin(background-color, (xs: $color-white, sm: $color-silk-rich));
-      @include ruleMin(color, (sm: $color-white));
+      @include ruleMin(background-color, (xs: $color-white, md: $color-silk-rich));
+      @include ruleMin(color, (md: $color-white));
     }
   }
 
   .container {
-    @include rule(padding, (sm: 0));
+    @include rule(padding, (md: 0));
   }
 }

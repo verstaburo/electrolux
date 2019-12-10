@@ -1,4 +1,8 @@
 import ResizeObserver from 'resize-observer-polyfill';
+import {
+  freeze,
+  unfreeze,
+} from '../js-functions/freeze';
 
 const $ = window.$;
 
@@ -96,9 +100,11 @@ export default function navigation() {
 
   const nav = {
     open() {
+      freeze();
       $('[data-navigation]').addClass('is-opened');
     },
     close() {
+      unfreeze();
       $('[data-navigation]').removeClass('is-opened');
     },
     isOpen() {
@@ -106,27 +112,30 @@ export default function navigation() {
     },
   };
 
-  $(document).on('click', '.js-show-nav-list', (evt) => {
-    evt.preventDefault();
+  window.globalFunctions.navigationClose = () => {
+    nav.close();
+    $('.js-menu-open').removeClass('is-active');
+  };
 
-    if (nav.isOpen()) {
-      nav.close();
-    } else {
-      nav.open();
-    }
-  });
+  // $(document).on('click', '.js-show-nav-list', (evt) => {
+  //   evt.preventDefault();
+
+  //   if (nav.isOpen()) {
+  //     nav.close();
+  //   } else {
+  //     nav.open();
+  //   }
+  // });
 
   $(document).on('click', '.js-menu-open', (evt) => {
     evt.preventDefault();
     const self = evt.currentTarget;
 
     if (nav.isOpen()) {
-      $('[data-navigation]').removeClass('is-sticky is-top');
       $(self).removeClass('is-active');
       nav.close();
     } else {
       $(self).addClass('is-active');
-      $('[data-navigation]').addClass('is-sticky is-top');
       nav.open();
     }
   });
@@ -160,10 +169,14 @@ export default function navigation() {
     if (navBlock.length > 0) {
       const nBT = $(navBlock).offset().top;
       const nBMT = $(navMobile).offset().top - 61;
-      const navTop = ($(window).width() < bp.sm) ? nBMT : nBT;
+      const navTop = ($(window).width() < bp.md) ? nBMT : nBT;
 
-      if (sT > navTop) {
-        $(navBlock).addClass('is-sticky');
+      if (($(window).width() >= bp.md)) {
+        if (sT > navTop) {
+          $(navBlock).addClass('is-sticky');
+        } else {
+          $(navBlock).removeClass('is-sticky');
+        }
       } else {
         $(navBlock).removeClass('is-sticky');
       }

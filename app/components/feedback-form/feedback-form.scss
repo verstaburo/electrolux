@@ -18,7 +18,7 @@
   @include ruleMin(height, (xs: 100%, sm: auto));
   @include ruleMin(padding-top, (xs: 60px, sm: 110px));
   @include ruleMin(background-color, (xs: $color-white, sm: $color-bg-gray2));
-  @include ruleMin(position, (xs: fixed, sm: absolute));
+  @include ruleMin(position, (xs: fixed, md: absolute));
 
   .container {
     position: relative;

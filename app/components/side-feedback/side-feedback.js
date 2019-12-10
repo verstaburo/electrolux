@@ -5,6 +5,7 @@ export default function sideFeedback() {
     evt.preventDefault();
     const self = evt.currentTarget;
     const panel = $(self).closest('[data-panel]');
+
     $(panel).toggleClass('is-active');
   });
 

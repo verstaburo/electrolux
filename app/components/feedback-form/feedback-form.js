@@ -3,13 +3,19 @@ const $ = window.$;
 export default function feedbackForm() {
   const feedback = {
     open() {
-      $('body, html').stop().animate({
-        scrollTop: 0,
-      }, 300, 'swing', () => {
+      if ($(window).width() >= window.globalOptions.sizes.md) {
+        $('body, html').stop().animate({
+          scrollTop: 0,
+        }, 300, 'swing', () => {
+          $('.header .js-close-feedback').addClass('is-active');
+          $('.feedback-form').addClass('is-active');
+          window.globalFunctions.navigationClose();
+        });
+      } else {
         $('.header .js-close-feedback').addClass('is-active');
         $('.feedback-form').addClass('is-active');
-        $('[data-navigation]').removeClass('is-opened');
-      });
+        window.globalFunctions.navigationClose();
+      }
     },
     close() {
       $('.header .js-close-feedback').removeClass('is-active');

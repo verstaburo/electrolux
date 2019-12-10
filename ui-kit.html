@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="header"><button class="burger header__burger is-hidden-xl js-menu-open"><span></span></button>
+    <header class="header"><button class="burger header__burger js-menu-open"><span></span></button>
         <div class="header__wrapper">
             <div class="logo header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div><a class="header__close is-hidden-sm js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
         </div>
@@ -678,12 +678,12 @@
                                         <div class="navigation__name" data-active-link-title="data-active-link-title"></div>
                                     </div>
                                     <div class="navigation__list">
-                                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#mc" data-nav-link="mc">Расписание мастер&#8209;классов</a></div>
+                                        <div class="navigation__item is-hidden-mdxl"><a class="navigation__link" href="#mc" data-nav-link="mc">Расписание мастер&#8209;классов</a></div>
                                         <div class="navigation__item"><a class="navigation__link" href="#kitchen-msc" data-nav-link="kitchen-msc">Кулинарные пространства</a></div>
                                         <div class="navigation__item"><a class="navigation__link" href="#childrens-mc" data-nav-link="childrens-mc">Мастер&#8209;класс для детей</a></div>
-                                        <div class="navigation__item"><a class="navigation__link" href="#chef" data-nav-link="chef">Бренд-шеф</a></div>
+                                        <div class="navigation__item"><a class="navigation__link" href="#chef" data-nav-link="chef">Бренд&#8209;шеф</a></div>
                                         <div class="navigation__item"><a class="navigation__link" href="#whiterabbit" data-nav-link="whiterabbit">Акция от White Rabbit Family</a></div>
-                                        <div class="navigation__item is-hidden-xl"><a class="navigation__link" href="#order" data-nav-link="order">Получить мастер-класс</a></div>
+                                        <div class="navigation__item"><a class="navigation__link" href="#order" data-nav-link="order">Записаться на мастер&#8209;класс</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -1611,7 +1611,7 @@
                                                 <div class="form__payment" data-form-field="pay">
                                                     <div class="form__price">
                                                         <div class="form__total"><span data-total-price>3 000</span> ₽</div>
-                                                        <div class="form__price-text">итоговая стоимость</div>
+                                                        <div class="form__price-text">итоговая стоимость</div><input class="input" type="hidden" name="totalPrice" data-total-price-field="data-total-price-field" />
                                                     </div>
                                                 </div>
                                                 <div class="form__buttons form__buttons_mtb"><button class="button form__button js-form-submit" type="submit"><span class="is-disabled" data-form-field="free">Записаться</span><span data-form-field="pay">Оплатить</span></button></div>

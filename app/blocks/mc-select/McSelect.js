@@ -8,6 +8,8 @@ export default class McSelect {
     this.label = this.el.find('[data-label]');
     this.head = this.el.find('[data-head]');
     this.inputs = this.el.find('[data-mc-input]');
+    this.preset = this.preset.bind(this);
+    this.getSelectedElem = this.getSelectedElem.bind(this);
   }
   init() {
     const t = this;
@@ -56,10 +58,11 @@ export default class McSelect {
       t.close();
     });
 
-    t.mcselect = t;
+    t.el[0].mcselect = t;
   }
   getSelectedElem() {
-    const activeEl = this.el.find('[data-mc-input]:checked');
+    const t = this;
+    const activeEl = t.el.find('[data-mc-input]:checked');
     const parent = activeEl.closest('[data-select-item]');
     const elem = parent.find('[data-select-value]');
     return elem;
@@ -68,8 +71,10 @@ export default class McSelect {
     const t = this;
     const currEl = t.getSelectedElem();
     t.label.empty();
-    const cloneEl = $(currEl).clone();
-    t.label.append(cloneEl);
+    if (currEl.length) {
+      const cloneEl = $(currEl).clone();
+      t.label.append(cloneEl);
+    }
   }
   open() {
     this.el.addClass('is-open');

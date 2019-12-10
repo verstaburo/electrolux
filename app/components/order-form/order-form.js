@@ -145,6 +145,22 @@ export default function orderForm() {
     switchElements(getFormFilterTypes());
   }
 
+  function setAvailableCases(evt) {
+    const self = evt.currentTarget;
+    const currentLocation = Number($(self).val());
+    const form = $(self).prop('form');
+    const select = $(form).find('.js-mc-select')[0];
+    const allCases = $(select).find('[data-case-location-value]');
+    $(allCases).find('[type="radio"]').each((i, el) => {
+      const ck = el;
+      ck.checked = false;
+    });
+    $(allCases).find('[type="radio"]').removeAttr('checked');
+    $(allCases).removeClass('is-hide');
+    $(allCases).not(`[data-case-location-value=${currentLocation}]`).addClass('is-hide');
+    setTimeout(select.mcselect.preset);
+  }
+
   window.globalFunctions.switcherFormElements = switcherFormElements;
 
   // показываем форму
@@ -171,6 +187,7 @@ export default function orderForm() {
   });
 
   $(document).on('change', '[data-location]', window.globalFunctions.setFormVacancies);
+  $(document).on('change', '[data-location]', setAvailableCases);
   $(document).on('change', '[data-form-vacancy]', () => {
     window.globalFunctions.switcherFormElements();
     setTimeout(window.globalFunctions.setTotalPrice, 10);

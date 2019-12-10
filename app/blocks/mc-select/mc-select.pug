@@ -10,7 +10,7 @@ mixin mc-select()
         block
 
 mixin mc-select-item(data)
-  +e.LI.item
+  +e.LI.item(data-case-location-value=data.location)
     +mc-radio('mc', data)(data-select-item)
 
 mixin ui-kit-mc-select()

@@ -25,8 +25,7 @@ export default class McSelect {
       }
     });
 
-    $(t.head).on('touchstart', (evt) => {
-      evt.preventDefault();
+    $(t.head).on('touchstart', () => {
       if (isTouchDevice()) {
         if (t.isOpen()) {
           t.close();

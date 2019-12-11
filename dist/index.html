@@ -83,9 +83,16 @@
                                         <option value="2">Роза Хутор</option>
                                     </select><span class="error-message"></span></span>
                             </label></div>
-                        <div class="filters__item"><label class="inputbox inputbox_row">
-                                <p class="inputbox__label">В период</p><span class="inputbox__wrapper inputbox__wrapper_flex"><span class="inputbox__date js-datepicker"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-date="data-date" data-filter-start-date="data-filter-start-date" data-type="date2" /></span><span class="inputbox__date js-datepicker"><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-date="data-date" data-filter-end-date="data-filter-end-date" data-type="date2" /></span><span class="error-message"></span></span>
-                            </label></div>
+                        <div class="filters__item">
+                            <div class="inputbox inputbox_row">
+                                <p class="inputbox__label">В период</p>
+                                <div class="inputbox__wrapper inputbox__wrapper_flex">
+                                    <div class="inputbox__date js-datepicker"><input class="input input input_time js-show-datepicker" type="text" name="startDate" placeholder="Дата приезда" data-date="data-date" data-filter-start-date="data-filter-start-date" data-type="date2" /></div>
+                                    <div class="inputbox__date js-datepicker"><input class="input input input_time js-show-datepicker" type="text" name="endDate" placeholder="Дата отъезда" data-date="data-date" data-filter-end-date="data-filter-end-date" data-type="date2" /></div>
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="filters__clear">
                         <div class="container"><button class="filters__reset js-reset-filter" type="reset">

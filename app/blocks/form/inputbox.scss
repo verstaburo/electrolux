@@ -111,7 +111,7 @@
           flex: 1;
 
           &:not(:first-child) {
-            @include ruleMin(margin-left, (xs: 5px, sm: 20px, md: 30px));
+            @include ruleMin(margin-left, (xs: 20px, md: 30px));
           }
         }
       }

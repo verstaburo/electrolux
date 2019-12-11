@@ -23,6 +23,7 @@
 
     &:not(:last-child) {
       @include ruleMin(margin-right, (sm: 30px));
+      @include ruleMin(margin-bottom, (xs: 30px, sm: 0));
     }
   }
 

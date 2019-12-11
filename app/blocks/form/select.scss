@@ -33,17 +33,29 @@
 
   &__toggle {
     position: absolute;
-    top: 50%;
-    height: 18px;
-    width: 10px;
+    // top: 50%;
+    // height: 18px;
+    // width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 16px;
     transform-origin: 50% 50% 0;
-    transform: translate3d(0, -50%, 0) rotate(90deg);
+    // transform: translate3d(0, -50%, 0) rotate(90deg);
     transition: transform $ease-main;
 
-    @include ruleMin(right, (xs: 12px, sm: 20px));
+    svg {
+      width: 10px;
+      height: 17px;
+      transform-origin: 50% 50% 0;
+      transform: rotate(90deg);
+    }
 
     #{$b}.is-open & {
-      transform: translate3d(0, -50%, 0) rotate(-90deg);
+      transform: rotate(180deg);
     }
 
     .is-error &, .is-success & {
@@ -62,21 +74,31 @@
     }
   }
 
+  &__placeholder {
+    opacity: 1;
+    color: $color-placeholder;
+  }
+
   &__list {
     border-color: $color-border;
 
     &--single {
-      display: table;
+      position: absolute;
+      top: 0;
+      left: 16px;
+      bottom: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       box-sizing: border-box;
-      height: 100%;
       padding: 0;
-      padding-right: 20px;
+      width: calc(100% - 58px);
       overflow: hidden;
 
       .choices__item {
-        display: table-cell;
-        vertical-align: middle;
         box-sizing: border-box;
+
+        @include ellipsis(100%);
       }
     }
 

@@ -1,0 +1,25 @@
+mixin popup-feedback-success()
+  +popup.popup-feedback-success&attributes(attributes)
+    +e.title Спасибо за Ваш запрос!
+    +e.content
+      +e.text Мы свяжемся с вами как можно скорее.
+      +e.sign
+        p Ваш, Electrolux
+        +link._underline.__link(href="/") Вернуться к нам
+    block
+
+mixin ui-kit-popup-feedback-success()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент popup-feedback-success
+      +ui-path
+        p Компонент: components/popup-feedback-success/popup-feedback-success
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +popup-feedback-success
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

@@ -94,7 +94,7 @@
 
   &.-current- {
     color: $color-days;
-    background: rgba($color-main, .1);
+    background: rgba($color-calendar-range, .1);
   }
 
   // Ховер по активной дате
@@ -112,7 +112,7 @@
   // Цвет фона активного месяца/дня
 
   &.-selected-, &.-selected-.-current- {
-    background: $color-main;
+    background: rgba($color-calendar-range, .2);
     color: $color-days;
   }
 }

@@ -12,14 +12,15 @@ mixin filters()
       +e.item
         +inputbox._row
           +label В период
-          +input-wrapper._flex.js-datepicker-range
-            +input.input_time(type="text" name="startDate" placeholder="Дата приезда"  data-start-date data-filter-start-date data-type="date").js-show-datepicker
-            +input.input_time(type="text" name="endDate" placeholder="Дата отъезда"  data-end-date data-filter-end-date data-type="date").js-show-datepicker
+          +input-wrapper._flex
+            +e.date.js-datepicker
+              +input.input_time(type="text" name="startDate" placeholder="Дата приезда"  data-date data-filter-start-date data-type="date2").js-show-datepicker
+            +e.date.js-datepicker
+              +input.input_time(type="text" name="endDate" placeholder="Дата отъезда"  data-date data-filter-end-date data-type="date2").js-show-datepicker
     +e.clear
       .container
         +e.BUTTON.reset.js-reset-filter(type="reset")
           +e.text Сбросить все
-          +icon('cross').__reset-icon
     block
 
 mixin ui-kit-filters()

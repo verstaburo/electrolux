@@ -67,6 +67,45 @@
   }
 
   &_fxp {
-    background-image: url('../images/fxp/fxp-lead.jpg');
+    background-image: url('../images/fxp/fxp-lead2.jpg');
+
+    @include ruleMin(background-image, (xs: url('../images/fxp/fxp-lead-mob.jpg'), sm: url('../images/fxp/fxp-lead.jpg')));
+    @include ruleMin(background-position, (xs: 55% 50%, sm: 32% 50%, md: 50% 50%));
+    @include ruleMin(min-height, (xs: 405px, sm: 56vw, md: 29.7vw));
+
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #{$b} {
+
+      &__content {
+        background-color: rgba($color-white, .85);
+
+        @include ruleMin(max-width, (xs: 290px, sm: 420px, md: 530px));
+        @include ruleMin(padding, (xs: 25px 10px 30px 20px, sm: 30px 25px 34px 40px, md: 28px 30px 41px 40px));
+      }
+
+      &__title {
+        display: block;
+        font-weight: 600;
+
+        @include ruleMin(font-size, (xs: 24px, sm: 36px));
+        @include ruleMin(line-height, (xs: 30px, sm: 42px, md: 48px));
+      }
+
+      &__text {
+        color: $color-cross-dark;
+
+        @include ruleMin(font-size, (xs: 15px, sm: 16px, md: 18px));
+        @include ruleMin(line-height, (xs: 20px, sm: 24px, md: 30px));
+
+        &:not(:first-child) {
+          @include ruleMin(margin-top, (xs: 15px, sm: 18px, md: 13px));
+        }
+      }
+    }
   }
 }

@@ -35,7 +35,6 @@
   }
 
   &__header {
-    // @include ruleMin(display, (xs: flex, md: none));
     display: none;
 
     @include ruleMin(font-size, (xs: 15px, md: 16px));
@@ -51,10 +50,6 @@
     color: $color-white;
     z-index: 2;
     box-sizing: border-box;
-
-    // #{$b}.is-top & {
-    //   opacity: 0;
-    // }
   }
 
   &__arrow {
@@ -110,7 +105,7 @@
 
   &__link {
     @include ruleMin(font-size, (xs: 15px, sm: 16px));
-    @include ruleMin(padding, (xs: 0 20px, lg: 0 25px));
+    @include ruleMin(padding, (xs: 0 20px, md: 0 8px, lg: 0 25px));
     @include ruleMin(height, (xs: 58px, md: 60px));
     @include ruleMin(justify-content, (xs: flex-start, sm: center));
     @include ruleMin(text-align, (xs: left, sm: center));

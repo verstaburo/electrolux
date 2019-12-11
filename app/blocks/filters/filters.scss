@@ -6,6 +6,10 @@
   z-index: 3;
   width: 100%;
 
+  @include screen('sm') {
+    margin-top: 30px;
+  }
+
   .container {
     position: relative;
     display: flex;
@@ -50,24 +54,17 @@
     width: 100%;
     bottom: 100%;
     right: 0;
-    margin-bottom: 15px;
+
+    @include ruleMin(margin-bottom, (xs: 10px, sm: 15px));
   }
 
   &__reset {
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: inline-block;
     margin-left: auto;
     color: $color-collapse;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.2;
     font-weight: 600;
-
-    &-icon {
-      width: 14px;
-      height: 14px;
-      fill: currentColor;
-      margin-left: 10px;
-    }
+    border-bottom: 1px solid currentColor;
   }
 }

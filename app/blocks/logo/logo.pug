@@ -6,6 +6,16 @@ mixin logo()
       +e.IMG.image_aeg(src="assets/images/logo-aeg.svg")
     block
 
+mixin logo-fxp()
+  +b.logo_fxp&attributes(attributes)
+    +e.A.item(href="https://www.electrolux.ru")
+      +e.IMG.image_electrolux(src="assets/images/logo.svg")
+    +e.A.item(href="https://www.aeg.ru")
+      +e.IMG.image_aeg(src="assets/images/logo-aeg.svg")
+    +e.A.item(href="https://www.zanussi.ru/")
+      +e.IMG.image_zanussi(src="assets/images/fxp/logo-zanussi.jpg")
+    block
+
 mixin ui-kit-logo()
   +ui-section
     +ui-section-head

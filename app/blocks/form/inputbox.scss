@@ -60,6 +60,19 @@
     }
   }
 
+  &__date {
+
+    &.is-show-date {
+
+      .datepicker-inline {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0, 0;
+        z-index: 3;
+      }
+    }
+  }
+
   &:not(:first-child) {
     margin-top: 28px;
   }
@@ -91,7 +104,8 @@
           flex: 1;
         }
 
-        .input {
+        #{$b}__date {
+          flex: 1;
 
           &:not(:first-child) {
             @include ruleMin(margin-left, (xs: 5px, sm: 20px, md: 30px));

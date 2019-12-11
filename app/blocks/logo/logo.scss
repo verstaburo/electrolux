@@ -60,5 +60,41 @@
         width: 77px;
       }
     }
+
+    &_zanussi {
+      @include ruleMin(width, (xs: 66px, sm: 79px, md: 85px));
+    }
+  }
+
+  &_fxp {
+
+    #{$b} {
+
+      &__item {
+        @include ruleMin(padding, (xs: 0 8px, sm: 0 21px));
+
+        &:not(:last-child) {
+
+          &::before {
+            @include ruleMin(height, (xs: 38px, sm: 43px, md: 45px));
+          }
+        }
+      }
+
+      &__image {
+
+        &_electrolux {
+          @include ruleMin(width, (xs: 134px, sm: 161px, md: 173px));
+        }
+
+        &_aeg {
+          @include ruleMin(width, (xs: 60px, sm: 71px, md: 77px));
+        }
+
+        &_zanussi {
+          @include ruleMin(width, (xs: 66px, sm: 79px, md: 85px));
+        }
+      }
+    }
   }
 }

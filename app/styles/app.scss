@@ -17,6 +17,7 @@
   margin-right: auto;
   max-width: $container-width;
   box-sizing: border-box;
+  $b: &;
 
   @include ruleMin(padding, (xs: 0 $container-padding, lg: 0 25px));
 
@@ -34,6 +35,28 @@
     margin-right: 0;
 
     @include ruleMin(padding-right, (xs: 20px, lg: 96px));
+  }
+
+  &_fxp {
+    max-width: 1240px;
+
+    @include ruleMin(padding, (xs: 0 15px, sm: 0 20px));
+
+    &#{$b}_half {
+      @include ruleMin(max-width, (xs: none, sm: 620px));
+    }
+
+    &#{$b}_start {
+      margin-left: 0;
+
+      @include ruleMin(padding-left, (xs: 15px, md: 50px));
+    }
+
+    &#{$b}_end {
+      margin-right: 0;
+
+      @include ruleMin(padding-right, (xs: 15px, lg: 50px));
+    }
   }
 }
 

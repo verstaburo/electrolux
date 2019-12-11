@@ -8,6 +8,7 @@
   background-color: $color-white;
   border-bottom: 1px solid $color-form-border;
   z-index: 10;
+  overflow: hidden;
 
   @include ruleMin(position, (xs: fixed, md: absolute));
   @include ruleMin(height, (xs: 60px, sm: 110px));
@@ -65,5 +66,27 @@
     width: 30px;
     height: 30px;
     fill: $color-cross-dark;
+  }
+
+  &_fxp {
+    @include ruleMin(height, (xs: 72px, sm: 80px, md: 110px));
+
+    #{$b} {
+
+      &__wrapper {
+        @include ruleMin(justify-content, (xs: center, sm: space-between));
+        @include ruleMin(padding, (xs: 0 8px, sm: 0 20px, lg: 0 50px));
+      }
+
+      &__logo {
+        @include ruleMin(margin-left, (sm: -22px));
+        @include ruleMin(margin-right, (xs: 0));
+      }
+
+      &__phone {
+        @include ruleMin(display, (xs: none, sm: inline-flex));
+        @include ruleMin(margin-right, (lg: 0));
+      }
+    }
   }
 }

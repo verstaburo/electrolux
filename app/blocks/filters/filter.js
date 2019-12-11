@@ -17,8 +17,8 @@ export default function filter() {
   function filtration() {
     // значения фильтров
     const filterLocation = $('[data-filter-location]').val();
-    const filterStartDate = $('[data-filter-start-date]').val().split('/').join('.');
-    const filterEndDate = $('[data-filter-end-date]').val().split('/').join('.') || '01.01.3000';
+    const filterStartDate = $('[data-filter-start-date]').val() || '01.01.2000';
+    const filterEndDate = $('[data-filter-end-date]').val() || '01.01.3000';
     let isFilteredByLocation = false; // будем ли фильтровать по месту
     let isFilteredByDate = false; // будем ли фильтровать по дате
     let filteredByLocation; // элементы отфильтрованные по месту

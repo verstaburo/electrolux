@@ -10,10 +10,10 @@ mixin footer()
     block
 
 mixin footer-fxp()
-  +b.FOOTER.footer&attributes(attributes)
+  +b.FOOTER.footer_fxp&attributes(attributes)
     +e.wrapper
       +e.side_front
-        +logo._footer.__logo
+        +logo-fxp._footer.__logo
       +e.side_end.is-hidden-sm
         +totop.__totop.is-hidden-sm
     block

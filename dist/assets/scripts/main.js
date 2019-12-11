@@ -74,7 +74,6 @@ $(document).ready(function () {
     evt.preventDefault();
     evt.stopPropagation();
     var self = evt.currentTarget;
-    console.log(self);
     var url = $(self).attr('action');
     $(self).parsley().whenValidate().done(function () {
       $.ajax({
@@ -95,7 +94,30 @@ $(document).ready(function () {
       });
     });
   });
+
+  // отправка формы в поддержку
+  $('[data-feedback]').on('submit', function (evt) {
+    console.log('send feedback');
+    evt.preventDefault();
+    evt.stopPropagation();
+    var self = evt.currentTarget;
+    var url = $(self).attr('action');
+    $(self).parsley().whenValidate().done(function () {
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: new FormData(self),
+        processData: false,
+        contentType: false,
+        dataType: 'json',
+        complete: function (data) {
+          window.globalFunctions.openPopup($('#popup-feedback-success')[0]);
+        }
+      });
+    });
+  });
 });
+
 
 
 // Карты

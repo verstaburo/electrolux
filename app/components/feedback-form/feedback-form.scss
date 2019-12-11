@@ -114,4 +114,8 @@
       pointer-events: auto;
     }
   }
+
+  &_fxp {
+    @include ruleMin(padding-top, (xs: 72px, sm: 80px, md: 110px));
+  }
 }

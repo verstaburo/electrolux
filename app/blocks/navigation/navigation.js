@@ -148,6 +148,13 @@ export default function navigation() {
     const burger = $('.js-menu-open');
     const link = $(self).attr('href').split('#').pop();
     const target = $(`#${link}`);
+    const bp = window.globalOptions.sizes;
+    const wW = $(window).width();
+    let offset = 59;
+
+    if (wW >= bp.sm && wW < bp.md) {
+      offset = 109;
+    }
 
     nav.close();
 
@@ -156,7 +163,7 @@ export default function navigation() {
 
     if (target.length > 0) {
       $('body, html').stop().animate({
-        scrollTop: target.offset().top - 60,
+        scrollTop: target.offset().top - offset,
       }, 600, 'swing');
     }
   });

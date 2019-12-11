@@ -9,9 +9,9 @@ mixin header()
     block
 
 mixin header-fxp()
-  +b.HEADER.header&attributes(attributes)
+  +b.HEADER.header_fxp&attributes(attributes)
     +e.wrapper
-      +logo.__logo
+      +logo-fxp.__logo
       +e.A.close.is-hidden-sm.js-close-feedback(href="#")
         +icon('cross').__cross
       +header-phone.__phone.is-hidden-sm(href="tel:88004444448") 8 (800) 444-44-48

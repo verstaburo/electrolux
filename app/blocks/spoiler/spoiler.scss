@@ -7,6 +7,10 @@
   border-radius: 50%;
   background-color: $color-basic;
 
+  &_blue {
+    background-color: $color-bright-blue;
+  }
+
   &__icon {
     position: absolute;
     top: 11px;

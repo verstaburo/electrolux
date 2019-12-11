@@ -8,7 +8,7 @@ mixin feedback-form()
             +icon('arrow').__icon_back
           +e.close-text Назад
       +e.content
-        +form(action="/" method="post" data-validated-form).__form
+        +form(action="/" method="post" data-validated-form data-feedback).__form
           +grid
             +col({xl: 4, md: 6, sm: 12})
               +inputbox

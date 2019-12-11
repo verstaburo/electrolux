@@ -115,12 +115,14 @@ export function datepicker() {
   });
 
   $('.js-datepicker').each((i, el) => {
+    const altField = $(el).find('[data-date]');
     $(el).datepicker({
       classes: 'inputbox__datepicker',
       format: 'dd.mm.yyyy',
-      altField: '[data-date]',
+      altField,
       altFieldDateFormat: 'dd.mm.yyyy',
       onSelect() {
+        $(altField).change();
         setTimeout(() => {
           $(el).removeClass('is-show-date');
         }, 50);

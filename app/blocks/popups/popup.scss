@@ -26,4 +26,17 @@
       margin-top: 35px;
     }
   }
+
+  &__sign {
+    font-size: 15px;
+    text-align: left;
+    width: 100%;
+    margin-top: 30px;
+    line-height: 1.5;
+
+    .link {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
 }

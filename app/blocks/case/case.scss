@@ -1,11 +1,15 @@
 .case {
   $b: &;
 
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   background-color: $color-bg-gray;
+  // flex-wrap: wrap;
+
+  // @include ruleMin(align-content, (xs: flex-start, md: stretch));
 
   &__top {
     display: block;
@@ -18,13 +22,23 @@
   &__media {
     position: relative;
     display: block;
-    padding-top: 124%;
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;
     z-index: 1;
 
-    @include ruleMin(padding-top, (xs: 124%));
+    @include ruleMin(padding-top, (xs: 56.25%, md: 124%));
+  }
+
+  &__about {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+
+    @include ruleMin(position, (xs: relative, md: absolute));
+    @include ruleMin(padding-top, (xs: 0, md: 124%));
+    @include ruleMin(top, (md: 0));
+    @include ruleMin(left, (md: 0));
   }
 
   &__image {
@@ -54,32 +68,26 @@
   }
 
   &__describe {
-    position: absolute;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
-    left: 0;
-    top: 0;
     z-index: 3;
     background-color: $color-bg-gray;
     color: $color-basic;
     box-sizing: border-box;
-    transform: translate3d(100%, 0, 0);
     transition: transform $ease-main;
 
-    @include ruleMin(padding, (xs: 30px 20px 0, sm: 23px 20px 0));
+    @include ruleMin(position, (md: absolute));
+    @include ruleMin(left, (md: 0));
+    @include ruleMin(top, (md: 0));
+    @include ruleMin(padding, (xs: 6px 20px 0, md: 23px 20px 0));
+    @include ruleMin(transform, (md: translate3d(100%, 0, 0)));
 
     #{$b}:hover & {
-      @include screen('sm', min) {
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    #{$b}.is-hover & {
-      @include screen('sm') {
+      @include screen('md', min) {
         transform: translate3d(0, 0, 0);
       }
     }
@@ -91,6 +99,9 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+
+    @include ruleMin(order, (xs: 2, md: 1));
+    @include ruleMin(margin-top, (xs: 16px, md: 0));
   }
 
   &__item {
@@ -101,7 +112,7 @@
     line-height: 1.5;
     font-weight: 300;
 
-    @include ruleMin(font-size, (xs: 14px, sm: 16px));
+    @include ruleMin(font-size, (xs: 14px, md: 16px));
 
     &:not(:last-child) {
       margin-right: 10px;
@@ -129,20 +140,86 @@
   }
 
   &__menu {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     flex: 1;
-    border-top: 2px solid $color-white;
-    border-bottom: 2px solid $color-white;
     box-sizing: border-box;
+    width: 100%;
 
-    @include ruleMin(padding, (xs: 14px 0 5px, sm: 14px 0 10px));
+    @include ruleMin(border-top, (md: 2px solid $color-white));
+    @include ruleMin(padding, (xs: 38px 0 15px, md: 45px 0 20px));
+    @include ruleMin(order, (xs: 3, md: 2));
 
     &:not(:first-child) {
       margin-top: 18px;
     }
+  }
+
+  &__opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include ruleMin(padding-top, (xs: 5px, md: 13px));
+  }
+
+  &__closed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: color $ease-main, opacity $ease-main;
+    opacity: 0;
+
+    @include ruleMin(display, (xs: none));
+    @include ruleMin(padding-bottom, (xs: 10px));
+
+    #{$b}.is-opened & {
+      @include ruleMin(display, (xs: block, md: none));
+
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-silk-rich;
+    text-decoration: none;
+
+    @include ruleMin(display, (xs: inline-flex, md: none));
+
+    &_underline {
+      border-bottom: 1px solid currentColor;
+    }
+
+    &_open {
+      @include ruleMin(display, (xs: inline-flex, md: none));
+
+      #{$b}.is-opened & {
+        @include ruleMin(display, (xs: none));
+      }
+    }
+
+    &_close {
+      color: $color-collapse;
+    }
+  }
+
+  &__arrow {
+    fill: currentColor;
+    width: 10px;
+    height: 17px;
+    transform: rotate(-90deg);
+    margin-left: 14px;
   }
 
   &__name {
@@ -152,16 +229,35 @@
     line-height: 1.2;
     font-weight: 600;
     color: $color-silk-rich;
+    transition: opacity $ease-main;
+
+    @include ruleMin(display, (xs: none, md: block));
+    @include ruleMin(opacity, (xs: 0, md: 1));
+
+    #{$b}.is-opened & {
+      @include ruleMin(display, (xs: block));
+      @include ruleMin(opacity, (xs: 1));
+    }
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include ruleMin(display, (xs: none, md: block));
+    @include ruleMin(flex, (md: 1));
+    @include ruleMin(height, (xs: 243px, md: auto));
+    @include ruleMin(padding-bottom, (xs: 43px, md: 0));
   }
 
   &__scrollblock {
-    display: block;
     width: 100%;
-    flex: 1;
+    height: 100%;
+  }
 
-    &:not(:first-child) {
-      margin-top: 17px;
-    }
+  &__list {
+    padding: 5px 0;
   }
 
   &__total {
@@ -171,19 +267,25 @@
     box-sizing: border-box;
     width: 100%;
     flex-wrap: wrap;
+    border-bottom: 2px solid $color-white;
+
+    @include ruleMin(border-top, (xs: 2px solid $color-white, md: none));
+    @include ruleMin(order, (xs: 1, md: 3));
+    @include ruleMin(padding, (xs: 16px 0 12px, md: 10px 0));
 
     &:not(:first-child) {
-      margin-top: 15px;
+      @include ruleMin(margin-top, (md: 15px));
     }
   }
 
   &__note {
-    display: block;
     width: 100%;
     color: $color-checkbox-text;
     font-size: 14px;
     line-height: 1.3;
     font-weight: 300;
+
+    @include ruleMin(display, (xs: none, md: block));
 
     &:not(:first-child) {
       margin-top: 10px;
@@ -239,23 +341,32 @@
     align-items: flex-start;
     width: 100%;
     box-sizing: border-box;
-    flex: 1;
 
-    @include ruleMin(padding, (xs: 20px, sm: 25px 26px));
+    @include ruleMin(padding, (xs: 20px 20px 15px, sm: 12px 20px, md: 24px 26px 38px));
+  }
+
+  &__place {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+
+    &:not(:last-child) {
+      @include ruleMin(margin-bottom, (xs: 8px, md: 16px));
+    }
   }
 
   &__location {
-    display: block;
-    width: 100%;
+    display: inline-block;
     font-weight: 600;
     line-height: 1.5;
     text-transform: uppercase;
     color: $color-case-loc;
 
-    @include ruleMin(font-size, (xs: 14px, sm: 16px));
+    @include ruleMin(font-size, (xs: 14px, md: 16px));
 
     &:not(:last-child) {
-      margin-bottom: 6px;
+      margin-right: 20px;
     }
   }
 
@@ -263,28 +374,19 @@
     display: block;
     width: 100%;
     font-weight: 600;
-    line-height: 1.2;
     color: $color-silk-rich;
 
-    @include ruleMin(font-size, (xs: 15px, sm: 18px));
-
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
+    @include ruleMin(line-height, (xs: 1.5, md: 1.2));
+    @include ruleMin(font-size, (xs: 15px, md: 18px));
   }
 
   &__date {
-    display: block;
-    width: 100%;
+    display: inline-block;
     font-weight: 300;
     line-height: 1.5;
-    color: $color-case-loc;
+    color: $color-case-label;
 
-    @include ruleMin(font-size, (xs: 14px, sm: 16px));
-
-    &:not(:first-child) {
-      @include ruleMin(margin-top, (xs: auto));
-    }
+    @include ruleMin(font-size, (xs: 14px, md: 16px));
   }
 
   &__buttons {

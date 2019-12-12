@@ -5,7 +5,21 @@ mixin case(data)
         +e.label Детский
       +e.media
         +e.IMG.image(src=data.image)
+    +e.header
+      +e.place
+        +e.location!=data.location.name
+        +e.TIME.date(datatime=data.date.date)!=data.date.text
+      +e.H4.title!=data.title
+    +e.about
       +e.describe
+        +e.total
+          +e.price
+            +e.price-text Стоимость:
+            +e.sum!=data.price
+          //- data-case-index должен совпадать с полем data-target-case-index у соответстующего мл в форме записи
+          //- data-location-value должен совпадать с value одной из опций у select[data-location] в форме записи
+          +button().__button.js-order-mc(href="#order" data-case-index=data.id data-location-value=data.location.value) Записаться
+          +e.note!=data.note
         +e.info
           +e.item
             +icon('clock').__icon_time
@@ -14,26 +28,18 @@ mixin case(data)
             +icon('user').__icon_vacancy
             +e.info-text!= data.vacancy.text
         +e.menu
-          +e.name Меню:
-          +e.scrollblock.js-scrollbar
-            +list.__list
-              each item in data.menu
-                li!=item
-          +e.total
-            +e.price
-              +e.price-text Стоимость:
-              +e.sum!=data.price
-            //- data-case-index должен совпадать с полем data-target-case-index у соответстующего мл в форме записи
-            //- data-location-value должен совпадать с value одной из опций у select[data-location] в форме записи
-            +button().__button.js-order-mc(href="#order" data-case-index=data.id data-location-value=data.location.value) Записаться
-            +e.note!= data.note
-    +e.bottom
-      +e.header
-        +e.location!=data.location.name
-        +e.H4.title!=data.title
-        +e.TIME.date(datatime=data.date.date)!=data.date.text
-      +e.buttons.is-hidden-xl
-        +button().__button_wide.js-show-describe(href="#") Программа мастер-класса
+          +e.opened
+            +e.A.link._underline._open.js-show-describe(href="#") Показать меню
+            +e.name Меню:
+          +e.content(data-menu-block)
+            +e.scrollblock.js-scrollbar
+              +list.__list
+                each item in data.menu
+                  li!=item
+          +e.closed
+            +e.A.link_close.js-hide-describe(href="#")
+              +e.text Свернуть
+              +icon('arrow').__arrow
     block
 
 mixin ui-kit-case()

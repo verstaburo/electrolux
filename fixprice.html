@@ -16,7 +16,7 @@
 <body>
     <header class="header header_fxp">
         <div class="header__wrapper">
-            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div><a class="header__close is-hidden-sm js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
+            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div><a class="header__close js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
         </div>
     </header>
     <div class="side-feedback" data-panel="data-panel"><button class="side-feedback__head is-hidden-xl js-show-panel">
@@ -31,17 +31,15 @@
         </ul>
     </div>
     <div class="feedback-form feedback-form_fxp">
-        <div class="container">
-            <div class="feedback-form__head">
-                <div class="feedback-form__title">Связаться с нами</div><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__back"><svg class="feedback-form__icon feedback-form__icon_back"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></span><span class="feedback-form__close-text">Назад</span></a>
-            </div>
+        <div class="container container_fxp">
+            <div class="feedback-form__head"><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__close-text">Закрыть</span><span class="feedback-form__close-icon"><svg><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></span></a></div>
             <div class="feedback-form__content">
                 <form class="form feedback-form__form" action="/" method="post" data-validated-form="data-validated-form" data-feedback="data-feedback">
-                    <div class="grid">
-                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_noborder" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
-                        <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_noborder js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
-                        <div class="grid__col grid__col_xl_4 grid__col_md_12"><button class="button button_blue form__button" type="submit">Отправить</button>
-                            <div class="form__text is-hidden-sm">Нажимая на кнопку, я соглашаюсь с&nbsp;<a class="link link_underline" href="#"><span class="link__text">условиями политики конфиденциальности.</span></a></div>
+                    <div class="grid grid_gap20to30">
+                        <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_nbdr js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_sm_12"><button class="button button_blue form__button" type="submit">Отправить</button>
+                            <div class="form__text">Нажимая на кнопку, я соглашаюсь с&nbsp;<a class="link link_underline" href="#"><span class="link__text">условиями политики конфиденциальности.</span></a></div>
                         </div>
                     </div>
                 </form>
@@ -59,6 +57,15 @@
                 </div>
             </div>
         </section>
+        <section class="section">
+            <div class="section__head">
+                <div class="container">
+                    <div class="text-block text-block_centered">
+                        <h3 class="text-block__title">Ремонт по фиксированной стоимости 9 790 рублей!</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer footer_fxp">
         <div class="footer__wrapper">
@@ -71,7 +78,16 @@
     <div class="popups">
         <div class="popup popup-phones" id="popup-phones">
             <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
-            <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:+74952484444"><span class="link__text">+7 (495) 248-44-44</span></a><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+            <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+        </div>
+        <div class="popup popup-feedback-success" id="popup-feedback-success">
+            <div class="popup__title">Спасибо за Ваш запрос!</div>
+            <div class="popup__content">
+                <div class="popup__text">Мы свяжемся с вами как можно скорее.</div>
+                <div class="popup__sign">
+                    <p>Ваш, Electrolux</p><a class="link link_underline popup__link" href="/"><span class="link__text">Вернуться к нам</span></a>
+                </div>
+            </div>
         </div>
     </div>
     <script src="assets/scripts/libs/parsley.min.js"></script>

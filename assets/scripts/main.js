@@ -45,10 +45,10 @@ $(document).ready(function () {
     errorClass: 'is-error',
     successClass: 'is-success',
     excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden], [disabled]',
-    classHandler(el) {
+    classHandler: function (el) {
       return $(el.element).closest('.inputbox');
     },
-    errorsContainer(el) {
+    errorsContainer: function (el) {
       return $(el.element).closest('.inputbox__wrapper').find('.error-message');
     },
   });

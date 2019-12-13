@@ -11,6 +11,39 @@
 
 // Валидация и отправка форм
 $(document).ready(function () {
+
+  // функция для обнуления формы
+  function resetForm(formEl) {
+    const form = formEl
+    const selects = $(form).find('select');
+    const datepickers = $('.js-datepicker');
+    const mcselect = $('.js-mc-select');
+    const files = $('.input-uploader [data-filename]');
+    // обнуляем селекты
+    $(selects).each(function (i, el) {
+      el.choices.setChoiceByValue(el.defaultSelectedValue);
+    });
+    // обнуляем кастомный селект для мк
+    if (mcselect.length > 0) {
+      $(mcselect).each(function (i, el) {
+        el.mcselect.reset();
+      })
+    }
+    // очищаем поле от имени файла
+    if (files.length > 0) {
+      files.text('');
+    }
+    // дефолтный ресет для формы
+    form.reset();
+    // очишаем календарь
+    $(datepickers).each(function (i, el) {
+      $(el).datepicker().data('datepicker').clear();
+    });
+    // сбрасываем валидатор
+    $(form).parsley().reset();
+  }
+
+  // валидация
   var Parsley = window.Parsley;
 
   Parsley.addMessages('ru', {
@@ -88,7 +121,10 @@ $(document).ready(function () {
           if (formTypesArray.indexOf('oven') === -1) {
             // редирект
           } else {
+            // показываем попап
             window.globalFunctions.openPopup($('#popup-registration-success')[0]);
+            // очищаем форму
+            resetForm(self);
           }
         }
       });

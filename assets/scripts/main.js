@@ -92,7 +92,6 @@ $(document).ready(function () {
     var self = evt.currentTarget;
     var promocodeEl = $(self).closest('.promocode');
     var promocode = $(promocodeEl).find('[data-promocode-value]').val();
-    console.log(promocode);
     if (promocode) {
       $(promocodeEl).removeClass('is-error');
       $(promocodeEl).addClass('is-success');
@@ -133,7 +132,6 @@ $(document).ready(function () {
 
   // отправка формы в поддержку
   $('[data-feedback]').on('submit', function (evt) {
-    console.log('send feedback');
     evt.preventDefault();
     evt.stopPropagation();
     var self = evt.currentTarget;

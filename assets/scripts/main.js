@@ -118,6 +118,7 @@ $(document).ready(function () {
         complete: function (data) {
           var formTypesArray = window.globalFunctions.getFormTypes().split(',');
           if (formTypesArray.indexOf('oven') === -1) {
+            window.globalFunctions.openPopup($('#popup-reg-pay-success')[0]);
             // редирект
           } else {
             // показываем попап

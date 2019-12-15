@@ -476,13 +476,17 @@
                     <div class="container">
                         <div class="accordion js-accordion">
                             <div class="accordion__button js-accordion-button js-accordion-button">
-                                <p>Кнопка открытия аккордеона</p>
+                                <div class="accordion__text">
+                                    <p>Кнопка открытия аккордеона</p>
+                                </div>
                             </div>
                             <div class="accordion__content js-accordion-content">
-                                <p>Контент</p>
-                                <p>Контент</p>
-                                <p>Контент</p>
-                                <p>Контент</p>
+                                <div class="accordion__wrapper">
+                                    <p>Контент</p>
+                                    <p>Контент</p>
+                                    <p>Контент</p>
+                                    <p>Контент</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1899,31 +1903,31 @@
                     <div class="container">
                         <ul class="features">
                             <li class="features__item">
-                                <div class="feature">
+                                <div class="feature features__feature">
                                     <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/artisan.png" alt="" role="presentation" /></div>
                                     <div class="feature__text">Выезд мастера на дом</div>
                                 </div>
                             </li>
                             <li class="features__item">
-                                <div class="feature">
+                                <div class="feature features__feature">
                                     <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/diagnostic.png" alt="" role="presentation" /></div>
                                     <div class="feature__text">Диагностика у вас дома</div>
                                 </div>
                             </li>
                             <li class="features__item">
-                                <div class="feature">
+                                <div class="feature features__feature">
                                     <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/spares.png" alt="" role="presentation" /></div>
                                     <div class="feature__text">Оригинальные запчасти для ремонта</div>
                                 </div>
                             </li>
                             <li class="features__item">
-                                <div class="feature">
+                                <div class="feature features__feature">
                                     <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/malfunction.png" alt="" role="presentation" /></div>
                                     <div class="feature__text"> Устранение неисправностей</div>
                                 </div>
                             </li>
                             <li class="features__item">
-                                <div class="feature">
+                                <div class="feature features__feature">
                                     <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/warranty.png" alt="" role="presentation" /></div>
                                     <div class="feature__text">Гарантия 3 месяца</div>
                                 </div>
@@ -1971,6 +1975,311 @@
                             <div class="popup__title">Спасибо за регистрацию!</div>
                             <div class="popup__content">На указанный e-mail придёт письмо со всей подробной информацией.</div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент tech-slider</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/tech-slider/tech-slider</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="tech-slider js-tech-slider">
+                            <div class="tech-slider__container" data-slider-container="data-slider-container">
+                                <div class="tech-slider__wrapper swiper-wrapper">
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/ovens/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-oven.png" alt="" role="presentation" /></span><span class="tech-card__title">Духовые шкафы</span></a></div>
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/hobs/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-hob.png" alt="" role="presentation" /></span><span class="tech-card__title">Варочные панели</span></a></div>
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/dishwashing/dishwashers/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-dishwasher.png" alt="" role="presentation" /></span><span class="tech-card__title">Посудомоечные машины</span></a></div>
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/cooker-hoods/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-hood.png" alt="" role="presentation" /></span><span class="tech-card__title">Вытяжки</span></a></div>
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/laundry/laundry/washing-machines/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-washingm.png" alt="" role="presentation" /></span><span class="tech-card__title">Стиральные машины</span></a></div>
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/laundry/laundry/dryers/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-dryer.png" alt="" role="presentation" /></span><span class="tech-card__title">Сушильные машины</span></a></div>
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooling/refrigerators/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-refrigerator.png" alt="" role="presentation" /></span><span class="tech-card__title">Холодильники</span></a></div>
+                                    <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooling/freezers/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-freezer.png" alt="" role="presentation" /></span><span class="tech-card__title">Морозильники</span></a></div>
+                                </div>
+                            </div>
+                            <div class="tech-slider__controls">
+                                <div class="tech-slider__buttons">
+                                    <div class="tech-slider__button tech-slider__button_prev" data-slider-btn-prev="data-slider-btn-prev"><svg class="tech-slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                    <div class="tech-slider__button tech-slider__button_next" data-slider-btn-next="data-slider-btn-next"><svg class="tech-slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок tech-card</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/tech-card/tech-card</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container"><a class="tech-card"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-oven.png" alt="" role="presentation" /></span><span class="tech-card__title">Духовые шкафы</span></a></div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент request-form</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/request-form/request-form</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="request-form">
+                            <div class="request-form__buttons"><button class="request-form__collapse js-hide-request">
+                                    <div class="request-form__collapse-text">Скрыть форму</div>
+                                </button></div>
+                            <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform="data-requestform">
+                                <fieldset class="form__section">
+                                    <div class="form__title">Личные данные</div>
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                <p class="inputbox__label">Представьтесь, пожалуйста (ФИО)*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" /><span class="error-message"></span></span>
+                                            </label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Введите адрес e-mail" data-type="email" /><span class="error-message"></span></span>
+                                            </label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                                <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" /><span class="error-message"></span></span>
+                                            </label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                                <p class="inputbox__label">Физический адрес*</p><span class="inputbox__wrapper"><input class="input" type="text" name="address" required="required" placeholder="Куда поедет специалист" /><span class="error-message"></span></span>
+                                            </label></div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form__section">
+                                    <div class="form__title">Ваш продукт</div>
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                                <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
+                                                        <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                        <option value="1">Модель 1</option>
+                                                        <option value="2">Модель 2</option>
+                                                        <option value="3">Модель 3</option>
+                                                        <option value="4">Модель 4</option>
+                                                        <option value="5">Модель 5</option>
+                                                        <option value="6">Модель 6</option>
+                                                        <option value="7">Модель 7</option>
+                                                        <option value="8">Модель 8</option>
+                                                        <option value="9">Модель 9</option>
+                                                        <option value="10">Модель 10</option>
+                                                        <option value="11">Модель 11</option>
+                                                    </select><span class="error-message"></span></span>
+                                            </label>
+                                            <div class="form__hint"><a class="link link_underline link_info" href="#"><span class="link__text">Как найти номер модели / PNC?</span></a></div>
+                                        </div>
+                                        <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                                <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required"></textarea><span class="error-message"></span></span>
+                                            </label></div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form__section form__section_mgt22">
+                                    <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                        <p>Я принимаю условия оферты и ознакомился c&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                                        <p>Я соглашаюсь&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">с условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                                    </span></label><span class="error-message"></span></span></label></div>
+                                    <div class="form__payment">
+                                        <div class="form__price">
+                                            <div class="form__total">9 790 ₽</div>
+                                            <div class="form__price-text">фиксированная стоимость</div><input class="input" type="hidden" name="price" value="9790" />
+                                        </div>
+                                    </div>
+                                    <div class="form__buttons"><button class="button form__button js-form-submit" type="submit">Оплатить</button></div>
+                                    <div class="form__note form__note_mt20">
+                                        <p>*Поля, обязательные для заполнения.</p>
+                                        <p>**Услуга предоставляется при 100% оплате</p>
+                                        <p>После нажатия кнопки «Оплатить», Вы будете перенесены на страницу оплаты. Это безопасно.</p>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент faq</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/faq/faq</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="faq">
+                            <div class="container container_fxp">
+                                <div class="faq__list">
+                                    <div class="accordion faq__item js-accordion">
+                                        <div class="accordion__button js-accordion-button js-accordion-button">
+                                            <div class="accordion__text">Не удалось согласовать визит. Что будет с моей оплатой?</div>
+                                        </div>
+                                        <div class="accordion__content js-accordion-content">
+                                            <div class="accordion__wrapper">
+                                                <div class="text-block">
+                                                    <div class="text-block__text">В случае если в течение 1 (одного месяца) с даты внесения Пользователем предоплаты за Услугу Сторонам не удалось согласовать дату и время первоначального визита сервисного специалиста, Пользователь считается отказавшимся от Услуги и возвращается оплаченная им стоимость Услуги в полном объеме.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion faq__item js-accordion">
+                                        <div class="accordion__button js-accordion-button js-accordion-button">
+                                            <div class="accordion__text">Как происходит оплата услуги?</div>
+                                        </div>
+                                        <div class="accordion__content js-accordion-content">
+                                            <div class="accordion__wrapper">
+                                                <div class="text-block">
+                                                    <div class="text-block__text">В случае если в течение 1 (одного месяца) с даты внесения Пользователем предоплаты за Услугу Сторонам не удалось согласовать дату и время первоначального визита сервисного специалиста, Пользователь считается отказавшимся от Услуги и возвращается оплаченная им стоимость Услуги в полном объеме.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion faq__item js-accordion">
+                                        <div class="accordion__button js-accordion-button js-accordion-button">
+                                            <div class="accordion__text"> На какие виды бытовой техники не распространяется услуга?</div>
+                                        </div>
+                                        <div class="accordion__content js-accordion-content">
+                                            <div class="accordion__wrapper">
+                                                <div class="text-block">
+                                                    <div class="text-block__text">В случае если в течение 1 (одного месяца) с даты внесения Пользователем предоплаты за Услугу Сторонам не удалось согласовать дату и время первоначального визита сервисного специалиста, Пользователь считается отказавшимся от Услуги и возвращается оплаченная им стоимость Услуги в полном объеме.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент cities</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/cities/cities</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <section class="cities">
+                            <div class="cities__top">
+                                <div class="container container_fxp">
+                                    <div class="cities__grid">
+                                        <div class="cities__picture"><img class="cities__image" src="assets/images/fxp/town.png" alt="" role="presentation" /></div>
+                                        <div class="cities__title">В каких городах мы выполняем ремонт?</div>
+                                        <div class="cities__content">
+                                            <div class="cities__text">Услуга предоставляется в городах:</div>
+                                            <ul class="list list_horizontal list_big cities__samples">
+                                                <li><a href="#">Санкт-Петербург</a></li>
+                                                <li><a href="#">Саратов</a></li>
+                                                <li><a href="#">Екатеринбург</a></li>
+                                            </ul><a class="link link_underline link_blue cities__link js-show-cities"><span class="link__text">Полный список городов</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cities__bottom">
+                                <div class="container container_fxp">
+                                    <div class="cities__wrapper" data-cities-list="data-cities-list">
+                                        <div class="cities__close js-close-cities"><svg class="cities__close-icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></div>
+                                        <div class="cities__scrollblock js-scrollbar">
+                                            <div class="cities__list">
+                                                <div class="cities__char">
+                                                    <p>Б</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Барнаул</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>В</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Воронеж</a></li>
+                                                        <li><a href="#">Волгоград</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>Е</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Екатеринбург</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>К</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Краснодар</a></li>
+                                                        <li><a href="#">Красноярск</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>Н</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Нижний Новгород</a></li>
+                                                        <li><a href="#">Новосибирск</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>Р</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Ростов-на-Дону</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>С</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Самара</a></li>
+                                                        <li><a href="#">Санкт-Петербург</a></li>
+                                                        <li><a href="#">Саратов</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>Т</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Тамбов</a></li>
+                                                        <li><a href="#">Тверь</a></li>
+                                                        <li><a href="#">Тула</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cities__char">
+                                                    <p>У</p>
+                                                    <ul class="list list_big cities__item">
+                                                        <li><a href="#">Уссурийск</a></li>
+                                                        <li><a href="#">Уфа</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>

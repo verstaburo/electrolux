@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>undefined | Логин</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header header_fxp">
+        <div class="header__wrapper">
+            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div><a class="header__close js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
+        </div>
+    </header>
+    <div class="side-feedback" data-panel="data-panel"><button class="side-feedback__head is-hidden-xl js-show-panel">
+            <div class="side-feedback__head-image"><svg class="side-feedback__head-icon side-feedback__head-icon_message is-closed"><use xlink:href="assets/images/icon.svg#icon_message"></use></svg><svg class="side-feedback__head-icon side-feedback__head-icon_cross is-opened"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></div>
+            <div class="side-feedback__head-content">
+                <div class="side-feedback__head-text"><span class="is-closed">Связаться с нами</span><span class="is-opened">Закрыть</span></div>
+            </div>
+        </button>
+        <ul class="side-feedback__list">
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-phones" href="tel:88004444448" data-popup="#popup-phones"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_phone"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Свяжитесь с нами</span><span class="is-hidden-xl">8 (800) 444-44-48</span></span></a></li>
+            <li class="side-feedback__item"><a class="side-feedback__link js-show-feedback" href="#feedback-form"><span class="side-feedback__image"><svg class="side-feedback__icon side-feedback__icon_mail"><use xlink:href="assets/images/icon.svg#icon_mail"></use></svg></span><span class="side-feedback__text"><span class="is-hidden-sm">Написать на сайте</span><span class="is-hidden-xl">Написать нам</span></span></a></li>
+        </ul>
+    </div>
+    <div class="feedback-form feedback-form_fxp">
+        <div class="container container_fxp">
+            <div class="feedback-form__head"><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__close-text">Закрыть</span><span class="feedback-form__close-icon"><svg><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></span></a></div>
+            <div class="feedback-form__content">
+                <form class="form feedback-form__form" action="/" method="post" data-validated-form="data-validated-form" data-feedback="data-feedback">
+                    <div class="grid grid_gap20to30">
+                        <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_nbdr js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
+                        <div class="grid__col grid__col_xl_4 grid__col_sm_12"><button class="button button_blue form__button" type="submit">Отправить</button>
+                            <div class="form__text">Нажимая на кнопку, я соглашаюсь с&nbsp;<a class="link link_underline" href="#"><span class="link__text">условиями политики конфиденциальности.</span></a></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main class="page page_fxp page_bg-login page_flex" role="main">
+        <div class="container container_fxp container_flex">
+            <div class="popup login"></div>
+        </div>
+    </main>
+    <footer class="footer footer_fxp">
+        <div class="footer__wrapper">
+            <div class="footer__side footer__side_front">
+                <div class="logo logo_fxp logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div>
+            </div>
+            <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top totop totop_v2 footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
+        </div>
+    </footer>
+    <div class="popups">
+        <div class="popup popup-phones" id="popup-phones">
+            <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
+            <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
+        </div>
+        <div class="popup popup-feedback-success" id="popup-feedback-success">
+            <div class="popup__title">Спасибо за Ваш запрос!</div>
+            <div class="popup__content">
+                <div class="popup__text">Мы свяжемся с вами как можно скорее.</div>
+                <div class="popup__sign">
+                    <p>Ваш, Electrolux</p><a class="link link_underline popup__link" href="/"><span class="link__text">Вернуться к нам</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/libs/parsley.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

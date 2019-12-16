@@ -2456,6 +2456,744 @@
                     </div>
                 </div>
             </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент requests-table</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/requests-table/requests-table</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <table class="requests-table">
+                            <thead class="requests-table__head">
+                                <tr class="requests-table__row">
+                                    <td class="requests-table__cell requests-table__cell_number">
+                                        <div class="requests-table__text requests-table__text_head">
+                                            <p>№</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text requests-table__text_head">
+                                            <p>Дата</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text requests-table__text_head">
+                                            <p>ФИО</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text requests-table__text_head">
+                                            <p>Контакты</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text requests-table__text_head">
+                                            <p>Оплата</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text requests-table__text_head">
+                                            <p>Статус</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody class="requests-table__body">
+                                <tr class="requests-table__request is-new">
+                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text">
+                                            <p>2019-10-09 15:40:55</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text">
+                                            <p>Туртурика Светлана Николаевна</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text">
+                                            <p>+7 (903) 505-55-20</p>
+                                            <p>consanna@mail.ru</p>
+                                            <p>Старый Толмачёвский пер., 1</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text requests-table__text_red">
+                                            <p>Не оплачено</p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                </tr>
+                                <tr class="requests-table__request is-new">
+                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text">
+                                            <p>2019-10-09 15:40:55</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text">
+                                            <p>Киселева Евгения Викторовна</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text">
+                                            <p>+7 (903) 712-32-43</p>
+                                            <p>natasha.gremitskikh@gmail.com</p>
+                                            <p>ул. Красносельская, 7 ст1</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text requests-table__text_red">
+                                            <p>Не оплачено</p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                </tr>
+                                <tr class="requests-table__request is-paid">
+                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">08-9958</span></a></td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text">
+                                            <p>2019-10-09 15:40:55</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text">
+                                            <p>Старостинатаростина Наталья Александровна</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text">
+                                            <p>+7 (903) 712-32-43</p>
+                                            <p>natasha.gremitskikh@gmail.com</p>
+                                            <p>ул. Кожевническая, 7 ст1</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text">
+                                            <p>Оплачено</p>
+                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                </tr>
+                                <tr class="requests-table__request is-paid">
+                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text">
+                                            <p>2019-10-09 15:40:55</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text">
+                                            <p>Туртурика Светлана Николаевна</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text">
+                                            <p>+7 (903) 505-55-20</p>
+                                            <p>consanna@mail.ru</p>
+                                            <p>Старый Толмачёвский пер., 1</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text">
+                                            <p>Оплачено</p>
+                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                </tr>
+                                <tr class="requests-table__request is-paid">
+                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text">
+                                            <p>2019-10-09 15:40:55</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text">
+                                            <p>Киселевалеваселева Евгения Викторовна</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text">
+                                            <p>+7 (903) 712-32-43</p>
+                                            <p>natasha.gremitskikh@gmail.com</p>
+                                            <p>ул. Красносельская, 7 ст1</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text">
+                                            <p>Оплачено</p>
+                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                </tr>
+                                <tr class="requests-table__request is-success">
+                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">17-9958</span></a></td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text">
+                                            <p>2019-10-09 15:40:55</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text">
+                                            <p>Старостина Наталья Александровна</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text">
+                                            <p>+7 (903) 712-32-43</p>
+                                            <p>natasha.gremitskikh@gmail.com</p>
+                                            <p>ул. Кожевническая, 7 ст1</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text">
+                                            <p>Оплачено</p>
+                                            <p><small>Чек №: 675463535</small></p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" checked="checked" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                </tr>
+                                <tr class="requests-table__request is-refund">
+                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">17-9958</span></a></td>
+                                    <td class="requests-table__cell requests-table__cell_date">
+                                        <div class="requests-table__text">
+                                            <p>2019-10-09 15:40:55</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_name">
+                                        <div class="requests-table__text">
+                                            <p>Старостина Наталья Александровна</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                        <div class="requests-table__text">
+                                            <p>+7 (903) 712-32-43</p>
+                                            <p>natasha.gremitskikh@gmail.com</p>
+                                            <p>ул. Кожевническая, 7 ст1</p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_paid">
+                                        <div class="requests-table__text">
+                                            <p>Сделан возврат</p>
+                                            <p><small>Чек №: 675463535</small></p>
+                                        </div>
+                                    </td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент requests</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/requests/requests</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="requests">
+                            <div class="requests__top">
+                                <div class="container">
+                                    <h1 class="requests__title">Список заявок</h1>
+                                    <div class="requests__controls">
+                                        <div class="requests__controls-top">
+                                            <div class="grid">
+                                                <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12"><a class="button button_flex requests__button js-popup" href="#popup-new-request"><span class="button__text"><svg class="button__plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg><span>Создать заявку</span></span></a></div>
+                                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12">
+                                                    <div class="search"><input class="input search__input" type="search" name="search" placeholder="искать в таблице" /><button class="search__button"><img class="search__image" src="assets/images/search.png" alt="" role="presentation" /></button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="requests__controls-bottom">
+                                            <div class="grid">
+                                                <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12">
+                                                    <div class="request-filter">
+                                                        <div class="request-filter__text">Фильтровать по</div>
+                                                        <div class="request-select">
+                                                            <div class="request-select__head">
+                                                                <div class="request-select__label">Все</div>
+                                                                <div class="request-select__toggle"><svg class="request-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                                            </div>
+                                                            <div class="request-select__dropdown"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12">
+                                                    <div class="request-export">
+                                                        <div class="request-export__item"><a class="link link_underline link_dark link_bold request-export__link" href="requests-archive"><span class="link__text">Архив</span></a></div>
+                                                        <div class="request-export__item">
+                                                            <div class="request-export__text"><img class="request-export__icon" src="assets/images/export.png" alt="" role="presentation" /><span>Экспортировать:</span></div><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">Все</span></a><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">03.12.19</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="requests__bottom">
+                                <div class="container">
+                                    <div class="requests__wrapper">
+                                        <table class="requests-table">
+                                            <thead class="requests-table__head">
+                                                <tr class="requests-table__row">
+                                                    <td class="requests-table__cell requests-table__cell_number">
+                                                        <div class="requests-table__text requests-table__text_head">
+                                                            <p>№</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text requests-table__text_head">
+                                                            <p>Дата</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text requests-table__text_head">
+                                                            <p>ФИО</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text requests-table__text_head">
+                                                            <p>Контакты</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text requests-table__text_head">
+                                                            <p>Оплата</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state">
+                                                        <div class="requests-table__text requests-table__text_head">
+                                                            <p>Статус</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="requests-table__body">
+                                                <tr class="requests-table__request is-new">
+                                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text">
+                                                            <p>2019-10-09 15:40:55</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text">
+                                                            <p>Туртурика Светлана Николаевна</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text">
+                                                            <p>+7 (903) 505-55-20</p>
+                                                            <p>consanna@mail.ru</p>
+                                                            <p>Старый Толмачёвский пер., 1</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text requests-table__text_red">
+                                                            <p>Не оплачено</p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                </tr>
+                                                <tr class="requests-table__request is-new">
+                                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text">
+                                                            <p>2019-10-09 15:40:55</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text">
+                                                            <p>Киселева Евгения Викторовна</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text">
+                                                            <p>+7 (903) 712-32-43</p>
+                                                            <p>natasha.gremitskikh@gmail.com</p>
+                                                            <p>ул. Красносельская, 7 ст1</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text requests-table__text_red">
+                                                            <p>Не оплачено</p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                </tr>
+                                                <tr class="requests-table__request is-paid">
+                                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">08-9958</span></a></td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text">
+                                                            <p>2019-10-09 15:40:55</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text">
+                                                            <p>Старостинатаростина Наталья Александровна</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text">
+                                                            <p>+7 (903) 712-32-43</p>
+                                                            <p>natasha.gremitskikh@gmail.com</p>
+                                                            <p>ул. Кожевническая, 7 ст1</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text">
+                                                            <p>Оплачено</p>
+                                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                </tr>
+                                                <tr class="requests-table__request is-paid">
+                                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text">
+                                                            <p>2019-10-09 15:40:55</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text">
+                                                            <p>Туртурика Светлана Николаевна</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text">
+                                                            <p>+7 (903) 505-55-20</p>
+                                                            <p>consanna@mail.ru</p>
+                                                            <p>Старый Толмачёвский пер., 1</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text">
+                                                            <p>Оплачено</p>
+                                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                </tr>
+                                                <tr class="requests-table__request is-paid">
+                                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text">
+                                                            <p>2019-10-09 15:40:55</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text">
+                                                            <p>Киселевалеваселева Евгения Викторовна</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text">
+                                                            <p>+7 (903) 712-32-43</p>
+                                                            <p>natasha.gremitskikh@gmail.com</p>
+                                                            <p>ул. Красносельская, 7 ст1</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text">
+                                                            <p>Оплачено</p>
+                                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                </tr>
+                                                <tr class="requests-table__request is-success">
+                                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">17-9958</span></a></td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text">
+                                                            <p>2019-10-09 15:40:55</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text">
+                                                            <p>Старостина Наталья Александровна</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text">
+                                                            <p>+7 (903) 712-32-43</p>
+                                                            <p>natasha.gremitskikh@gmail.com</p>
+                                                            <p>ул. Кожевническая, 7 ст1</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text">
+                                                            <p>Оплачено</p>
+                                                            <p><small>Чек №: 675463535</small></p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" checked="checked" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                </tr>
+                                                <tr class="requests-table__request is-refund">
+                                                    <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">17-9958</span></a></td>
+                                                    <td class="requests-table__cell requests-table__cell_date">
+                                                        <div class="requests-table__text">
+                                                            <p>2019-10-09 15:40:55</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_name">
+                                                        <div class="requests-table__text">
+                                                            <p>Старостина Наталья Александровна</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_contacts">
+                                                        <div class="requests-table__text">
+                                                            <p>+7 (903) 712-32-43</p>
+                                                            <p>natasha.gremitskikh@gmail.com</p>
+                                                            <p>ул. Кожевническая, 7 ст1</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_paid">
+                                                        <div class="requests-table__text">
+                                                            <p>Сделан возврат</p>
+                                                            <p><small>Чек №: 675463535</small></p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="pagination requests__pagination">
+                                        <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                        <div class="pagination__progress">2/8</div>
+                                        <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент popup-request</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/popup-request/popup-request</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="popup-request"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент popup-new-request</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/popup-new-request/popup-new-request</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="popup-new-request"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент popup-edit-request</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/popup-edit-request/popup-edit-request</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="popup-edit-request"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок repair-state</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/repair-state/repair-state</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок search</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/search/search</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="search"><input class="input search__input" type="search" name="search" placeholder="искать в таблице" /><button class="search__button"><img class="search__image" src="assets/images/search.png" alt="" role="presentation" /></button></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок request-filter</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/request-filter/request-filter</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="request-filter">
+                            <div class="request-filter__text">Фильтровать по</div>
+                            <div class="request-select">
+                                <div class="request-select__head">
+                                    <div class="request-select__label">Все</div>
+                                    <div class="request-select__toggle"><svg class="request-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                </div>
+                                <div class="request-select__dropdown"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок request-export</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/request-export/request-export</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="request-export">
+                            <div class="request-export__item"><a class="link link_underline link_dark link_bold request-export__link" href="requests-archive"><span class="link__text">Архив</span></a></div>
+                            <div class="request-export__item">
+                                <div class="request-export__text"><img class="request-export__icon" src="assets/images/export.png" alt="" role="presentation" /><span>Экспортировать:</span></div><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">Все</span></a><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">03.12.19</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок request-select</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/request-select/request-select</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="request-select">
+                            <div class="request-select__head">
+                                <div class="request-select__label">Все</div>
+                                <div class="request-select__toggle"><svg class="request-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            </div>
+                            <div class="request-select__dropdown"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок request-checkbox</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/request-checkbox/request-checkbox</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="request-checkbox"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок pagination</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/pagination/pagination</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="pagination">
+                            <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            <div class="pagination__progress">2/8</div>
+                            <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
     <footer class="footer">

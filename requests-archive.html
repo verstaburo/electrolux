@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>undefined | Список заявок</title>
+    <title>undefined | Список заявок - архив</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
@@ -31,7 +31,7 @@
                     <div class="requests__controls">
                         <div class="requests__controls-top">
                             <div class="grid">
-                                <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12"><a class="button button_flex requests__button js-popup" href="#popup-new-request"><span class="button__text"><svg class="button__plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg><span>Создать заявку</span></span></a></div>
+                                <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12"></div>
                                 <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12">
                                     <div class="search"><input class="input search__input" type="search" name="search" placeholder="искать в таблице" /><button class="search__button"><img class="search__image" src="assets/images/search.png" alt="" role="presentation" /></button></div>
                                 </div>
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12">
                                     <div class="request-export">
-                                        <div class="request-export__item"><a class="link link_underline link_dark link_bold request-export__link" href="requests-archive"><span class="link__text">Архив</span></a></div>
+                                        <div class="request-export__item"><a class="link link_underline link_red link_bold request-export__link" href="requests-archive"><span class="link__text">Архив</span></a></div>
                                         <div class="request-export__item">
                                             <div class="request-export__text"><img class="request-export__icon" src="assets/images/export.png" alt="" role="presentation" /><span>Экспортировать:</span></div><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">Все</span></a><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">03.12.19</span></a>
                                         </div>
@@ -124,10 +124,14 @@
                                     </td>
                                     <td class="requests-table__cell requests-table__cell_paid">
                                         <div class="requests-table__text requests-table__text_red">
-                                            <p>Не оплачено</p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a>
+                                            <p>Не оплачено</p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-new">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
@@ -150,10 +154,14 @@
                                     </td>
                                     <td class="requests-table__cell requests-table__cell_paid">
                                         <div class="requests-table__text requests-table__text_red">
-                                            <p>Не оплачено</p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a>
+                                            <p>Не оплачено</p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-paid">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">08-9958</span></a></td>
@@ -177,10 +185,14 @@
                                     <td class="requests-table__cell requests-table__cell_paid">
                                         <div class="requests-table__text">
                                             <p>Оплачено</p>
-                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                            <p><small>Чек №: 675463535</small></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-paid">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
@@ -204,10 +216,14 @@
                                     <td class="requests-table__cell requests-table__cell_paid">
                                         <div class="requests-table__text">
                                             <p>Оплачено</p>
-                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                            <p><small>Чек №: 675463535</small></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-paid">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
@@ -231,10 +247,14 @@
                                     <td class="requests-table__cell requests-table__cell_paid">
                                         <div class="requests-table__text">
                                             <p>Оплачено</p>
-                                            <p><small>Чек №: 675463535</small></p><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-change-payment"><span class="link__text">Отменить оплату</span></a>
+                                            <p><small>Чек №: 675463535</small></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-success">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">17-9958</span></a></td>
@@ -261,7 +281,11 @@
                                             <p><small>Чек №: 675463535</small></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" checked="checked" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-refund">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">17-9958</span></a></td>
@@ -288,7 +312,11 @@
                                             <p><small>Чек №: 675463535</small></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

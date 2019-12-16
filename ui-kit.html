@@ -2104,7 +2104,7 @@
                                             <div class="form__price-text">фиксированная стоимость</div><input class="input" type="hidden" name="price" value="9790" />
                                         </div>
                                     </div>
-                                    <div class="form__buttons"><button class="button form__button js-form-submit" type="submit">Оплатить</button></div>
+                                    <div class="form__buttons"><button class="button form__button" type="submit">Оплатить</button></div>
                                     <div class="form__note form__note_mt20">
                                         <p>*Поля, обязательные для заполнения.</p>
                                         <p>**Услуга предоставляется при 100% оплате</p>
@@ -2322,7 +2322,27 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup login"></div>
+                        <div class="popup login">
+                            <div class="popup__title popup__title_dark">Вход в систему</div>
+                            <form class="login-form" action="/" method="post" data-validated-form="data-validated-form">
+                                <div class="grid">
+                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                            <p class="inputbox__label inputbox__label_bold inputbox__label_dark">Логин</p><span class="inputbox__wrapper"><input class="input" type="text" name="login" required="required" placeholder="Логин" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                            <p class="inputbox__label inputbox__label_bold inputbox__label_dark">Пароль</p><span class="inputbox__wrapper"><input class="input" type="password" name="password" placeholder="Введите пароль" required="required" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6">
+                                        <div class="login-form__save">
+                                            <div class="login-form__save-check"><label class="checkradio checkradio_fz14 checkradio_dark"><input class="checkradio__input" name="save" value="save" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                        <p>Сохранить логин и пароль</p>
+                                                    </span></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__col grid__col_xl_6"><button class="button login-form__button" type="submit">Войти</button></div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -2377,6 +2397,41 @@
                 <div class="ui-kit__section-content">
                     <div class="container">
                         <div class="popup popup-change-payment"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок login-form</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/login-form/login-form</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <form class="login-form" action="/" method="post" data-validated-form="data-validated-form">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                        <p class="inputbox__label inputbox__label_bold inputbox__label_dark">Логин</p><span class="inputbox__wrapper"><input class="input" type="text" name="login" required="required" placeholder="Логин" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                        <p class="inputbox__label inputbox__label_bold inputbox__label_dark">Пароль</p><span class="inputbox__wrapper"><input class="input" type="password" name="password" placeholder="Введите пароль" required="required" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6">
+                                    <div class="login-form__save">
+                                        <div class="login-form__save-check"><label class="checkradio checkradio_fz14 checkradio_dark"><input class="checkradio__input" name="save" value="save" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                    <p>Сохранить логин и пароль</p>
+                                                </span></label></div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_xl_6"><button class="button login-form__button" type="submit">Войти</button></div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

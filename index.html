@@ -668,7 +668,7 @@
                     <div class="order-form__buttons"><button class="order-form__collapse js-hide-orderform">
                             <div class="order-form__collapse-text">Свернуть</div><svg class="order-form__collapse-arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
                         </button></div>
-                    <form class="form order-form__form" action="/" method="post" data-validated-form="data-validated-form" data-orderform="data-orderform">
+                    <form class="form order-form__form" action="/" method="post" data-validated-form="data-validated-form" data-orderform="data-orderform" autocomplete="off">
                         <div class="grid">
                             <div class="grid__col grid__col_xl_1 grid__col_sm_12 is-hidden-sm"></div>
                             <div class="grid__col grid__col_xl_10 grid__col_sm_12">
@@ -730,15 +730,15 @@
                                         <div class="form__title form__title_mb28"><span data-form-field="adult">Личные данные</span><span class="is-disabled" data-form-field="child">Сопровождающий ребенка</span></div>
                                         <div class="grid">
                                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                    <p class="inputbox__label">Представьтесь, пожалуйста (ФИО)*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" /><span class="error-message"></span></span>
+                                                    <p class="inputbox__label">Представьтесь, пожалуйста (ФИО)*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" autocomplete="off" /><span class="error-message"></span></span>
                                                 </label></div>
                                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                    <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Например, ivan.ivanov@electrolux.com" data-type="email" /><span class="error-message"></span></span>
+                                                    <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Например, ivan.ivanov@electrolux.com" data-type="email" autocomplete="off" /><span class="error-message"></span></span>
                                                 </label></div>
                                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                     <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" /><span class="error-message"></span></span>
                                                 </label></div>
-                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult" autocomplete="off"><label class="inputbox">
                                                     <p class="inputbox__label">Количество человек*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="vacancy" data-form-vacancy="data-form-vacancy" required="required">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
@@ -772,7 +772,7 @@
                                             <div class="form__child" data-child="data-child">
                                                 <div class="grid">
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                            <p class="inputbox__label">Имя ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childName[0]" required="required" placeholder="Имя ребенка" /><span class="error-message"></span></span>
+                                                            <p class="inputbox__label">Имя ребенка*</p><span class="inputbox__wrapper"><input class="input" type="text" name="childName[0]" required="required" placeholder="Имя ребенка" autocomplete="off" /><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                             <p class="inputbox__label">Возраст ребенка*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="childAge[0]" required="required">
@@ -833,10 +833,10 @@
                                                         </select><span class="error-message"></span></span>
                                                 </label></div>
                                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                    <p class="inputbox__label">Дата покупки*</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="дд.мм.гггг" data-date="data-date" readonly="readonly" /><span class="error-message"></span></span>
+                                                    <p class="inputbox__label">Дата покупки*</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="дд.мм.гггг" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
                                                 </label></div>
                                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                    <p class="inputbox__label">Номер чека*</p><span class="inputbox__wrapper"><input class="input" type="text" name="checkNumber" required="required" placeholder="16278499921" data-parsley-type="digits" /><span class="error-message"></span></span>
+                                                    <p class="inputbox__label">Номер чека*</p><span class="inputbox__wrapper"><input class="input" type="text" name="checkNumber" required="required" placeholder="16278499921" data-parsley-type="digits" autocomplete="off" /><span class="error-message"></span></span>
                                                 </label></div>
                                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                     <p class="inputbox__label">Приложите чек*</p><span class="inputbox__wrapper"><label class="input-uploader js-file-upload"><input class="input" type="file" name="files[]" required="required" disabled="disabled" /><span class="input-uploader__filename" data-filename="data-filename"></span><span class="input-uploader__placeholder" data-placeholder="data-placeholder">Нажмите для выбора</span></label><span class="error-message"></span></span>

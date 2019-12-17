@@ -42,18 +42,25 @@
                                 <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12">
                                     <div class="request-filter">
                                         <div class="request-filter__text">Фильтровать по</div>
-                                        <div class="request-select">
-                                            <div class="request-select__head">
-                                                <div class="request-select__label">Все</div>
-                                                <div class="request-select__toggle"><svg class="request-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                        <div class="request-select js-request-select">
+                                            <div class="request-select__head" data-request-head="data-request-head">
+                                                <div class="request-select__label" data-request-label="data-request-label">Все</div>
+                                                <div class="request-select__toggle" data-show-filters="data-show-filters"><svg class="request-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
                                             </div>
-                                            <div class="request-select__dropdown"></div>
+                                            <div class="request-select__dropdown">
+                                                <div class="request-select__content">
+                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="new" data-request-filter="new" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#f4f5f4;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Новые заявки</span></label></div>
+                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="refund" data-request-filter="refund" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#ffe6e3;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Возврат</span></label></div>
+                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="finished" data-request-filter="finished" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#e9fdd8;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Оплачено, выполнено</span></label></div>
+                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="paid" data-request-filter="paid" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#faf4d4;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Оплачено, не выполнено</span></label></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12">
                                     <div class="request-export">
-                                        <div class="request-export__item"><a class="link link_underline link_dark link_bold request-export__link" href="requests-archive"><span class="link__text">Архив</span></a></div>
+                                        <div class="request-export__item"><a class="link link_underline link_dark link_bold request-export__link" href="requests-archive.html"><span class="link__text">Архив</span></a></div>
                                         <div class="request-export__item">
                                             <div class="request-export__text"><img class="request-export__icon" src="assets/images/export.png" alt="" role="presentation" /><span>Экспортировать:</span></div><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">Все</span></a><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">03.12.19</span></a>
                                         </div>
@@ -111,7 +118,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="pagination requests__pagination">
+                    <div class="pagination requests__pagination is-hidden">
                         <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
                         <div class="pagination__progress">2/8</div>
                         <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
@@ -132,7 +139,7 @@
         <div class="popup popup-request" id="popup-request">
             <div class="popup-request__wrapper">
                 <div class="popup-request__head">
-                    <div class="popup-request__title">12-0001</div><a class="button popup-request__button js-popup" href="#popup-edit-request">Редактировать</a>
+                    <h3 class="popup-request__title">12-0001</h3><a class="button popup-request__button js-popup" href="#popup-edit-request">Редактировать</a>
                 </div>
                 <div class="popup-request__content">
                     <table class="info-table">
@@ -182,11 +189,210 @@
                 </div>
             </div>
         </div>
-        <div class="popup popup-new-request" id="popup-new-request"></div>
-        <div class="popup popup-edit-request" id="popup-edit-request"></div>
-        <div class="popup popup-confirm-repair" id="popup-confirm-repair"></div>
-        <div class="popup popup-confirm-payment" id="popup-confirm-payment"></div>
-        <div class="popup popup-change-payment" id="popup-change-payment"></div>
+        <div class="popup popup-new-request" id="popup-new-request">
+            <div class="popup-new-request__wrapper">
+                <h3 class="popup__title popup__title_fz40">Создание заявки</h3>
+                <div class="popup-new-request__content">
+                    <section class="request-form request-form_popup">
+                        <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform-new="data-requestform-new" autocomplete="off">
+                            <fieldset class="form__section">
+                                <div class="form__title">Личные данные пользователя</div>
+                                <div class="grid">
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">ФИО*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" autocomplete="off" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Введите адрес e-mail" data-type="email" autocomplete="off" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" autocomplete="off" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                            <p class="inputbox__label">Физический адрес*</p><span class="inputbox__wrapper"><input class="input" type="text" name="address" required="required" placeholder="Куда поедет специалист" autocomplete="off" /><span class="error-message"></span></span>
+                                        </label></div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form__section">
+                                <div class="form__title">Продукт</div>
+                                <div class="grid">
+                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                            <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
+                                                    <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                    <option value="1">Модель 1</option>
+                                                    <option value="2">Модель 2</option>
+                                                    <option value="3">Модель 3</option>
+                                                    <option value="4">Модель 4</option>
+                                                    <option value="5">Модель 5</option>
+                                                    <option value="6">Модель 6</option>
+                                                    <option value="7">Модель 7</option>
+                                                    <option value="8">Модель 8</option>
+                                                    <option value="9">Модель 9</option>
+                                                    <option value="10">Модель 10</option>
+                                                    <option value="11">Модель 11</option>
+                                                </select><span class="error-message"></span></span>
+                                        </label>
+                                        <div class="form__hint"><a class="link link_underline link_info" href="#"><span class="link__text">Как найти номер модели / PNC?</span></a></div>
+                                    </div>
+                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                            <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off"></textarea><span class="error-message"></span></span>
+                                        </label></div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form__section form__section_mgt22">
+                                <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                    <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                                    <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                                </span></label><span class="error-message"></span></span></label></div>
+                                <div class="form__buttons"><button class="button form__button" type="submit">Создать</button></div>
+                                <div class="form__note form__note_mt20">
+                                    <p>*Поля, обязательные для заполнения.</p>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-edit-request" id="popup-edit-request">
+            <div class="popup-edit-request__wrapper">
+                <h3 class="popup__title popup__title_fz40">Редактировать заявку</h3>
+                <div class="popup-edit-request__content">
+                    <section class="request-form request-form_popup">
+                        <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform-edit="data-requestform-edit" autocomplete="off">
+                            <fieldset class="form__section">
+                                <div class="form__title">Личные данные пользователя</div>
+                                <div class="grid">
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">ФИО*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" autocomplete="off" value="Петр Демьянович" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Введите адрес e-mail" data-type="email" autocomplete="off" value="IvanovIvan@meil.ru" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" autocomplete="off" value="+7 (903) 209-47-43" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                            <p class="inputbox__label">Физический адрес*</p><span class="inputbox__wrapper"><input class="input" type="text" name="address" required="required" placeholder="Куда поедет специалист" autocomplete="off" value="г. Москва, ул. Садовая, д. 23, кв. 51" /><span class="error-message"></span></span>
+                                        </label></div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form__section">
+                                <div class="form__title">Продукт</div>
+                                <div class="grid">
+                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                            <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
+                                                    <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                    <option value="EWS1477FDW" selected="selected">EWS1477FDW</option>
+                                                    <option value="1">Модель 1</option>
+                                                    <option value="2">Модель 2</option>
+                                                    <option value="3">Модель 3</option>
+                                                    <option value="4">Модель 4</option>
+                                                    <option value="5">Модель 5</option>
+                                                    <option value="6">Модель 6</option>
+                                                    <option value="7">Модель 7</option>
+                                                    <option value="8">Модель 8</option>
+                                                    <option value="9">Модель 9</option>
+                                                    <option value="10">Модель 10</option>
+                                                    <option value="11">Модель 11</option>
+                                                </select><span class="error-message"></span></span>
+                                        </label>
+                                        <div class="form__hint"><a class="link link_underline link_info" href="#"><span class="link__text">Как найти номер модели / PNC?</span></a></div>
+                                    </div>
+                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                            <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off">Не работает переключатель варочной поверхности</textarea><span class="error-message"></span></span>
+                                        </label></div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form__section">
+                                <div class="form__title">Сервис</div>
+                                <div class="grid">
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Оплата</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Оплата" autocomplete="off" value="Транзакция №14256374565" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Оказание услуги</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="finished" required="required">
+                                                    <option value="0" selected="selected">Не выполнено</option>
+                                                    <option value="1">Выполнено</option>
+                                                </select><span class="error-message"></span></span>
+                                        </label></div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form__section form__section_mgt22">
+                                <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                    <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                                    <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                                </span></label><span class="error-message"></span></span></label></div>
+                                <div class="form__buttons"><button class="button form__button" type="submit">Сохранить</button></div>
+                                <div class="form__note form__note_mt20">
+                                    <p>*Поля, обязательные для заполнения.</p>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup_fxp popup-confirm-repair" id="popup-confirm-repair">
+            <h3 class="popup__title">Подтверждаете выполнение ремонта?</h3>
+            <div class="popup__content">
+                <div class="grid">
+                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button popup-confirm-repair__button popup-confirm-repair__button_wide js-confirm-repair" type="button">Подтвердить</button></div>
+                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_underline link_bold" data-fancybox-close="data-fancybox-close" href="#"><span class="link__text">Отмена</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup_fxp popup-confirm-payment" id="popup-confirm-payment">
+            <h3 class="popup__title">Подтвердите оплату заявки</h3>
+            <div class="popup__content">
+                <form class="form" action="/" method="post" data-validated-form="data-validated-form"></form>
+                <div class="grid">
+                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                            <p class="inputbox__label">Номер транзакции</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Введите номер" autocomplete="off" /><span class="error-message"></span></span>
+                        </label></div>
+                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button popup-confirm-payment__button popup-confirm-payment__button_wide" type="submit">Подтвердить</button></div>
+                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold popup-confirm-payment__link" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup_fxp popup-change-payment" id="popup-change-payment">
+            <h3 class="popup__title">Отменить оплату</h3>
+            <div class="popup__content">
+                <form class="refund-form" action="/" method="post" data-refund-form="data-refund-form" data-validated-form="data-validated-form">
+                    <fieldset class="refund-form__section"><label class="inputbox">
+                            <p class="inputbox__label">Выберите действие</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="changeData" data-change-paid="data-change-paid">
+                                    <option value="0" selected="selected" data-custom-properties="change">Изменить данные оплаты</option>
+                                    <option value="1" data-custom-properties="refund">Возврат оплаты</option>
+                                </select><span class="error-message"></span></span>
+                        </label></fieldset>
+                    <fieldset class="refund-form__section refund-form__section_small-mg" data-form-field="change">
+                        <div class="refund-form__text">Если вы ввели неправильные данные об оплате, вы можете скорректировать их с помощью этого действия.</div>
+                        <div class="refund-form__buttons">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-popup" href="#popup-confirm-payment">Подтвердить</a></div>
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold refund-form__link" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="refund-form__section" data-form-field="refund">
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                    <p class="inputbox__label">Данные возврата</p><span class="inputbox__wrapper"><input class="input" type="text" name="paidData" required="required" placeholder="Номер транзакции" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                    <p class="inputbox__label">Дата возврата</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="dateRefund" required="required" placeholder="дд.мм.гггг" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                        </div>
+                        <div class="refund-form__text">Статус «Возврат» выставляется после того, как покупателю отправлены денежные средства на счёт.</div>
+                        <div class="refund-form__buttons">
+                            <div class="grid">
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button refund-form__button" type="submit">Подтвердить</button></div>
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold refund-form__link" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </div>
     <script src="assets/scripts/libs/parsley.min.js"></script>
     <script src="assets/scripts/app.min.js"></script>

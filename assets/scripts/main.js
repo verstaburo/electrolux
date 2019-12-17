@@ -257,4 +257,21 @@ if ($('.map').length > 0) {
   });
 }
 
+// для фикспрайс
+$(document).ready(function () {
+
+  // установка статуса "Выполнено" при подтверждении в попапе #popup-confirm-repair
+  $(document).on('click', '.js-confirm-repair', function (evt) {
+    evt.preventDefault();
+    var self = evt.currentTarget;
+    var popup = $(self).closest('.popup')[0];
+    var targetLabel = popup.popupTrigger;
+    var targetCheckbox = $(targetLabel).find('input[type="checkbox"]')[0];
+    targetCheckbox.checked = true;
+    $(targetLabel).closest('tr').removeClass('is-paid').addClass('is-success');
+    $(targetCheckbox).change();
+    window.globalFunctions.closePopup();
+  });
+});
+
 /* eslint-enable */

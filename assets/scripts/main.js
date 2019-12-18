@@ -121,6 +121,7 @@ $(document).ready(function () {
           var formTypesArray = window.globalFunctions.getFormTypes().split(',');
           if (formTypesArray.indexOf('oven') === -1) {
             window.globalFunctions.openPopup($('#popup-reg-pay-success')[0]);
+            resetForm(self);
             // редирект
           } else {
             // показываем попап

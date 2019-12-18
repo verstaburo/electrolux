@@ -16,9 +16,10 @@ $(document).ready(function () {
   function resetForm(formEl) {
     const form = formEl
     const selects = $(form).find('select');
-    const datepickers = $('.js-datepicker');
-    const mcselect = $('.js-mc-select');
-    const files = $('.input-uploader [data-filename]');
+    const datepickers = $(form).find('.js-datepicker');
+    const mcselect = $(form).find('.js-mc-select');
+    const filesEl = $(form).find('.input-uploader');
+    const files = $(form).find('.input-uploader [data-filename]');
     // обнуляем селекты
     $(selects).each(function (i, el) {
       el.choices.setChoiceByValue(el.defaultSelectedValue);
@@ -31,6 +32,7 @@ $(document).ready(function () {
     }
     // очищаем поле от имени файла
     if (files.length > 0) {
+      $(filesEl).removeClass('is-full');
       files.text('');
     }
     // дефолтный ресет для формы

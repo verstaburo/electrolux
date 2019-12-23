@@ -2363,14 +2363,15 @@
                         <div class="popup popup_fxp popup-confirm-payment">
                             <h3 class="popup__title">Подтвердите оплату заявки</h3>
                             <div class="popup__content">
-                                <form class="form" action="/" method="post" data-validated-form="data-validated-form"></form>
-                                <div class="grid">
-                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
-                                            <p class="inputbox__label">Номер транзакции</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Введите номер" autocomplete="off" /><span class="error-message"></span></span>
-                                        </label></div>
-                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button popup-confirm-payment__button popup-confirm-payment__button_wide" type="submit">Подтвердить</button></div>
-                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold popup-confirm-payment__link" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
-                                </div>
+                                <form class="form" action="/" method="post" data-validated-form="data-validated-form">
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                                <p class="inputbox__label">Номер транзакции</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Введите номер" autocomplete="off" /><span class="error-message"></span></span>
+                                            </label></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button form__button form__button_wide" type="submit">Подтвердить</button></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold form__link" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -3628,7 +3629,7 @@
                                     <h3 class="popup-mc__title">МК-0572</h3>
                                 </div>
                                 <div class="popup-mc__content">
-                                    <table class="info-table">
+                                    <table class="info-table info-table_mc">
                                         <tbody class="info-table__body">
                                             <tr class="info-table__row">
                                                 <td class="info-table__cell info-table__cell_head">Дата</td>
@@ -3732,7 +3733,12 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-participation-confirmation"></div>
+                        <div class="popup popup_adm popup-participation-confirmation">
+                            <h3 class="popup__title popup__title_fz18-24">Подтверждаете участие в бесплатном мастер-классе?</h3>
+                            <div class="popup__content">
+                                <div class="popup__buttons"><button class="button button_fz15 popup__button popup__button_w168" type="button">Подтвердить</button><a class="link link_bold popup__link" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3750,7 +3756,10 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-participation-confirmed"></div>
+                        <div class="popup popup_adm popup-participation-confirmed">
+                            <h3 class="popup__title popup__title_fz18-24">Участие подтверждено</h3>
+                            <div class="popup__content">Приглашение отправлено на указанную почту</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3768,7 +3777,12 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-participation-rejected"></div>
+                        <div class="popup popup_adm popup-participation-rejected">
+                            <h3 class="popup__title popup__title_fz18-24">Участие отклонено</h3>
+                            <div class="popup__content">
+                                <p>Письмо с указанием причины отказа отправлено на почту заявителю</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3786,7 +3800,22 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-rejection-reason"></div>
+                        <div class="popup popup_adm popup_adm_form popup-rejection-reason">
+                            <h3 class="popup__title popup__title_fz18-24">Укажите причину отказа</h3>
+                            <div class="popup__content popup__content_tal">
+                                <form class="form form_adm popup__form" action="/" method="post" data-validated-form="data-validated-form"><label class="inputbox">
+                                        <p class="inputbox__label">Выберите причину из списка:</p><span class="inputbox__wrapper"><select class="select js-select js-select js-update-textarea" name="reason" required="required" autocomplete="off" data-target-textarea="rejectedReason">
+                                                <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                <option value="1">Модель техники не входит в спиcок участвующих в акции</option>
+                                                <option value="2">Вы уже были на мастер-классе по приглашению</option>
+                                                <option value="3">Обнаружение несоответствий в документах</option>
+                                                <option value="4">Другое</option>
+                                            </select><span class="error-message"></span></span>
+                                    </label><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea" name="describe" required="required" placeholder="Указать свою причину" autocomplete="off" data-textarea="rejectedReason"></textarea><span class="error-message"></span></span></label>
+                                    <div class="form__buttons form__buttons_grid"><button class="button button_fz15 form__button form__button_wide" type="submit">Подтвердить</button><a class="link link_bold form__link form__link_fz15" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3804,7 +3833,22 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-new-comment"></div>
+                        <div class="popup popup_adm popup_adm_form popup-new-comment">
+                            <h3 class="popup__title popup__title_fz18-24">Комментарий после звонка</h3>
+                            <div class="popup__content popup__content_tal">
+                                <form class="form form_adm popup__form" action="/" method="post" data-validated-form="data-validated-form"><label class="inputbox">
+                                        <p class="inputbox__label">Выберите популярные варианты:</p><span class="inputbox__wrapper"><select class="select js-select js-select js-update-textarea" name="comment" required="required" placeholder="Выберите из списка" autocomplete="off" data-target-textarea="comment">
+                                                <option value="" placeholder="placeholder">Выберите из списка</option>
+                                                <option value="1">Вариант 1</option>
+                                                <option value="2">Вариант 2</option>
+                                                <option value="3">Вариант 3</option>
+                                                <option value="4">Вариант 4</option>
+                                            </select><span class="error-message"></span></span>
+                                    </label><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea" name="describe" required="required" placeholder="Место для уточнений" autocomplete="off" data-textarea="comment"></textarea><span class="error-message"></span></span></label>
+                                    <div class="form__buttons form__buttons_grid"><button class="button button_fz15 form__button form__button_wide" type="submit">Добавить</button><a class="link link_bold form__link form__link_fz15" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3822,7 +3866,9 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-comment-add"></div>
+                        <div class="popup popup_adm popup-comment-add">
+                            <h3 class="popup-comment-add__title popup-comment-add__title_fz18-24">Комментарий добавлен</h3>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3840,7 +3886,12 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-confirm-mc-closing"></div>
+                        <div class="popup popup_adm popup-confirm-mc-closing">
+                            <h3 class="popup__title popup__title_fz18-24">Вы уверены, что хотите закрыть запись на данный мастер-класс?</h3>
+                            <div class="popup__content">
+                                <div class="popup__buttons"><button class="button button_fz15 popup__button popup__button_w168" type="button">Подтвердить</button><a class="link link_bold popup__link" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3858,7 +3909,9 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-mc-closed"></div>
+                        <div class="popup popup_adm popup-mc-closed">
+                            <h3 class="popup__title popup__title_fz18-24">Запись на данный <br> мастер-класс закрыта</h3>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3876,7 +3929,28 @@
                 </div>
                 <div class="ui-kit__section-content">
                     <div class="container">
-                        <div class="popup-receipt"></div>
+                        <div class="popup popup_adm popup_adm_img popup-receipt">
+                            <h3 class="popup__title popup__title_fz18-24">Скан чека</h3>
+                            <div class="popup__content"><img class="popup__image" src="assets/images/mc-admin/receipt.jpg" alt="" role="presentation" /></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент nav-back</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/nav-back/nav-back</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="nav-back"><a class="nav-back__link" href="#">Официальный сайт</a></div>
                     </div>
                 </div>
             </section>

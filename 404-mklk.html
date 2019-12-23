@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>undefined | Список заявок - пустой</title>
+    <title>undefined | 404</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
@@ -16,113 +16,21 @@
 <body>
     <header class="header header_fxp">
         <div class="header__wrapper">
-            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div>
+            <div class="logo header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
             <div class="logout header__logout is-hidden-sm">
                 <div class="logout__name">Администратор</div>
                 <div class="logout__buttons"><a class="button logout__button" href="#">Выйти</a></div>
             </div>
         </div>
     </header>
-    <main class="page page_fxp page_gray" role="main">
-        <div class="requests">
-            <div class="requests__top">
-                <div class="container">
-                    <h1 class="requests__title">Список заявок</h1>
-                    <div class="requests__controls">
-                        <div class="requests__controls-top">
-                            <div class="grid">
-                                <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12"><a class="button button_flex requests__button js-popup" href="#popup-new-request"><span class="button__text"><svg class="button__plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg><span>Создать заявку</span></span></a></div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12">
-                                    <div class="search"><input class="input search__input" type="search" name="search" placeholder="искать в таблице" /><button class="search__button"><img class="search__image" src="assets/images/search.png" alt="" role="presentation" /></button></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="requests__controls-bottom">
-                            <div class="grid">
-                                <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12">
-                                    <div class="request-filter">
-                                        <div class="request-filter__text">Фильтровать по</div>
-                                        <div class="request-select js-request-select">
-                                            <div class="request-select__head" data-request-head="data-request-head">
-                                                <div class="request-select__label" data-request-label="data-request-label">Все</div>
-                                                <div class="request-select__toggle" data-show-filters="data-show-filters"><svg class="request-select__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
-                                            </div>
-                                            <div class="request-select__dropdown">
-                                                <div class="request-select__content">
-                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="new" data-request-filter="new" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#f4f5f4;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Новые заявки</span></label></div>
-                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="refund" data-request-filter="refund" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#ffe6e3;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Возврат</span></label></div>
-                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="finished" data-request-filter="finished" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#e9fdd8;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Оплачено, выполнено</span></label></div>
-                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="paid" data-request-filter="paid" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#faf4d4;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Оплачено, не выполнено</span></label></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grid__col grid__col_xl_4 grid__col_md_6 grid__col_sm_12">
-                                    <div class="request-export">
-                                        <div class="request-export__item"><a class="link link_underline link_dark link_bold request-export__link" href="requests-archive.html"><span class="link__text">Архив</span></a></div>
-                                        <div class="request-export__item">
-                                            <div class="request-export__text"><img class="request-export__icon" src="assets/images/export.png" alt="" role="presentation" /><span>Экспортировать:</span></div><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">Все</span></a><a class="link link_underline link_dark link_bold request-export__link" href="#"><span class="link__text">03.12.19</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="requests__bottom">
-                <div class="container">
-                    <div class="requests__wrapper">
-                        <table class="requests-table">
-                            <thead class="requests-table__head">
-                                <tr class="requests-table__row">
-                                    <td class="requests-table__cell requests-table__cell_number">
-                                        <div class="requests-table__text requests-table__text_head">
-                                            <p>№</p>
-                                        </div>
-                                    </td>
-                                    <td class="requests-table__cell requests-table__cell_date">
-                                        <div class="requests-table__text requests-table__text_head">
-                                            <p>Дата</p>
-                                        </div>
-                                    </td>
-                                    <td class="requests-table__cell requests-table__cell_name">
-                                        <div class="requests-table__text requests-table__text_head">
-                                            <p>ФИО</p>
-                                        </div>
-                                    </td>
-                                    <td class="requests-table__cell requests-table__cell_contacts">
-                                        <div class="requests-table__text requests-table__text_head">
-                                            <p>Контакты</p>
-                                        </div>
-                                    </td>
-                                    <td class="requests-table__cell requests-table__cell_paid">
-                                        <div class="requests-table__text requests-table__text_head">
-                                            <p>Оплата</p>
-                                        </div>
-                                    </td>
-                                    <td class="requests-table__cell requests-table__cell_state">
-                                        <div class="requests-table__text requests-table__text_head">
-                                            <p>Статус</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody class="requests-table__body">
-                                <tr class="requests-table__request">
-                                    <td class="requests-table__cell requests-table__cell_full" colspan="6">
-                                        <div class="requests-table__text">В данный момент нет ни одной заявки. Немного подождите или создайте первую заявку сами.</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="pagination requests__pagination is-hidden">
-                        <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
-                        <div class="pagination__progress">2/8</div>
-                        <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
-                    </div>
+    <main class="page page_fxp page_flex" role="main">
+        <div class="container container_fxp container_flex">
+            <div class="error">
+                <div class="error__mark">404</div>
+                <h1 class="error__title">Страница не найдена</h1>
+                <div class="error__text">
+                    <p>Извините, страница удалена либо никогда не существовала.</p>
+                    <p>Попробуйте начать с <a href="/" class="link link_inline link_red link_bordered">главной</a> страницы.</p>
                 </div>
             </div>
         </div>
@@ -130,7 +38,7 @@
     <footer class="footer footer_fxp">
         <div class="footer__wrapper">
             <div class="footer__side footer__side_front">
-                <div class="logo logo_fxp logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div>
+                <div class="logo logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
             </div>
             <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top totop totop_v2 footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
         </div>

@@ -556,14 +556,15 @@
         <div class="popup popup_fxp popup-confirm-payment" id="popup-confirm-payment">
             <h3 class="popup__title">Подтвердите оплату заявки</h3>
             <div class="popup__content">
-                <form class="form" action="/" method="post" data-validated-form="data-validated-form"></form>
-                <div class="grid">
-                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
-                            <p class="inputbox__label">Номер транзакции</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Введите номер" autocomplete="off" /><span class="error-message"></span></span>
-                        </label></div>
-                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button popup-confirm-payment__button popup-confirm-payment__button_wide" type="submit">Подтвердить</button></div>
-                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold popup-confirm-payment__link" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
-                </div>
+                <form class="form" action="/" method="post" data-validated-form="data-validated-form">
+                    <div class="grid">
+                        <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                <p class="inputbox__label">Номер транзакции</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Введите номер" autocomplete="off" /><span class="error-message"></span></span>
+                            </label></div>
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button form__button form__button_wide" type="submit">Подтвердить</button></div>
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold form__link" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="popup popup_fxp popup-change-payment" id="popup-change-payment">

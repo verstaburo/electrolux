@@ -2201,84 +2201,12 @@
                                                 <li><a href="#">Санкт-Петербург</a></li>
                                                 <li><a href="#">Саратов</a></li>
                                                 <li><a href="#">Екатеринбург</a></li>
-                                            </ul><a class="link link_underline link_blue cities__link js-show-cities"><span class="link__text">Полный список городов</span></a>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="cities__bottom">
-                                <div class="container container_fxp">
-                                    <div class="cities__wrapper" data-cities-list="data-cities-list">
-                                        <div class="cities__close js-close-cities"><svg class="cities__close-icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></div>
-                                        <div class="cities__scrollblock js-scrollbar">
-                                            <div class="cities__list">
-                                                <div class="cities__char">
-                                                    <p>Б</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Барнаул</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>В</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Воронеж</a></li>
-                                                        <li><a href="#">Волгоград</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>Е</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Екатеринбург</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>К</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Краснодар</a></li>
-                                                        <li><a href="#">Красноярск</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>Н</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Нижний Новгород</a></li>
-                                                        <li><a href="#">Новосибирск</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>Р</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Ростов-на-Дону</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>С</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Самара</a></li>
-                                                        <li><a href="#">Санкт-Петербург</a></li>
-                                                        <li><a href="#">Саратов</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>Т</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Тамбов</a></li>
-                                                        <li><a href="#">Тверь</a></li>
-                                                        <li><a href="#">Тула</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="cities__char">
-                                                    <p>У</p>
-                                                    <ul class="list list_big cities__item">
-                                                        <li><a href="#">Уссурийск</a></li>
-                                                        <li><a href="#">Уфа</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="cities__bottom"></div>
                         </section>
                     </div>
                 </div>
@@ -2431,7 +2359,7 @@
                                         <div class="refund-form__text">Если вы ввели неправильные данные об оплате, вы можете скорректировать их с помощью этого действия.</div>
                                         <div class="refund-form__buttons">
                                             <div class="grid">
-                                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-popup" href="#popup-confirm-payment">Подтвердить</a></div>
+                                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-popup" href="#popup-confirm-payment"><span data-form-field="change">Изменить</span><span data-form-field="refund">Подтвердить</span></a></div>
                                                 <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold refund-form__link" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
                                             </div>
                                         </div>
@@ -2592,7 +2520,11 @@
                                             <p class="is-confirm"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-new">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
@@ -2621,7 +2553,11 @@
                                             <p class="is-confirm"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="requests-table__request is-paid">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">08-9958</span></a></td>
@@ -2766,7 +2702,11 @@
                                             <p class="is-confirm"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state">
+                                        <div class="requests-table__text">
+                                            <p>Не выполнено</p>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2900,7 +2840,11 @@
                                                             <p class="is-confirm"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a></p>
                                                         </div>
                                                     </td>
-                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                    <td class="requests-table__cell requests-table__cell_state">
+                                                        <div class="requests-table__text">
+                                                            <p>Не выполнено</p>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr class="requests-table__request is-new">
                                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">02-0571</span></a></td>
@@ -2929,7 +2873,11 @@
                                                             <p class="is-confirm"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a></p>
                                                         </div>
                                                     </td>
-                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                    <td class="requests-table__cell requests-table__cell_state">
+                                                        <div class="requests-table__text">
+                                                            <p>Не выполнено</p>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr class="requests-table__request is-paid">
                                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">08-9958</span></a></td>
@@ -3074,7 +3022,11 @@
                                                             <p class="is-confirm"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-confirm-payment"><span class="link__text">Подтвердите оплату</span></a></p>
                                                         </div>
                                                     </td>
-                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state js-popup" data-src="#popup-confirm-repair"><input class="repair-state__input" type="checkbox" name="isFinished" data-confirm-end="data-confirm-end" /><span class="repair-state__text repair-state__text_finished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
+                                                    <td class="requests-table__cell requests-table__cell_state">
+                                                        <div class="requests-table__text">
+                                                            <p>Не выполнено</p>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -3583,7 +3535,7 @@
                                 <div class="refund-form__text">Если вы ввели неправильные данные об оплате, вы можете скорректировать их с помощью этого действия.</div>
                                 <div class="refund-form__buttons">
                                     <div class="grid">
-                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-popup" href="#popup-confirm-payment">Подтвердить</a></div>
+                                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-popup" href="#popup-confirm-payment"><span data-form-field="change">Изменить</span><span data-form-field="refund">Подтвердить</span></a></div>
                                         <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold refund-form__link" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
                                     </div>
                                 </div>

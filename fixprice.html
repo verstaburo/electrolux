@@ -262,7 +262,7 @@
                                                 <option value="11">Модель 11</option>
                                             </select><span class="error-message"></span></span>
                                     </label>
-                                    <div class="form__hint"><a class="link link_underline link_info" href="#"><span class="link__text">Как найти номер модели / PNC?</span></a></div>
+                                    <div class="form__hint"><a class="link link_underline link_info js-popup" href="#popup-pnc"><span class="link__text">Как найти номер модели / PNC?</span></a></div>
                                 </div>
                                 <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                         <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off"></textarea><span class="error-message"></span></span>
@@ -361,6 +361,42 @@
             <div class="popup__content">
                 <div class="popup__text">Мы свяжемся с вами как можно скорее.</div>
             </div>
+        </div>
+        <div class="popup popup_blocks popup-pnc" id="popup-pnc">
+            <SECTION class="popup__head">
+                <h3 class="popup__title popup__title_md-fz40">Как найти номер модели/PNC</h3>
+            </SECTION>
+            <SECTION class="popup__content popup__content_gray">
+                <article class="pnc">
+                    <section class="pnc__column pnc__column_left">
+                        <div class="text-block pnc__content">
+                            <h4 class="text-block__title text-block__title_fz20">Первый способ:</h4>
+                            <div class="text-block__text text-block__text_fz20-v2">
+                                <p>Вы можете найти название модели у нас на сайте <a class="link link_inline link_red2" href="https://www.electrolux.ru">www.electrolux.ru.</a> Продуктовый код вы можете найти в карточке модели, у нас на сайте в подробных характеристиках товара.</p>
+                            </div>
+                        </div>
+                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m1" src="assets/images/fxp/method1.jpg" alt="" role="presentation" /></figure>
+                    </section>
+                    <section class="pnc__column pnc__column_right">
+                        <div class="text-block pnc__content">
+                            <h4 class="text-block__title text-block__title_fz20">Второй способ:</h4>
+                            <div class="text-block__text text-block__text_fz20-v2">
+                                <p>Вы можете посмотреть информацию о модели и коде, которая у вас есть на самом продукте.</p>
+                            </div>
+                        </div>
+                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m2" src="assets/images/fxp/method2.jpg" alt="" role="presentation" />
+                            <div class="pnc__caption">
+                                <ol class="pnc__list">
+                                    <li>Номер модели</li>
+                                    <li>Код продукта (PNC)</li>
+                                    <li>Код ML</li>
+                                    <li>Серийный номер</li>
+                                </ol>
+                            </div>
+                        </figure>
+                    </section>
+                </article>
+            </SECTION>
         </div>
     </div>
     <script src="assets/scripts/libs/parsley.min.js"></script>

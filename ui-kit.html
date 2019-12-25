@@ -2489,7 +2489,7 @@
                                     </td>
                                 </tr>
                             </thead>
-                            <tbody class="requests-table__body">
+                            <tbody class="requests-table__body js-ajax-container">
                                 <tr class="requests-table__request is-new">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
                                     <td class="requests-table__cell requests-table__cell_date">
@@ -2728,7 +2728,7 @@
                             <div class="requests__top">
                                 <div class="container">
                                     <h1 class="requests__title">Список заявок</h1>
-                                    <div class="requests__controls">
+                                    <form class="requests__controls js-ajax-request-form" name="filter-and-sorting-form" action="" method="GET">
                                         <div class="requests__controls-top">
                                             <div class="grid">
                                                 <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12"><a class="button button_flex requests__button js-popup" href="#popup-new-request"><span class="button__text"><svg class="button__plus"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg><span>Создать заявку</span></span></a></div>
@@ -2768,7 +2768,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="requests__bottom">
@@ -2809,7 +2809,7 @@
                                                     </td>
                                                 </tr>
                                             </thead>
-                                            <tbody class="requests-table__body">
+                                            <tbody class="requests-table__body js-ajax-container">
                                                 <tr class="requests-table__request is-new">
                                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
                                                     <td class="requests-table__cell requests-table__cell_date">
@@ -3027,11 +3027,13 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
-                                    <div class="pagination requests__pagination">
-                                        <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
-                                        <div class="pagination__progress">2/8</div>
-                                        <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                        <div class="requests__pagination js-ajax-pagination-container">
+                                            <div class="pagination">
+                                                <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                                <div class="pagination__progress">2/8</div>
+                                                <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -3995,6 +3997,24 @@
                                 </figure>
                             </section>
                         </article>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Блок loader</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Блок: blocks/loader/loader</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание Блока</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="loader"></div>
                     </div>
                 </div>
             </section>

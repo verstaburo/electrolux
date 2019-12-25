@@ -28,7 +28,7 @@
             <div class="requests__top">
                 <div class="container">
                     <h1 class="requests__title">Архив заявок</h1>
-                    <div class="requests__controls">
+                    <form class="requests__controls js-ajax-request-form" name="filter-and-sorting-form" action="" method="GET">
                         <div class="requests__controls-top">
                             <div class="grid">
                                 <div class="grid__col grid__col_xl_8 grid__col_md_6 grid__col_sm_12"><a class="button requests__button" href="requests.html">← Вернуться назад</a></div>
@@ -49,7 +49,7 @@
                                             </div>
                                             <div class="request-select__dropdown">
                                                 <div class="request-select__content">
-                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="new" data-request-filter="new" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#f4f5f4;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Новые заявки</span></label></div>
+                                                    <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="all" data-request-filter="all" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#f4f5f4;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Все</span></label></div>
                                                     <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="refund" data-request-filter="refund" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#ffe6e3;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Возврат</span></label></div>
                                                     <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="finished" data-request-filter="finished" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#e9fdd8;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Оплачено, выполнено</span></label></div>
                                                     <div class="request-select__item"><label class="request-checkbox" data-request-select-item="data-request-select-item"><input class="request-checkbox__input" type="checkbox" name="request" value="paid" data-request-filter="paid" /><span class="request-checkbox__box"><img class="request-checkbox__icon" src="assets/images/check.svg" alt="" role="presentation" /></span><span class="request-checkbox__marker" style="background-color:#faf4d4;"></span><span class="request-checkbox__text" data-request-select-value="data-request-select-value">Оплачено, не выполнено</span></label></div>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="requests__bottom">
@@ -109,7 +109,7 @@
                                     </td>
                                 </tr>
                             </thead>
-                            <tbody class="requests-table__body">
+                            <tbody class="requests-table__body js-ajax-container">
                                 <tr class="requests-table__request is-new">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link js-popup" href="#popup-request"><span class="link__text">12-0001</span></a></td>
                                     <td class="requests-table__cell requests-table__cell_date">
@@ -329,11 +329,13 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="pagination requests__pagination">
-                        <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
-                        <div class="pagination__progress">2/8</div>
-                        <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                        <div class="requests__pagination js-ajax-pagination-container">
+                            <div class="pagination">
+                                <div class="pagination__button pagination__button_prev is-disabled"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                                <div class="pagination__progress">2/8</div>
+                                <div class="pagination__button pagination__button_next"><svg class="pagination__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -117,7 +117,7 @@ $(document).ready(function () {
         processData: false,
         contentType: false,
         dataType: 'json',
-        complete: function (data) {
+        success: function (data) {
           var formTypesArray = window.globalFunctions.getFormTypes().split(',');
           if (formTypesArray.indexOf('oven') === -1) {
             window.globalFunctions.openPopup($('#popup-reg-pay-success')[0]);
@@ -147,9 +147,31 @@ $(document).ready(function () {
         processData: false,
         contentType: false,
         dataType: 'json',
-        complete: function (data) {
+        success: function (data) {
           window.globalFunctions.openPopup($('#popup-feedback-success')[0]);
+          resetForm(self);
         }
+      });
+    });
+  });
+
+  // отправка заявки на ремонт
+  $('[data-requestform], [data-requestform-new], [data-requestform-edit]').on('submit', function (evt) {
+    evt.preventDefault();
+    evt.stopPropagation();
+    var self = evt.currentTarget;
+    var url = $(self).attr('action');
+    $(self).parsley().whenValidate().done(function () {
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: new FormData(self),
+        processData: false,
+        contentType: false,
+        dataType: 'json',
+        success: function () {
+          resetForm(self);
+        },
       });
     });
   });

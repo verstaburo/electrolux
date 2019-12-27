@@ -134,7 +134,7 @@ $(document).ready(function () {
   });
 
   // отправка формы в поддержку
-  $('[data-feedback]').on('submit', function (evt) {
+  $(document).on('submit', '[data-feedback]', function (evt) {
     evt.preventDefault();
     evt.stopPropagation();
     var self = evt.currentTarget;
@@ -156,7 +156,7 @@ $(document).ready(function () {
   });
 
   // отправка заявки на ремонт
-  $('[data-requestform], [data-requestform-new], [data-requestform-edit]').on('submit', function (evt) {
+  $(document).on('submit', '[data-requestform], [data-requestform-new], [data-requestform-edit]', function (evt) {
     evt.preventDefault();
     evt.stopPropagation();
     var self = evt.currentTarget;
@@ -171,6 +171,9 @@ $(document).ready(function () {
         dataType: 'json',
         success: function () {
           resetForm(self);
+        },
+        error: function () {
+          console.error('not send form');
         },
       });
     });

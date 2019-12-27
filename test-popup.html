@@ -1,0 +1,77 @@
+<div class="popup popup-edit-request">
+    <div class="popup-edit-request__wrapper">
+        <h3 class="popup__title popup__title_fz40">Редактировать заявку</h3>
+        <div class="popup-edit-request__content">
+            <section class="request-form request-form_popup">
+                <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform-edit="data-requestform-edit" autocomplete="off">
+                    <fieldset class="form__section">
+                        <div class="form__title">Личные данные пользователя</div>
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">ФИО*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" autocomplete="off" value="Петр Демьянович" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Введите адрес e-mail" data-type="email" autocomplete="off" value="IvanovIvan@meil.ru" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" autocomplete="off" value="+7 (903) 209-47-43" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                    <p class="inputbox__label">Физический адрес*</p><span class="inputbox__wrapper"><input class="input" type="text" name="address" required="required" placeholder="Куда поедет специалист" autocomplete="off" value="г. Москва, ул. Садовая, д. 23, кв. 51" /><span class="error-message"></span></span>
+                                </label></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <div class="form__title">Продукт</div>
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                    <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
+                                            <option value="" placeholder="placeholder">Выберите из списка</option>
+                                            <option value="EWS1477FDW" selected="selected">EWS1477FDW</option>
+                                            <option value="1">Модель 1</option>
+                                            <option value="2">Модель 2</option>
+                                            <option value="3">Модель 3</option>
+                                            <option value="4">Модель 4</option>
+                                            <option value="5">Модель 5</option>
+                                            <option value="6">Модель 6</option>
+                                            <option value="7">Модель 7</option>
+                                            <option value="8">Модель 8</option>
+                                            <option value="9">Модель 9</option>
+                                            <option value="10">Модель 10</option>
+                                            <option value="11">Модель 11</option>
+                                        </select><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                    <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off">Не работает переключатель варочной поверхности</textarea><span class="error-message"></span></span>
+                                </label></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <div class="form__title">Сервис</div>
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Оплата</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Оплата" autocomplete="off" value="Транзакция №14256374565" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Оказание услуги</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="finished" required="required">
+                                            <option value="0" selected="selected">Не выполнено</option>
+                                            <option value="1">Выполнено</option>
+                                        </select><span class="error-message"></span></span>
+                                </label></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__section form__section_mgt22">
+                        <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                            <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                            <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                        </span></label><span class="error-message"></span></span></label></div>
+                        <div class="form__buttons"><button class="button form__button" type="submit">Сохранить</button></div>
+                        <div class="form__note form__note_mt20">
+                            <p>*Поля, обязательные для заполнения.</p>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>

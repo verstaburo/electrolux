@@ -1,0 +1,39 @@
+<div class="popup popup_fxp popup-change-payment" id="popup-change-payment">
+    <h3 class="popup__title">Отменить оплату</h3>
+    <div class="popup__content">
+        <form class="refund-form js-ajax-form-fxp" action="/backend-form-admin-cancel-payment.json" method="post" data-refund-form="data-refund-form" data-validated-form="data-validated-form">
+            <fieldset class="refund-form__section"><label class="inputbox">
+                    <p class="inputbox__label">Выберите действие</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="changeData" data-change-paid="data-change-paid">
+                            <option value="0" selected="selected" data-custom-properties="change">Изменить данные оплаты</option>
+                            <option value="1" data-custom-properties="refund">Возврат оплаты</option>
+                        </select><span class="error-message"></span></span>
+                </label></fieldset>
+            <fieldset class="refund-form__section refund-form__section_small-mg" data-form-field="change">
+                <div class="refund-form__text">Если вы ввели неправильные данные об оплате, вы можете скорректировать их с помощью этого действия.</div>
+                <div class="refund-form__buttons">
+                    <div class="grid">
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-action" href="/backend-form-admin-confirm-payment-request.json" data-form-field="change"><span>Изменить</span></a></div>
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold refund-form__link" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="refund-form__section" data-form-field="refund">
+                <div class="grid">
+                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                            <p class="inputbox__label">Данные возврата</p><span class="inputbox__wrapper"><input class="input" type="text" name="paidData" required="required" placeholder="Номер транзакции" autocomplete="off" /><span class="error-message"></span></span>
+                        </label></div>
+                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                            <p class="inputbox__label">Дата возврата</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="dateRefund" required="required" placeholder="дд.мм.гггг" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
+                        </label></div>
+                </div>
+                <div class="refund-form__text">Статус «Возврат» выставляется после того, как покупателю отправлены денежные средства на счёт.</div>
+                <div class="refund-form__buttons">
+                    <div class="grid">
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button refund-form__button" type="submit">Подтвердить</button></div>
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold refund-form__link" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

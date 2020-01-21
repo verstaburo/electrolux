@@ -8,15 +8,21 @@
     <title>undefined | Ремонт по фиксированной стоимости</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link href="favicon.ico" rel="shortcut icon">
-    <link href="assets/styles/app.min.css" rel="stylesheet">
-    <script src="assets/scripts/libs/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/assets/styles/app.min.css" rel="stylesheet">
+    <script src="/assets/scripts/libs/jquery.min.js"></script>
 </head>
 
 <body>
     <header class="header header_fxp">
         <div class="header__wrapper">
-            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div><a class="header__close js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
+            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_electrolux" src="/assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_aeg" src="/assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_zanussi" src="/assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div><a class="header__close js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
         </div>
     </header>
     <div class="side-feedback" data-panel="data-panel"><button class="side-feedback__head is-hidden-xl js-show-panel">
@@ -34,7 +40,7 @@
         <div class="container container_fxp">
             <div class="feedback-form__head"><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__close-text">Закрыть</span><span class="feedback-form__close-icon"><svg><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></span></a></div>
             <div class="feedback-form__content">
-                <form class="form feedback-form__form" action="/" method="post" data-validated-form="data-validated-form" data-feedback="data-feedback">
+                <form class="form feedback-form__form js-ajax-form-fxp" action="/backend-form-feedback-response.json" method="post" data-validated-form="data-validated-form">
                     <div class="grid grid_gap20to30">
                         <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
                         <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_nbdr js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
@@ -68,31 +74,31 @@
                     <ul class="features">
                         <li class="features__item">
                             <div class="feature features__feature">
-                                <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/artisan.png" alt="" role="presentation" /></div>
+                                <div class="feature__picture"><img class="feature__image" src="/assets/images/fxp/artisan.png" alt="" role="presentation" /></div>
                                 <div class="feature__text">Выезд мастера на дом</div>
                             </div>
                         </li>
                         <li class="features__item">
                             <div class="feature features__feature">
-                                <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/diagnostic.png" alt="" role="presentation" /></div>
+                                <div class="feature__picture"><img class="feature__image" src="/assets/images/fxp/diagnostic.png" alt="" role="presentation" /></div>
                                 <div class="feature__text">Диагностика у вас дома</div>
                             </div>
                         </li>
                         <li class="features__item">
                             <div class="feature features__feature">
-                                <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/spares.png" alt="" role="presentation" /></div>
+                                <div class="feature__picture"><img class="feature__image" src="/assets/images/fxp/spares.png" alt="" role="presentation" /></div>
                                 <div class="feature__text">Оригинальные запчасти для ремонта</div>
                             </div>
                         </li>
                         <li class="features__item">
                             <div class="feature features__feature">
-                                <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/malfunction.png" alt="" role="presentation" /></div>
+                                <div class="feature__picture"><img class="feature__image" src="/assets/images/fxp/malfunction.png" alt="" role="presentation" /></div>
                                 <div class="feature__text"> Устранение неисправностей</div>
                             </div>
                         </li>
                         <li class="features__item">
                             <div class="feature features__feature">
-                                <div class="feature__picture"><img class="feature__image" src="assets/images/fxp/warranty.png" alt="" role="presentation" /></div>
+                                <div class="feature__picture"><img class="feature__image" src="/assets/images/fxp/warranty.png" alt="" role="presentation" /></div>
                                 <div class="feature__text">Гарантия 3 месяца</div>
                             </div>
                         </li>
@@ -107,14 +113,14 @@
                         <h3 class="text-block__title">Почему это удобно и выгодно?</h3>
                         <div class="text-block__text text-block__text_dark">
                             <p>Вам не нужно мучительно выбирать сервисный центр и сравнивать цены на ремонт. <br> Вы заранее знаете стоимость услуги, в которую уже включены оригинальные запчасти. <br> Диагностику и ремонт проводят аккредитованные специалисты Electrolux — быстро и эффективно.</p>
-                            <p>Вы можете ознакомиться <a href="assets/documents/full-conditionsFPR.docx" target="_blank" class="link link_inline link_blue link_bordered">с полными условиями</a> предоставления услуги.</p>
+                            <p>Вы можете ознакомиться <a href="/assets/documents/full-conditionsFPR.docx" target="_blank" class="link link_inline link_blue link_bordered">с полными условиями</a> предоставления услуги.</p>
                         </div>
                         <div class="text-block__buttons"><a class="button text-block__button js-goto-request" href="#request">Заказать услугу</a></div>
                     </div>
                 </div>
             </div>
             <div class="section__column">
-                <div class="section__media"><img class="section__image" src="assets/images/fxp/why.jpg" alt="" role="presentation" /></div>
+                <div class="section__media"><img class="section__image" src="/assets/images/fxp/why.jpg" alt="" role="presentation" /></div>
             </div>
         </section>
         <section class="section section_fxp">
@@ -129,14 +135,14 @@
                 <div class="tech-slider js-tech-slider">
                     <div class="tech-slider__container" data-slider-container="data-slider-container">
                         <div class="tech-slider__wrapper swiper-wrapper">
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/ovens/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-oven.png" alt="" role="presentation" /></span><span class="tech-card__title">Духовые шкафы</span></a></div>
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/hobs/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-hob.png" alt="" role="presentation" /></span><span class="tech-card__title">Варочные панели</span></a></div>
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/dishwashing/dishwashers/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-dishwasher.png" alt="" role="presentation" /></span><span class="tech-card__title">Посудомоечные машины</span></a></div>
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/cooker-hoods/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-hood.png" alt="" role="presentation" /></span><span class="tech-card__title">Вытяжки</span></a></div>
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/laundry/laundry/washing-machines/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-washingm.png" alt="" role="presentation" /></span><span class="tech-card__title">Стиральные машины</span></a></div>
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/laundry/laundry/dryers/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-dryer.png" alt="" role="presentation" /></span><span class="tech-card__title">Сушильные машины</span></a></div>
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooling/refrigerators/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-refrigerator.png" alt="" role="presentation" /></span><span class="tech-card__title">Холодильники</span></a></div>
-                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooling/freezers/"><span class="tech-card__picture"><img class="tech-card__image" src="assets/images/fxp/tech-freezer.png" alt="" role="presentation" /></span><span class="tech-card__title">Морозильники</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/ovens/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-oven.png" alt="" role="presentation" /></span><span class="tech-card__title">Духовые шкафы</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/hobs/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-hob.png" alt="" role="presentation" /></span><span class="tech-card__title">Варочные панели</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/dishwashing/dishwashers/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-dishwasher.png" alt="" role="presentation" /></span><span class="tech-card__title">Посудомоечные машины</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooking/cooker-hoods/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-hood.png" alt="" role="presentation" /></span><span class="tech-card__title">Вытяжки</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/laundry/laundry/washing-machines/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-washingm.png" alt="" role="presentation" /></span><span class="tech-card__title">Стиральные машины</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/laundry/laundry/dryers/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-dryer.png" alt="" role="presentation" /></span><span class="tech-card__title">Сушильные машины</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooling/refrigerators/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-refrigerator.png" alt="" role="presentation" /></span><span class="tech-card__title">Холодильники</span></a></div>
+                            <div class="tech-slider__slide swiper-slide"><a class="tech-card" href="https://www.electrolux.ru/kitchen/cooling/freezers/" target="_blank"><span class="tech-card__picture"><img class="tech-card__image" src="/assets/images/fxp/tech-freezer.png" alt="" role="presentation" /></span><span class="tech-card__title">Морозильники</span></a></div>
                         </div>
                     </div>
                     <div class="tech-slider__controls">
@@ -155,7 +161,7 @@
                             <ul class="list list_horizontal list_fxp text-block__list">
                                 <li>приборов старше 7 лет;</li>
                                 <li>мелкобытовой техники;</li>
-                                <li>холодильников Vestel, <a href="assets/documents/exeptionsFPR.pdf" target="_blank" class="link link_inline link_blue link_bordered">список моделей</a></li>
+                                <li><a href="/assets/documents/exeptionsFPR.pdf" target="_blank" class="link link_inline link_blue link_bordered">некоторые модели бытовой техники</a></li>
                             </ul>
                         </div>
                     </div>
@@ -164,7 +170,7 @@
         </section>
         <section class="section section_fxp section_chess">
             <div class="section__column">
-                <div class="section__media"><img class="section__image" src="assets/images/fxp/how.jpg" alt="" role="presentation" /></div>
+                <div class="section__media"><img class="section__image" src="/assets/images/fxp/how.jpg" alt="" role="presentation" /></div>
             </div>
             <div class="section__column">
                 <div class="container container_fxp container_half container_start">
@@ -183,14 +189,14 @@
             <div class="cities__top">
                 <div class="container container_fxp">
                     <div class="cities__grid">
-                        <div class="cities__picture"><img class="cities__image" src="assets/images/fxp/town.png" alt="" role="presentation" /></div>
+                        <div class="cities__picture"><img class="cities__image" src="/assets/images/fxp/town.png" alt="" role="presentation" /></div>
                         <div class="cities__title">В каких городах мы выполняем ремонт?</div>
                         <div class="cities__content">
                             <div class="cities__text">Услуга предоставляется в городах:</div>
-                            <ul class="list list_horizontal list_big cities__samples">
-                                <li><a href="#">Санкт-Петербург</a></li>
-                                <li><a href="#">Саратов</a></li>
-                                <li><a href="#">Екатеринбург</a></li>
+                            <ul class="list list_big cities__samples">
+                                <li><a href="#"><b>Екатеринбург</b> | Норд-сервис</a></li>
+                                <li><a href="#"><b>Самара</b> | Стандарт-экспресс</a></li>
+                                <li><a href="#"><b>Санкт-Петербург</b> | Энергоквартал / ТВС сервис</a></li>
                             </ul>
                         </div>
                     </div>
@@ -203,9 +209,9 @@
             <div class="container container_fxp">
                 <div class="section__panel">
                     <div class="text-block text-block_fxp">
-                        <h3 class="text-block__title text-block__title_darker">Фирменные аксессуары</h3>
-                        <div class="text-block__text text-block__text_dark text-block__text_mt-sm9">Фирменные аксессуары для техники Electrolux, AEG и Zanussi не только помогут вам максимально эффективно использовать все её возможности, но и продлят срок её службы.</div>
-                        <div class="text-block__buttons"><a class="button text-block__button" href="https://electrolux.technopark.ru/collection/sredstva-po-uhodu">Перейти к товарам</a></div>
+                        <h3 class="text-block__title text-block__title_darker">Оригинальные аксессуары</h3>
+                        <div class="text-block__text text-block__text_dark text-block__text_mt-sm9">Оригинальные аксессуары для техники Electrolux, AEG и Zanussi не только помогут вам максимально эффективно использовать все её возможности, но и продлят срок её службы.</div>
+                        <div class="text-block__buttons"><a class="button text-block__button" href="https://electrolux.technopark.ru/collection/sredstva-po-uhodu" target="_blank">Перейти к товарам</a></div>
                     </div>
                 </div>
             </div>
@@ -225,7 +231,7 @@
                     <div class="request-form__buttons"><button class="request-form__collapse js-hide-request">
                             <div class="request-form__collapse-text">Скрыть форму</div>
                         </button></div>
-                    <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform="data-requestform" autocomplete="off">
+                    <form class="form js-ajax-form-fxp js-ajax-form-fxp_fxp request-form__form" action="/backend-form-feedback-response.json" method="post" data-validated-form="data-validated-form" data-requestform="data-requestform" autocomplete="off">
                         <fieldset class="form__section">
                             <div class="form__title">Личные данные</div>
                             <div class="grid">
@@ -244,26 +250,22 @@
                             </div>
                         </fieldset>
                         <fieldset class="form__section">
-                            <div class="form__title">Ваш продукт</div>
+                            <div class="form__title">Ваш продукт</div><input class="input" type="hidden" name="productId" data-hidden-productId="data-hidden-productId" />
                             <div class="grid">
-                                <div class="grid__col grid__col_xl_12"><label class="inputbox">
-                                        <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
-                                                <option value="" placeholder="placeholder">Выберите из списка</option>
-                                                <option value="1">Модель 1</option>
-                                                <option value="2">Модель 2</option>
-                                                <option value="3">Модель 3</option>
-                                                <option value="4">Модель 4</option>
-                                                <option value="5">Модель 5</option>
-                                                <option value="6">Модель 6</option>
-                                                <option value="7">Модель 7</option>
-                                                <option value="8">Модель 8</option>
-                                                <option value="9">Модель 9</option>
-                                                <option value="10">Модель 10</option>
-                                                <option value="11">Модель 11</option>
-                                            </select><span class="error-message"></span></span>
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                        <p class="inputbox__label">Название модели*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="model" required="required" placeholder="Например, END5299" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-model.html" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                        <p class="inputbox__label">PNC код товара*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="pnc" required="required" placeholder="Например, 920404119" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-pnc.html" /><span class="error-message"></span></span>
+                                    </label></div>
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                        <p class="inputbox__label">Серийный номер модели</p><span class="inputbox__wrapper"><input class="input" type="text" name="serialNumber" placeholder="Например, 2435645" autocomplete="off" /><span class="error-message"></span></span>
                                     </label>
-                                    <div class="form__hint"><a class="link link_underline link_info js-popup" href="#popup-pnc"><span class="link__text">Как найти номер модели / PNC?</span></a></div>
+                                    <div class="form__hint"><a class="link link_underline link_info js-popup" href="#popup-pnc"><span class="link__text">Как найти информацию о модели?</span></a></div>
                                 </div>
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                        <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
+                                    </label></div>
                                 <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                         <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off"></textarea><span class="error-message"></span></span>
                                     </label></div>
@@ -271,8 +273,8 @@
                         </fieldset>
                         <fieldset class="form__section form__section_mgt22">
                             <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
-                                                <p>Я принимаю условия оферты и ознакомился c&nbsp;<a class="link link_underline" href="assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
-                                                <p>Я соглашаюсь&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">с условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                                <p>Я принимаю условия оферты и ознакомился c&nbsp;<a class="link link_underline" href="/assets/documents/offerFPR.docx" target="_blank"><span class="link__text">правилами проведения.</span></a></p>
+                                                <p>Я соглашаюсь&nbsp;<a class="link link_underline" href="/assets/documents/offerFPR.docx" target="_blank"><span class="link__text">с условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
                                             </span></label><span class="error-message"></span></span></label></div>
                             <div class="form__payment">
                                 <div class="form__price">
@@ -328,20 +330,13 @@
                         </div>
                         <div class="accordion faq__item js-accordion">
                             <div class="accordion__button js-accordion-button js-accordion-button">
-                                <div class="accordion__text"> На какие виды бытовой техники не распространяется услуга?</div>
+                                <div class="accordion__text"> Бланк заявления на возврат денежных средств.</div>
                             </div>
                             <div class="accordion__content js-accordion-content">
                                 <div class="accordion__wrapper">
                                     <div class="text-block">
                                         <div class="text-block__text">
-                                            <p>Ремонт по фиксированной цене – единоразовая услуга, включает ремонт и необходимые запасные части за исключением:</p>
-                                            <ul class="list list_fxp text-block__list">
-                                                <li>приборы старше 7 лет;</li>
-                                                <li>мелкобытовая техника;</li>
-                                                <li>
-                                                <li><a class="link link_inline link_bordered" href="assets/documents/exeptionsFPR.pdf" target="_blank"><span class="link__text">холодильники Vestel.</span></a></li>
-                                                </li>
-                                            </ul>
+                                            <p>Скачать бланк заявления на возврат денежных средств можно по <a class="link link_inline link_blue link_bordered" href="/assets/documents/refund-FPR.docx" target="_blank">ссылке</a>.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -355,21 +350,18 @@
     <footer class="footer footer_fxp">
         <div class="footer__wrapper">
             <div class="footer__side footer__side_front">
-                <div class="logo logo_fxp logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div>
+                <div class="logo logo_fxp logo_footer footer__logo"><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_electrolux" src="/assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_aeg" src="/assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_zanussi" src="/assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div>
             </div>
             <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top totop totop_v2 footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
         </div>
     </footer>
+    <div class="footer-sec">
+        <div class="wrap-sec"><a class="doc-link footer-link" href="/right.html" target="_blank"> Правила пользования сайтом electrolux-fpr.ru</a></div>
+    </div>
     <div class="popups">
         <div class="popup popup-phones" id="popup-phones">
             <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
             <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
-        </div>
-        <div class="popup popup-feedback-success" id="popup-feedback-success">
-            <div class="popup__title">Спасибо за Ваш запрос!</div>
-            <div class="popup__content">
-                <div class="popup__text">Мы свяжемся с вами как можно скорее.</div>
-            </div>
         </div>
         <div class="popup popup_blocks popup-pnc" id="popup-pnc">
             <SECTION class="popup__head">
@@ -384,7 +376,7 @@
                                 <p>Вы можете найти название модели у нас на сайте <a class="link link_inline link_red2" href="https://www.electrolux.ru">www.electrolux.ru.</a> Продуктовый код вы можете найти в карточке модели, у нас на сайте в подробных характеристиках товара.</p>
                             </div>
                         </div>
-                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m1" src="assets/images/fxp/method1.jpg" alt="" role="presentation" /></figure>
+                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m1" src="/assets/images/fxp/method1.jpg" alt="" role="presentation" /></figure>
                     </section>
                     <section class="pnc__column pnc__column_right">
                         <div class="text-block pnc__content">
@@ -393,7 +385,7 @@
                                 <p>Вы можете посмотреть информацию о модели и коде, которая у вас есть на самом продукте.</p>
                             </div>
                         </div>
-                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m2" src="assets/images/fxp/method2.jpg" alt="" role="presentation" />
+                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m2" src="/assets/images/fxp/method2.jpg" alt="" role="presentation" />
                             <div class="pnc__caption">
                                 <ol class="pnc__list">
                                     <li>Номер модели</li>
@@ -408,9 +400,9 @@
             </SECTION>
         </div>
     </div>
-    <script src="assets/scripts/libs/parsley.min.js"></script>
-    <script src="assets/scripts/app.min.js"></script>
-    <script src="assets/scripts/main.js"></script>
+    <script src="/assets/scripts/libs/parsley.min.js"></script>
+    <script src="/assets/scripts/app.min.js"></script>
+    <script src="/assets/scripts/main.js"></script>
 </body>
 
 </html>

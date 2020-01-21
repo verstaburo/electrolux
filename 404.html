@@ -8,15 +8,21 @@
     <title>undefined | 404</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link href="favicon.ico" rel="shortcut icon">
-    <link href="assets/styles/app.min.css" rel="stylesheet">
-    <script src="assets/scripts/libs/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/assets/styles/app.min.css" rel="stylesheet">
+    <script src="/assets/scripts/libs/jquery.min.js"></script>
 </head>
 
 <body>
     <header class="header header_fxp">
         <div class="header__wrapper">
-            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div><a class="header__close js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
+            <div class="logo logo_fxp header__logo"><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_electrolux" src="/assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_aeg" src="/assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_zanussi" src="/assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div><a class="header__close js-close-feedback" href="#"><svg class="header__cross"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></a><a class="header-phone header__phone is-hidden-sm" href="tel:88004444448"><svg class="header-phone__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg><span class="header-phone__text">8 (800) 444-44-48</span></a>
         </div>
     </header>
     <div class="side-feedback" data-panel="data-panel"><button class="side-feedback__head is-hidden-xl js-show-panel">
@@ -34,7 +40,7 @@
         <div class="container container_fxp">
             <div class="feedback-form__head"><a class="feedback-form__close js-close-feedback" href="#"><span class="feedback-form__close-text">Закрыть</span><span class="feedback-form__close-icon"><svg><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg></span></a></div>
             <div class="feedback-form__content">
-                <form class="form feedback-form__form" action="/" method="post" data-validated-form="data-validated-form" data-feedback="data-feedback">
+                <form class="form feedback-form__form js-ajax-form-fxp" action="/backend-form-feedback-response.json" method="post" data-validated-form="data-validated-form">
                     <div class="grid grid_gap20to30">
                         <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="text" name="name" placeholder="Ваше ФИО*" required="required" /><span class="error-message"></span></span></label><label class="inputbox"><span class="inputbox__wrapper"><input class="input input_nbdr" type="email" name="email" placeholder="Адрес электронной почты*" required="required" /><span class="error-message"></span></span></label></div>
                         <div class="grid__col grid__col_xl_4 grid__col_sm_12"><label class="inputbox"><span class="inputbox__wrapper"><textarea class="textarea textarea_nbdr js-scrollbar" name="message" placeholder="Ваше сообщение*" required="required"></textarea><span class="error-message"></span></span></label></div>
@@ -61,21 +67,18 @@
     <footer class="footer footer_fxp">
         <div class="footer__wrapper">
             <div class="footer__side footer__side_front">
-                <div class="logo logo_fxp logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.zanussi.ru/"><img class="logo__image logo__image_zanussi" src="assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div>
+                <div class="logo logo_fxp logo_footer footer__logo"><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_electrolux" src="/assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_aeg" src="/assets/images/logo-aeg.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://electrolux-fpr.ru/" target="_blank"><img class="logo__image logo__image_zanussi" src="/assets/images/fxp/logo-zanussi.jpg" alt="" role="presentation" /></a></div>
             </div>
             <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top totop totop_v2 footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
         </div>
     </footer>
+    <div class="footer-sec">
+        <div class="wrap-sec"><a class="doc-link footer-link" href="/right.html" target="_blank"> Правила пользования сайтом electrolux-fpr.ru</a></div>
+    </div>
     <div class="popups">
         <div class="popup popup-phones" id="popup-phones">
             <div class="popup-phones__head"><svg class="popup-phones__icon"><use xlink:href="assets/images/icon.svg#icon_phone-in-circle"></use></svg></div>
             <div class="popup-phones__phones"><a class="link popup-phones__link" href="tel:88004444448"><span class="link__text">8 (800) 444-44-48</span></a></div>
-        </div>
-        <div class="popup popup-feedback-success" id="popup-feedback-success">
-            <div class="popup__title">Спасибо за Ваш запрос!</div>
-            <div class="popup__content">
-                <div class="popup__text">Мы свяжемся с вами как можно скорее.</div>
-            </div>
         </div>
         <div class="popup popup_blocks popup-pnc" id="popup-pnc">
             <SECTION class="popup__head">
@@ -90,7 +93,7 @@
                                 <p>Вы можете найти название модели у нас на сайте <a class="link link_inline link_red2" href="https://www.electrolux.ru">www.electrolux.ru.</a> Продуктовый код вы можете найти в карточке модели, у нас на сайте в подробных характеристиках товара.</p>
                             </div>
                         </div>
-                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m1" src="assets/images/fxp/method1.jpg" alt="" role="presentation" /></figure>
+                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m1" src="/assets/images/fxp/method1.jpg" alt="" role="presentation" /></figure>
                     </section>
                     <section class="pnc__column pnc__column_right">
                         <div class="text-block pnc__content">
@@ -99,7 +102,7 @@
                                 <p>Вы можете посмотреть информацию о модели и коде, которая у вас есть на самом продукте.</p>
                             </div>
                         </div>
-                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m2" src="assets/images/fxp/method2.jpg" alt="" role="presentation" />
+                        <figure class="pnc__picture"><img class="pnc__image pnc__image_m2" src="/assets/images/fxp/method2.jpg" alt="" role="presentation" />
                             <div class="pnc__caption">
                                 <ol class="pnc__list">
                                     <li>Номер модели</li>
@@ -114,9 +117,9 @@
             </SECTION>
         </div>
     </div>
-    <script src="assets/scripts/libs/parsley.min.js"></script>
-    <script src="assets/scripts/app.min.js"></script>
-    <script src="assets/scripts/main.js"></script>
+    <script src="/assets/scripts/libs/parsley.min.js"></script>
+    <script src="/assets/scripts/app.min.js"></script>
+    <script src="/assets/scripts/main.js"></script>
 </body>
 
 </html>

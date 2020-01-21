@@ -11,8 +11,215 @@
 
 // Валидация и отправка форм
 $(document).ready(function () {
+  // экшны сервера
+  const ACTION_FORM_CLEAN = "clean";
+  const ACTION_NEXT_POPUP = "next";
+  const ACTION_EXTERNAL_LINK = "external";
+  const ACTION_CLOSE_POPUP = "close";
+  const ACTION_RELOAD_PAGE = "reload";
+  const ACTION_UPDATE_NODES = "update";
+  // события ui
+  const EVENT_FORM_CLEAN = "form.clean";
+  const EVENT_BINDING_REQUIRED = "js.bind";
+  const FANCYBOX_CONTENT_LOADED = "afterLoad.fb";
+  $(document)
+    // обработка ajax-форм
+    .on('submit', 'form.js-ajax-form-fxp', onAjaxFormSubmit)
+    // когда fancybox подгрузит контент - биндим на него динамику
+    .on(FANCYBOX_CONTENT_LOADED, function (event, fancybox, current) {
+      $(current.$content).trigger(EVENT_BINDING_REQUIRED)
+    })
+    // обработка события очистки формы
+    .on(EVENT_FORM_CLEAN, 'form', function (e) {
+      resetForm(e.currentTarget)
+    })
+    .on('click', 'a.js-action', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      asyncGetAction($(e.currentTarget).attr('href'))
+    })
+    .on(EVENT_BINDING_REQUIRED, function (e) {
+      $(e.target)
+        .find('[data-validated-form]')
+        .parsley({
+          trigger: 'submit',
+          errorClass: 'is-error',
+          successClass: 'is-success',
+          excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden], [disabled]',
+          classHandler: function (el) {
+            return $(el.element).closest('.inputbox');
+          },
+          errorsContainer: function (el) {
+            return $(el.element).closest('.inputbox__wrapper').find('.error-message');
+          },
+        })
+    })
+    .trigger(EVENT_BINDING_REQUIRED)
+  ;
 
-  // функция для обнуления формы
+  /**
+   * вызывается когда отправляем ajax форму на fixprice
+   * @param e Event
+   */
+  function onAjaxFormSubmit(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var $form = $(e.currentTarget);
+    $form
+      .parsley()
+      .whenValidate()
+      .done(function () {
+        asyncSendForm($form)
+      });
+  }
+
+  /**
+   * отправляем данные формы на бэк
+   * @param $form jQuery
+   */
+  function asyncSendForm($form) {
+    $.ajax({
+      url: $form.attr('action'),
+      type: "POST",
+      data: $form.serialize(),
+      dataType: 'json',
+      success: function (response) {
+        onSuccess($form, response)
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        onError($form, jqXHR, textStatus, errorThrown)
+      }
+    });
+  }
+
+  /**
+   * обработка ошибки при отправке формы через ajax
+   * @param $form jQuery - отправленая форма
+   * @param jqXHR jqXHR
+   * @param textStatus String
+   * @param errorThrown String
+   */
+  function onError($form, jqXHR, textStatus, errorThrown) {
+    // TODO
+    console.error("FORM SUBMIT ERROR", arguments)
+  }
+
+  /**
+   * разбор ответа сервера после отправки формы. сервер присылает набор действия которые надо сделать в ui
+   * @param json Object - успешный ответ сервера после отправки формы
+   * @param $form jQuery - элемент формы
+   */
+  function onSuccess($form, json) {
+    if (typeof json == 'object' && json.hasOwnProperty('actions')) {
+      json
+        .actions
+        .forEach(function (action) {
+          switch (action) {
+            case ACTION_FORM_CLEAN:
+              $form.trigger(EVENT_FORM_CLEAN);
+              break;
+            case ACTION_NEXT_POPUP:
+              asyncLoadPopup(json.next);
+              break;
+            case ACTION_EXTERNAL_LINK:
+              openExternalLink(json.link);
+              break;
+            case ACTION_CLOSE_POPUP:
+              $.fancybox.close();
+              break;
+            case ACTION_RELOAD_PAGE:
+              /**
+               * перезагрузка страницы и открытие попапа кажется слишком раздражающим
+               * поэтому отрезаем хеш чтобы fancybox не открывал заново попап.
+               */
+              document.location = document.location.href.replace(location.hash , "" );
+              break;
+            case ACTION_UPDATE_NODES:
+              /**
+               * контракт обновляемых DOM элементов
+               * - должен быть data-id для определения элемента
+               * - должен быть data-update-url для обращения за новым куском хтмл взамен старого
+               */
+              $('[data-id=' + json.id + '][data-update-url]')
+                .toArray()
+                .map((element) => $(element))
+                .forEach(asyncUpdateElement);
+              break;
+          }
+        })
+    }
+  }
+
+  /**
+   * загрузка контента по урл и открытие его в попапе.
+   * биндинг JS происходит по событию fancybox
+   * @param url
+   */
+  function asyncLoadPopup(url) {
+    isExternalUrl(url)
+      ? $.fancybox.open({src: url, type: 'iframe'})
+      : $.get(url, function (html) {$.fancybox.open({src: html, type: 'html'});})
+  }
+
+  function isExternalUrl(url) {
+    var host = window.location.hostname;
+
+    var linkHost = function(url) {
+      if (/^https?:\/\//.test(url)) { // Absolute URL.
+        // The easy way to parse an URL, is to create <a> element.
+        // @see: https://gist.github.com/jlong/2428561
+        var parser = document.createElement('a');
+        parser.href = url;
+
+        return parser.hostname;
+      }
+      else { // Relative URL.
+        return window.location.hostname;
+      }
+    }(url);
+
+    return host !== linkHost;
+  }
+
+  function openExternalLink(link) {
+    var a = document.createElement('a');
+    a.href = link;
+    a.target = '_blank';
+    a.click()
+  }
+
+  /**
+   * обновление куска страницы с сервера
+   * @param $element jQuery - jquery элемент который требуется заменить
+   */
+  function asyncUpdateElement($element) {
+    $.ajax({
+      url: $element.attr('data-update-url'),
+      type: 'GET',
+      success: function (response) {
+        var $response = $(response);
+        $element.replaceWith($response);
+        $response.trigger(EVENT_BINDING_REQUIRED);
+      }
+    })
+  }
+
+  function asyncGetAction(url) {
+    $.get({
+      url: url,
+      success: function (response) {
+        onSuccess(null, response)
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        onError(null, jqXHR, textStatus, errorThrown)
+      }
+    });
+  }
+
+  /**
+   * функция для обнуления формы
+   * @param formEl HTMLElement
+   */
   function resetForm(formEl) {
     const form = formEl
     const selects = $(form).find('select');
@@ -75,19 +282,6 @@ $(document).ready(function () {
 
   Parsley.setLocale('ru');
 
-  $('[data-validated-form]').parsley({
-    trigger: 'submit',
-    errorClass: 'is-error',
-    successClass: 'is-success',
-    excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden], [disabled]',
-    classHandler: function (el) {
-      return $(el.element).closest('.inputbox');
-    },
-    errorsContainer: function (el) {
-      return $(el.element).closest('.inputbox__wrapper').find('.error-message');
-    },
-  });
-
   // проверка промокода
   $(document).on('click', '.js-promocode', function (evt) {
     evt.preventDefault();
@@ -133,8 +327,11 @@ $(document).ready(function () {
     });
   });
 
-  // отправка формы в поддержку
-  $(document).on('submit', '[data-feedback]', function (evt) {
+  /**
+   * отправка формы в поддержку
+   * @deprecated fixprice не использует этот код, т.к. используется более общий метод onAjaxFormSubmit
+   */
+  $('[data-feedback]').on('submit', function (evt) {
     evt.preventDefault();
     evt.stopPropagation();
     var self = evt.currentTarget;
@@ -154,32 +351,7 @@ $(document).ready(function () {
       });
     });
   });
-
-  // отправка заявки на ремонт
-  $(document).on('submit', '[data-requestform], [data-requestform-new], [data-requestform-edit]', function (evt) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    var self = evt.currentTarget;
-    var url = $(self).attr('action');
-    $(self).parsley().whenValidate().done(function () {
-      $.ajax({
-        url: url,
-        type: "POST",
-        data: new FormData(self),
-        processData: false,
-        contentType: false,
-        dataType: 'json',
-        success: function () {
-          resetForm(self);
-        },
-        error: function () {
-          console.error('not send form');
-        },
-      });
-    });
-  });
 });
-
 
 
 // Карты
@@ -283,22 +455,5 @@ if ($('.map').length > 0) {
     placemarkRh.balloon.open();
   });
 }
-
-// для фикспрайс
-$(document).ready(function () {
-
-  // установка статуса "Выполнено" при подтверждении в попапе #popup-confirm-repair
-  $(document).on('click', '.js-confirm-repair', function (evt) {
-    evt.preventDefault();
-    var self = evt.currentTarget;
-    var popup = $(self).closest('.popup')[0];
-    var targetLabel = popup.popupTrigger;
-    var targetCheckbox = $(targetLabel).find('input[type="checkbox"]')[0];
-    targetCheckbox.checked = true;
-    $(targetLabel).closest('tr').removeClass('is-paid').addClass('is-success');
-    $(targetCheckbox).change();
-    window.globalFunctions.closePopup();
-  });
-});
 
 /* eslint-enable */

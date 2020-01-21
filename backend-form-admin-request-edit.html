@@ -1,9 +1,9 @@
-<div class="popup popup-edit-request">
+<div class="popup popup-edit-request" id="popup-edit-request">
     <div class="popup-edit-request__wrapper">
         <h3 class="popup__title popup__title_fz40">Редактировать заявку</h3>
         <div class="popup-edit-request__content">
             <section class="request-form request-form_popup">
-                <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform-edit="data-requestform-edit" autocomplete="off">
+                <form class="form form_fxp request-form__form js-ajax-form-fxp" action="/backend-form-admin-edit-response.json" method="post" data-validated-form="data-validated-form" autocomplete="off">
                     <fieldset class="form__section">
                         <div class="form__title">Личные данные пользователя</div>
                         <div class="grid">
@@ -22,24 +22,19 @@
                         </div>
                     </fieldset>
                     <fieldset class="form__section">
-                        <div class="form__title">Продукт</div>
+                        <div class="form__title">Продукт</div><input class="input" type="hidden" name="productId" data-hidden-productId="data-hidden-productId" />
                         <div class="grid">
-                            <div class="grid__col grid__col_xl_12"><label class="inputbox">
-                                    <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
-                                            <option value="" placeholder="placeholder">Выберите из списка</option>
-                                            <option value="EWS1477FDW" selected="selected">EWS1477FDW</option>
-                                            <option value="1">Модель 1</option>
-                                            <option value="2">Модель 2</option>
-                                            <option value="3">Модель 3</option>
-                                            <option value="4">Модель 4</option>
-                                            <option value="5">Модель 5</option>
-                                            <option value="6">Модель 6</option>
-                                            <option value="7">Модель 7</option>
-                                            <option value="8">Модель 8</option>
-                                            <option value="9">Модель 9</option>
-                                            <option value="10">Модель 10</option>
-                                            <option value="11">Модель 11</option>
-                                        </select><span class="error-message"></span></span>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Название модели*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="model" required="required" placeholder="Например, END5299" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-model.html" value="END5299" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">PNC код товара*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="pnc" required="required" placeholder="Например, 920404119" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-pnc.html" value="920404119" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Серийный номер модели</p><span class="inputbox__wrapper"><input class="input" type="text" name="serialNumber" placeholder="Например, 2435645" autocomplete="off" value="2435645" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" value="08.2019" /><span class="error-message"></span></span>
                                 </label></div>
                             <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                     <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off">Не работает переключатель варочной поверхности</textarea><span class="error-message"></span></span>
@@ -62,7 +57,7 @@
                     </fieldset>
                     <fieldset class="form__section form__section_mgt22">
                         <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
-                                            <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                            <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="/assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
                                             <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
                                         </span></label><span class="error-message"></span></span></label></div>
                         <div class="form__buttons"><button class="button form__button" type="submit">Сохранить</button></div>

@@ -1,0 +1,6 @@
+{
+  "actions":[
+    "clean", "next"
+  ],
+  "next": "/backend-form-feedback-response-popup.html"
+}

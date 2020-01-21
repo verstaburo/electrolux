@@ -1,0 +1,6 @@
+{
+  "actions":[
+    "close","next"
+  ],
+  "next": "/backend-form-admin-confirm-payment.html"
+}

@@ -8,15 +8,21 @@
     <title>undefined | 404</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link href="favicon.ico" rel="shortcut icon">
-    <link href="assets/styles/app.min.css" rel="stylesheet">
-    <script src="assets/scripts/libs/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/assets/styles/app.min.css" rel="stylesheet">
+    <script src="/assets/scripts/libs/jquery.min.js"></script>
 </head>
 
 <body>
     <header class="header header_fxp">
         <div class="header__wrapper">
-            <div class="logo header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
+            <div class="logo header__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="/assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="/assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
             <div class="logout header__logout is-hidden-sm">
                 <div class="logout__name">Администратор</div>
                 <div class="logout__buttons"><a class="button logout__button" href="#">Выйти</a></div>
@@ -38,7 +44,7 @@
     <footer class="footer footer_fxp">
         <div class="footer__wrapper">
             <div class="footer__side footer__side_front">
-                <div class="logo logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
+                <div class="logo logo_footer footer__logo"><a class="logo__item" href="https://www.electrolux.ru"><img class="logo__image logo__image_electrolux" src="/assets/images/logo.svg" alt="" role="presentation" /></a><a class="logo__item" href="https://www.aeg.ru"><img class="logo__image logo__image_aeg" src="/assets/images/logo-aeg.svg" alt="" role="presentation" /></a></div>
             </div>
             <div class="footer__side footer__side_end is-hidden-sm"><button class="totop js-to-top totop totop_v2 footer__totop is-hidden-sm"><svg class="totop__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg></button></div>
         </div>
@@ -47,9 +53,9 @@
         <div class="popup popup-request" id="popup-request">
             <div class="popup-request__wrapper">
                 <div class="popup-request__head">
-                    <h3 class="popup-request__title">12-0001</h3><a class="button popup-request__button js-popup" href="#popup-edit-request">Редактировать</a>
+                    <h3 class="popup-request__title">12-0001</h3><a class="button popup-request__button" href="/backend-form-admin-request-edit.html" data-fancybox="1" data-type="ajax" data-src="/backend-form-admin-request-edit.html">Редактировать</a>
                 </div>
-                <div class="popup-request__content">
+                <div class="popup-request__content" data-id="1" data-update-url="/backend-admin-update-request-view.html">
                     <table class="info-table">
                         <tbody class="info-table__body">
                             <tr class="info-table__row">
@@ -102,7 +108,7 @@
                 <h3 class="popup__title popup__title_fz40">Создание заявки</h3>
                 <div class="popup-new-request__content">
                     <section class="request-form request-form_popup">
-                        <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform-new="data-requestform-new" autocomplete="off">
+                        <form class="form form_fxp request-form__form js-ajax-form-fxp" action="/backend-form-admin-create.json" method="post" data-validated-form="data-validated-form" data-requestform-new="data-requestform-new" autocomplete="off">
                             <fieldset class="form__section">
                                 <div class="form__title">Личные данные пользователя</div>
                                 <div class="grid">
@@ -121,23 +127,19 @@
                                 </div>
                             </fieldset>
                             <fieldset class="form__section">
-                                <div class="form__title">Продукт</div>
+                                <div class="form__title">Продукт</div><input class="input" type="hidden" name="productId" data-hidden-productId="data-hidden-productId" />
                                 <div class="grid">
-                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
-                                            <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
-                                                    <option value="" placeholder="placeholder">Выберите из списка</option>
-                                                    <option value="1">Модель 1</option>
-                                                    <option value="2">Модель 2</option>
-                                                    <option value="3">Модель 3</option>
-                                                    <option value="4">Модель 4</option>
-                                                    <option value="5">Модель 5</option>
-                                                    <option value="6">Модель 6</option>
-                                                    <option value="7">Модель 7</option>
-                                                    <option value="8">Модель 8</option>
-                                                    <option value="9">Модель 9</option>
-                                                    <option value="10">Модель 10</option>
-                                                    <option value="11">Модель 11</option>
-                                                </select><span class="error-message"></span></span>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Название модели*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="model" required="required" placeholder="Например, END5299" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-model.html" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">PNC код товара*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="pnc" required="required" placeholder="Например, 920404119" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-pnc.html" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Серийный номер модели</p><span class="inputbox__wrapper"><input class="input" type="text" name="serialNumber" placeholder="Например, 2435645" autocomplete="off" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
                                         </label></div>
                                     <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                             <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off"></textarea><span class="error-message"></span></span>
@@ -146,7 +148,7 @@
                             </fieldset>
                             <fieldset class="form__section form__section_mgt22">
                                 <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
-                                                    <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                                    <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="/assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
                                                     <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
                                                 </span></label><span class="error-message"></span></span></label></div>
                                 <div class="form__buttons"><button class="button form__button" type="submit">Создать</button></div>
@@ -164,7 +166,7 @@
                 <h3 class="popup__title popup__title_fz40">Редактировать заявку</h3>
                 <div class="popup-edit-request__content">
                     <section class="request-form request-form_popup">
-                        <form class="form form_fxp request-form__form" action="/" method="post" data-validated-form="data-validated-form" data-requestform-edit="data-requestform-edit" autocomplete="off">
+                        <form class="form form_fxp request-form__form js-ajax-form-fxp" action="/backend-form-admin-edit-response.json" method="post" data-validated-form="data-validated-form" autocomplete="off">
                             <fieldset class="form__section">
                                 <div class="form__title">Личные данные пользователя</div>
                                 <div class="grid">
@@ -183,24 +185,19 @@
                                 </div>
                             </fieldset>
                             <fieldset class="form__section">
-                                <div class="form__title">Продукт</div>
+                                <div class="form__title">Продукт</div><input class="input" type="hidden" name="productId" data-hidden-productId="data-hidden-productId" />
                                 <div class="grid">
-                                    <div class="grid__col grid__col_xl_12"><label class="inputbox">
-                                            <p class="inputbox__label">PNC продукта или модель*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="model" required="required">
-                                                    <option value="" placeholder="placeholder">Выберите из списка</option>
-                                                    <option value="EWS1477FDW" selected="selected">EWS1477FDW</option>
-                                                    <option value="1">Модель 1</option>
-                                                    <option value="2">Модель 2</option>
-                                                    <option value="3">Модель 3</option>
-                                                    <option value="4">Модель 4</option>
-                                                    <option value="5">Модель 5</option>
-                                                    <option value="6">Модель 6</option>
-                                                    <option value="7">Модель 7</option>
-                                                    <option value="8">Модель 8</option>
-                                                    <option value="9">Модель 9</option>
-                                                    <option value="10">Модель 10</option>
-                                                    <option value="11">Модель 11</option>
-                                                </select><span class="error-message"></span></span>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Название модели*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="model" required="required" placeholder="Например, END5299" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-model.html" value="END5299" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">PNC код товара*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="pnc" required="required" placeholder="Например, 920404119" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-pnc.html" value="920404119" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Серийный номер модели</p><span class="inputbox__wrapper"><input class="input" type="text" name="serialNumber" placeholder="Например, 2435645" autocomplete="off" value="2435645" /><span class="error-message"></span></span>
+                                        </label></div>
+                                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                            <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" value="08.2019" /><span class="error-message"></span></span>
                                         </label></div>
                                     <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                             <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off">Не работает переключатель варочной поверхности</textarea><span class="error-message"></span></span>
@@ -223,7 +220,7 @@
                             </fieldset>
                             <fieldset class="form__section form__section_mgt22">
                                 <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
-                                                    <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                                    <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="/assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
                                                     <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
                                                 </span></label><span class="error-message"></span></span></label></div>
                                 <div class="form__buttons"><button class="button form__button" type="submit">Сохранить</button></div>
@@ -239,16 +236,18 @@
         <div class="popup popup_fxp popup-confirm-repair" id="popup-confirm-repair">
             <h3 class="popup__title">Подтверждаете выполнение ремонта?</h3>
             <div class="popup__content">
-                <div class="grid">
-                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button popup-confirm-repair__button popup-confirm-repair__button_wide js-confirm-repair" type="button">Подтвердить</button></div>
-                    <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_underline link_bold" data-fancybox-close="data-fancybox-close" href="#"><span class="link__text">Отмена</span></a></div>
-                </div>
+                <form class="form js-ajax-form-fxp" action="/backend-form-admin-status-change.json" method="post">
+                    <div class="grid">
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><button class="button form__button form__button_wide js-confirm-repair" type="submit">Подтвердить</button></div>
+                        <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_underline link_bold" data-fancybox-close="data-fancybox-close" href="#"><span class="link__text">Отмена</span></a></div>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="popup popup_fxp popup-confirm-payment" id="popup-confirm-payment">
             <h3 class="popup__title">Подтвердите оплату заявки</h3>
             <div class="popup__content">
-                <form class="form" action="/" method="post" data-validated-form="data-validated-form">
+                <form class="form js-ajax-form-fxp" action="/backend-form-admin-confirm-payment-response.json" method="post" data-validated-form="data-validated-form">
                     <div class="grid">
                         <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                 <p class="inputbox__label">Номер транзакции</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Введите номер" autocomplete="off" /><span class="error-message"></span></span>
@@ -262,7 +261,7 @@
         <div class="popup popup_fxp popup-change-payment" id="popup-change-payment">
             <h3 class="popup__title">Отменить оплату</h3>
             <div class="popup__content">
-                <form class="refund-form" action="/" method="post" data-refund-form="data-refund-form" data-validated-form="data-validated-form">
+                <form class="refund-form js-ajax-form-fxp" action="/backend-form-admin-cancel-payment.json" method="post" data-refund-form="data-refund-form" data-validated-form="data-validated-form">
                     <fieldset class="refund-form__section"><label class="inputbox">
                             <p class="inputbox__label">Выберите действие</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="changeData" data-change-paid="data-change-paid">
                                     <option value="0" selected="selected" data-custom-properties="change">Изменить данные оплаты</option>
@@ -273,7 +272,7 @@
                         <div class="refund-form__text">Если вы ввели неправильные данные об оплате, вы можете скорректировать их с помощью этого действия.</div>
                         <div class="refund-form__buttons">
                             <div class="grid">
-                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-popup" href="#popup-confirm-payment"><span data-form-field="change">Изменить</span><span data-form-field="refund">Подтвердить</span></a></div>
+                                <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="button refund-form__button js-action" href="/backend-form-admin-confirm-payment-request.json" data-form-field="change"><span>Изменить</span></a></div>
                                 <div class="grid__col grid__col_xl_6 grid__col_sm_12"><a class="link link_bold refund-form__link" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
                             </div>
                         </div>

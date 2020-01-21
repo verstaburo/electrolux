@@ -1,0 +1,58 @@
+<div class="popup popup-new-request" id="popup-new-request">
+    <div class="popup-new-request__wrapper">
+        <h3 class="popup__title popup__title_fz40">Создание заявки</h3>
+        <div class="popup-new-request__content">
+            <section class="request-form request-form_popup">
+                <form class="form form_fxp request-form__form js-ajax-form-fxp" action="/backend-form-admin-create.json" method="post" data-validated-form="data-validated-form" data-requestform-new="data-requestform-new" autocomplete="off">
+                    <fieldset class="form__section">
+                        <div class="form__title">Личные данные пользователя</div>
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">ФИО*</p><span class="inputbox__wrapper"><input class="input" type="text" name="name" required="required" placeholder="ФИО*" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Адрес электронной почты*</p><span class="inputbox__wrapper"><input class="input" type="email" name="email" required="required" placeholder="Введите адрес e-mail" data-type="email" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                                    <p class="inputbox__label">Физический адрес*</p><span class="inputbox__wrapper"><input class="input" type="text" name="address" required="required" placeholder="Куда поедет специалист" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <div class="form__title">Продукт</div><input class="input" type="hidden" name="productId" data-hidden-productId="data-hidden-productId" />
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Название модели*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="model" required="required" placeholder="Например, END5299" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-model.html" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">PNC код товара*</p><span class="inputbox__wrapper"><input class="input js-autocomplete" type="text" name="pnc" required="required" placeholder="Например, 920404119" autocomplete="off" data-autocomplete-url="/backend-autocomplete-list-pnc.html" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Серийный номер модели</p><span class="inputbox__wrapper"><input class="input" type="text" name="serialNumber" placeholder="Например, 2435645" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_12"><label class="inputbox">
+                                    <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off"></textarea><span class="error-message"></span></span>
+                                </label></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__section form__section_mgt22">
+                        <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                            <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="/assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
+                                            <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                        </span></label><span class="error-message"></span></span></label></div>
+                        <div class="form__buttons"><button class="button form__button" type="submit">Создать</button></div>
+                        <div class="form__note form__note_mt20">
+                            <p>*Поля, обязательные для заполнения.</p>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>

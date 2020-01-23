@@ -16,7 +16,7 @@
                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                     <p class="inputbox__label">Телефон*</p><span class="inputbox__wrapper"><input class="input" type="tel" name="phone" required="required" placeholder="Например, +79032094743" data-type="tel" autocomplete="off" value="+7 (903) 209-47-43" /><span class="error-message"></span></span>
                                 </label></div>
-                            <div class="grid__col grid__col_xl_6 grid__col_sm_12" data-form-field="adult"><label class="inputbox">
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                     <p class="inputbox__label">Физический адрес*</p><span class="inputbox__wrapper"><input class="input" type="text" name="address" required="required" placeholder="Куда поедет специалист" autocomplete="off" value="г. Москва, ул. Садовая, д. 23, кв. 51" /><span class="error-message"></span></span>
                                 </label></div>
                         </div>
@@ -32,7 +32,9 @@
                                 </label></div>
                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                     <p class="inputbox__label">Серийный номер модели</p><span class="inputbox__wrapper"><input class="input" type="text" name="serialNumber" placeholder="Например, 2435645" autocomplete="off" value="2435645" /><span class="error-message"></span></span>
-                                </label></div>
+                                </label>
+                                <div class="form__hint"><a class="link link_underline link_info js-popup" href="#popup-pnc"><span class="link__text">Как найти информацию о модели и PNC?</span></a></div>
+                            </div>
                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                     <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" value="08.2019" /><span class="error-message"></span></span>
                                 </label></div>
@@ -45,20 +47,39 @@
                         <div class="form__title">Сервис</div>
                         <div class="grid">
                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                    <p class="inputbox__label">Оплата</p><span class="inputbox__wrapper"><input class="input" type="text" name="paid" required="required" placeholder="Оплата" autocomplete="off" value="Транзакция №14256374565" /><span class="error-message"></span></span>
+                                    <p class="inputbox__label">Оплата*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="paymentState" required="required">
+                                            <option value="0">Не оплачено</option>
+                                            <option value="1" selected="selected">Оплачено</option>
+                                        </select><span class="error-message"></span></span>
                                 </label></div>
                             <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                    <p class="inputbox__label">Оказание услуги</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="finished" required="required">
+                                    <p class="inputbox__label">Подтверждение оплаты</p><span class="inputbox__wrapper"><input class="input" type="text" name="receiptNum" placeholder="Номер чека" autocomplete="off" value="Чек № 354657883" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Статус*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="finished" required="required">
                                             <option value="0" selected="selected">Не выполнено</option>
                                             <option value="1">Выполнено</option>
                                         </select><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Дата оказания услуги</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="dateOfComplete" placeholder="дд.мм.гггг" data-date="data-date" readonly="readonly" value="09.10.2019" /><span class="error-message"></span></span>
+                                </label></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <div class="form__title">Возврат</div>
+                        <div class="grid">
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Чек возврата</p><span class="inputbox__wrapper"><input class="input" type="text" name="refundReceiptNum" placeholder="Номер чека" autocomplete="off" value="Чек №1628783994" /><span class="error-message"></span></span>
+                                </label></div>
+                            <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
+                                    <p class="inputbox__label">Дата возврата</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="refundDate" placeholder="Дата возврата" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
                                 </label></div>
                         </div>
                     </fieldset>
                     <fieldset class="form__section form__section_mgt22">
                         <div class="form__notes"><label class="inputbox form__agreements"><span class="inputbox__wrapper"><label class="checkradio inputbox__agreement"><input class="checkradio__input" name="offer" value="offer" type="checkbox" required="required" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
-                                            <p>Пользователь принимает условия оферты и ознакомился с&nbsp;<a class="link link_underline" href="/assets/documents/offerFPR.docx" target="__blank"><span class="link__text">правилами проведения.</span></a></p>
-                                            <p>Пользователь согласен с&nbsp;<a class="link link_underline" href="#" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
+                                            <p>Пользователь принимает условия оферты и согласен с &nbsp;<a class="link link_underline" href="/assets/documents/POLZOVATELSKOE-SOGLASHENIE-(OFERTA)_FPR.pdf" target="__blank"><span class="link__text">условиями обработки персональных данных, оплаты, возврата и пользования сайтом.</span></a></p>
                                         </span></label><span class="error-message"></span></span></label></div>
                         <div class="form__buttons"><button class="button form__button" type="submit">Сохранить</button></div>
                         <div class="form__note form__note_mt20">

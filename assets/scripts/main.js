@@ -54,8 +54,7 @@ $(document).ready(function () {
           },
         })
     })
-    .trigger(EVENT_BINDING_REQUIRED)
-  ;
+    .trigger(EVENT_BINDING_REQUIRED);
 
   /**
    * вызывается когда отправляем ajax форму на fixprice
@@ -132,7 +131,7 @@ $(document).ready(function () {
                * перезагрузка страницы и открытие попапа кажется слишком раздражающим
                * поэтому отрезаем хеш чтобы fancybox не открывал заново попап.
                */
-              document.location = document.location.href.replace(location.hash , "" );
+              document.location = document.location.href.replace(location.hash, "");
               break;
             case ACTION_UPDATE_NODES:
               /**
@@ -156,15 +155,33 @@ $(document).ready(function () {
    * @param url
    */
   function asyncLoadPopup(url) {
-    isExternalUrl(url)
-      ? $.fancybox.open({src: url, type: 'iframe'})
-      : $.get(url, function (html) {$.fancybox.open({src: html, type: 'html'});})
+    isExternalUrl(url) ?
+      $.fancybox.open({
+        src: url,
+        type: 'iframe',
+        opts: {
+          touch: false,
+          closeExisting: true,
+          autoFocus: false,
+        }
+      }) :
+      $.get(url, function (html) {
+        $.fancybox.open({
+          src: html,
+          type: 'html',
+          opts: {
+            touch: false,
+            closeExisting: true,
+            autoFocus: false,
+          }
+        });
+      })
   }
 
   function isExternalUrl(url) {
     var host = window.location.hostname;
 
-    var linkHost = function(url) {
+    var linkHost = function (url) {
       if (/^https?:\/\//.test(url)) { // Absolute URL.
         // The easy way to parse an URL, is to create <a> element.
         // @see: https://gist.github.com/jlong/2428561
@@ -172,8 +189,7 @@ $(document).ready(function () {
         parser.href = url;
 
         return parser.hostname;
-      }
-      else { // Relative URL.
+      } else { // Relative URL.
         return window.location.hostname;
       }
     }(url);

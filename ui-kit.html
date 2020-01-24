@@ -2085,7 +2085,7 @@
                                             <div class="form__hint"><a class="link link_underline link_info js-popup" href="#popup-pnc"><span class="link__text">Как найти информацию о модели и PNC?</span></a></div>
                                         </div>
                                         <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
+                                                <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
                                             </label></div>
                                         <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                                 <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off"></textarea><span class="error-message"></span></span>
@@ -2518,8 +2518,7 @@
                                         <div class="requests-table__text requests-table__text_red">
                                             <p>Не оплачено</p>
                                             <p class="is-receipt">Чек №:</p>
-                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="10" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="20" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                         </div>
                                     </td>
                                     <td class="requests-table__cell requests-table__cell_state">
@@ -2551,8 +2550,7 @@
                                         <div class="requests-table__text requests-table__text_red">
                                             <p>Не оплачено</p>
                                             <p class="is-receipt">Чек №:</p>
-                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="11" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="21" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                         </div>
                                     </td>
                                     <td class="requests-table__cell requests-table__cell_state">
@@ -2584,11 +2582,10 @@
                                         <div class="requests-table__text">
                                             <p>Оплачено</p>
                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="12" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="22" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change-abort.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
                                 </tr>
                                 <tr class="requests-table__request is-paid" data-id="3" data-update-url="/backend-admin-request-row-view.html">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-request-view.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-request-view.html"><span class="link__text">12-0001</span></a></td>
@@ -2613,11 +2610,10 @@
                                         <div class="requests-table__text">
                                             <p>Оплачено</p>
                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="13" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="23" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change-abort.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
                                 </tr>
                                 <tr class="requests-table__request is-paid" data-id="4" data-update-url="/backend-admin-request-row-view.html">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-request-view.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-request-view.html"><span class="link__text">02-0571</span></a></td>
@@ -2642,11 +2638,10 @@
                                         <div class="requests-table__text">
                                             <p>Оплачено</p>
                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="14" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="24" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                         </div>
                                     </td>
-                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
+                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change-abort.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
                                 </tr>
                                 <tr class="requests-table__request is-success" data-id="5" data-update-url="/backend-admin-request-row-view.html">
                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-request-view.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-request-view.html"><span class="link__text">17-9958</span></a></td>
@@ -2671,8 +2666,7 @@
                                         <div class="requests-table__text">
                                             <p>Оплачено</p>
                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="15" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="25" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                         </div>
                                     </td>
                                     <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></a><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
@@ -2700,8 +2694,7 @@
                                         <div class="requests-table__text">
                                             <p>Сделан возврат</p>
                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="16" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="26" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                         </div>
                                     </td>
                                     <td class="requests-table__cell requests-table__cell_state">
@@ -2838,8 +2831,7 @@
                                                         <div class="requests-table__text requests-table__text_red">
                                                             <p>Не оплачено</p>
                                                             <p class="is-receipt">Чек №:</p>
-                                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="10" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="20" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                                         </div>
                                                     </td>
                                                     <td class="requests-table__cell requests-table__cell_state">
@@ -2871,8 +2863,7 @@
                                                         <div class="requests-table__text requests-table__text_red">
                                                             <p>Не оплачено</p>
                                                             <p class="is-receipt">Чек №:</p>
-                                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="11" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="21" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                                         </div>
                                                     </td>
                                                     <td class="requests-table__cell requests-table__cell_state">
@@ -2904,11 +2895,10 @@
                                                         <div class="requests-table__text">
                                                             <p>Оплачено</p>
                                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="12" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="22" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                                         </div>
                                                     </td>
-                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change-abort.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
                                                 </tr>
                                                 <tr class="requests-table__request is-paid" data-id="3" data-update-url="/backend-admin-request-row-view.html">
                                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-request-view.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-request-view.html"><span class="link__text">12-0001</span></a></td>
@@ -2933,11 +2923,10 @@
                                                         <div class="requests-table__text">
                                                             <p>Оплачено</p>
                                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="13" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="23" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                                         </div>
                                                     </td>
-                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change-abort.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
                                                 </tr>
                                                 <tr class="requests-table__request is-paid" data-id="4" data-update-url="/backend-admin-request-row-view.html">
                                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-request-view.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-request-view.html"><span class="link__text">02-0571</span></a></td>
@@ -2962,11 +2951,10 @@
                                                         <div class="requests-table__text">
                                                             <p>Оплачено</p>
                                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="14" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="24" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                                         </div>
                                                     </td>
-                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
+                                                    <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change-abort.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></td>
                                                 </tr>
                                                 <tr class="requests-table__request is-success" data-id="5" data-update-url="/backend-admin-request-row-view.html">
                                                     <td class="requests-table__cell requests-table__cell_number"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-request-view.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-request-view.html"><span class="link__text">17-9958</span></a></td>
@@ -2991,8 +2979,7 @@
                                                         <div class="requests-table__text">
                                                             <p>Оплачено</p>
                                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="15" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="25" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                                         </div>
                                                     </td>
                                                     <td class="requests-table__cell requests-table__cell_state"><label class="repair-state"><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></a><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></span></label></td>
@@ -3020,8 +3007,7 @@
                                                         <div class="requests-table__text">
                                                             <p>Сделан возврат</p>
                                                             <p class="is-receipt"><small>Чек №: 675463535</small></p>
-                                                            <p class="is-change"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-change-payment.html" data-fancybox="16" data-type="ajax" data-src="/backend-form-admin-change-payment.html"><span class="link__text">Отменить оплату</span></a></p>
-                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-confirm-payment.html" data-fancybox="26" data-type="ajax" data-src="/backend-form-admin-confirm-payment.html"><span class="link__text">Подтвердите оплату</span></a></p>
+                                                            <p class="is-confirm"><a class="link link_underline link_bold requests-table__link" href="/backend-form-admin-payment-ref.html" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-payment-ref.html" data-auto-focus="false" data-touch="false"><span class="link__text">Ссылка на оплату</span></a></p>
                                                         </div>
                                                     </td>
                                                     <td class="requests-table__cell requests-table__cell_state">
@@ -3168,7 +3154,7 @@
                                                         <div class="form__hint"><a class="link link_underline link_info js-popup" href="#popup-pnc"><span class="link__text">Как найти информацию о модели и PNC?</span></a></div>
                                                     </div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                            <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
+                                                            <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                                             <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off"></textarea><span class="error-message"></span></span>
@@ -3244,7 +3230,7 @@
                                                         <div class="form__hint"><a class="link link_underline link_info js-popup" href="#popup-pnc"><span class="link__text">Как найти информацию о модели и PNC?</span></a></div>
                                                     </div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                            <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" required="required" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" value="08.2019" /><span class="error-message"></span></span>
+                                                            <p class="inputbox__label">Месяц и год покупки</p><span class="inputbox__wrapper js-datepicker" data-min-view="months" data-date-format="mm.yyyy"><input class="input input_time js-show-datepicker" type="text" name="shoppingDate" placeholder="Месяц и год покупки" data-date="data-date" readonly="readonly" autocomplete="off" value="08.2019" /><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_12"><label class="inputbox">
                                                             <p class="inputbox__label">Описание проблемы*</p><span class="inputbox__wrapper"><textarea class="textarea js-scrollbar" name="message" placeholder="Расскажите, что не работает" required="required" autocomplete="off">Не работает переключатель варочной поверхности</textarea><span class="error-message"></span></span>
@@ -3261,7 +3247,7 @@
                                                                 </select><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                            <p class="inputbox__label">Подтверждение оплаты</p><span class="inputbox__wrapper"><input class="input" type="text" name="receiptNum" placeholder="Номер чека" autocomplete="off" value="Чек № 354657883" /><span class="error-message"></span></span>
+                                                            <p class="inputbox__label">Чек оплаты</p><span class="inputbox__wrapper"><input class="input" type="text" name="receiptNum" placeholder="Введите номер чека" autocomplete="off" /><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                             <p class="inputbox__label">Статус*</p><span class="inputbox__wrapper"><select class="select js-select js-select" name="finished" required="required">
@@ -3270,7 +3256,7 @@
                                                                 </select><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                            <p class="inputbox__label">Дата оказания услуги</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="dateOfComplete" placeholder="дд.мм.гггг" data-date="data-date" readonly="readonly" value="09.10.2019" /><span class="error-message"></span></span>
+                                                            <p class="inputbox__label">Дата оказания услуги</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="dateOfComplete" placeholder="" data-date="data-date" readonly="readonly" /><span class="error-message"></span></span>
                                                         </label></div>
                                                 </div>
                                             </fieldset>
@@ -3278,7 +3264,7 @@
                                                 <div class="form__title">Возврат</div>
                                                 <div class="grid">
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
-                                                            <p class="inputbox__label">Чек возврата</p><span class="inputbox__wrapper"><input class="input" type="text" name="refundReceiptNum" placeholder="Номер чека" autocomplete="off" value="Чек №1628783994" /><span class="error-message"></span></span>
+                                                            <p class="inputbox__label">Чек возврата</p><span class="inputbox__wrapper"><input class="input" type="text" name="refundReceiptNum" placeholder="Введите номер чека" autocomplete="off" /><span class="error-message"></span></span>
                                                         </label></div>
                                                     <div class="grid__col grid__col_xl_6 grid__col_sm_12"><label class="inputbox">
                                                             <p class="inputbox__label">Дата возврата</p><span class="inputbox__wrapper js-datepicker"><input class="input js-show-datepicker" type="text" name="refundDate" placeholder="Дата возврата" data-date="data-date" readonly="readonly" autocomplete="off" /><span class="error-message"></span></span>
@@ -3315,7 +3301,7 @@
                     </div>
                 </div>
                 <div class="ui-kit__section-content">
-                    <div class="container"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></div>
+                    <div class="container"><label class="repair-state"><span class="repair-state__text repair-state__text_notfinished"><span class="repair-state__box"></span><span class="repair-state__content">Выполнено</span></span><a class="repair-state__text repair-state__text_finished" data-fancybox="data-fancybox" data-type="ajax" data-src="/backend-form-admin-status-change-abort.html"><span class="repair-state__box"></span><span class="repair-state__content">Не выполнено</span></a></label></div>
                 </div>
             </section>
             <section class="ui-kit__section">
@@ -4051,6 +4037,67 @@
                 <div class="ui-kit__section-content">
                     <div class="container">
                         <div class="autocomplete-list js-scrollbar"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент popup-payment-ref</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/popup-payment-ref/popup-payment-ref</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <div class="popup popup_fxp popup-payment-ref">
+                            <h3 class="popup__title">Ссылка на оплату</h3>
+                            <div class="popup__content">
+                                <form class="payment-ref-form" action="/" method="post">
+                                    <fieldset class="payment-ref-form__section"><label class="inputbox"><span class="inputbox__wrapper"><input class="input" type="text" name="paymentRef" readonly="readonly" placeholder="Ссылка на оплату" autocomplete="off" value="https://https://folders/1XFbGehJXANBReDioJwDHZ16H1A5Dtp3e" data-copy-field="linkRef" /><span class="error-message"></span></span></label>
+                                        <div class="payment-ref-form__copy"><a class="link link_icon_gray link_bold link_underline" href="#" data-copy="linkRef"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_copy"></use></svg><span class="link__text">Копировать ссылку</span></a></div>
+                                        <div class="payment-ref-form__targets"><label class="checkradio payment-ref-form__item"><input class="checkradio__input" name="mailing" value="email" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                    <p>Отправить на e-mail</p>
+                                                </span></label><label class="checkradio payment-ref-form__item"><input class="checkradio__input" name="mailing" value="sms" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                                    <p>Отправить по SMS</p>
+                                                </span></label></div>
+                                        <div class="payment-ref-form__buttons"><button class="button button_fz15 payment-ref-form__button" type="submit">Отправить</button><a class="link link_bold payment-ref-form__link payment-ref-form__link_fz15" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ui-kit__section">
+                <div class="ui-kit__section-head">
+                    <div class="container">
+                        <h2 class="ui-kit__title">Компонент payment-ref-form</h2>
+                        <div class="ui-kit__blockpath">
+                            <p>Компонент: components/payment-ref-form/payment-ref-form</p>
+                        </div>
+                        <div class="ui-kit__description">
+                            <p>Описание компонента</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-kit__section-content">
+                    <div class="container">
+                        <form class="payment-ref-form" action="/" method="post">
+                            <fieldset class="payment-ref-form__section"><label class="inputbox"><span class="inputbox__wrapper"><input class="input" type="text" name="paymentRef" readonly="readonly" placeholder="Ссылка на оплату" autocomplete="off" value="https://https://folders/1XFbGehJXANBReDioJwDHZ16H1A5Dtp3e" data-copy-field="linkRef" /><span class="error-message"></span></span></label>
+                                <div class="payment-ref-form__copy"><a class="link link_icon_gray link_bold link_underline" href="#" data-copy="linkRef"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_copy"></use></svg><span class="link__text">Копировать ссылку</span></a></div>
+                                <div class="payment-ref-form__targets"><label class="checkradio payment-ref-form__item"><input class="checkradio__input" name="mailing" value="email" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                            <p>Отправить на e-mail</p>
+                                        </span></label><label class="checkradio payment-ref-form__item"><input class="checkradio__input" name="mailing" value="sms" type="checkbox" /><span class="checkradio__box"><svg class="checkradio__check"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg></span><span class="checkradio__content">
+                                            <p>Отправить по SMS</p>
+                                        </span></label></div>
+                                <div class="payment-ref-form__buttons"><button class="button button_fz15 payment-ref-form__button" type="submit">Отправить</button><a class="link link_bold payment-ref-form__link payment-ref-form__link_fz15" href="#" data-fancybox-close="data-fancybox-close"><span class="link__text">Отмена</span></a></div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </section>
